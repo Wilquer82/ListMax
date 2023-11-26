@@ -1,0 +1,67 @@
+* {
+    padding: 0 0;
+    margin: 0 0;
+    overflow: hidden;
+}
+
+
+#main {
+    background-image: url('./assets/event.png');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    opacity: .5;
+    width: 100vw;
+    height: 100vh;
+}
+
+#color {
+    background-color: #2e0692;
+    opacity: .7;
+}
+
+.textContainer {
+    position: fixed;
+    top: 10rem;
+    left: 10rem;
+    width: 660px;
+    height: 320px;
+}
+
+.lineContainer{
+    display: flex;
+    width: 660px;
+    justify-content:flex-start;
+}
+
+.MainText {
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: -0.3px;
+}
+
+.G {
+    color: #A1F71A;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: -0.3px;
+}
+
+span{
+    margin: 0 7px  ;
+}
+
+.paragraph{
+    position: fixed;
+    top: 31rem;
+    left: 10rem;
+    width: 640px;
+    height: 90px;
+    font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px; /* 125% */
+}

@@ -1,0 +1,66 @@
+*{
+    padding: 0 0;
+    margin: 0 0;
+    font-family: 'Poppins', sans-serif;;
+
+}
+
+
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    display:flex;
+    width: 100vw;
+    height: 5rem;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 2;
+}
+
+.nav-item{
+    color: var(--foundation-branco-light, #ffffff);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.175px;
+}
+
+.buttonGreen{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: #A1F71A;
+    border: 2px solid #A1F71A;
+    color: black;
+    height: 40px;
+    width: 180px;
+    border-radius: 0px 8px 8px 0px;
+}
+
+.buttonGreenOver{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    border: 2px solid #A1F71A;
+    color: #A1F71A;
+    height: 40px;
+    width: 90px;
+    flex-shrink: 0;
+    border-radius: 8px 0px 0px 8px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 171.429% */
+    letter-spacing: 0.175px;
+}
+
+.button{
+    width: 275px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
