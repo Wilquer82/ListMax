@@ -8,7 +8,7 @@ function News({ whereCalled }) {
   return (
     <>
       <BackGround />
-      {whereCalled == "NewsLetter" &&
+      { whereCalled == "NewsLetter" &&
       <div className="textContainer">
         <img className="logoM" src={Logo} width="245px" height="64px" alt="Logo List-Max" />
         <div className="lineContainer">
@@ -29,7 +29,7 @@ function News({ whereCalled }) {
         </div>
       </div>
       }
-      {whereCalled == "Manut" &&
+      { whereCalled == "Manut" &&
       <div className="textContainer">
         <img className="logoM" src={Logo} width="245px" height="64px" alt="Logo List-Max" />
         <div className="lineContainer">
@@ -43,6 +43,7 @@ function News({ whereCalled }) {
         </div>
       </div>
       }
+      { whereCalled == "Manut" || whereCalled == "NewsLetter" &&
       <div className="twoInputsButton">
         <p className="subTitle">Cadastre-se para </p>
         <p className="subTitle">receber as novidades.</p>
@@ -50,7 +51,7 @@ function News({ whereCalled }) {
         <Input size="large" className="inputNews" type="text" placeholder="Celular"/>
         <Button size="large"className="buttonNews">Cadastrar no Newsletter</Button>
       </div>
-
+      } 
     </>
   )
 }
