@@ -19,7 +19,7 @@
     opacity: .7;
 }
 
-.textContainer {
+.textContainerA {
     position: fixed;
     top: 10rem;
     left: 10rem;
@@ -27,13 +27,13 @@
     height: 320px;
 }
 
-.lineContainer{
+.lineContainerA{
     display: flex;
     width: 660px;
     justify-content:flex-start;
 }
 
-.MainText {
+.MainTextA {
     font-size: 60px;
     font-style: normal;
     font-weight: 400;
@@ -41,7 +41,7 @@
     letter-spacing: -0.3px;
 }
 
-.G {
+.GA {
     color: #A1F71A;
     font-size: 60px;
     font-style: normal;
@@ -54,7 +54,7 @@ span{
     margin: 0 7px  ;
 }
 
-.paragraph{
+.paragraphA{
     position: fixed;
     top: 31rem;
     left: 10rem;

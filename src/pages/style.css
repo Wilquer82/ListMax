@@ -1,15 +1,17 @@
 .textContainer {
     position: fixed;
     top: 10rem;
-    left: 10rem;
+    left: 13vw;
     width: 50vw;
     height: 320px;
+    margin: 0 0;
 }
 
 .lineContainer{
     display: flex;
     width: 660px;
     justify-content:flex-start;
+    margin-bottom: 1rem;
 }
 
 .MainText {
@@ -55,9 +57,9 @@ span{
     justify-content:space-evenly;
     position: fixed;
     top: 10rem;
-    right: 10rem;
+    right: 4vw;
     width: 50vw;
-    height: 230px;
+    height: 270px;
 }
 
 .inputNews{
@@ -65,6 +67,9 @@ span{
 }
 
 .buttonNews{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 400px;
     background-color: #A1F71A;
     font-size: 16px;

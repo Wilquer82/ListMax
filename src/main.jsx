@@ -14,9 +14,14 @@ const router = createBrowserRouter([
     element: <App/>,
   },
   {
-    path: "/News",
-    element: <News/>,
+    path: "/news",
+    element: <News whereCalled="NewsLetter"/>,
   },
+  {
+    path: "/manut",
+    element: <News whereCalled="Manut"/>,
+  },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
