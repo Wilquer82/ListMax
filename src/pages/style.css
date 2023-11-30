@@ -7,6 +7,30 @@
     margin: 0 0;
 }
 
+.textContainerL {
+    position: fixed;
+    top: 15rem;
+    left: 13vw;
+    width: 55vw;
+    height: 330px;
+    margin: 0 0;
+}
+
+.textContainerR {
+    position: fixed;
+    top: 12rem;
+    left: 13vw;
+    width: 55vw;
+    height: 360px;
+    margin: 0 0;
+}
+
+.fixed{
+    position: fixed;
+    top: 10rem;
+    left: 13vw;
+}
+
 .lineContainer{
     display: flex;
     width: 660px;
@@ -31,6 +55,15 @@
     letter-spacing: -1.08px;
 }
 
+.GL {
+    color: #A1F71A;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 56px; /* 112% */
+    letter-spacing: -1.5px;
+}
+
 span{
     margin: 0 7px  ;
 }
@@ -46,8 +79,37 @@ span{
     margin-top: 2rem;
 }
 
+.paragraphL{
+    width: 400px;
+    height: 90px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 175% */
+    margin-top: 2rem;
+}
+
+.flex{
+    display: flex;
+    align-items: baseline;
+}
+
+.roxo{
+    color: #FF14FF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+}
+
 .logoM{
     margin-bottom:3rem;
+}
+
+.logoP{
+    position: fixed;
+    top: 2rem;
+    left: 5rem;
 }
 
 .twoInputsButton{
@@ -62,8 +124,53 @@ span{
     height: 270px;
 }
 
+.loginInputs{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content:space-evenly;
+    position: fixed;
+    top: 15rem;
+    right: 15vw;
+    width: 400px;
+    height: 270px;
+}
+
+.loginInputsR{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content:space-evenly;
+    position: fixed;
+    top: 12rem;
+    right: 15vw;
+    width: 400px;
+    height:500px;
+}
+
+.nameLast{
+    display:flex;
+
+}
+
+.treeImg{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 400px;
+}
+
+.textRight{
+    text-align: right;
+}
+
+.textCenter{
+    text-align: center;
+}
+
 .inputNews{
     width: 400px;
+    margin: 0 0;
 }
 
 .buttonNews{

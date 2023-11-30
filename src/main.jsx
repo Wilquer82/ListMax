@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import News from './pages/newsletter.jsx';
+import News from './pages/form.jsx';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -15,11 +15,19 @@ const router = createBrowserRouter([
   },
   {
     path: "/news",
-    element: <News whereCalled="NewsLetter"/>,
+    element: <News whereCalled="news"/>,
   },
   {
     path: "/manut",
-    element: <News whereCalled="Manut"/>,
+    element: <News whereCalled="manut"/>,
+  },
+  {
+    path: "/login",
+    element: <News whereCalled="login"/>,
+  },
+  {
+    path: "/register",
+    element: <News whereCalled="register"/>,
   },
 
 ]);
