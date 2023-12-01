@@ -9,10 +9,10 @@ function App() {
       <NavBar />
       <div className="textContainerA">
         <div className="lineContainerA">
-          <h1 className="MainTextA">Seu</h1><span></span><h1 className="GA">evento</h1>
+          <h1 className="MainTextA">Seu</h1><span className="span"></span><h1 className="GA">evento</h1>
         </div>
         <div className="lineContainerA">
-          <h1 className="GA">exclusivo</h1><span></span><h1 className="MainTextA">com a</h1>
+          <h1 className="GA">exclusivo</h1><span className="span"></span><h1 className="MainTextA">com a</h1>
         </div>
         <div className="lineContainerA">
           <h1 className="GA">plataforma premium</h1>

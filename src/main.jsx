@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import News from './pages/form.jsx';
+import Login from './pages/login.jsx';
+import Register from './pages/register.jsx';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -23,11 +25,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <News whereCalled="login"/>,
+    element: <Login/>,
   },
   {
     path: "/register",
-    element: <News whereCalled="register"/>,
+    element: <Register/>,
   },
 
 ]);

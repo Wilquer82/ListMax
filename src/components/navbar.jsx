@@ -1,4 +1,3 @@
-
 import './style.css';
 import Logo from '../assets/Logo.png';
 import { Link } from 'react-router-dom';
@@ -43,5 +42,6 @@ function NavBar() {
         </>
     )
 }
+
 
 export default NavBar;
