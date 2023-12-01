@@ -1,0 +1,71 @@
+import { useState } from "react";
+import { Button, Input, Space } from 'antd';
+import Google from '../assets/Google.png';
+import Apple from '../assets/Apple.png';
+import Face from '../assets/Facebook.png';
+import Logo from '../assets/logo2.png';
+import { Link } from "react-router-dom";
+import BackGround from "../components/backGround";
+import './style.css';
+
+
+
+export default function Login (){
+
+    const [isModalBlocked, setIsModalBlocked] = useState(false);
+
+    return (
+        <div>
+            <BackGround/>
+            <div className="textContainerL">
+                <img className="logoP" src={Logo} width="153px" height="40px" alt="Logo List-Max" />
+                <div className="lineContainer">
+                    <h1 className="GL">Bem-vindo de volta!</h1>
+                </div>
+                <div className="lineContainer">
+                    <h1 className="MainText">Acesse sua conta para</h1>
+                </div>
+                <div className="lineContainer">
+                    <h1 className="MainText">organizar seu evento!</h1>
+                </div>
+                <div className="paragraphL">
+                    <p>Se você não possui uma conta </p>
+                    <div className="flex"><p>cadastrada, você pode &nbsp;</p>
+                    <Link to="/register"><p className="pink"> se cadastrar aqui!</p></Link></div>
+                </div>
+            </div>
+            <Space direction="vertical" className="loginInputs">
+                <Input size="large" className="inputNews" type="email" placeholder="E-mail"/>
+                <Input.Password size="large" className="inputNews" placeholder="Senha" />
+                <p className="textRight">Esqueceu a senha?</p>
+                <Button size="large"className="buttonNews" onClick={()=>setIsModalBlocked(true)}>Login</Button>
+                <p className="textCenter">ou continue com:</p>
+                <div className="treeImg">
+                    <img src={Google} alt="With Google"/>
+                    <img src={Apple} alt="With Apple"/>
+                    <img src={Face} alt="With Facebook"/>
+                </div>
+            </Space>
+            {isModalBlocked &&
+                <div className="ModalBlocked">
+                    <Button 
+                        className="close" 
+                        type="primary" 
+                        onClick={() => setIsModalBlocked(false)}
+                        shape="square" 
+                        size="small"
+                        >X</Button>
+                    <div className="blocked">
+                    <p>Você está bloqueado(a) da plataforma</p>
+                    <p>por infringir os nossos Termos de Uso.</p>
+                    <p>Para mais informações, entre em contato.</p>
+                    </div>
+                    <Space direction="horizontal">
+                    <Button size="large"className="buttonModalLogin" onClick={()=>setIsModalBlocked(false)}>Ler Termos de Uso</Button>
+                    <Button size="large"className="buttonModalLogin" onClick={()=>setIsModalBlocked(false)}>Ver Página de Contato</Button>
+                    </Space>
+                </div>
+                }
+        </div>
+    )
+}
