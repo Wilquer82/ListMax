@@ -18,7 +18,9 @@ export default function Login (){
         <div>
             <BackGround/>
             <div className="textContainerL">
-                <img className="logoP" src={Logo} width="153px" height="40px" alt="Logo List-Max" />
+                <Link to='/'>
+                    <img className="logoP" src={Logo} width="153px" height="40px" alt="Logo List-Max" />
+                </Link>
                 <div className="lineContainer">
                     <h1 className="GL">Bem-vindo de volta!</h1>
                 </div>

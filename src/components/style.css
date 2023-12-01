@@ -2,7 +2,6 @@
     padding: 0 0;
     margin: 0 0;
     font-family: 'Poppins', sans-serif;;
-
 }
 
 
@@ -23,10 +22,22 @@
     color: var(--foundation-branco-light, #ffffff);
     font-size: 14px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 24px;
     letter-spacing: 0.175px;
+    transition: 1s;
+    cursor: pointer;
 }
+
+.nav-item:hover{
+    color: #A1F71A;
+}
+
+.nav-item::after{
+    color: #A1F71A;
+}
+
+
 
 .buttonGreen{
     display: flex;

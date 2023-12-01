@@ -36,7 +36,9 @@ export default function Register() {
         <div>
             <BackGround />
             <div className="textContainerR">
-                <img className="logoP" src={Logo} width="153px" height="40px" alt="Logo List-Max" />
+                <Link to='/'>
+                    <img className="logoP" src={Logo} width="153px" height="40px" alt="Logo List-Max" />
+                </Link>
                 <div className="lineContainer">
                     <h1 className="GL">Antes de criar seu</h1>
                 </div>

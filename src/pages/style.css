@@ -330,3 +330,38 @@
     background-color: var(--colors-roxo-normal, #6D0AD7);
 }
 
+
+.flexPart{
+    position: fixed;
+    top: 20vh;
+    left:30vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+}
+
+.textContainerPart {
+    margin-left: 3rem;;
+}
+
+.threeFives{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 800px;
+    height: 60px;
+    top: 40vh;
+    left: 20vw
+}
+
+.Select{
+    height: 48px
+}
+
+.positionCenter{
+    position: fixed;
+    top: 53vh;
+    left: 37.5vw;
+}

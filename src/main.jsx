@@ -4,6 +4,7 @@ import App from './App.jsx'
 import News from './pages/form.jsx';
 import Login from './pages/login.jsx';
 import Register from './pages/register.jsx';
+import Partners from './pages/partners.jsx';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
     path: "/register",
     element: <Register/>,
   },
+  {
+    path: "/partners",
+    element: <Partners/>,
+  },
+  
 
 ]);
 
