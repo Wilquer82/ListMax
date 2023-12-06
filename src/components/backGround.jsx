@@ -1,6 +1,6 @@
 import './style.css'
 
-function BackGround() {
+export default function BackGround() {
     return (
         <div id="color">
             <div id="main">
@@ -8,5 +8,3 @@ function BackGround() {
         </div>
     )
 }
-
-export default BackGround;

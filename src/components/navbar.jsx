@@ -23,15 +23,21 @@ function NavBar() {
                 Parceiros
             </p>
             </Link>
+            <Link to="/News">
             <p className="nav-item">
                 Blog
             </p>
+            </Link>
+
             <p className="nav-item">
                 Contato
             </p>
+            <Link to="/manut">
             <p className="nav-item">
                 Perguntas Frequentes
             </p>
+            </Link>
+
             <div className="button">
                 <Link to="/login">
                     <div className="buttonGreenOver">

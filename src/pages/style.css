@@ -3,36 +3,21 @@
 }
 
 .textContainer {
-    position: fixed;
-    top: 10rem;
-    left: 13vw;
-    width: 50vw;
+    margin-top: 8rem;
+    width: 30vw;
     height: 330px;
-    margin: 0 0;
 }
 
 .textContainerL {
-    position: fixed;
-    top: 15rem;
-    left: 13vw;
-    width: 55vw;
+    margin-top: 8rem;
+    width: 30vw;
     height: 330px;
-    margin: 0 0;
 }
 
 .textContainerR {
-    position: fixed;
-    top: 12rem;
-    left: 13vw;
-    width: 55vw;
+    margin-top: 8rem;
+    width: 30%;
     height: 360px;
-    margin: 0 0;
-}
-
-.fixed{
-    position: fixed;
-    top: 10rem;
-    left: 13vw;
 }
 
 .lineContainer{
@@ -121,36 +106,30 @@
 }
 
 .twoInputsButton{
+    margin-top:8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content:space-evenly;
-    position: fixed;
-    top: 10rem;
-    right: 4vw;
-    width: 50vw;
+    width: 30vw;
     height: 270px;
 }
 
 .loginInputs{
+    margin-top: 8rem;
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
-    position: fixed;
-    top: 15rem;
-    right: 15vw;
     width: 400px;
     height: 270px;
 }
 
 .loginInputsR{
+    margin-top: 8rem;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    align-items: center;
     justify-content:space-evenly;
-    position: fixed;
-    top: 12rem;
-    right: 15vw;
     width: 400px;
     height:500px;
 }
@@ -330,11 +309,11 @@
     background-color: var(--colors-roxo-normal, #6D0AD7);
 }
 
+/* ////////////////////////////////////////// */
 
 .flexPart{
-    position: fixed;
-    top: 20vh;
-    left:30vw;
+    margin-top: 8rem;
+    margin-left: 30vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -346,22 +325,24 @@
 }
 
 .threeFives{
-    position: fixed;
+    margin-top: 5rem;
+    margin-left: 20vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 800px;
+    width: 900px;
     height: 60px;
-    top: 40vh;
-    left: 20vw
 }
 
 .Select{
     height: 48px
 }
 
-.positionCenter{
-    position: fixed;
-    top: 53vh;
-    left: 37.5vw;
+.center{
+    display:flex;
+    width: 900px;
+    margin-left: 20vw;
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: center;
 }

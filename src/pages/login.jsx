@@ -15,8 +15,9 @@ export default function Login (){
     const [isModalBlocked, setIsModalBlocked] = useState(false);
 
     return (
-        <div>
-            <BackGround/>
+        <>
+        <BackGround />
+        <div className="Main">
             <div className="textContainerL">
                 <Link to='/'>
                     <img className="logoP" src={Logo} width="153px" height="40px" alt="Logo List-Max" />
@@ -33,7 +34,7 @@ export default function Login (){
                 <div className="paragraphL">
                     <p>Se você não possui uma conta </p>
                     <div className="flex"><p>cadastrada, você pode &nbsp;</p>
-                    <Link to="/register"><p className="pink"> se cadastrar aqui!</p></Link></div>
+                    <Link to="/register" whereCalled="client"><p className="pink"> se cadastrar aqui!</p></Link></div>
                 </div>
             </div>
             <Space direction="vertical" className="loginInputs">
@@ -67,7 +68,8 @@ export default function Login (){
                     <Button size="large"className="buttonModalLogin" onClick={()=>setIsModalBlocked(false)}>Ver Página de Contato</Button>
                     </Space>
                 </div>
-                }
+            }
         </div>
+        </>
     )
 }

@@ -33,8 +33,9 @@ export default function Register() {
     }
 
     return (
-        <div>
-            <BackGround />
+        <>
+        <BackGround />
+        <div className="Main">
             <div className="textContainerR">
                 <Link to='/'>
                     <img className="logoP" src={Logo} width="153px" height="40px" alt="Logo List-Max" />
@@ -64,6 +65,7 @@ export default function Register() {
                 </Space>
                 <Input size="large" className="inputNews" type="phone" placeholder="Celular" />
                 <Input size="large" className="inputNews" type="email" placeholder="E-mail" />
+                <Input size="large" className="inputNews" type="email" placeholder="Confirme seu e-mail" />
                 <Input.Password size="large" className="inputNews" placeholder="Escolha um senha" />
                 <Input.Password size="large" className="inputNews" placeholder="Confirme sua senha" />
                 <Button 
@@ -109,5 +111,6 @@ export default function Register() {
                 </div>
             }
         </div>
+        </>
     )
 }

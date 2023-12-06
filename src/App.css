@@ -1,38 +1,55 @@
 * {
-    padding: 0 0;
-    margin: 0 0;
+    padding: 0 0 auto;
+    margin: 0 0 auto;
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
 
 }
 
-
 #main {
-    background-image: url('./assets/event.png');
-    background-size: 100vw 100vh;
-    background-repeat: no-repeat;
-    opacity: .5;
+    position: relative;
     width: 100vw;
     height: 100vh;
 }
 
-#color {
-    background-color: #2e0692;
-    opacity: .7;
+#main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/event.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.5;
+    z-index: -1;
 }
 
+#color::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2e0692;
+    opacity: 0.7;
+    z-index: -2;
+}
+
+
 .textContainerA {
-    position: fixed;
-    top: 10rem;
-    left: 10rem;
+    margin-left: 8rem;
     width: 660px;
     height: 320px;
 }
 
-.lineContainerA{
+.lineContainerA {
     display: flex;
     width: 660px;
-    justify-content:flex-start;
+    justify-content: flex-start;
 }
 
 .MainTextA {
@@ -52,18 +69,39 @@
     letter-spacing: -0.3px;
 }
 
-.span{
-    margin: 0 7px  ;
+.span {
+    margin: 0 7px;
 }
 
-.paragraphA{
-    position: fixed;
-    top: 31rem;
-    left: 10rem;
+.paragraphA {
+    margin-left: 8rem;
     width: 640px;
     height: 90px;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 30px; /* 125% */
+    line-height: 30px;
+}
+
+.Main {
+    position: fixed;
+    top: 5.1rem;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.MainP {
+    position: fixed;
+    top: 10rem;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.column{
+    flex-direction: column;
 }
