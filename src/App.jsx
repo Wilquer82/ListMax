@@ -1,6 +1,7 @@
 import "./App.css";
 import NavBar from "./components/navbar";
 import BackGround from "./components/backGround";
+import TwoButtons from "./components/twoButtons";
 
 export default function App() {
   return (
@@ -25,7 +26,13 @@ export default function App() {
         <div className="paragraphA">
           <p>Convide, controle e conecte-se: a solução definitiva com QR Code e Reconhecimento Facial. A solução perfeita para administrar os seus convidados.</p>
         </div>
+        <div className="textContainerA">
+          <TwoButtons />
+        </div>
       </div>
+
+
+
     </>
   );
 }

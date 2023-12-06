@@ -5,6 +5,7 @@ import News from './pages/form.jsx';
 import Login from './pages/login.jsx';
 import Register from './pages/register.jsx';
 import Partners from './pages/partners.jsx';
+import Test from './pages/test.jsx';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -14,27 +15,31 @@ import './index.css'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
+  },
+  {
+    path: "/test",
+    element: <Test />,
   },
   {
     path: "/news",
-    element: <News whereCalled="news"/>,
+    element: <News whereCalled="news" />,
   },
   {
     path: "/manut",
-    element: <News whereCalled="manut"/>,
+    element: <News whereCalled="manut" />,
   },
   {
     path: "/login",
-    element: <Login/>,
+    element: <Login />,
   },
   {
     path: "/register",
-    element: <Register/>,
+    element: <Register />,
   },
   {
     path: "/partners",
-    element: <Partners/>,
+    element: <Partners />,
   },
   
 

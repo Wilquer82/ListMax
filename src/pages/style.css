@@ -1,5 +1,6 @@
-*{
-    font-family: 'Poppins', sans-serif!important;
+* {
+    font-family: 'Poppins', sans-serif !important;
+
 }
 
 .textContainer {
@@ -8,12 +9,12 @@
     height: 330px;
 }
 
-.twoInputsButton{
-    margin-top:8rem;
+.twoInputsButton {
+    margin-top: 8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     width: 30vw;
     height: 270px;
 }
@@ -30,20 +31,20 @@
     height: 360px;
 }
 
-.loginInputsR{
+.loginInputsR {
     margin-top: 12vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     width: 400px;
-    height:500px;
+    height: 500px;
 }
 
-.lineContainer{
+.lineContainer {
     display: flex;
     width: 660px;
-    justify-content:flex-start;
+    justify-content: flex-start;
     margin-bottom: 1rem;
 }
 
@@ -69,37 +70,40 @@
     font-size: 50px;
     font-style: normal;
     font-weight: 600;
-    line-height: 56px; /* 112% */
+    line-height: 56px;
+    /* 112% */
     letter-spacing: -1.5px;
 }
 
-.paragraph{
+.paragraph {
     width: 400px;
     height: 90px;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 28px; /* 116.667% */
+    line-height: 28px;
+    /* 116.667% */
     letter-spacing: -0.48px;
     margin-top: 2rem;
 }
 
-.paragraphL{
+.paragraphL {
     width: 400px;
     height: 90px;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 28px; /* 175% */
+    line-height: 28px;
+    /* 175% */
     margin-top: 2rem;
 }
 
-.flex{
+.flex {
     display: flex;
     align-items: baseline;
 }
 
-.pink{
+.pink {
     color: #FF14FF;
     font-size: 16px;
     font-style: normal;
@@ -107,7 +111,7 @@
     line-height: 120%;
 }
 
-.roxo{
+.roxo {
     color: #6D0AD7;
     font-size: 16px;
     font-style: normal;
@@ -115,51 +119,51 @@
     line-height: 120%;
 }
 
-.logoM{
-    margin-bottom:3rem;
+.logoM {
+    margin-bottom: 3rem;
 }
 
-.logoP{
+.logoP {
     position: fixed;
     top: 2rem;
     left: 5rem;
 }
 
-.loginInputs{
+.loginInputs {
     margin-top: 8rem;
     display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     width: 400px;
     height: 270px;
 }
 
-.nameLast{
-    display:flex;
+.nameLast {
+    display: flex;
     align-items: center;
 }
 
-.treeImg{
+.treeImg {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 400px;
 }
 
-.textRight{
+.textRight {
     text-align: right;
 }
 
-.textCenter{
+.textCenter {
     text-align: center;
 }
 
-.inputNews{
+.inputNews {
     width: 400px;
     margin: 0 0;
 }
 
-.buttonNews{
+.buttonNews {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -171,16 +175,17 @@
     line-height: 120%;
 }
 
-.subTitle{
+.subTitle {
     text-align: center;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 28px; /* 116.667% */
+    line-height: 28px;
+    /* 116.667% */
     letter-spacing: -0.48px;
 }
 
-.close{
+.close {
     position: absolute;
     top: 2rem;
     right: 2rem;
@@ -188,18 +193,18 @@
     border-radius: 50%;
 }
 
-.Modal Button .close{
+.Modal Button .close {
     font-size: 24px;
     height: 24px;
     width: 24px;
-    padding: 0 0 ;
-    margin: 0 0 ;
+    padding: 0 0;
+    margin: 0 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.Modal{
+.Modal {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -216,14 +221,14 @@
     box-shadow: 2px 2px 2px grey;
 }
 
-.containerCodigo{
+.containerCodigo {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
 
-.codigo{
+.codigo {
     width: 64px;
     height: 64px;
     padding: 8px 19px;
@@ -233,7 +238,7 @@
     font-size: 20px;
 }
 
-.modalParagraph{
+.modalParagraph {
     width: 506px;
     height: 77px;
     flex-shrink: 0;
@@ -242,15 +247,17 @@
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px; /* 120% */
+    line-height: 24px;
+    /* 120% */
     letter-spacing: -0.4px;
 }
 
-.confirm{
+.confirm {
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
-    line-height: 21px; /* 150% */
+    line-height: 21px;
+    /* 150% */
     letter-spacing: -0.14px;
     color: var(--colors-branco-light, #FFF);
     text-align: center;
@@ -265,7 +272,7 @@
     background-color: var(--colors-roxo-normal, #6D0AD7);
 }
 
-.blocked{
+.blocked {
     color: var(--foundation-azul-escuro-normal, #1B0746);
     text-align: center;
     font-size: 25px;
@@ -274,7 +281,7 @@
     line-height: normal;
 }
 
-.ModalBlocked{
+.ModalBlocked {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -291,11 +298,12 @@
     box-shadow: 2px 2px 2px grey;
 }
 
-.buttonModalLogin{
+.buttonModalLogin {
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px; /* 171.429% */
+    line-height: 24px;
+    /* 171.429% */
     letter-spacing: 0.175px;
     text-align: center;
     display: flex;
@@ -311,7 +319,7 @@
 
 /* ////////////////////////////////////////// */
 
-.flexPart{
+.flexPart {
     margin-top: 8rem;
     margin-left: 30vw;
     display: flex;
@@ -321,10 +329,11 @@
 }
 
 .textContainerPart {
-    margin-left: 3rem;;
+    margin-left: 3rem;
+    ;
 }
 
-.threeFives{
+.threeFives {
     margin-top: 5rem;
     margin-left: 20vw;
     display: flex;
@@ -334,15 +343,158 @@
     height: 60px;
 }
 
-.Select{
+.Select {
     height: 48px
 }
 
-.center{
-    display:flex;
+.center {
+    display: flex;
     width: 900px;
     margin-left: 20vw;
     margin-top: 3rem;
     justify-content: center;
     align-items: center;
+}
+
+.overflowY {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.About {
+    color: #310561;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 2rem;
+}
+
+.Text {
+    color: #000;
+    text-align: justify;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.Container {
+    width: 400px;
+    margin-left: 10rem;
+    margin-top: 5rem;
+}
+
+.ImgContainer {
+    margin-left: 10rem;
+    margin-top: 5rem;
+}
+
+.white {
+    height: 500px;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    /* justify-content: space-evenly;
+    align-items: center; */
+}
+
+.ImgOne {
+    position: absolute;
+    z-index: 6;
+}
+
+.ImgTwo {
+    position: absolute;
+    top: 118vh;
+    right: 41vh;
+    z-index: 5;
+}
+
+.blue {
+    background-color: #310561;
+    width: 100vw;
+    height: 1070px;
+}
+
+.logoDivision {
+    position: absolute;
+    top: 135vh;
+    left: 10rem
+}
+
+
+.pinkG {
+    color: #FF14FF;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 43px;
+    letter-spacing: -0.18px;
+}
+
+.h3 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 43px;
+    /* 119.444% */
+    letter-spacing: -0.18px;
+}
+
+.titleContainer {
+    position: absolute;
+    margin-left: 10rem;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.lineContainerP {
+    display: flex;
+    width: 500px;
+    justify-content: flex-start;
+    text-align:justify;
+}
+
+.gift {
+    position: absolute;
+    left: 70vh
+}
+
+.gradient {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #FF14FF 0%, #6D0AD7 100%);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    width: max-content;
+    height: 3rem;
+    color: white;
+    margin: 1.5rem 0;
+    padding: 0 1.5rem  ;
+}
+
+.description{
+    position: absolute;
+    margin-left: 10rem;
+    margin-top: 20rem;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.lightBlue{
+    background-color: #6d0ad7;
+    width: 100vw;
+    height: 600px;
+    
 }

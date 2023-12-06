@@ -1,9 +1,9 @@
 *{
     padding: 0 0;
     margin: 0 0;
-    font-family: 'Poppins', sans-serif;;
-}
+    font-family: 'Poppins', sans-serif;
 
+}
 
 .navbar{
     position: absolute;
@@ -37,8 +37,6 @@
     color: #A1F71A;
 }
 
-
-
 .buttonGreen{
     display: flex;
     align-items: center;
@@ -69,9 +67,42 @@
 }
 
 .button{
-    width: 275px;
+    width: 270px;
     height: 45px;
     display: flex;
     align-items: center;
     justify-content:space-between;
+}
+
+.buttons{
+    position: absolute;
+    width: 23vw;
+    height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.buttonMore{
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    background: #90DA1F;
+
+}
+
+.videoButton{
+    width: 11vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    background: transparent;
+    border: none;
+    color: #90DA1F;
+    box-shadow: 0px 12px 30px 0px rgba(24, 92, 255, 0.18);
 }
