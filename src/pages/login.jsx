@@ -12,6 +12,11 @@ import './style.css';
 
 export default function Login (){
 
+    const Login =  () => {
+        console.log(document.getElementById("email").value);
+        console.log(document.getElementById("password").value);
+    }
+
     const [isModalBlocked, setIsModalBlocked] = useState(false);
 
     return (
@@ -38,16 +43,20 @@ export default function Login (){
                 </div>
             </div>
             <Space direction="vertical" className="loginInputs">
-                <Input size="large" className="inputNews" type="email" placeholder="E-mail"/>
-                <Input.Password size="large" className="inputNews" placeholder="Senha" />
-                <p className="textRight">Esqueceu a senha?</p>
-                <Button size="large"className="buttonNews" onClick={()=>setIsModalBlocked(true)}>Login</Button>
-                <p className="textCenter">ou continue com:</p>
-                <div className="treeImg">
-                    <img src={Google} alt="With Google"/>
-                    <img src={Apple} alt="With Apple"/>
-                    <img src={Face} alt="With Facebook"/>
-                </div>
+                    <Input id="email" size="large" className="inputNews" type="email" placeholder="E-mail"/>
+                    <Input.Password id="password" size="large" className="inputNews" placeholder="Senha" />
+                    
+                    <p className="textRight">Esqueceu a senha?</p>
+
+                    <Button size="large"className="buttonNews" onClick={()=>{Login()}}>Login</Button>
+
+                    <p className="textCenter">ou continue com:</p>
+
+                    <div className="treeImg">
+                        <img src={Google} alt="With Google"/>
+                        <img src={Apple} alt="With Apple"/>
+                        <img src={Face} alt="With Facebook"/>
+                    </div>
             </Space>
             {isModalBlocked &&
                 <div className="ModalBlocked">

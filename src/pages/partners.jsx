@@ -8,6 +8,9 @@ import NavBar from '../components/navbar';
 import TwoButtons from '../components/twoButtons';
 import PartOne from '../assets/partners1.png';
 import PartTwo from '../assets/partners2.png';
+import ButtonVideo from '../assets/Button.png';
+import Video from '../assets/Video.png';
+
 
 export default function Partners() {
 
@@ -156,7 +159,27 @@ export default function Partners() {
                         </div>
                     </div>
                     <div className="lightBlue">
+                        <div className="half tenRemTop">
+                            <div className="lineContainerP tenRemLeft">
+                                <p className="fourth">Ainda ficou com</p>
+                            </div>
+                            <div className="lineContainerP tenRemLeft">
+                                <p className="fourth">dúvidas? Assista:</p>
+                            </div>
+                            <div className="centerImg">
+                                <img className="" src={Video} alt="Merch01"/>
+                                <img style={{position: 'absolute', zIndex:'4'}} src={ButtonVideo} alt="Merch02"/>
+                            </div>
 
+                        </div>
+                        <div className="half">
+                            <p className="textLight">Na ListMax, acreditamos que cada evento especial merece ser memorável. Junte-se a nós no ListMax Partners e torne-se parte de uma comunidade de profissionais que compartilham a mesma visão. Simplifique a gestão de convidados, recompense seus clientes e expanda seus negócios.</p>
+                            <Button
+                                
+                                className="buttonNews add"
+                            >
+                                Quero me tornar um parceiro
+                            </Button>                        </div>
                     </div>
                 </div>
             }
