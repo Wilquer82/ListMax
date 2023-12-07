@@ -11,6 +11,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
+import HomePartners from './pages/homePartners.jsx';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: "/partners",
     element: <Partners />,
+  },
+  {
+    path: "/homePartners",
+    element: <HomePartners />,
   },
   
 

@@ -15,6 +15,9 @@ export default function Login (){
     const Login =  () => {
         console.log(document.getElementById("email").value);
         console.log(document.getElementById("password").value);
+
+
+
     }
 
     const [isModalBlocked, setIsModalBlocked] = useState(false);
@@ -47,9 +50,9 @@ export default function Login (){
                     <Input.Password id="password" size="large" className="inputNews" placeholder="Senha" />
                     
                     <p className="textRight">Esqueceu a senha?</p>
-
-                    <Button size="large"className="buttonNews" onClick={()=>{Login()}}>Login</Button>
-
+                    <Link to="/homePartners">
+                        <Button size="large"className="buttonNews" onClick={()=>{Login()}}>Login</Button>
+                    </Link>
                     <p className="textCenter">ou continue com:</p>
 
                     <div className="treeImg">
