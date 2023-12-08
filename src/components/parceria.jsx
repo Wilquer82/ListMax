@@ -14,7 +14,7 @@ export default function Parceria() {
                         <p><span style={{color:'#B8B2C6'}}>ListMax Partners  / </span><span style={{color:'#1B0746'}}> Minha conta</span></p>
                     
                 </div>
-                <div style={{width:'68%'}}/>
+                <div style={{width:'32vw'}}/>
 
                 
                 <div>

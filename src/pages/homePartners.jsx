@@ -2,13 +2,15 @@ import './homePartners.css';
 import NavBarPartners from '../components/navbarPartner';
 import { useState } from 'react';
 import Parceria from '../components/parceria';
+import Comissoes from '../components/comissoes';
+import Config from '../components/configuracoes';
 
 
 
 export default function HomePartners() {
 
     const [selectedTab, setSelectedTab] = useState('Parceria');
-   
+
     return (
         <div className="MainPartners">
             <NavBarPartners />
@@ -23,7 +25,9 @@ export default function HomePartners() {
                 <p> Configurações</p>
             </div>    
         </div>
-            <Parceria />
+            {selectedTab == 'Parceria' && <Parceria />}
+            {selectedTab == 'Comissões' && <Comissoes />}
+            {selectedTab == 'Configurações' && <Config />}
         </div>
     )
 }
