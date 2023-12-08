@@ -10,6 +10,7 @@ import PartOne from '../assets/partners1.png';
 import PartTwo from '../assets/partners2.png';
 import ButtonVideo from '../assets/Button.png';
 import Video from '../assets/Video.png';
+import { Link } from 'react-router-dom';
 
 
 export default function Partners() {
@@ -53,7 +54,6 @@ export default function Partners() {
                 </div>
                 :
                 <div style={{minHeigh:'100vh', width: '100vw', display: 'flex', flexDirection: 'column'}}>
-                    {/* <div style={{ height: '800px',width:'800px' }}> */}
                         <div style={{display: 'flex', height: '700px', width: '100vw', justifyContent: 'space-evenly'}}>
                             <div className="textContainerR">
                             <img src={LogoP} width="131px" height="134px" alt="Logo List-Max" />
@@ -110,8 +110,7 @@ export default function Partners() {
                             </Button>
                             </Space>
                         </div>
-                    {/* </div> */}
-                    <div className="white">
+                        <div className="white">
                         <div className="Container">
                             <h2 className="About">Sobre o programa</h2>
                             <p className="Text">Na ListMax, sabemos o quanto as parcerias são cruciais para o sucesso em eventos especiais. É por isso que estamos empolgados em apresentar o ListMax Partners, um programa exclusivo que oferece a profissionais do setor de eventos, como cerimoniais, fotógrafos, vídeomakers, buffets e outros, uma maneira de não apenas melhorar a experiência de seus clientes, mas também expandir seus próprios negócios.</p>
@@ -174,12 +173,12 @@ export default function Partners() {
                         </div>
                         <div className="half">
                             <p className="textLight">Na ListMax, acreditamos que cada evento especial merece ser memorável. Junte-se a nós no ListMax Partners e torne-se parte de uma comunidade de profissionais que compartilham a mesma visão. Simplifique a gestão de convidados, recompense seus clientes e expanda seus negócios.</p>
-                            <Button
-                                
-                                className="buttonNews add"
-                            >
+                            <Link to="/homePartners">
+                            <Button className="buttonNews add">
                                 Quero me tornar um parceiro
-                            </Button>                        </div>
+                            </Button>                        
+                            </Link>
+                        </div>
                     </div>
                 </div>
             }

@@ -1,6 +1,6 @@
 import LogoP from '../assets/logotipo-partners.png';
 import './style.css';
-import { Button, Input, Select } from 'antd';
+import { Button } from 'antd';
 import LogoE from '../assets/logoEmpresa.png';
 import { PhoneOutlined, UserOutlined, EnvironmentOutlined, MailOutlined, CreditCardOutlined, UploadOutlined } from '@ant-design/icons';
 

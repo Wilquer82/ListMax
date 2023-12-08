@@ -186,8 +186,8 @@
 .PartnersTitle{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    min-width: 100vw;
+    justify-content: space-between;
+    width: 79vw;
     padding: 3rem 0;
 }
 

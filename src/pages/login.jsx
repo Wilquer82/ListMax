@@ -50,9 +50,7 @@ export default function Login (){
                     <Input.Password id="password" size="large" className="inputNews" placeholder="Senha" />
                     
                     <p className="textRight">Esqueceu a senha?</p>
-                    <Link to="/homePartners">
                         <Button size="large"className="buttonNews" onClick={()=>{Login()}}>Login</Button>
-                    </Link>
                     <p className="textCenter">ou continue com:</p>
 
                     <div className="treeImg">

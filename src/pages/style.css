@@ -415,12 +415,12 @@
 .blue {
     background-color: #310561;
     width: 100vw;
-    height: 1070px;
+    min-height: 1170px;
 }
 
 .logoDivision {
     position: absolute;
-    top: 135vh;
+    top: 150vh;
     left: 10rem
 }
 
@@ -463,7 +463,7 @@
 
 .gift {
     position: absolute;
-    left: 70vh
+    left: 74vh
 }
 
 .gradient {
