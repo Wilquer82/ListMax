@@ -12,11 +12,17 @@ import {
 } from "react-router-dom";
 import './index.css'
 import HomePartners from './pages/homePartners.jsx';
+import HomeUsers from './pages/homeUsers.jsx';
+
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/homeUsers",
+    element: <HomeUsers />,
   },
   {
     path: "/test",

@@ -7,6 +7,7 @@ import Logo from '../assets/logo2.png';
 import { Link } from "react-router-dom";
 import BackGround from "../components/backGround";
 import './style.css';
+import HomeUsers from './homeUsers';
 
 
 
@@ -50,7 +51,9 @@ export default function Login (){
                     <Input.Password id="password" size="large" className="inputNews" placeholder="Senha" />
                     
                     <p className="textRight">Esqueceu a senha?</p>
-                        <Button size="large"className="buttonNews" onClick={()=>{Login()}}>Login</Button>
+                        <Link to="/HomeUsers">
+                            <Button size="large"className="buttonNews" onClick={()=>{Login()}}>Login</Button>
+                        </Link>
                     <p className="textCenter">ou continue com:</p>
 
                     <div className="treeImg">

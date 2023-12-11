@@ -13,7 +13,7 @@ export default function HomePartners() {
 
     return (
         <div className="MainPartners">
-            <NavBarPartners />
+            <NavBarPartners Local = {"Partners"}/>
             <div className="TabList">
             <div className={`Tab ${selectedTab === 'Parceria' ? 'active' : ''}`} onClick={() => setSelectedTab('Parceria')}>
                 <p>Parceria</p>

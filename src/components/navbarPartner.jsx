@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import Choice from '../assets/navChoice.png';
 import UserCard from './user';
 
-export default function NavBarPartners() {
+export default function NavBarPartners({ Local }) {
+    console.log(Local)
     return (
         <>
             <nav className="navbarPartner">
@@ -38,12 +39,13 @@ export default function NavBarPartners() {
                         Contato
                     </p>
                     {/* <Link to="/manut"> */}
+                    { Local == "Partners" &&
                     <div className="nav-item">
                         <img src={Choice} alt="PartnersHome" width="100px" className="choiceImg" />
                         <p className="nav-item part">
                             ListMax Partners
                         </p>
-                    </div>
+                    </div>}
                 </div>
                 <div className='nav-item'>
                     <UserCard />
