@@ -22,20 +22,21 @@ export default function Config() {
                     <img src={LogoP} alt="Logo ListMax" width="140px" />
                 </div>
             </div>
-            <div className="squareE">
-                <div className="centerIMG">
-                    <img style={{ position: 'absolute', zIndex: '1' }} src={LogoE} alt="LogoEmpresa" />
-                    <p style={{ color: 'black', position: 'absolute', zIndex: '4' }}>LOGOTIPO DA EMPRESA</p>
+            <div className="square">
+                    <div style={{width:"39vw", display:"flex", alignItems: "center", justifyContent:"center"}}>
+                    <div className="centerIMG">
+                        <img src={LogoE} alt="LogoEmpresa" />
+                        <p style={{ color: 'black', position: 'absolute', zIndex: '4' }}>LOGOTIPO DA EMPRESA</p>
+                    </div>
+                    <div className="data">
+                        <p style={{ width: "50%" }} className="squareTitle">Nome da Empresa</p>
+                        <p style={{ color: "#BFBFBF" }}><UserOutlined />  Nome Partner</p>
+                        <p style={{ color: "#BFBFBF" }}><EnvironmentOutlined /> Localidade</p>
+                        <p style={{ color: "#BFBFBF" }}><MailOutlined />  E-Mail</p>
+                        <p style={{ color: "#BFBFBF" }}><PhoneOutlined />  Telefone</p>
+                        <p style={{ color: "#BFBFBF" }}><CreditCardOutlined /> Conta bancária</p>
+                    </div>
                 </div>
-                <div className="data">
-                    <p style={{ width: "50%" }} className="squareTitle">Nome da Empresa</p>
-                    <p style={{ color: "#BFBFBF" }}><UserOutlined />  Nome Partner</p>
-                    <p style={{ color: "#BFBFBF" }}><EnvironmentOutlined /> Localidade</p>
-                    <p style={{ color: "#BFBFBF" }}><MailOutlined />  E-Mail</p>
-                    <p style={{ color: "#BFBFBF" }}><PhoneOutlined />  Telefone</p>
-                    <p style={{ color: "#BFBFBF" }}><CreditCardOutlined /> Conta bancária</p>
-                </div>
-
             </div>
             <div className="squareE">
                 <p style={{ width: "100%", borderBottom: "1px solid #BFBFBF", height: "2.5rem" }} className="squareTitle">Informações da Conta</p>
