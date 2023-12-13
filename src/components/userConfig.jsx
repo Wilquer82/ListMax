@@ -1,10 +1,7 @@
-import LogoP from '../assets/logotipo-partners.png';
 import './style.css';
 import { Button, Switch, Checkbox } from 'antd';
 import LogoE from '../assets/logoEmpresa.png';
-import { PhoneOutlined, UserOutlined, EnvironmentOutlined, MailOutlined, CreditCardOutlined, UploadOutlined, ExclamationCircleOutlined } from '@ant-design/icons';
-
-
+import { PhoneOutlined, UserOutlined, EnvironmentOutlined, MailOutlined, ExclamationCircleOutlined } from '@ant-design/icons';
 
 
 export default function UserConfig() {
@@ -23,10 +20,10 @@ export default function UserConfig() {
 
             </div>
             <div className="square">
-                <div style={{width:"39vw"}}>
+                <div style={{width:"39vw", display:"flex", alignItems: "center", justifyContent:"center"}}>
                     <div className="centerIMG">
-                        <img style={{ position: 'absolute', zIndex: '1' }} src={LogoE} alt="LogoEmpresa" />
-                        <p style={{ color: 'black', position: 'absolute', zIndex: '4' }}></p>
+                        <img src={LogoE} alt="LogoEmpresa" height={"200px"}/>
+                        {/* <p style={{ color: 'black', position: 'absolute', zIndex: '4' }}></p> */}
                     </div>
                     <div className="data">
                         <p style={{ color: "#BFBFBF" }}><UserOutlined />  Nome</p>
@@ -36,7 +33,15 @@ export default function UserConfig() {
                     </div>
                 </div>                
                 <div style={{ width:"39vw", display: "flex", alignItems:"flex-start", justifyContent:"flex-end"}}>
-                    <Button  size="large" style={{ height: "3rem", width: "6rem", backgroundColor: "#6D0AD7", color: "white"}}>Editar</Button>
+                {/* {!edit &&
+                    <Button  
+                        size="large" 
+                        style={{ height: "3rem", width: "6rem", backgroundColor: "#6D0AD7", color: "white"}} 
+                        onClick={()=>{}}
+                    >
+                        Editar
+                    </Button>
+                } */}
                 </div> 
             </div>
             <div className="squareE">

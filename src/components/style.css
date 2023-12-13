@@ -90,26 +90,36 @@
 }
 
 .buttonMore {
-    width: 10vw;
+    width: 12vw;
+    min-height: 3.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
     background: #90da1f;
+    border: none;
 }
 
 .videoButton {
-    width: 11vw;
+    margin-left: 3rem;
+    width: 12vw;
+    min-height: 3.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     font-style: normal;
     font-weight: 700;
-    line-height: 120%;
-    background: transparent;
     border: none;
     color: #90da1f;
-    box-shadow: 0px 12px 30px 0px rgba(24, 92, 255, 0.18);
+    font-family: "Manrope";
+    font-size: 16px;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.24px;
+    cursor: pointer;
+}
+
+.videoButton:hover{
+    font-weight: 800;
 }
 
 /* /////////////////////////  NAVBARPARTNER */
@@ -211,7 +221,7 @@
     border: 1px solid var(--colors-azul-escuro-light-active, #B8B2C6);
     background: var(--colors-branco-normal, #FEFEFE);
     box-shadow: 0px 8px 20px 0px rgba(184, 178, 198, 0.50);
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     padding: 3rem;
 }
 
@@ -231,6 +241,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: 24px; /* 150% */
+    height: 3rem;
 }
 
 .cupom{
@@ -357,6 +368,7 @@
     justify-content: space-around;
     width: 221px;
     height: 105px;
+    border-radius: 6px;
     flex-shrink: 0;
     border: 1px dashed #6D0AD7;
     margin: 1rem;
@@ -506,9 +518,9 @@ letter-spacing: -0.14px;
 }
 
 .centerIMG{
-    margin-top: 6rem;
-    margin-left: 6rem;
-    position: absolute;
+    /* margin-top: 6rem;
+    margin-left: 6rem; */
+    /* position: absolute; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -522,7 +534,7 @@ letter-spacing: -0.14px;
     text-align: left;
     height: 25vh;
     width: 50vw;
-    margin-left: 13rem;
+    margin-left: 3rem;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -531,13 +543,18 @@ letter-spacing: -0.14px;
 }
 
 .Input{
-    background-color: #E8E6ED;
+    background-color: #e8e6ed;
     border: none;
     border-collapse:collapse ;
     border-radius: 9px;
     height: 3rem;
     padding-left: 1rem;
     color: black;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-input-affix-wrapper >input.ant-input {
+    background-color: #e8e6ed;
+
 }
 
 .buttonP{

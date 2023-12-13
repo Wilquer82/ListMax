@@ -45,15 +45,15 @@
     display: flex;
     width: 660px;
     justify-content: flex-start;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
 }
 
 .MainText {
     font-size: 36px;
     font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: -1.08px;
+    font-weight: 400;
+    line-height: 43px; /* 119.444% */
+    letter-spacing: -0.18px;
 }
 
 .G {
@@ -173,6 +173,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
+    border: none;
 }
 
 .subTitle {
@@ -320,21 +321,22 @@
 /* ////////////////////////////////////////// */
 
 .flexPart {
-    margin-top: 8rem;
-    margin-left: 30vw;
+    margin-top: 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 600px;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
 }
 
 .textContainerPart {
     margin-left: 3rem;
-    ;
+    line-height: 1rem;
+   
 }
 
 .threeFives {
-    margin-top: 5rem;
+    margin-top: 2rem;
     margin-left: 20vw;
     display: flex;
     align-items: center;
@@ -351,7 +353,7 @@
     display: flex;
     width: 900px;
     margin-left: 20vw;
-    margin-top: 3rem;
+    margin-top: 2rem;
     justify-content: center;
     align-items: center;
 }

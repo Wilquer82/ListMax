@@ -1,6 +1,6 @@
 import { Button, Space } from 'antd';
 import './style.css';
-import { PlayCircleOutlined } from '@ant-design/icons';
+import { PlayCircleFilled } from '@ant-design/icons';
 
 
 
@@ -13,13 +13,7 @@ export default function TwoButtons() {
             >
                 Saiba mais
             </Button>
-            <Button
-                size="large"
-                className="videoButton"
-                icon={<PlayCircleOutlined />}
-            >
-                Assistir video
-            </Button>
+            <p className='videoButton'><PlayCircleFilled style={{fontSize:'2rem', marginRight:'.5rem'}}/> Assistir video </p>
         </Space>
     )
 }

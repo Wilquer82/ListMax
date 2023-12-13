@@ -33,12 +33,13 @@ export default function Partners() {
             {!register ?
                 <div className="Main column">
                     <div className="flexPart">
-                        <img src={LogoP} className="logoPart" alt="Logo List-Max Partners" width="150px" />
+                        <img src={LogoP} className="logoPart" alt="Logo List-Max Partners" width="130px" />
                         <div className="textContainerPart">
-                            <div className="lineContainer">
+                            <div className="lineContainer" >
                                 <h1 className="MainText">Busque</h1><span className="span"></span><h1 className="G">fornecedores</h1>
                             </div>
-                            <div className="lineContainer">
+
+                            <div className="lineContainer" >
                                 <h1 className="MainText">para seu evento   </h1>
                             </div>
                         </div>
@@ -53,7 +54,7 @@ export default function Partners() {
                     </div>
                 </div>
                 :
-                <div style={{minHeigh:'100vh', width: '100vw', display: 'flex', flexDirection: 'column'}}>
+                <div style={{minHeigh:'100vh', width: '100vw', display: 'flex', flexDirection: 'column', overflowY: 'hidden'}}>
                         <div style={{display: 'flex', height: '700px', width: '100vw', justifyContent: 'space-evenly'}}>
                             <div className="textContainerR">
                             <img src={LogoP} width="131px" height="134px" alt="Logo List-Max" />
