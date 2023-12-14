@@ -1,11 +1,12 @@
 import './style.css';
 import Logo from '../assets/Logo.png';
 import { Link } from 'react-router-dom';
-import Choice from '../assets/navChoice.png';
 import UserCard from './user';
+import { useState } from 'react';
 
 export default function NavBarPartners({ Local }) {
-    console.log(Local)
+    const [myEvents, setMyEvents] = useState(false);
+
     return (
         <>
             <nav className="navbarPartner">
@@ -14,45 +15,43 @@ export default function NavBarPartners({ Local }) {
                         <img src={Logo} alt="Logo ListMax" width="153.398px" height="40px" />
                     </Link>
                     <Link to='/Test'>
-                        <p className="nav-item">
+                        <p className="nav-item" style={{justifyContent:"center"}}>
                             Como Funciona
                         </p>
                     </Link>
-                    <p className="nav-item">
+                    <p className="nav-item" style={{justifyContent:"center"}}>
                         Recursos
                     </p>
-                    <p className="nav-item">
+                    <p className="nav-item" style={{justifyContent:"center"}}>
                         Preços
                     </p>
                     <Link to="/partners">
-                        <p className="nav-item">
+                        <p className="nav-item" style={{justifyContent:"center"}}>
                             Parceiros
                         </p>
                     </Link>
                     <Link to="/News">
-                        <p className="nav-item">
+                        <p className="nav-item" style={{justifyContent:"center"}}>
                             Blog
                         </p>
                     </Link>
 
-                    <p className="nav-item">
+                    <p className="nav-item" style={{justifyContent:"center"}}>
                         Contato
                     </p>
-                    {/* <Link to="/manut"> */}
                     { Local == "Partners" &&
-                    <div className="nav-item">
-                        <img src={Choice} alt="PartnersHome" width="100px" className="choiceImg" />
-                        <p className="nav-item part">
+                        <p style={{justifyContent:"center"}} className="nav-item white-choiced    ">
                             ListMax Partners
                         </p>
-                    </div>}
+                    }
+                    {Local == "Clients" &&
+                        <p style={{width:"12rem", justifyContent:"center"}} className={myEvents ? "nav-item white-choiced" : "nav-item"}
+                            onClick={()=>{setMyEvents((old) => !old)}}>
+                                Meus Eventos
+                        </p>
+                    }
                 </div>
-                <div className='nav-item'>
-                    <UserCard />
-                </div>
-                {/* </Link> */}
-
-
+                <UserCard />
             </nav>
         </>
     )

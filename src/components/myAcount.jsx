@@ -1,4 +1,3 @@
-import LogoP from '../assets/logotipo-partners.png';
 import './style.css';
 import { Button, Switch, Input } from 'antd';
 import LogoE from '../assets/logoEmpresa.png';

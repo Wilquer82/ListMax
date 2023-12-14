@@ -13,7 +13,7 @@ export default function HomeUsers() {
 
     return (
         <div className="MainPartners">
-            <NavBarPartners Local={"Clients "} />
+            <NavBarPartners Local={"Clients"} />
             <div className="TabList">
             <div className={`Tab ${selectedTab === 'Home' ? 'active' : ''}`} onClick={() => setSelectedTab('Home')}>
                 <p>Home</p>
