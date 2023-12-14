@@ -13,7 +13,7 @@ import {
 import './index.css'
 import HomePartners from './pages/homePartners.jsx';
 import HomeUsers from './pages/homeUsers.jsx';
-
+import HomeEvents from './pages/homeEventos.jsx';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +24,12 @@ const router = createBrowserRouter([
     path: "/homeUsers",
     element: <HomeUsers />,
   },
+
+  {
+    path: "/homeEvents",
+    element: <HomeEvents />,
+  },
+
   {
     path: "/test",
     element: <Test />,
