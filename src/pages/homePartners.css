@@ -28,7 +28,7 @@
 .Tab {
     cursor: pointer;
     padding: 0 2rem;
-    font-size: 1rem;
+    font-size: .8rem;
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
@@ -59,4 +59,33 @@
     border-radius: 10px;
     display: flex;
     align-items: center;
+}
+
+.box{
+    background-color: #E8E6ED;
+    width: 20vw;
+    height: 90vh;
+    border: 1px solid #B8B2C6;
+    box-shadow: 0px 8px 20px 0px #B8B2C680;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.pdate{
+    margin-left: .5rem;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1B0746;
+}
+
+.Description{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #6D0AD7;
 }
