@@ -3,6 +3,7 @@ import NavBarPartners from '../components/navbarPartner';
 import { Button } from 'antd';
 import { useState } from 'react';
 import PgEvento from '../components/pgEvento';
+import PgConvite from '../components/pgConvite';
 
 
 
@@ -20,7 +21,7 @@ export default function HomeEvents() {
                     <div className="PartnersTitle">
                         <div>
                             <p className="Title">Meus eventos</p>
-                            <p><span style={{ color: '#B8B2C6' }}>Home /</span><span style={{ color: '#1B0746' }}>Eventos futuros</span></p>
+                            <p><span style={{ color: '#B8B2C6' }}>Home / </span><span style={{ color: '#1B0746' }}>Eventos futuros</span></p>
                         </div>
 
                         <Button className="buttonNews add" style={{ height: "3rem", width: "18rem", backgroundColor: "#6D0AD7", color: "white" }}>
@@ -38,15 +39,39 @@ export default function HomeEvents() {
                     <div style={{ width: "79vw", marginTop: "5rem", marginBottom: "5rem" }} >
                         <div
                             style={{
-                                backgroundColor: "#E8E6ED",
-                                width: "20vw", height: "90vh",
+                                backgroundColor: "#e8e6ed",
+                                width: "25vw", height: "90vh",
                                 border: "1px solid #B8B2C6",
                                 boxShadow: "0px 8px 20px 0px #B8B2C680",
                                 display: "flex",
-                                flexDirection: "column"
+                                flexDirection: "column",
+                                borderRadius: "1rem",    
+                                padding: "1rem 1rem",       
                             }}>
-                            <div style={{ border: "1px solid #B8B2C6", height: "30vh", width: "100%" }}></div>
-                            <div style={{ border: "1px solid #B8B2C6", height: "30vh", width: "100%" }}>
+                            <div style={{  height: "30vh", width: "100%" }}>
+                                <div style={{  height: "90%", width: "95%", backgroundColor:"#D9D9D9", margin: "auto", borderRadius: "9px"}}/>
+                                <p style={{ color: "var(--Colors-Azul-escuro-Normal, #1B0746)", fontSize: "16px", fontWeight: "600", lineHeight: "24px"}}>Nome do evento</p>
+                                
+                            </div>
+
+                            <div style={{  height: "30vh", width: "100%" }}>
+                                <p style={{ }}>Descrição</p>
+                                <p style={{  height: "30vh", width: "100%" }}>Lorem ipsum dolor sit amet,
+                                     consectetur adipiscing elit. 
+                                     In euismod, elit quis mollis dictum, 
+                                     dui felis tristique lectus, eget 
+                                     vestibulum elit erat ac nunc.
+                                      Vestibulum suscipit ullamcorper 
+                                      imperdiet. Lorem ipsum dolor sit 
+                                      amet vestibulum suscipit ullamcorper 
+                                      imperdiet. Lorem ipsum dolor sit amet
+                                       suscipit ullamcorper amet...</p>
+                            </div>
+                            <div style={{ border: "none", top: "48rem" ,position: "absolute", display:"flex",alignItems:"center" , justifyContent:"space-between", width: "25vw" }}>
+                                <div className="circuloE"></div>
+                                <div className="circuloD"></div>
+                            </div>
+                            <div style={{  height: "30vh", width: "100%", borderTop: "3px dashed #6D0AD7" }}>
                                 <Button
                                     className="buttonNews add"
                                     style={{ border: "none", marginLeft: "2rem", height: "2rem", width: "13rem", backgroundColor: "#1B0746", color: "white" }}
@@ -80,6 +105,8 @@ export default function HomeEvents() {
                         </div>
                     </div>
                     {selectedTab == 'Página do Evento' && <PgEvento />}
+                    {selectedTab == 'Convites' && <PgConvite />}
+
                 </div>
             }
         </div>

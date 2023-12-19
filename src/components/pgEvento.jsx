@@ -39,7 +39,11 @@ export default function PgEvento() {
                     className="buttonNews add"
                     style={{ border: "none", marginRight: "7rem", marginBottom: "2rem", height: "3rem", width: "13rem", backgroundColor: "#FF14FF", color: "white" }}
                     icon={<EditOutlined />}
-                    onClick={() => {setModal((old) => !old); setPassOne((old) => !old)}}
+                    onClick={() => {setModal(true); 
+                                    setPassOne(true); 
+                                    setPassTwo(false);
+                                    setPassThree(false);
+                                    setPassFour(false);}}
                 >Editar Informações</Button>
             </div>
             <div style={{ width: "79vw", minHeight: "40vh", display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "space-evenly" }}>
@@ -101,7 +105,7 @@ export default function PgEvento() {
             </div>
             <div style={{ width: "79vw", display: "flex", justifyContent: "space-between", alignItems: "start", marginTop: "2rem", flexDirection: "column" }}>
                 <p className="Description">Descrição</p>
-                <p style={{ margin: "2rem 0", color: "#1B0746" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod,
+                <p style={{ margin: "2rem 0", color: "#1B0746", textAlign: "justify" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod,
                     elit quis mollis dictum, dui felis tristique lectus, eget vestibulum elit erat ac nunc. Vestibulum suscipit ullamcorper
                     imperdiet. Nam sed nisi tortor. Aliquam tempor, nulla at accumsan elementum, turpis nisl mollis neque, vitae porta sapien
                     sem ut diam. In pharetra cursus velit id lobortis. Donec ipsum est, tincidunt at quam a, suscipit interdum massa. Mauris
@@ -122,18 +126,6 @@ export default function PgEvento() {
                     fames ac ante ipsum primis in faucibus. Pellentesque gravida mauris a arcu sodales, sit amet hendrerit leo molestie. Pellentesque
                     vitae libero ligula. Duis consequat convallis tristique.</p>
             </div>
-            {/* {modal && <Modal
-                tamanhoW="70vw"
-                tamanhoH="70vh"
-                title={"Guia rápido de como gerir seu evento aqui na ListMax!"}
-                // img={}
-                set={() => setModal(false)} />} */}
-
-            {/* {newSelect ?
-            <ModalSelect
-              set={() => setNewSelect(false)}
-              setMenu={() => set(false)} />
-            : null} */}
             { modal &&
             <div
                 id="Fundo"
@@ -187,15 +179,16 @@ export default function PgEvento() {
                         }
                         { passTwo &&
                         <>
-                            <p style={{bottom: "13.7rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>2º Passo</p>
+                            <p style={{bottom: "14.7rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>2º Passo</p>
                             <p style={{ color: "#1B0746", fonSize: "20px", fontWeight: "600", lineHeight: "24px", letterSpacing: "-0.02em", }}
                                 >Crie seus convites</p>
                             <p style={{ color: "#1B0746"}}>Na ListMax você pode criar convites diferentes para cada grupo de convidados.</p>
+                            <br/>
                         </>
                         }
                         { passThree &&
                         <>
-                            <p style={{bottom: "13.7rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>3º Passo</p>
+                            <p style={{bottom: "14.7rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>3º Passo</p>
                             <p style={{ color: "#1B0746", fonSize: "20px", fontWeight: "600", lineHeight: "24px", letterSpacing: "-0.02em", }}
                                 >Adicione seus convidados</p>
                             <p style={{ color: "#1B0746"}}>
@@ -205,7 +198,7 @@ export default function PgEvento() {
                         }
                         { passFour &&
                         <>
-                            <p style={{bottom: "13.7rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>4º Passo</p>
+                            <p style={{bottom: "14.7rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>4º Passo</p>
                             <p style={{ color: "#1B0746", fonSize: "20px", fontWeight: "600", lineHeight: "24px", letterSpacing: "-0.02em", }}
                                 >Envie os convites</p>
                             <p style={{ color: "#1B0746"}}>
@@ -228,7 +221,9 @@ export default function PgEvento() {
                                 letterSpacing: "0em",
                                 color: "white",
                                 height:"3rem",
-                                textAlign: "right"
+                                textAlign: "right",
+                                border: "none",
+                                padding: "0 3rem"
                             }}>
                             Próximo passo <RightOutlined />
                         </Button>
@@ -248,7 +243,7 @@ export default function PgEvento() {
                             alignItems: "center",
                             justifyContent: "space-between",
                             padding: "0 3rem",
-                            borderRadius: "10px",
+                            borderRadius: "8px",
                             cursor: "pointer",
                         }}>
                             <p  onClick={() =>  {setPassOne((old) => !old);
@@ -278,7 +273,7 @@ export default function PgEvento() {
                         alignItems: "center",
                         justifyContent: "space-between",
                         padding: "0 3rem",
-                        borderRadius: "10px",
+                        borderRadius: "8px",
                         cursor: "pointer",
                     }}>
                         <p  onClick={() =>  {setPassThree((old) => !old);
@@ -304,7 +299,7 @@ export default function PgEvento() {
                             alignItems: "center",
                             justifyContent: "space-between",
                             padding: "0 3rem",
-                            borderRadius: "10px",
+                            borderRadius: "8px",
                             cursor: "pointer",
                         }}>
                         <p  onClick={() =>  {setPassThree((old) => !old);
@@ -317,60 +312,6 @@ export default function PgEvento() {
                 </div>
             </div>
             }
-            {/* {modal2 && 
-                <div
-                        id="Fundo"
-                        style={{
-                            overflow: "hidden",
-                            zIndex: "10001!important",
-                            minWidth: "101%",
-                            minHeight: "210%",
-                            backdropFilter: "blur(10px)",
-                            backgroundColor: "#181C32CC",
-                            display: "flex",
-                            position: "fixed",
-                            top: "0",
-                            left: "0"
-                        }}
-                        onClick={CloseOutClick}>
-                        <div style={{ width: "70vw", height: "90vh", margin: "5vh 15vw", backgroundColor: "white", borderRadius: ".5rem", display: "flex", flexDirection: "column", position: "absolute", alignItems: "center", justifyContent: "space-evenly" }}>
-                            <Button 
-                                className="close" 
-                                type="primary" 
-                                onClick={() => { setModal(false)}} 
-                                shape="square" 
-                                size="small"
-                                icon={<CloseOutlined />}
-                            />
-        
-                            <p style={{color:"#1B0746", fontSize: "20px", fontWeight: "500", lineHeight: "30px", letterSpacing: "0em", textAlign: "center", marginTop:"3rem"}}>Guia rápido de como gerir seu evento aqui na ListMax!</p>
-                            <div className="centerImg">
-                                <img style={{position: "absolute", zIndex:"4"}} src={ButtonVideo} alt="Merch02"/>
-                                <img src={Video} alt="Imagem do Modal" style={{ width: "90%", height: "auto", margin: "0 3rem" }} />
-                            </div>
-                            <div className="squareModal">
-                                <p style={{bottom: "14.5rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>1º Passo</p>
-                                <p style={{ color: "#1B0746", fonSize: "20px", fontWeight: "600", lineHeight: "24px", letterSpacing: "-0.02em", }}
-                                    >Personalize seu evento</p>
-                                <p style={{ color: "#1B0746"}}>Inclua a imagem que será o banner da página de confirmação de presenças e a edite uma descrição bem bacana!</p>
-                            </div>
-                            <Button 
-                                style={{ 
-                                    background: "linear-gradient(90deg, #FF14FF 0%, #6D0AD7 100%)", 
-                                    width: "35rem", 
-                                    fontSize: "16px",
-                                    fontWeight: "600",
-                                    lineHeight: "19px",
-                                    letterSpacing: "0em",
-                                    color: "white",
-                                    height:"3rem",
-                                    textAlign: "right"
-                                }}>
-                                Próximo passo <RightOutlined />
-                            </Button>
-                        </div>
-                </div>
-            } */}
         </div>
     )
 }

@@ -19,8 +19,8 @@
     justify-content: left;
     width: 100vw;
     height: 5rem;
-    padding: 3rem 0;
-    margin-top: 5rem;
+    padding-top: 2rem;
+    margin-top: 4rem;
     padding-left: 10rem;
     color: #1B0746;
 }
@@ -43,7 +43,6 @@
 
 .MainEvents{
     overflow-x: hidden;
-    margin-top: 5rem;
     background-color: white;
     min-height: 100vh;
     width: 100vw;
@@ -88,4 +87,35 @@
     letter-spacing: -0.02em;
     text-align: left;
     color: #6D0AD7;
+}
+
+.circuloE {
+    /* float: left; */
+    width: 25px;
+    height: 50px;
+    shape-outside: circle(50% at 30%);
+    clip-path: circle(50% at 0%);
+    background: white;
+    border-right: 1px solid #B8B2C6;
+    fill: var(--Colors-Azul-escuro-Light, #E8E6ED);
+    stroke-width: 1px;
+    stroke: var(--colors-azul-escuro-light-active, #B8B2C6);
+    box-shadow: 0px 2px 5px 0px #B8B2C680;
+    border: none;
+
+}
+
+.circuloD {
+    /* float: right; */
+    /* margin-left: auto; */
+    width: 25px;
+    height: 50px;
+    shape-outside: circle(50% at 30%);
+    clip-path: circle(50% at 100%);
+    background: white;
+    fill: var(--Colors-Azul-escuro-Light, #E8E6ED);
+    stroke-width: 1px;
+    border: none;
+    stroke: var(--colors-azul-escuro-light-active, #B8B2C6);
+
 }
