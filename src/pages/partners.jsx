@@ -68,8 +68,8 @@ export default function Partners() {
                                 <p>Seja um ListMax Partner e ganhe acesso a benefícios exclusivos.</p>
                             </div>
                             <TwoButtons />
-
                             </div>
+
                             <Space direction="vertical" className="loginInputsR">
                             <Space direction="horizontal" className="nameLast">
                                 <Input size="large" type="text" placeholder="Nome" />
@@ -77,6 +77,7 @@ export default function Partners() {
                             </Space>
                             <Input size="large" className="inputNews" type="phone" placeholder="Celular" />
                             <Input size="large" className="inputNews" type="text" placeholder="Empresa" />
+
                             <Select
                                 showSearch
                                 className="inputNews"

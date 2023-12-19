@@ -141,6 +141,7 @@
 .nameLast {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .treeImg {
@@ -566,4 +567,8 @@
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-input-affix-wrapper >input.ant-input {
+    background-color: #ffffff;
 }

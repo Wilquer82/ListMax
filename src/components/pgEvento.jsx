@@ -18,7 +18,6 @@ export default function PgEvento() {
         }
     }
 
-
     const twoColors = {
         '0%': '#FF14FF',
         '100%': '#6D0AD7',
@@ -29,8 +28,6 @@ export default function PgEvento() {
     const [passTwo, setPassTwo] = useState(false);
     const [passThree, setPassThree] = useState(false);
     const [passFour, setPassFour] = useState(false);
-
-
 
     return (
         <div className="ParceriaMain">
@@ -82,7 +79,6 @@ export default function PgEvento() {
                         <div style={{ width: "10%", display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "2rem" }}>
                             <TeamOutlined className="pdate" /><p className="pdate">0000</p>
                         </div>
-
                     </div>
                 </div>
 
@@ -105,7 +101,8 @@ export default function PgEvento() {
             </div>
             <div style={{ width: "79vw", display: "flex", justifyContent: "space-between", alignItems: "start", marginTop: "2rem", flexDirection: "column" }}>
                 <p className="Description">Descrição</p>
-                <p style={{ margin: "2rem 0", color: "#1B0746", textAlign: "justify" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod,
+                <p style={{ margin: "2rem 0", color: "#1B0746", textAlign: "justify" }}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod,
                     elit quis mollis dictum, dui felis tristique lectus, eget vestibulum elit erat ac nunc. Vestibulum suscipit ullamcorper
                     imperdiet. Nam sed nisi tortor. Aliquam tempor, nulla at accumsan elementum, turpis nisl mollis neque, vitae porta sapien
                     sem ut diam. In pharetra cursus velit id lobortis. Donec ipsum est, tincidunt at quam a, suscipit interdum massa. Mauris

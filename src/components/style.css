@@ -241,8 +241,9 @@
     align-items: center;
     min-height: 10vh;
     overflow-x: hidden;
-
 }
+
+
 
 .PartnersTitle{
     display: flex;
@@ -603,7 +604,6 @@ letter-spacing: -0.14px;
 
 :where(.css-dev-only-do-not-override-2q8sxy).ant-input-affix-wrapper >input.ant-input {
     background-color: #e8e6ed;
-
 }
 
 .buttonP{
