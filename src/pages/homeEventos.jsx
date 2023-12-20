@@ -4,7 +4,6 @@ import { Button, Progress } from 'antd';
 import { useState } from 'react';
 import PgEvento from '../components/pgEvento';
 import PgConvite from '../components/pgConvite';
-import Division from '../assets/division-circle.png';
 import Duplicate from '../assets/copy.svg';
 
 
@@ -76,10 +75,7 @@ export default function HomeEvents() {
                                     imperdiet. Lorem ipsum dolor sit amet
                                     suscipit ullamcorper amet...</p>
                             </div>
-                            <div style={{ border: "none", display:"flex",alignItems:"center" , justifyContent:"center" }}>
-                                {/* <div className="circuloE"></div>
-                                <div className="circuloD"></div> */}
-                                <img src={Division} width={"308px"} height={"40px"} alt="divisão"/>
+                            <div style={{ border: '1px dashed var(--Colors-Roxo-Normal, #6D0AD7)', display:"flex",alignItems:"center" , justifyContent:"center"  }}>
                             </div>
                             <div style={{padding:"1rem 1rem", width: "100%", height:"30vh", display: "flex", justifyContent: "space-between", alignItems: "base-line", flexDirection:"column"}}>
                                 <div style={{display: "flex", justifyContent:"space-between"}}>
@@ -99,8 +95,10 @@ export default function HomeEvents() {
                                 <div>
                                     <div style={{ width: "100%", height:"100%", display: "flex", justifyContent: "space-between", alignItems: "base-line", flexDirection:"column"}}>
                                         <p className="ticketSub">Convidados</p>
-                                        <div style={{ width: "100%", display: "flex", justifyContent: "space-evenly", alignItems:"center"}}>
-                                            <p className="ticketCont" style={{marginBottom:".5rem", marginRight:"2rem", marginLeft:"1rem"}}>000/000</p>
+                                        <div style={{ width: "100%", display: "flex", justifyContent: "space-between", alignItems:"center"}}>
+                                            <p className="ticketCont" 
+                                            style={{marginBottom:".5rem", marginRight:"1rem"}}
+                                            >000/000</p>
                                             <Progress percent={20} strokeColor={twoColors} showInfo={false} size={[200, 20]} trailColor="#B8B2C6" />
                                         </div>
                                     </div>

@@ -9,7 +9,6 @@
     background-color: #E8E6ED;
     min-height: 100vh;
     overflow-x: hidden;
-
 }
 
 .MainEvents{
@@ -30,7 +29,6 @@
     width: 100vw;
     height: 5rem;
     padding-top: 2rem;
-    margin-top: 4rem;
     padding-left: 10rem;
     color: #1B0746;
 }
@@ -90,13 +88,12 @@
     color: #1B0746;
 }
 
-.Description{
+.SubForm{
     font-size: 20px;
     font-weight: 600;
     line-height: 24px;
     letter-spacing: -0.02em;
-    text-align: left;
-    color: #6D0AD7;
+    color: #1B0746;
 }
 
 .circuloE {
