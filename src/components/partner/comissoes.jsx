@@ -1,5 +1,5 @@
-import LogoP from '../assets/logotipo-partners.png';
-import './style.css';
+import LogoP from '../../assets/logotipo-partners.png';
+import '../style.css';
 import { Button } from 'antd';
 
 

@@ -1,9 +1,9 @@
 import './homePartners.css';
 import NavBarPartners from '../components/navbarPartner';
 import { useState } from 'react';
-import Parceria from '../components/parceria';
-import Comissoes from '../components/comissoes';
-import Config from '../components/configuracoes';
+import Parceria from '../components/partner/parceria';
+import Comissoes from '../components/partner/comissoes';
+import Config from '../components/partner/configuracoes';
 
 
 

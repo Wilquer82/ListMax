@@ -1,14 +1,14 @@
 
 import { Button, Progress } from 'antd'
 import { LeftOutlined, RightOutlined, CloseOutlined, EditOutlined, CalendarOutlined, ClockCircleOutlined, TeamOutlined, EnvironmentOutlined } from '@ant-design/icons';
-import Gmaps from '../assets/icons8-google-maps-novo 1.png';
-import Waze from '../assets/wase.png';
+import Gmaps from '../../assets/icons8-google-maps-novo 1.png' ;
+import Waze from '../../assets/wase.png';
 import { useState } from 'react';
-import Video from '../assets/Video.png';
-import ButtonVideo from '../assets/Button.png';
-import Video2 from '../assets/pass2.png';
-import Video3 from '../assets/pass3.png';
-import Video4 from '../assets/pass4.png';
+import Video from '../../assets/Video.png';
+import ButtonVideo from '../../assets/Button.png';
+import Video2 from '../../assets/pass2.png';
+import Video3 from '../../assets/pass3.png';
+import Video4 from '../../assets/pass4.png';
 
 export default function PgEvento() {
 

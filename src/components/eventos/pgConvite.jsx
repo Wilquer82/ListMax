@@ -2,7 +2,7 @@
 import { Button, Progress, Space, Input } from "antd"
 import { FormOutlined, ExclamationCircleOutlined, EllipsisOutlined, DeleteOutlined, CloseOutlined } from "@ant-design/icons";
 import { useState } from "react";
-import  Upload from "../assets/upload-square.svg"
+import  Upload from "../../assets/upload-square.svg"
 
 
 export default function PgConvite() {

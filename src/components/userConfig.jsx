@@ -68,10 +68,10 @@ export default function UserConfig() {
                         <p style={{color: "#595959"}}>Receber todos</p>
                     </div>
                 </div>
-                        <div style={{display: "flex", flexDirection:"column", justifyContent:"space-between", fontSize: "14px",marginTop:"2rem" ,width:"29vw", minHeight:"10vh"}}>
-                        <Checkbox onChange={onChange}>Assinar boletins informativos</Checkbox>
-                        <Checkbox onChange={onChange}>Assinar boletins sobre atualizações especiais</Checkbox>
-                    </div>                
+                <div style={{display: "flex", flexDirection:"column", justifyContent:"space-between", fontSize: "14px",marginTop:"2rem" ,width:"29vw", minHeight:"10vh"}}>
+                    <Checkbox onChange={onChange}>Assinar boletins informativos</Checkbox>
+                    <Checkbox onChange={onChange}>Assinar boletins sobre atualizações especiais</Checkbox>
+                </div>                
             </div>
             <div className="squareE">
                 <p style={{ width: "100%", borderBottom: "1px solid #BFBFBF", height: "2.5rem" }} className="squareTitle">Dados e Privacidade</p>

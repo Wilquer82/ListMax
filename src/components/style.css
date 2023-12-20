@@ -285,8 +285,6 @@
     overflow-x: hidden;
 }
 
-
-
 .PartnersTitle{
     display: flex;
     align-items: center;
@@ -334,6 +332,14 @@
     font-weight: 500;
     line-height: 24px; /* 150% */
     height: 3rem;
+}
+
+.SubTitle{
+    color: var(--colors-branco-dark-active, #727272);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
 }
 
 .cupom{
@@ -681,4 +687,27 @@ letter-spacing: -0.14px;
     width: 25vw; 
     height: 90vh;
     border-radius: 1rem;
+}
+
+.selectNum{
+    background-color: #E8E6ED;
+    width: 4rem;
+    height: 2.5rem;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    background-color: #E8E6ED;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-select {
+    border-radius: 15px;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-popover .ant-popover-inner {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0 0;
+    width: 0;
+    height: 0;
 }

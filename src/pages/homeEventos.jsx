@@ -2,9 +2,13 @@ import './homePartners.css';
 import NavBarPartners from '../components/navbarPartner';
 import { Button, Progress } from 'antd';
 import { useState } from 'react';
-import PgEvento from '../components/pgEvento';
-import PgConvite from '../components/pgConvite';
+import PgEvento from '../components/eventos/pgEvento';
+import PgConvite from '../components/eventos/pgConvite';
 import Duplicate from '../assets/copy.svg';
+import PgConvidados from '../components/eventos/pgConvidados';
+import PgEstatiscas from '../components/eventos/pgEstatis';
+import PgRecep from '../components/eventos/pgRecep';
+import PgLook from '../components/eventos/pgLook';
 
 
 export default function HomeEvents() {
@@ -144,6 +148,10 @@ export default function HomeEvents() {
                     </div>
                     {selectedTab == 'Página do Evento' && <PgEvento />}
                     {selectedTab == 'Convites' && <PgConvite />}
+                    {selectedTab == 'Gerenciar Convidados' && <PgConvidados />}
+                    {selectedTab == 'Estatíticas' && <PgEstatiscas />}
+                    {selectedTab == 'Recepção' && <PgRecep />}
+                    {selectedTab == 'LookYou' && <PgLook />}
 
                 </div>
             }
