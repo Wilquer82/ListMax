@@ -33,6 +33,15 @@
     color: #1B0746;
 }
 
+.TabListConv{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    /* width: 100%; */
+    color: #1B0746;
+}
+
 .Tab {
     cursor: pointer;
     padding: 0 2rem;
@@ -141,4 +150,53 @@
     font-style: normal; 
     font-weight: 600; 
     line-height: 16px;
+}
+
+.ticketConv{
+    color: #BFBFBF;
+    font-size: 12px; 
+    font-style: normal; 
+    font-weight: 600; 
+    line-height: 16px;
+}
+
+.alphabetic{
+    background-color: white;
+    color: #6D0AD7;
+    padding: .3rem;
+    border: 1px solid #6D0AD7;
+    border-radius: .5rem;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stickers{
+    color: #6D0AD7;
+    padding: .3rem;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.alphabetic:hover, .alphabetic.active {
+    color: white;
+    background-color: #6D0AD7;
+}
+
+.convText {
+    color: var(--colors-azul-escuro-light-active, #B8B2C6);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px; /* 150% */
+    letter-spacing: -0.14px;
 }

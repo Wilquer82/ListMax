@@ -184,125 +184,125 @@ export default function PgConvite() {
                     </div>
                 </div>
                 <div style={{display:"flex", alignItems:"center", justifyContent:"space-between", width: "79vw", marginBottom: "3rem"}}>
-                            <div style={{
-                                border: "1px solid #B8B2C6",
-                                width:"53vw",
+                    <div style={{
+                        border: "1px solid #B8B2C6",
+                        width:"53vw",
+                        height: "90vh",
+                        boxShadow: "0px 8px 20px 0px #B8B2C680",
+                        background: "#fefefe",
+                        borderRadius:"1rem",
+                        display:"flex", 
+                        flexDirection: "column", 
+                        alignItems:"start", 
+                        justifyContent:"flex-start",
+                        padding: "2rem 0"
+                        }}>
+
+                        <p style={{ padding:"0 2rem"}} className="SubForm">Crie e gerencie modelos de convites para serem enviados aos convidados</p>
+                        <div style={{  display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"flex-start", height: "4rem", width:"100%"}}>
+                            <div  style={{ padding:"1rem 2rem", display:"flex", alignItems:"center", height:"6rem", width:"100%", background: "#F0E7FB", marginTop: "1rem"}}>
+                                    <p style={{ fontSize: "16px"}}className="textBold">MODELO</p>
+                            </div>
+                            <div style={{ padding:"1rem 2rem", display:"flex", alignItems:"center", justifyContent: "space-between" ,height: "4rem", width:"100%", borderTop: "1px solid #B8B2C6", borderBottom: "1px solid #B8B2C6"}}>
+                                <p style={{ fontSize: "16px"}} className="text">Modelo de convite para familiares</p> 
+                                <Button  
+                                    style={{ display:"flex", alignItems:"center", justifyContent:"center",background: "#F0E7FB", border:"none"}} 
+                                    icon={<EllipsisOutlined style={{fontWeight:"bold"}}/>}
+                                    onClick={() =>  setSeeOptions((old) => !old)}/>
+                                
+                                    {seeOptions && 
+                                    <div className="miniMenuConv" id="ConvMenu" onClick={CloseOutClick}>
+                                        <p className="miniItemConv">Editar <FormOutlined /></p>
+                                        <p className="miniItemConv Ex" onClick={() => { setModalEx(true)}} >Excluir <DeleteOutlined /></p>   
+                                    </div>}
+
+                                    {modalEx &&
+                                        <div
+                                        id="Fundo"
+                                        style={{
+                                            overflow: "hidden",
+                                            zIndex: "10001!important",
+                                            width: "100vw",
+                                            height: "100vh",
+                                            backdropFilter: "blur(10px)",
+                                            backgroundColor: "#181C32CC",
+                                            display: "flex",
+                                            position: "fixed",
+                                            top: "0",
+                                            left: "0",
+                                            alignItems:"center",
+                                            justifyContent:"center",
+                                        }}
+                                        onClick={CloseOutClickEx}>
+                                            <div style={{ width: "60vw", height: "40vh", margin: "0 0 auto", backgroundColor: "white", borderRadius: ".5rem", display: "flex", flexDirection: "column", position: "absolute", zIndex: "10", alignItems: "center", justifyContent: "space-evenly" }}>
+                                                <Button 
+                                                    className="close" 
+                                                    type="primary" 
+                                                    onClick={() => { setModalEx(false)}} 
+                                                    shape="square" 
+                                                    size="small"
+                                                    icon={<CloseOutlined />}
+                                                />
+
+                                                <p className="squareTitle">Tem certeza que deseja excluir esse modelo de convite?</p>
+                                                <Button style={{fontWeight: "bold", width: "18rem" , backgroundColor:"#EA4335", height:"3rem"}}type="primary" danger> Excluir </Button>
+
+                                            </div>
+                                        </div>
+
+                                    }
+                            </div>
+
+                        </div>
+                    </div>
+                    <div style={{
+                        display:"flex", 
+                        alignItems:"center", 
+                        justifyContent:"center",
+                        }}>
+                        {!modalEx && <div className="boxBlur"/>}
+                        <div
+                            style={{
+                                backgroundColor: "white",
+                                width: "25vw", 
                                 height: "90vh",
+                                border: "1px solid #B8B2C6",
                                 boxShadow: "0px 8px 20px 0px #B8B2C680",
-                                background: "#fefefe",
-                                borderRadius:"1rem",
-                                display:"flex", 
-                                flexDirection: "column", 
-                                alignItems:"start", 
-                                justifyContent:"flex-start",
-                                padding: "2rem 0"
-                                }}>
-
-                                <p style={{ padding:"0 2rem"}} className="SubForm">Crie e gerencie modelos de convites para serem enviados aos convidados</p>
-                                <div style={{  display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"flex-start", height: "4rem", width:"100%"}}>
-                                    <div  style={{ padding:"1rem 2rem", display:"flex", alignItems:"center", height:"6rem", width:"100%", background: "#F0E7FB", marginTop: "1rem"}}>
-                                            <p style={{ fontSize: "16px"}}className="textBold">MODELO</p>
-                                    </div>
-                                    <div style={{ padding:"1rem 2rem", display:"flex", alignItems:"center", justifyContent: "space-between" ,height: "4rem", width:"100%", borderTop: "1px solid #B8B2C6", borderBottom: "1px solid #B8B2C6"}}>
-                                        <p style={{ fontSize: "16px"}} className="text">Modelo de convite para familiares</p> 
-                                        <Button  
-                                            style={{ display:"flex", alignItems:"center", justifyContent:"center",background: "#F0E7FB", border:"none"}} 
-                                            icon={<EllipsisOutlined style={{fontWeight:"bold"}}/>}
-                                            onClick={() =>  setSeeOptions((old) => !old)}/>
-                                        
-                                            {seeOptions && 
-                                            <div className="miniMenuConv" id="ConvMenu" onClick={CloseOutClick}>
-                                                <p className="miniItemConv">Editar <FormOutlined /></p>
-                                                <p className="miniItemConv Ex" onClick={() => { setModalEx(true)}} >Excluir <DeleteOutlined /></p>   
-                                            </div>}
-
-                                            {modalEx &&
-                                                <div
-                                                id="Fundo"
-                                                style={{
-                                                    overflow: "hidden",
-                                                    zIndex: "10001!important",
-                                                    width: "100vw",
-                                                    height: "100vh",
-                                                    backdropFilter: "blur(10px)",
-                                                    backgroundColor: "#181C32CC",
-                                                    display: "flex",
-                                                    position: "fixed",
-                                                    top: "0",
-                                                    left: "0",
-                                                    alignItems:"center",
-                                                    justifyContent:"center",
-                                                }}
-                                                onClick={CloseOutClickEx}>
-                                                    <div style={{ width: "60vw", height: "40vh", margin: "0 0 auto", backgroundColor: "white", borderRadius: ".5rem", display: "flex", flexDirection: "column", position: "absolute", zIndex: "10", alignItems: "center", justifyContent: "space-evenly" }}>
-                                                        <Button 
-                                                            className="close" 
-                                                            type="primary" 
-                                                            onClick={() => { setModalEx(false)}} 
-                                                            shape="square" 
-                                                            size="small"
-                                                            icon={<CloseOutlined />}
-                                                        />
-
-                                                        <p className="squareTitle">Tem certeza que deseja excluir esse modelo de convite?</p>
-                                                        <Button style={{fontWeight: "bold", width: "18rem" , backgroundColor:"#EA4335", height:"3rem"}}type="primary" danger> Excluir </Button>
-
-                                                    </div>
-                                                </div>
-
-                                            }
-                                    </div>
-
+                                display: "flex",
+                                flexDirection: "column",
+                                borderRadius: "1rem",    
+                            }}>
+                            <div style={{ height: "30vh", width: "100%", padding: "1rem 1rem" }}>
+                                <div style={{  height: "90%", width: "95%", backgroundColor:"#D9D9D9", margin: "auto", borderRadius: "9px"}}/>
+                                <p style={{ paddingTop: "1rem", color: "var(--Colors-Azul-escuro-Normal, #1B0746)", fontSize: "16px", fontWeight: "600", lineHeight: "24px"}}>Nome do evento</p>
+                            </div>
+                            <div style={{ height: "30vh", width: "70%", padding: "1rem 1rem", display: "flex", justifyContent:"space-evenly", flexDirection:"column" }}>
+                                <div style={{display: "flex", justifyContent:"space-between"}}>
+                                    <span><p className="ticketSub"> Data</p>
+                                    <p className="ticketCont">Nov 05 2024</p></span>
+                                    <span><p className="ticketSub"> Hora</p>
+                                    <p className="ticketCont">00:00</p></span>
+                                
+                                </div>
+                                <div>
+                                    <span>
+                                        <p className="ticketSub"> Endereço</p>
+                                        <p className="ticketCont">Endereço completo</p>
+                                    </span>
+                                </div>
+                                <div>
+                                    <span>
+                                        <p className="ticketSub"> Convidado</p>
+                                        <p className="ticketCont">Nome e Sobrenome</p>
+                                    </span>
                                 </div>
                             </div>
-                            <div style={{
-                                display:"flex", 
-                                alignItems:"center", 
-                                justifyContent:"center",
-                                }}>
-                                {!modalEx && <div className="boxBlur"/>}
-                                <div
-                                    style={{
-                                        backgroundColor: "white",
-                                        width: "25vw", 
-                                        height: "90vh",
-                                        border: "1px solid #B8B2C6",
-                                        boxShadow: "0px 8px 20px 0px #B8B2C680",
-                                        display: "flex",
-                                        flexDirection: "column",
-                                        borderRadius: "1rem",    
-                                    }}>
-                                    <div style={{ height: "30vh", width: "100%", padding: "1rem 1rem" }}>
-                                        <div style={{  height: "90%", width: "95%", backgroundColor:"#D9D9D9", margin: "auto", borderRadius: "9px"}}/>
-                                        <p style={{ paddingTop: "1rem", color: "var(--Colors-Azul-escuro-Normal, #1B0746)", fontSize: "16px", fontWeight: "600", lineHeight: "24px"}}>Nome do evento</p>
-                                    </div>
-                                    <div style={{ height: "30vh", width: "70%", padding: "1rem 1rem", display: "flex", justifyContent:"space-evenly", flexDirection:"column" }}>
-                                        <div style={{display: "flex", justifyContent:"space-between"}}>
-                                            <span><p className="ticketSub"> Data</p>
-                                            <p className="ticketCont">Nov 05 2024</p></span>
-                                            <span><p className="ticketSub"> Hora</p>
-                                            <p className="ticketCont">00:00</p></span>
-                                        
-                                        </div>
-                                        <div>
-                                            <span>
-                                                <p className="ticketSub"> Endereço</p>
-                                                <p className="ticketCont">Endereço completo</p>
-                                            </span>
-                                        </div>
-                                        <div>
-                                            <span>
-                                                <p className="ticketSub"> Convidado</p>
-                                                <p className="ticketCont">Nome e Sobrenome</p>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div style={{ borderTop:"3px dashed #6D0AD7", padding:"1rem 1rem", width: "100%", minHeight:"30vh", display: "flex", justifyContent: "center", alignItems:"flex-end" }}>
-                                    <p className="ticketSub">Código QR para acessar o evento</p>
-                                    </div>
-                                </div>
+                            <div style={{ borderTop:"3px dashed #6D0AD7", padding:"1rem 1rem", width: "100%", minHeight:"30vh", display: "flex", justifyContent: "center", alignItems:"flex-end" }}>
+                            <p className="ticketSub">Código QR para acessar o evento</p>
                             </div>
                         </div>
+                    </div>
+                </div>
             </div>
             }
         </>
