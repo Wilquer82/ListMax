@@ -185,8 +185,6 @@
     justify-content: center;
 }
 
-
-
 .alphabetic:hover, .alphabetic.active {
     color: white;
     background-color: #6D0AD7;
@@ -199,4 +197,215 @@
     font-weight: 500;
     line-height: 21px; /* 150% */
     letter-spacing: -0.14px;
+}
+
+/* .step {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5625rem;
+    background:#1B0746;
+} */
+
+.containerH{
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerV{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.squareNo{
+    display: flex;
+    border-radius: 0.5rem;
+    border: 1px solid var(--colors-azul-escuro-light-active, #B8B2C6);
+    background: var(--Colors-Azul-escuro-Light, #E8E6ED);
+    box-shadow: 0px 8px 20px 0px rgba(184, 178, 198, 0.50);
+    padding: 2rem;
+}
+
+.stepper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 19.625rem;
+    height: 69vh;
+    border-radius: 0.5rem;
+    border: 1px solid var(--colors-azul-escuro-light-active, #B8B2C6);
+    background: var(--Colors-Azul-escuro-Light, #E8E6ED);
+    box-shadow: 0px 8px 20px 0px rgba(184, 178, 198, 0.50);
+    padding: 2rem;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    cursor: pointer;
+}
+
+.step-number {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    background-color: #595959;
+    z-index: 1;
+}
+
+.step-title {
+    flex-grow: 1;
+    color: #727272;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem; /* 120% */
+    letter-spacing: -0.025rem;
+}
+
+.step-line {
+    position: absolute;
+    margin-top:70px;
+    left: 20px;
+    height: 20px;
+    border-left: 1px dashed #6D0AD7;
+    width: 1px;
+}
+
+.step.active .step-title{
+    color: black;
+}
+
+.step.active .step-number {
+    background-color: #1B0746;
+    color: #fff;
+}
+
+.f16{
+    color: #1B0746;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height  : 120%;
+}
+
+.my-radio-group .ant-radio .ant-radio-inner {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    border: 1px solid var(--Colors-Roxo-Normal, #6D0AD7);
+    background-color: transparent;
+}
+
+.my-radio-group .ant-radio .ant-radio-inner::after {
+    width: 0;
+    height: 0;
+
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
+    background-color:  #6D0AD7;
+}
+
+.blueSq{
+    width: 7rem;
+    height: 9rem;
+    border-radius: 0.5rem;
+    background: var(--Colors-Azul-escuro-Normal, #1B0746);
+    padding: 1rem;
+    border: solid 2px #1B0746;
+    cursor: pointer;
+}
+
+.blueSq:hover
+{
+    -webkit-animation: swing 1s ease;
+    animation: swing 1s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+.blueSq.active{
+    border: solid 2px #FF14FF ;
+    border-collapse: collapse;
+}
+
+.EventDes{
+    width: 52rem;
+    height: 3rem;
+}
+
+
+@-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    } 
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
 }

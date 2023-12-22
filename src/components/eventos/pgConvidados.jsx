@@ -27,21 +27,7 @@ export default function PgConvidados() {
         {nome: "Nome Sobrenome"},
         {nome: "Nome Sobrenome"},
         {nome: "Nome Sobrenome"},
-    ]
-
-    const CloseOutClick = (e) => {
-        if (e.target.id === "Fundo") {
-            setModal(false);
-        }
-        if (e.target.id === "FundoAdd") {
-            setAddConvidado(false);
-            setEditConv(false)
-        }
-    }
-
-    const onChange = (e) => {
-        console.log(`checked = ${e.target.checked}`);
-    };
+    ];
 
     const content = (
         <p style={{
@@ -64,11 +50,9 @@ export default function PgConvidados() {
         </p>
     );
 
-    const [activeElement, setActiveElement] = useState(null);
 
-    const handleClick = (event) => {
-        setActiveElement(event.target.id);
-    };
+
+ 
 
     const [modal, setModal] = useState(false);
     const [addConvidado, setAddConvidado] = useState(false);
@@ -81,6 +65,26 @@ export default function PgConvidados() {
     const [editConv, setEditConv] = useState(false);
     const [sendInvites, setSendInvites] = useState(false);
     const [modalInvite, setModalInvite] = useState(false);
+    const [activeElement, setActiveElement] = useState(null);
+
+    const handleClick = (event) => {
+        setActiveElement(event.target.id);
+    };
+
+    
+    const CloseOutClick = (e) => {
+        if (e.target.id === "Fundo") {
+            setModal(false);
+        }
+        if (e.target.id === "FundoAdd") {
+            setAddConvidado(false);
+            setEditConv(false)
+        }
+    }
+
+    const onChange = (e) => {
+        console.log(`checked = ${e.target.checked}`);
+    };
 
     const goNext = () => {
         setCurrentLetter((currentLetter + 3) % (alphabet.length - 2));

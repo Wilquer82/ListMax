@@ -1,45 +1,156 @@
-import './homePartners.css';
-import NavBarPartners from '../components/navbarPartner';
-import { Button, Progress } from 'antd';
 import { useState } from 'react';
+import './homePartners.css';
+import { RightOutlined, CheckOutlined, LeftOutlined } from "@ant-design/icons";
+import NavBarPartners from '../components/navbarPartner';
+import { Button, Progress, Radio, Input } from 'antd';
 import PgEvento from '../components/eventos/pgEvento';
 import PgConvite from '../components/eventos/pgConvite';
-import Duplicate from '../assets/copy.svg';
 import PgConvidados from '../components/eventos/pgConvidados';
 import PgEstatiscas from '../components/eventos/pgEstatis';
 import PgRecep from '../components/eventos/pgRecep';
 import PgLook from '../components/eventos/pgLook';
+import { 
+    BirthdayCake, Users, BabyCarriage, Marriage2, PartyHorn, Diner, MoreHorizontal, 
+    ConferenceRoom, ChatMessageConversation2, EventSvg, EducationBagLearning5, HandshakeDeal, StaffPersonnel,
+    PraySolid, Marriage, ReligionChristianity, ReligionJudaism, ReligionPeaceCultural, Heavensabove, 
+    Journalism, EducationBagLearning8, EducationBagLearning3, EducationBagLearning, EducationBagLearning4, EducationBagLearning2,
+    Music, ArtDesign, ComedyAndDramaMasks, CinemaFilmMovie, Sparkler, Hilarious, 
+    Sport2, Sport, SportWinner, Badminton, SportWinner1, SportBasketball, 
+    EditPurple, ListMax, Copy,
+    } from '../assets';
 
 
 export default function HomeEvents() {
+
+    const ImgLegend = {
+        "A": [
+            {img: BirthdayCake, legenda: "Aniversário"},
+            {img: Users, legenda: "Casamento"},
+            {img: BabyCarriage, legenda: "Chá de bebê"},
+            {img: Marriage2, legenda: "Noivado"},
+            {img: PartyHorn, legenda: "Festa surpresa"},
+            {img: Diner, legenda: "Jantar intimo"},
+            {img: MoreHorizontal, legenda: "Outros"}
+        ],
+        "B": [
+            {img: PraySolid, legenda: "Culto religioso"},
+            {img: Marriage, legenda: "Casamento religioso"},
+            {img: ReligionChristianity, legenda: "Batizado"},
+            {img: ReligionJudaism, legenda: "Bar/Bat Mitzvah"},
+            {img: ReligionPeaceCultural, legenda: "Festival religioso"},
+            {img: Heavensabove, legenda: "Retiro espiritual"},
+            {img: MoreHorizontal, legenda: "Outros"}
+        ],
+        "C": [
+            {img: Music, legenda: "Concerto"},
+            {img: ArtDesign, legenda: "Exibição de arte"},
+            {img: ComedyAndDramaMasks, legenda: "Peça de teatro"},
+            {img: CinemaFilmMovie, legenda: "Exibição de filme"},
+            {img: Sparkler, legenda: "Festival cultural"},
+            {img: Hilarious, legenda: "Show de comédia"},
+            {img: MoreHorizontal, legenda: "Outros"}
+        ],
+        "D": [
+
+            {img: ConferenceRoom, legenda: "Conferência"},
+            {img: ChatMessageConversation2, legenda: "Reunião de equipe"},
+            {img: EventSvg, legenda: "Lançamento de produto"},
+            {img: EducationBagLearning5, legenda: "Treinamento corporativo"},
+            {img: HandshakeDeal, legenda: "Evento de networking"},
+            {img: StaffPersonnel, legenda: "Workshop empresarial"},
+            {img: MoreHorizontal, legenda: "Outros"}
+        ],
+        "E": [
+            {img: Journalism, legenda: "Palestra"},
+            {img: EducationBagLearning8, legenda: "Seminário"},
+            {img: EducationBagLearning3, legenda: "Aula magna"},
+            {img: EducationBagLearning, legenda: "Feira educacional"},
+            {img: EducationBagLearning4, legenda: "Workshop educativo"},
+            {img: EducationBagLearning2, legenda: "Dia de portas abertas"}, 
+            {img: MoreHorizontal, legenda: "Outros"}
+        ],
+        "F": [
+            {img: Sport2, legenda: "Jogo de futebol"},
+            {img: Sport, legenda: "Corrida"},
+            {img: SportWinner, legenda: "Torneio esportivo"},
+            {img: Badminton, legenda: "Partida de tênis"},
+            {img: SportWinner1, legenda: "Maratona"},
+            {img: SportBasketball, legenda: "Jogo de basquete"},
+            {img: MoreHorizontal, legenda: "Outros"}
+        ]
+    };
 
     const twoColors = {
         '0%': '#FF14FF',
         '100%': '#6D0AD7',
     };
+    const { TextArea } = Input;
+    const steps = ['Tipo e Categoria', 'Título e Descrição', 'Data e Horário', 'Localização', 'Convidados', 'Serviços', 'Pagamento'];
+
 
     const [gerenciarEvento, setGerenciarEvento] = useState(false);
     const [selectedTab, setSelectedTab] = useState('Página do Evento');
+    const [criarEvento, setCriarEvento] = useState(false);
+    const [activeStep, setActiveStep] = useState(0);
+    const [eventType, setEventType] = useState("");
+    const [activeElement, setActiveElement] = useState(null);
+    const [principal, setPrincipal] = useState(true);
 
+    const handleClick = (event) => {
+        setActiveElement(event.target.id);
+    };
+
+    const onChange = e => {
+        setEventType(e.target.value)
+        console.log(`radio checked:${e.target.value}`);
+    };
+
+    const handleStep = (step) => {
+        setActiveStep(step);
+        console.log(step);
+        // Aqui você pode adicionar a lógica para interagir com o restante da página
+        // setCompletedSteps([...completedSteps, step]);
+    };
+
+    const handleButtonClick = (activeStep) => {
+        if (activeStep < steps.length - 1) {
+            setActiveStep(activeStep + 1);
+        }
+    };
+
+    function voltar() {
+        if (activeStep > 0) {  // Verifique se não estamos no primeiro passo
+          setActiveStep(activeStep - 1);  // Diminua o passo ativo em 1
+        }
+      }
+
+    
 
     return (
         <div className="MainEvents">
             <NavBarPartners Local={"Clients"} />
-            {!gerenciarEvento ?
+            {principal &&
                 <div className="ParceriaMain">
                     <div className="PartnersTitle">
                         <div>
                             <p className="Title">Meus eventos</p>
-                            <p><span style={{ color: '#B8B2C6' }}>Home / </span><span style={{ color: '#1B0746' }}>Eventos futuros</span></p>
+                            <p><span style={{ color: '#B8B2C6' }}>Home / </span>
+                            <span style={{ color: '#1B0746' }}>Eventos futuros</span></p>
                         </div>
 
-                        <Button className="buttonNews add" style={{ height: "3rem", width: "18rem", backgroundColor: "#6D0AD7", color: "white" }}>
+                        <Button 
+                            className="buttonNews" 
+                            style={{ height: "3rem", width: "18rem", backgroundColor: "#6D0AD7", color: "white" }}
+                            onClick={() => {
+                                setCriarEvento((old) => !old); 
+                                setPrincipal((old) => !old);}}
+                        >
                             Criar novo evento
                         </Button>
                     </div>
                     <div className="eventsBar">
-                        <Button className="buttonNews add" style={{ marginLeft: "2rem", height: "2rem", width: "13rem", backgroundColor: "#1B0746", color: "white" }}>Eventos Futuros</Button>
-                        <Button className="buttonNews add" style={{ border: "none", marginLeft: "2rem", height: "2rem", width: "13rem", backgroundColor: "transparent", color: "#1B0746" }}>Eventos Encerrados</Button>
+                        <Button className="buttonNews" style={{ marginLeft: "2rem", height: "2rem", width: "13rem", backgroundColor: "#1B0746", color: "white" }}>Eventos Futuros</Button>
+                        <Button className="buttonNews" style={{ border: "none", marginLeft: "2rem", height: "2rem", width: "13rem", backgroundColor: "transparent", color: "#1B0746" }}>Eventos Encerrados</Button>
                     </div>
                     {/* <div style={{width:"100vw" , marginTop: "10rem"}}>
                     <p style={{fontSize: "35px",fontWight: "500",lineHeight: "53px", textAlign: "center", color:"#6D0AD7"}}>Você não possui nenhum evento :(</p>
@@ -109,13 +220,13 @@ export default function HomeEvents() {
                                 </div>
                                 <div style={{display: "flex", justifyContent: "space-around"}}>
                                     <div style={{cursor:"pointer", display: "flex", alignItems:"center", justifyContent:"space-between"}}>
-                                        <img src={Duplicate} height={"15px"} width={"auto"}/> 
+                                        <img src={Copy} height={"15px"} width={"auto"}/> 
                                         <p className='ticketSub'>Duplicar Evento</p>
                                     </div>
                                     <Button
                                         className="buttonNews add"
                                         style={{ border: "2px solid #6D0AD7", height: "2rem", width: "8rem", backgroundColor: "transparent", color: "#6D0AD7", fontSize: "12px" }}
-                                        onClick={() => setGerenciarEvento((old) => !old)}>
+                                        onClick={() => {setGerenciarEvento((old) => !old); setPrincipal((old) => !old)}}>
                                             Gerenciar Evento
                                     </Button>
                                 </div>
@@ -123,7 +234,136 @@ export default function HomeEvents() {
                         </div>
                     </div>
                 </div>
-                :
+            }
+            {criarEvento &&
+                <div className="ParceriaMain">
+                    <div className="PartnersTitle" style={{paddingTop: "3rem", paddingBottom:"1rem"}}>
+                        <div>
+                            <p className="Title">Criar novo evento</p>
+                            <p><span style={{ color: '#B8B2C6' }}>Home / Meus Eventos / </span>
+                            <span style={{ color: '#1B0746' }}>Criar novo evento</span></p>
+                        </div>
+                    </div>
+                    <div className="containerH" style={{width:"79vw", height:"69vh"}}>
+                        <div className="stepper">
+                        {steps.map((label, index) => (
+                            <div key={label} className={`step ${index === activeStep ? 'active' : ''}`} onClick={() => handleStep(index)}>
+                                <div className="step-number" style={index < activeStep ? {backgroundColor: "#1B0746"} : {}}>{index < activeStep ? <CheckOutlined style={{color:"#FF14FF"}}/> : index + 1}</div>
+                                <div className="step-title">{label}</div>
+                                {index < steps.length - 1 && <div className="step-line"></div>}
+                            </div>
+                        ))}
+                        </div>
+                        {activeStep === 0 &&
+                            <div className="containerV" >
+                                <div className="squareNo containerV" style={{width:"55rem", height:"24vh", padding:"1rem"}} >
+                                    <p className="Title" style={{padding: "0"}}>Vamos começar?</p>
+                                    <p className="f16">Qual o seu tipo de evento?</p>
+                                    <Radio.Group className="my-radio-group containerH" style={{width:"60%"}} onChange={onChange}>
+                                        <div className="containerV" >
+                                            <Radio value="A" style={{marginBottom:".5rem"}}>Particular</Radio>
+                                            <Radio value="B" style={{marginBottom:".5rem"}}>Religioso</Radio>
+                                            <Radio value="C" style={{marginBottom:".5rem"}}>Cultural / Entretenimento</Radio>
+                                        </div>
+                                        <div className="containerV">
+                                            <Radio value="D" style={{marginBottom:".5rem"}}>Corporativo</Radio>
+                                            <Radio value="E" style={{marginBottom:".5rem"}}>Acadêmico / Educacional</Radio>
+                                            <Radio value="F" style={{marginBottom:".5rem"}}>Esportivo</Radio>
+                                        </div>
+                                    </Radio.Group>
+                                </div>
+                                <div  className="squareNo containerV" style={{width:"55rem", height:"43vh", padding:"1rem"}} >
+                                    <p className="Title" style={{padding: "0"}}>Certo!</p>
+                                    <p className="f16">Em qual dessas categorias seu evento se encaixa?</p>
+                                    <div className="containerH" style={{height:"9rem"}}>
+                                        {ImgLegend[eventType]? ImgLegend[eventType].map((item, index) => (
+                                        <div 
+                                            id={eventType+index} 
+                                            className={`blueSq containerV ${activeElement === (eventType+index) ? "active" : ""}`}
+                                            style={{alignItems:"center"}} 
+                                            key={index} 
+                                            onClick={handleClick}
+                                        >
+                                            <img src={item.img} alt={item.legenda} />
+                                            <p style={{fontSize:"14px", textAlign:"center"}}>{item.legenda}</p>
+                                        </div>
+                                        )): null}
+                                    </div>
+                                    <div className="containerH">
+                                        <div className="containerH" style={{justifyContent:"flex-end", alignItems:"center"}} >
+                                            <Input className="EventDes"placeholder="Descreva seu evento"/>
+                                            <img src={EditPurple} width={"24px"} style={{position: "absolute", paddingRight:".5rem"}}/>
+                                        </div>
+                                        <Button 
+                                            className="buttonNews" 
+                                            style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
+                                            onClick={() => handleButtonClick(activeStep)}
+                                        >
+                                            Continuar <RightOutlined />
+                                        </Button>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        {activeStep === 1 &&
+                            <div className="containerV" >
+                                <div className="squareNo containerV" style={{width:"55rem", height:"69vh", padding:"1rem"}} >
+                                    <p className="Title" style={{padding: "0"}}>Vamos continuar ...</p>
+                                    <p className="f16">Qual titulo, link e descrição deseja dar ao seu evento?</p>
+                                    <div className="containerV"  style={{justifyContent:"space-between", height: "55vh"}}>
+                                        <div className="containerH" style={{justifyContent:"left", alignItems:"center"}} >
+                                            <Input className="EventDes"placeholder="Título do evento"/>
+                                            <img src={EditPurple} width={"24px"} style={{position: "absolute", right: "11.5rem"}}/>
+                                        </div>
+                                        <div className="containerH" style={{justifyContent:"left", alignItems:"center"}} >
+                                            <img src={ListMax} height={"17px"} style={{position: "absolute", marginLeft: "1rem", zIndex:2}}/>
+                                            <Input className="EventDes" style={{paddingLeft: "8rem"}} placeholder="Seu evento"/>
+                                            <img src={EditPurple} width={"24px"} style={{position: "absolute", right: "11.5rem"}}/>
+                                        </div>
+                                        <TextArea
+                                            // showCount
+                                            maxLength={500}
+                                            onChange={onChange}
+                                            placeholder="Descrição"
+                                            style={{
+                                                height: '14rem',
+                                                width: '52rem', 
+                                                resize: 'none',
+                                            }}/>
+                                        <div className="containerH" style={{justifyContent:"space-between", alignItems:"center", width:"52rem"}}>
+                                            <Button 
+                                                className="buttonNews" 
+                                                style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
+                                                onClick={() => voltar()}
+                                            >
+                                                <LeftOutlined style={{color:"#A1F71A"}}/> Voltar
+                                            </Button>
+                                            <Button 
+                                                className="buttonNews" 
+                                                style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
+                                                onClick={() => handleButtonClick(activeStep)}
+                                            >
+                                                Continuar <RightOutlined style={{color:"#A1F71A"}}/>
+                                            </Button>
+                                        </div>
+                                    </div>
+                                </div>                 
+                            </div>
+                        }
+
+                        {activeStep === 2 &&
+                            <div className="containerV" >
+                                <div className="squareNo containerV" style={{width:"55rem", height:"69vh", padding:"1rem"}} >
+                                    <p className="Title" style={{padding: "0"}}>E quando vai ser?</p>
+                                    <p className="f16">Escolha a(s) data(s) e horário(s) do seu evento</p>
+                                </div>                                
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            }
+            {gerenciarEvento &&
                 <div className="ParceriaMain">
                     <div className="TabList">
                         <div style={{ color: "#009EF6", marginRight: "9rem" }}>Gerenciando: Nome do evento</div>
