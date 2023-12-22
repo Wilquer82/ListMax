@@ -9,11 +9,11 @@ export default function NavBar() {
             <Link to='/'>
             <img src={Logo} alt="Logo ListMax" width="153.398px" height="40px"/>
             </Link>
-            <Link to='/Test'>
+            {/* <Link to='/Test'> */}
             <p className="nav-item">
                 Como Funciona
             </p>
-            </Link>
+            {/* </Link> */}
             <p className="nav-item">
                 Recursos
             </p>

@@ -30,10 +30,10 @@ const router = createBrowserRouter([
     element: <HomeEvents />,
   },
 
-  {
-    path: "/test",
-    element: <Test />,
-  },
+  // {
+  //   path: "/test",
+  //   element: <Test />,
+  // },
   {
     path: "/news",
     element: <News whereCalled="news" />,
