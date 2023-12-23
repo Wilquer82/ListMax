@@ -1,14 +1,16 @@
 import { useState } from 'react';
 import './homePartners.css';
-import { RightOutlined, CheckOutlined, LeftOutlined } from "@ant-design/icons";
+import { RightOutlined, CheckOutlined, LeftOutlined, CalendarOutlined, ClockCircleOutlined } from "@ant-design/icons";
 import NavBarPartners from '../components/navbarPartner';
-import { Button, Progress, Radio, Input } from 'antd';
+import { Button, Progress, Radio, Input, Switch, DatePicker } from 'antd';
 import PgEvento from '../components/eventos/pgEvento';
 import PgConvite from '../components/eventos/pgConvite';
 import PgConvidados from '../components/eventos/pgConvidados';
 import PgEstatiscas from '../components/eventos/pgEstatis';
 import PgRecep from '../components/eventos/pgRecep';
 import PgLook from '../components/eventos/pgLook';
+import locale from 'antd/es/date-picker/locale/pt_BR';
+
 import { 
     BirthdayCake, Users, BabyCarriage, Marriage2, PartyHorn, Diner, MoreHorizontal, 
     ConferenceRoom, ChatMessageConversation2, EventSvg, EducationBagLearning5, HandshakeDeal, StaffPersonnel,
@@ -21,6 +23,8 @@ import {
 
 
 export default function HomeEvents() {
+    const { RangePicker } = DatePicker;
+    const { TextArea } = Input;
 
     const ImgLegend = {
         "A": [
@@ -84,7 +88,7 @@ export default function HomeEvents() {
         '0%': '#FF14FF',
         '100%': '#6D0AD7',
     };
-    const { TextArea } = Input;
+
     const steps = ['Tipo e Categoria', 'Título e Descrição', 'Data e Horário', 'Localização', 'Convidados', 'Serviços', 'Pagamento'];
 
 
@@ -95,14 +99,26 @@ export default function HomeEvents() {
     const [eventType, setEventType] = useState("");
     const [activeElement, setActiveElement] = useState(null);
     const [principal, setPrincipal] = useState(true);
+    const [startTime, setStartTime] = useState({hour: '', minute: ''});
+    const [endTime, setEndTime] = useState({hour: '', minute: ''});
+    const [dateStartEnd, setDateStartEnd] = useState(false);
+    
+    const hours = [...Array(24).keys()].map(i => i.toString().padStart(2, '0'));
+    const minutes = [...Array(60).keys()].map(i => i.toString().padStart(2, '0'));
+
+    const handleTimeChange = (setTime) => (event) => {
+        const { name, value } = event.target;
+        setTime(prevTime => ({ ...prevTime, [name]: value }));
+    };
 
     const handleClick = (event) => {
         setActiveElement(event.target.id);
     };
 
     const onChange = e => {
-        setEventType(e.target.value)
-        console.log(`radio checked:${e.target.value}`);
+        if(e.target.value){
+            setEventType(e.target.value)
+            console.log(`radio checked:${e.target.value}`);}
     };
 
     const handleStep = (step) => {
@@ -122,12 +138,15 @@ export default function HomeEvents() {
         if (activeStep > 0) {  // Verifique se não estamos no primeiro passo
           setActiveStep(activeStep - 1);  // Diminua o passo ativo em 1
         }
-      }
+    }
 
-    
+    const onChangeDate = (date, dateString) => {
+        console.log(date, dateString);
+    };
+
 
     return (
-        <div className="MainEvents">
+        <div className="MainEvents" style={{overflow:"hidden"}}>
             <NavBarPartners Local={"Clients"} />
             {principal &&
                 <div className="ParceriaMain">
@@ -155,7 +174,7 @@ export default function HomeEvents() {
                     {/* <div style={{width:"100vw" , marginTop: "10rem"}}>
                     <p style={{fontSize: "35px",fontWight: "500",lineHeight: "53px", textAlign: "center", color:"#6D0AD7"}}>Você não possui nenhum evento :(</p>
                     <p style={{fontSize: "20px", fontWeight: 500, lineHeight: "30px", textAlign: "center", color:"#1B0746"}}>Que tal criar um evento? É rápido e fácil!</p>
-                </div> */}
+                    </div> */}
                     <div style={{ width: "79vw", marginTop: "5rem", marginBottom: "5rem" }} >
                         <div
                             style={{
@@ -291,7 +310,7 @@ export default function HomeEvents() {
                                     </div>
                                     <div className="containerH">
                                         <div className="containerH" style={{justifyContent:"flex-end", alignItems:"center"}} >
-                                            <Input className="EventDes"placeholder="Descreva seu evento"/>
+                                            <Input style={{ width:"41rem", height:"3rem"}}placeholder="Descreva seu evento"/>
                                             <img src={EditPurple} width={"24px"} style={{position: "absolute", paddingRight:".5rem"}}/>
                                         </div>
                                         <Button 
@@ -317,7 +336,7 @@ export default function HomeEvents() {
                                         </div>
                                         <div className="containerH" style={{justifyContent:"left", alignItems:"center"}} >
                                             <img src={ListMax} height={"17px"} style={{position: "absolute", marginLeft: "1rem", zIndex:2}}/>
-                                            <Input className="EventDes" style={{paddingLeft: "8rem"}} placeholder="Seu evento"/>
+                                            <Input className="EventDes" style={{paddingLeft: "8.5rem"}} placeholder="Seu evento"/>
                                             <img src={EditPurple} width={"24px"} style={{position: "absolute", right: "11.5rem"}}/>
                                         </div>
                                         <TextArea
@@ -329,6 +348,7 @@ export default function HomeEvents() {
                                                 height: '14rem',
                                                 width: '52rem', 
                                                 resize: 'none',
+                                                padding:'1rem',
                                             }}/>
                                         <div className="containerH" style={{justifyContent:"space-between", alignItems:"center", width:"52rem"}}>
                                             <Button 
@@ -350,13 +370,99 @@ export default function HomeEvents() {
                                 </div>                 
                             </div>
                         }
-
                         {activeStep === 2 &&
                             <div className="containerV" >
                                 <div className="squareNo containerV" style={{width:"55rem", height:"69vh", padding:"1rem"}} >
+                                    <div className="containerV" style={{height:"49vh"}} >
+
                                     <p className="Title" style={{padding: "0"}}>E quando vai ser?</p>
-                                    <p className="f16">Escolha a(s) data(s) e horário(s) do seu evento</p>
-                                </div>                                
+                                    {!dateStartEnd ? 
+                                    <p className="f16">Escolha a data e horário do seu evento</p> :
+                                    <p className="f16">Escolha a(s) data(s) e horário(s) do seu evento</p>}
+                                    <div className="containerH" style={{width:"9rem"}}>
+                                        <Switch onChange={() => {setDateStartEnd((old) => !old)}} />
+                                        <p className="f15">Várias datas</p>
+                                    </div>
+                                    <div className="containerH" style={{alignItems:"center", width:"35rem"}}>
+                                        {!dateStartEnd ? 
+                                        <p className="f15">Data do seu evento</p> :
+                                        <p className="f15">Data inicio/fim do seu evento</p>}
+                                        {/* <Button 
+                                            className="buttonNews" 
+                                                style={{ height: "3rem", width: "13rem", backgroundColor: "#6D0AD7", color: "white" }}
+                                            // onClick={() => }
+                                        >
+                                            <CalendarOutlined style={{color:"#FEFEFE"}}/> data/mês/ano <RightOutlined style={{color:"#FEFEFE"}}/>
+                                        </Button> */}
+                                        {!dateStartEnd ? 
+                                        <DatePicker 
+                                            placement='bottomLeft'
+                                            className="buttonNews"
+                                            onChange={onChangeDate}
+                                            // placeholder='data/mês/ano'
+                                            locale={locale} 
+                                            format="DD/MM/YYYY" 
+                                            style={{ 
+                                                height: "3rem", 
+                                                width: "13rem", 
+                                                backgroundColor: "#6D0AD7", 
+                                                color: "white", 
+                                                }}
+                                        /> :
+                                        <RangePicker 
+                                        placement='bottomLeft'
+                                        className="buttonNews"
+                                            onChange={onChangeDate}
+                                            locale={locale} 
+                                            format="DD/MM/YYYY" 
+                                            style={{ 
+                                                height: "3rem", 
+                                                width: "16rem", 
+                                                backgroundColor: "#6D0AD7", 
+                                                color: "white", 
+                                                }}/>}
+                                    </div>
+                                    <p className="f15">Hora do inicio do seu evento</p>
+                                    <div className="containerH" style={{width:"10rem"}}>
+                                        <ClockCircleOutlined style={{fontSize:"1.5rem", color: "#6D0AD7"}} />
+                                        <select className="select" name="hour" value={startTime.hour} onChange={handleTimeChange(setStartTime)}>
+                                            {hours.map(hour => <option key={hour} value={hour}>{hour}</option>)}
+                                        </select>
+                                        <p className="f15">:</p>
+                                        <select className={!startTime.hour? "selectDeac" : "select"} name="minute" value={startTime.minute} onChange={handleTimeChange(setStartTime)} disabled={!startTime.hour}>
+                                            {minutes.map(minute => <option key={minute} value={minute}>{minute}</option>)}
+                                        </select>
+                                    </div>
+                                    <p className="f15">Hora do fim do seu evento</p>
+                                    <div className="containerH" style={{width:"10rem"}}>
+                                        <ClockCircleOutlined style={{fontSize:"1.5rem", color: "#6D0AD7"}}/>
+                                        <select className="select" name="hour" value={endTime.hour} onChange={handleTimeChange(setEndTime)}>
+                                            {hours.map(hour => <option key={hour} value={hour}>{hour}</option>)}
+                                        </select>
+                                        <p className="f15">:</p>
+                                        {/* className={`${!endTime.hour) ? "selectDeac" : "select"}`} */}
+                                        <select className={!endTime.hour? "selectDeac" : "select"}  name="minute" value={endTime.minute} onChange={handleTimeChange(setEndTime)} disabled={!endTime.hour}>
+                                            {minutes.map(minute => <option key={minute} value={minute}>{minute}</option>)}
+                                        </select>
+                                    </div>
+                                    </div> 
+                                    <div className="containerH" style={{justifyContent:"space-between", alignItems:"center", width:"52rem"}}>
+                                        <Button 
+                                            className="buttonNews" 
+                                            style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
+                                            onClick={() => voltar()}
+                                        >
+                                            <LeftOutlined style={{color:"#A1F71A"}}/> Voltar
+                                        </Button>
+                                        <Button 
+                                            className="buttonNews" 
+                                            style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
+                                            onClick={() => handleButtonClick(activeStep)}
+                                        >
+                                            Continuar <RightOutlined style={{color:"#A1F71A"}}/>
+                                        </Button>
+                                    </div>   
+                                </div>
                             </div>
                         }
 

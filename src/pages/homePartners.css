@@ -1,3 +1,4 @@
+
 * {
     font-family: 'Poppins', sans-serif !important;
     margin:  0 0;
@@ -295,6 +296,11 @@
     font-weight: 600;
     line-height  : 120%;
 }
+.f15{
+    color:  #595959;
+    font-size: 15px;
+    font-weight: 400;
+}
 
 .my-radio-group .ant-radio .ant-radio-inner {
     width: 24px;
@@ -312,6 +318,25 @@
 
 :where(.css-dev-only-do-not-override-2q8sxy).ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
     background-color:  #6D0AD7;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-switch.ant-switch-checked {
+    background: #6D0AD7;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled) {
+    background: #6D0AD7;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-picker .ant-picker-input >input {
+    color: #FEFEFE;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-picker .ant-picker-suffix {
+    color: white;
 }
 
 .blueSq{
@@ -340,6 +365,30 @@
 .EventDes{
     width: 52rem;
     height: 3rem;
+}
+
+.select{
+    border-radius: 0.25rem;
+    background: var(--Colors-Branco-Normal, #FEFEFE);
+    border: none;
+    color:#1B0746;
+    height: 2rem;
+    font-size: 14px;
+    text-align: center;
+    width: 3rem;
+    outline: none;
+}
+
+.selectDeac{
+    border-radius: 0.25rem;
+    background: var(--Colors-Branco-Normal, #D2B3F3);
+    border: none;
+    color:white;
+    height: 2rem;
+    font-size: 14px;
+    text-align: center;
+    width: 3rem;
+    outline: none;
 }
 
 
