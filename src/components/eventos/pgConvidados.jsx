@@ -50,10 +50,6 @@ export default function PgConvidados() {
         </p>
     );
 
-
-
- 
-
     const [modal, setModal] = useState(false);
     const [addConvidado, setAddConvidado] = useState(false);
     const [showList, setShowList] = useState(false);
@@ -71,7 +67,6 @@ export default function PgConvidados() {
         setActiveElement(event.target.id);
     };
 
-    
     const CloseOutClick = (e) => {
         if (e.target.id === "Fundo") {
             setModal(false);
@@ -127,7 +122,6 @@ export default function PgConvidados() {
                 return {};
         }
     };
-
     
     return (
         <>{sendInvites ? 
@@ -714,7 +708,7 @@ export default function PgConvidados() {
                                                 },
                                             ]}
                                         />
-                                        <Popover content={content} placement="left">
+                                        <Popover content={content} placement="left" arrow={false}>
                                             <ExclamationCircleOutlined style={{ color: "#6D0AD7", fontSize: "1.5rem", fontWeight: "bold" }} />
                                         </Popover>
                                     </div>

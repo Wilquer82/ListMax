@@ -339,6 +339,14 @@
     color: white;
 }
 
+:where(.css-dev-only-do-not-override-2q8sxy).ant-input-group .ant-input {
+    height: 3rem;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-input-search >.ant-input-group >.ant-input-group-addon:last-child .ant-input-search-button {
+    height: 3rem;
+}
+
 .blueSq{
     width: 7rem;
     height: 9rem;
