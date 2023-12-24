@@ -121,7 +121,7 @@
     border: none;
 
 }
-
+    
 .circuloD {
     /* float: right; */
     /* margin-left: auto; */
@@ -313,7 +313,6 @@
 .my-radio-group .ant-radio .ant-radio-inner::after {
     width: 0;
     height: 0;
-
 }
 
 :where(.css-dev-only-do-not-override-2q8sxy).ant-radio-wrapper .ant-radio-checked .ant-radio-inner {
@@ -346,6 +345,15 @@
 :where(.css-dev-only-do-not-override-2q8sxy).ant-input-search >.ant-input-group >.ant-input-group-addon:last-child .ant-input-search-button {
     height: 3rem;
 }
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-checkbox-checked .ant-checkbox-inner {
+    background: #6D0AD7;
+    border-color: #6D0AD7;
+}
+
+:where(.css-dev-only-do-not-override-2q8sxy).ant-checkbox-checked .ant-checkbox-inner:after {
+    transform:none;
+    opacity: 0;}
 
 .blueSq{
     width: 7rem;
@@ -399,6 +407,36 @@
     outline: none;
 }
 
+.whiteSquare{
+    border-radius: 0.5rem;
+    border: 1px solid var(--colors-azul-escuro-light-active, #B8B2C6);
+    background: var(--Colors-Branco-Normal, #FEFEFE);
+    box-shadow: 0px 8px 20px 0px rgba(184, 178, 198, 0.50);
+    color: var(--Colors-Azul-escuro-Normal, #1B0746);
+    font-size: 0.875rem;
+    font-weight: 600;
+    /* line-height: 1.5rem; */
+}
+
+.roxo10{
+    color: var(--Colors-Roxo-Normal, #6D0AD7);
+    font-size: 0.625rem;
+    font-weight: 600;
+}
+
+.roxo15{
+    color: var(--Colors-Roxo-Normal, #6D0AD7);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.squareAntes{
+    width: 55rem;
+    padding: 1rem; 
+    display:flex; 
+    flex-direction:column; 
+    overflow: clip;
+}
 
 @-webkit-keyframes swing
 {

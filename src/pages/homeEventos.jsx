@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './homePartners.css';
 import {
     RightOutlined,
+    DownOutlined,
     CheckOutlined,
     LeftOutlined,
     CalendarOutlined,
@@ -9,10 +10,11 @@ import {
     ExclamationCircleOutlined,
     MinusOutlined,
     PlusOutlined,
-    EditOutlined
+    EditOutlined,
+    UpOutlined
 } from "@ant-design/icons";
 import NavBarPartners from '../components/navbarPartner';
-import { Button, Progress, Radio, Input, Switch, DatePicker, Space, Popover } from 'antd';
+import { Button, Progress, Radio, Input, Switch, DatePicker, Space, Popover, Dropdown, Checkbox } from 'antd';
 import PgEvento from '../components/eventos/pgEvento';
 import PgConvite from '../components/eventos/pgConvite';
 import PgConvidados from '../components/eventos/pgConvidados';
@@ -29,8 +31,6 @@ import {
     Sport2, Sport, SportWinner, Badminton, SportWinner1, SportBasketball,
     EditPurple, ListMax, Copy, Map, Dolar
 } from '../assets';
-
-
 
 
 export default function HomeEvents() {
@@ -182,8 +182,11 @@ export default function HomeEvents() {
     const [startTime, setStartTime] = useState({ hour: '', minute: '' });
     const [endTime, setEndTime] = useState({ hour: '', minute: '' });
     const [dateStartEnd, setDateStartEnd] = useState(false);
+    const [dropLook, setdropLook] = useState(false);
+    const [dropWhats, setdropWhats] = useState(false);
 
-    const [value, setValue] = useState('');
+
+    const [value, setValue] = useState('200');
 
     const hours = [...Array(24).keys()].map(i => i.toString().padStart(2, '0'));
     const minutes = [...Array(60).keys()].map(i => i.toString().padStart(2, '0'));
@@ -227,8 +230,6 @@ export default function HomeEvents() {
         console.log(date, dateString);
     };
 
-    // const formatNumber = (value) => new Intl.NumberFormat().format(value);
-
     const handleChange = (onChange) => (e) => {
         const { value: inputValue } = e.target;
         const reg = /^\d*\.?\d*$/;
@@ -256,6 +257,7 @@ export default function HomeEvents() {
             setValue(newValue.toString());
         }
     };
+
 
 
     return (
@@ -456,7 +458,7 @@ export default function HomeEvents() {
                                         <TextArea
                                             // showCount
                                             maxLength={500}
-                                            onChange={onChange}
+                                            // onChange={onChange}
                                             placeholder="Descrição"
                                             style={{
                                                 height: '14rem',
@@ -761,6 +763,97 @@ export default function HomeEvents() {
                                             Continuar <RightOutlined style={{ color: "#A1F71A" }} />
                                         </Button>
                                     </div>
+                                </div>
+                            </div>
+                        }
+                        {activeStep === 5 &&
+                            <div className="containerV" >
+                                <div className="squareNo squareAntes" style={ dropLook && dropWhats? {minHeight: "79vh"}: {minHeight: "69vh"}} >
+                                    <p className="Title" style={{ padding: "1rem 0" }}>Serviços adicionais</p>
+                                    <p className="f16" style={{ padding: "1rem 0" }}>Potencialize sua experiência com nossos serviços premium</p>
+                                    <div>
+                                        <div className="whiteSquare" 
+                                        style={!dropLook? {with: "50vw", height:"3.5rem", padding:" 1rem 1rem", alignItems:"center" , marginTop: "1rem" }
+                                                :{with: "50vw", height:"15rem", padding:" 1rem 1rem", alignItems:"center", marginTop: "1rem" } }>
+                                            <div className="containerH">
+                                            <Checkbox className="my-radio-group" style={{ padding:"0" }}>Look You (recomendado)</Checkbox>
+                                            <span  
+                                                onClick={() => {
+                                                setdropLook((old) => !old)}}>
+                                                {!dropLook?
+                                                <div className="containerH" style={{alignItems:"center", width:"12rem"}}><p className="roxo10">R$</p> <p className="roxo15">0,00</p> <p className="f15">/por convidado</p><DownOutlined style={{ padding:"0", color:"#6D0AD7" }}/></div>
+                                                :
+                                                <div className="containerH" style={{alignItems:"center", width:"12rem"}}><p className="roxo10">R$</p> <p className="roxo15">0,00</p> <p className="f15">/por convidado</p><UpOutlined style={{ padding:"0", color:"#6D0AD7" }}/></div>}
+                                            </span>
+                                            </div>
+                                            <p 
+                                            style={dropLook?{
+                                                // position: "absolute",
+                                                // border: "2px dashed #6D0AD7",
+                                                // backgroundColor: "#F0E7FB",
+                                                fontSize: "1rem",
+                                                // borderRadius: "12px",
+                                                with: "100%",
+                                                height: "10rem",
+                                                color: "#1B0746",
+                                                padding: "1rem",
+                                                paddingLeft: "3rem",
+                                                // display: "flex",
+                                                // left: "-0.3rem",
+                                                // top: "-0.6rem",
+                                                textAlign:"justify",
+                                                fontWeight: "400",
+                                                lineHeight: "1.5rem",
+                                            }:{display:"none"}}>
+                                                    Através da inovadora inteligência Look You (beta), é possível realizar a recepção de convidados 
+                                                    utilizando a avançada tecnologia de reconhecimento facial, proporcionando uma experiência mais 
+                                                    eficiente e segura em comparação a usar apenas o QR Code. Além disso, o Look You (beta) identifica
+                                                    e separa automaticamente as fotos de um convidado, permitindo a criação de um álbum exclusivo apenas 
+                                                    com as imagens em que ele está presente. Você também tem a opção de enviar o álbum completo, que incluirá
+                                                    todas as fotos do seu evento, por e-mail e WhatsApp. Clique aqui para saber mais.</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="whiteSquare" 
+                                        style={!dropWhats? {with: "50vw", height:"3.5rem", padding:" 1rem 1rem", alignItems:"center" , marginTop: "1rem" }
+                                                :{with: "50vw", height:"11.5rem", padding:" 1rem 1rem", alignItems:"center", marginTop: "1rem" } }>
+                                            <div className="containerH">
+                                            <Checkbox className="my-radio-group" style={{ padding:"0" }}>Mensagem de Whatsapp extra (recomendado)</Checkbox>
+                                            <span  
+                                                onClick={() => {
+                                                setdropWhats((old) => !old)}}>
+                                                {!dropWhats?
+                                                <div className="containerH" style={{alignItems:"center", width:"12rem"}}><p className="roxo10">R$</p> <p className="roxo15">0,00</p> <p className="f15">/por convidado</p><DownOutlined style={{ padding:"0", color:"#6D0AD7" }}/></div>
+                                                :
+                                                <div className="containerH" style={{alignItems:"center", width:"12rem"}}><p className="roxo10">R$</p> <p className="roxo15">0,00</p> <p className="f15">/por convidado</p><UpOutlined style={{ padding:"0", color:"#6D0AD7" }}/></div>}
+                                            </span>
+                                            </div>
+                                            <p 
+                                            style={dropWhats?{
+                                                // position: "absolute",
+                                                // border: "2px dashed #6D0AD7",
+                                                // backgroundColor: "#F0E7FB",
+                                                fontSize: "1rem",
+                                                // borderRadius: "12px",
+                                                with: "100%",
+                                                height: "10rem",
+                                                color: "#1B0746",
+                                                padding: "1rem",
+                                                paddingLeft: "3rem",
+                                                // display: "flex",
+                                                // left: "-0.3rem",
+                                                // top: "-0.6rem",
+                                                textAlign:"justify",
+                                                fontWeight: "400",
+                                                lineHeight: "1.5rem",
+                                            }:{display:"none"}}>
+                                                Com esse serviço adicional, além da mensagem (já inclusa) de envio do convite, 
+                                                você terá a oportunidade de enviar uma mensagem exclusiva por e-mail e/ou WhatsApp 
+                                                para os convidados. Seja para agradecer pela presença ou para compartilhar momentos 
+                                                especiais, essa funcionalidade extra permite uma conexão mais pessoal com seus convidados.</p>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         }
