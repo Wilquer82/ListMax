@@ -7,7 +7,6 @@ import Logo from '../assets/logo2.png';
 import { Link } from "react-router-dom";
 import BackGround from "../components/backGround";
 import './style.css';
-import HomeUsers from './homeUsers';
 
 
 
@@ -16,9 +15,6 @@ export default function Login (){
     const Login =  () => {
         console.log(document.getElementById("email").value);
         console.log(document.getElementById("password").value);
-
-
-
     }
 
     const [isModalBlocked, setIsModalBlocked] = useState(false);
@@ -40,13 +36,13 @@ export default function Login (){
                 <div className="lineContainer">
                     <h1 className="MainText">organizar seu evento!</h1>
                 </div>
-                <div className="paragraphL">
+                <div className="paragraphL text-white">
                     <p>Se você não possui uma conta </p>
                     <div className="flex"><p>cadastrada, você pode &nbsp;</p>
                     <Link to="/register" whereCalled="client"><p className="pink"> se cadastrar aqui!</p></Link></div>
                 </div>
             </div>
-            <Space direction="vertical" className="loginInputs">
+            <Space direction="vertical" className="loginInputs text-white">
                     <Input id="email" size="large" className="inputNews" type="email" placeholder="E-mail"/>
                     <Input.Password id="password" size="large" className="inputNews" placeholder="Senha" />
                     

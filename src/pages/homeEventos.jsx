@@ -1,27 +1,42 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './homePartners.css';
 import {
     RightOutlined,
     DownOutlined,
     CheckOutlined,
     LeftOutlined,
-    CalendarOutlined,
     ClockCircleOutlined,
     ExclamationCircleOutlined,
     MinusOutlined,
     PlusOutlined,
     EditOutlined,
-    UpOutlined
+    UpOutlined,
+    PrinterOutlined
 } from "@ant-design/icons";
+
 import NavBarPartners from '../components/navbarPartner';
-import { Button, Progress, Radio, Input, Switch, DatePicker, Space, Popover, Dropdown, Checkbox } from 'antd';
+import { 
+    Button, 
+    Progress, 
+    Radio, 
+    Input, 
+    Switch, 
+    DatePicker, 
+    Space, 
+    Popover, 
+    Dropdown, 
+    Checkbox 
+} from 'antd';
+
 import PgEvento from '../components/eventos/pgEvento';
+import NavigationButtons from '../components/eventos/buttonsCriar';
 import PgConvite from '../components/eventos/pgConvite';
 import PgConvidados from '../components/eventos/pgConvidados';
 import PgEstatiscas from '../components/eventos/pgEstatis';
 import PgRecep from '../components/eventos/pgRecep';
 import PgLook from '../components/eventos/pgLook';
 import locale from 'antd/es/date-picker/locale/pt_BR';
+
 import {
     BirthdayCake, Users, BabyCarriage, Marriage2, PartyHorn, Diner, MoreHorizontal,
     ConferenceRoom, ChatMessageConversation2, EventSvg, EducationBagLearning5, HandshakeDeal, StaffPersonnel,
@@ -29,7 +44,7 @@ import {
     Journalism, EducationBagLearning8, EducationBagLearning3, EducationBagLearning, EducationBagLearning4, EducationBagLearning2,
     Music, ArtDesign, ComedyAndDramaMasks, CinemaFilmMovie, Sparkler, Hilarious,
     Sport2, Sport, SportWinner, Badminton, SportWinner1, SportBasketball,
-    EditPurple, ListMax, Copy, Map, Dolar
+    EditPurple, ListMax, Copy, Map, Dolar, CreditCard, Boleto, Cartao, QR, Pix, CodeBar, CopyP
 } from '../assets';
 
 
@@ -184,12 +199,27 @@ export default function HomeEvents() {
     const [dateStartEnd, setDateStartEnd] = useState(false);
     const [dropLook, setdropLook] = useState(false);
     const [dropWhats, setdropWhats] = useState(false);
-
-
+    const [cupom, setCupom] = useState(true);
+    const [payment, setpayment] = useState(0);
     const [value, setValue] = useState('200');
 
     const hours = [...Array(24).keys()].map(i => i.toString().padStart(2, '0'));
     const minutes = [...Array(60).keys()].map(i => i.toString().padStart(2, '0'));
+
+    const [time, setTime] = useState(10 * 60);
+
+    useEffect(() => {
+        let timer = 0;
+        clearInterval(timer);
+        timer = setInterval(() => {
+            setTime((prevTime) => prevTime - 1);
+        }, 1000);
+
+        return () => clearInterval(timer); // limpa o intervalo quando o componente é desmontado
+    }, []);
+
+    const minutesCr = Math.floor(time / 60);
+    const secondsCr = time % 60;
 
     const handleTimeChange = (setTime) => (event) => {
         const { name, value } = event.target;
@@ -258,8 +288,6 @@ export default function HomeEvents() {
         }
     };
 
-
-
     return (
         <div className="MainEvents" style={{ overflow: "hidden" }}>
             <NavBarPartners Local={"Clients"} />
@@ -303,7 +331,10 @@ export default function HomeEvents() {
                                 borderRadius: "1rem",
                                 // padding: "1rem 1rem",       
                             }}>
-                            <div style={{ height: "30vh", width: "100%", padding: "1rem 1rem" }}>
+                            <div style={{ 
+                                height: "30vh",
+                                width: "100%", 
+                                padding: "1rem 1rem" }}>
                                 <div style={{ height: "90%", width: "95%", backgroundColor: "#D9D9D9", margin: "auto", borderRadius: "9px" }} />
                                 <p style={{ paddingTop: "1rem", color: "var(--Colors-Azul-escuro-Normal, #1B0746)", fontSize: "16px", fontWeight: "600", lineHeight: "24px" }}>Nome do evento</p>
 
@@ -327,14 +358,14 @@ export default function HomeEvents() {
                             </div>
                             <div style={{ border: '1px dashed var(--Colors-Roxo-Normal, #6D0AD7)', display: "flex", alignItems: "center", justifyContent: "center" }}>
                             </div>
-                            <div style={{ padding: "1rem 1rem", width: "100%", height: "30vh", display: "flex", justifyContent: "space-between", alignItems: "base-line", flexDirection: "column" }}>
+                            <div style={{ padding: "1rem 1rem", width: "100%", minHeight: "34vh", display: "flex", justifyContent: "space-between", alignItems: "base-line", flexDirection: "column" }}>
                                 <div style={{ display: "flex", justifyContent: "space-between" }}>
-                                    <span><p className='ticketSub'> Data</p>
-                                        <p className='ticketCont'>Nov 05 2024</p></span>
-                                    <span><p className='ticketSub'> Início</p>
-                                        <p className='ticketCont'>00:00</p></span>
-                                    <span><p className='ticketSub'> Termino</p>
-                                        <p className='ticketCont'>00:00</p></span>
+                                    <div><p className='ticketSub'> Data</p>
+                                        <p className='ticketCont'>Nov 05 2024</p></div>
+                                    <div><p className='ticketSub'> Início</p>
+                                        <p className='ticketCont'>00:00</p></div>
+                                    <div><p className='ticketSub'> Termino</p>
+                                        <p className='ticketCont'>00:00</p></div>
                                 </div>
                                 <div>
                                     <span>
@@ -344,7 +375,7 @@ export default function HomeEvents() {
                                 </div>
                                 <div>
                                     <div style={{ width: "100%", height: "100%", display: "flex", justifyContent: "space-between", alignItems: "base-line", flexDirection: "column" }}>
-                                        <p className="ticketSub">Convidados</p>
+                                        <span className="ticketSub">Convidados</span>
                                         <div style={{ width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                                             <p className="ticketCont"
                                                 style={{ marginBottom: ".5rem", marginRight: "1rem" }}
@@ -353,11 +384,11 @@ export default function HomeEvents() {
                                         </div>
                                     </div>
                                 </div>
-                                <div style={{ display: "flex", justifyContent: "space-around" }}>
-                                    <div style={{ cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                                        <img src={Copy} height={"15px"} width={"auto"} />
-                                        <p className='ticketSub'>Duplicar Evento</p>
-                                    </div>
+                                <div style={{ display: "flex", justifyContent: "space-around", alignItems:"center" }}>
+                                    {/* <div style={{ cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "space-between" }}> */}
+                                        <img src={Copy} height={"16px"} width={"auto"} />
+                                        <span className='ticketSub'>Duplicar Evento</span>
+                                    {/* </div> */}
                                     <Button
                                         className="buttonNews add"
                                         style={{ border: "2px solid #6D0AD7", height: "2rem", width: "8rem", backgroundColor: "transparent", color: "#6D0AD7", fontSize: "12px" }}
@@ -373,13 +404,13 @@ export default function HomeEvents() {
             {criarEvento &&
                 <div className="ParceriaMain">
                     <div className="PartnersTitle" style={{ paddingTop: "3rem", paddingBottom: "1rem" }}>
-                        <div>
-                            <p className="Title">Criar novo evento</p>
-                            <p><span style={{ color: '#B8B2C6' }}>Home / Meus Eventos / </span>
-                                <span style={{ color: '#1B0746' }}>Criar novo evento</span></p>
+                        <div className="containerV">
+                            <span className="Title">Criar novo evento</span>
+                            <span style={{ color: '#B8B2C6' }}>Home / Meus Eventos / <span style={{ color: '#1B0746' }}>Criar novo evento</span></span>
+                            
                         </div>
                     </div>
-                    <div className="containerH" style={{ width: "79vw", height: "69vh" }}>
+                    <div className="containerH" style={{ width: "79vw", minHeight: "35rem" }}>
                         <div className="stepper">
                             {steps.map((label, index) => (
                                 <div key={label} className={`step ${index === activeStep ? 'active' : ''}`} onClick={() => handleStep(index)}>
@@ -391,23 +422,23 @@ export default function HomeEvents() {
                         </div>
                         {activeStep === 0 &&
                             <div className="containerV" >
-                                <div className="squareNo containerV" style={{ width: "55rem", height: "24vh", padding: "1rem" }} >
-                                    <p className="Title" style={{ padding: "0" }}>Vamos começar?</p>
+                                <div className="squareNo containerV" style={{ width: "55rem", height: "26vh", padding: "1rem" }} >
+                                    <span className="Title" style={{ padding: "0" }}>Vamos começar?</span>
                                     <p className="f16">Qual o seu tipo de evento?</p>
-                                    <Radio.Group className="my-radio-group containerH" style={{ width: "60%" }} onChange={onChangeEvent}>
+                                    <Radio.Group className="my-radio-group containerH" style={{ width: "60%"}} onChange={onChangeEvent}>
                                         <div className="containerV" >
-                                            <Radio value="A" style={{ marginBottom: ".5rem" }}>Particular</Radio>
-                                            <Radio value="B" style={{ marginBottom: ".5rem" }}>Religioso</Radio>
-                                            <Radio value="C" style={{ marginBottom: ".5rem" }}>Cultural / Entretenimento</Radio>
+                                            <Radio value="A" style={{ marginBottom: ".5rem", fontWeight: "500" }}>Particular</Radio>
+                                            <Radio value="B" style={{ marginBottom: ".5rem", fontWeight: "500" }}>Religioso</Radio>
+                                            <Radio value="C" style={{ marginBottom: ".5rem", fontWeight: "500" }}>Cultural / Entretenimento</Radio>
                                         </div>
                                         <div className="containerV">
-                                            <Radio value="D" style={{ marginBottom: ".5rem" }}>Corporativo</Radio>
-                                            <Radio value="E" style={{ marginBottom: ".5rem" }}>Acadêmico / Educacional</Radio>
-                                            <Radio value="F" style={{ marginBottom: ".5rem" }}>Esportivo</Radio>
+                                            <Radio value="D" style={{ marginBottom: ".5rem" , fontWeight: "500"}}>Corporativo</Radio>
+                                            <Radio value="E" style={{ marginBottom: ".5rem" , fontWeight: "500"}}>Acadêmico / Educacional</Radio>
+                                            <Radio value="F" style={{ marginBottom: ".5rem" , fontWeight: "500"}}>Esportivo</Radio>
                                         </div>
                                     </Radio.Group>
                                 </div>
-                                <div className="squareNo containerV" style={{ width: "55rem", height: "43vh", padding: "1rem" }} >
+                                <div className="squareNo containerV" style={{ width: "55rem", height: "45vh", padding: "1rem" }} >
                                     <p className="Title" style={{ padding: "0" }}>Certo!</p>
                                     <p className="f16">Em qual dessas categorias seu evento se encaixa?</p>
                                     <div className="containerH" style={{ height: "9rem" }}>
@@ -420,7 +451,7 @@ export default function HomeEvents() {
                                                 onClick={handleClick}
                                             >
                                                 <img src={item.img} alt={item.legenda} />
-                                                <p style={{ fontSize: "14px", textAlign: "center" }}>{item.legenda}</p>
+                                                <span style={{ color:"white", fontSize: "14px", textAlign: "center" }}>{item.legenda}</span>
                                             </div>
                                         )) : null}
                                     </div>
@@ -442,7 +473,7 @@ export default function HomeEvents() {
                         }
                         {activeStep === 1 &&
                             <div className="containerV" >
-                                <div className="squareNo containerV" style={{ width: "55rem", height: "69vh", padding: "1rem" }} >
+                                <div className="squareNo containerV" style={{ width: "55rem", height: "35rem", padding: "1rem" }} >
                                     <p className="Title" style={{ padding: "0" }}>Vamos continuar ...</p>
                                     <p className="f16">Qual titulo, link e descrição deseja dar ao seu evento?</p>
                                     <div className="containerV" style={{ justifyContent: "space-between", height: "55vh" }}>
@@ -466,29 +497,19 @@ export default function HomeEvents() {
                                                 resize: 'none',
                                                 padding: '1rem',
                                             }} />
-                                        <div className="containerH" style={{ justifyContent: "space-between", alignItems: "center", width: "52rem" }}>
-                                            <Button
-                                                className="buttonNews"
-                                                style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
-                                                onClick={() => voltar()}
-                                            >
-                                                <LeftOutlined style={{ color: "#A1F71A" }} /> Voltar
-                                            </Button>
-                                            <Button
-                                                className="buttonNews"
-                                                style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
-                                                onClick={() => handleButtonClick(activeStep)}
-                                            >
-                                                Continuar <RightOutlined style={{ color: "#A1F71A" }} />
-                                            </Button>
-                                        </div>
+                                        <NavigationButtons
+                                            voltar={voltar}
+                                            handleButtonClick={handleButtonClick}
+                                            activeStep={activeStep}
+                                            disabled={false}
+                                        />
                                     </div>
                                 </div>
                             </div>
                         }
                         {activeStep === 2 &&
                             <div className="containerV" >
-                                <div className="squareNo containerV" style={{ width: "55rem", height: "69vh", padding: "1rem" }} >
+                                <div className="squareNo containerV" style={{ width: "55rem", height: "35rem", padding: "1rem" }} >
                                     <div className="containerV" style={{ height: "49vh" }} >
 
                                         <p className="Title" style={{ padding: "0" }}>E quando vai ser?</p>
@@ -503,13 +524,6 @@ export default function HomeEvents() {
                                             {!dateStartEnd ?
                                                 <p className="f15">Data do seu evento</p> :
                                                 <p className="f15">Data inicio/fim do seu evento</p>}
-                                            {/* <Button 
-                                            className="buttonNews" 
-                                                style={{ height: "3rem", width: "13rem", backgroundColor: "#6D0AD7", color: "white" }}
-                                            // onClick={() => }
-                                        >
-                                            <CalendarOutlined style={{color:"#FEFEFE"}}/> data/mês/ano <RightOutlined style={{color:"#FEFEFE"}}/>
-                                        </Button> */}
                                             {!dateStartEnd ?
                                                 <DatePicker
                                                     placement='bottomLeft'
@@ -562,28 +576,18 @@ export default function HomeEvents() {
                                             </select>
                                         </div>
                                     </div>
-                                    <div className="containerH" style={{ justifyContent: "space-between", alignItems: "center", width: "52rem" }}>
-                                        <Button
-                                            className="buttonNews"
-                                            style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
-                                            onClick={() => voltar()}
-                                        >
-                                            <LeftOutlined style={{ color: "#A1F71A" }} /> Voltar
-                                        </Button>
-                                        <Button
-                                            className="buttonNews"
-                                            style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
-                                            onClick={() => handleButtonClick(activeStep)}
-                                        >
-                                            Continuar <RightOutlined style={{ color: "#A1F71A" }} />
-                                        </Button>
-                                    </div>
+                                    <NavigationButtons
+                                            voltar={voltar}
+                                            handleButtonClick={handleButtonClick}
+                                            activeStep={activeStep}
+                                            disabled={false}
+                                        />
                                 </div>
                             </div>
                         }
                         {activeStep === 3 &&
                             <div className="containerV" >
-                                <div className="squareNo containerV" style={{ width: "55rem", height: "69vh", padding: "1rem" }} >
+                                <div className="squareNo containerV" style={{ width: "55rem", height: "35rem", padding: "1rem" }} >
                                     <p className="Title" style={{ padding: "0" }}>Agora o endereço!</p>
                                     <p className="f16">Preencha os dados abaixo</p>
                                     <div className="containerV" style={{ width: "25rem", height: "20rem" }}>
@@ -629,28 +633,18 @@ export default function HomeEvents() {
                                             <Input style={{ height: "3rem", borderRadius: "0.5625rem" }} placeholder="Complemento" />
                                         </Space>
                                     </div>
-                                    <div className="containerH" style={{ justifyContent: "space-between", alignItems: "center", width: "52rem" }}>
-                                        <Button
-                                            className="buttonNews"
-                                            style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
-                                            onClick={() => voltar()}
-                                        >
-                                            <LeftOutlined style={{ color: "#A1F71A" }} /> Voltar
-                                        </Button>
-                                        <Button
-                                            className="buttonNews"
-                                            style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
-                                            onClick={() => handleButtonClick(activeStep)}
-                                        >
-                                            Continuar <RightOutlined style={{ color: "#A1F71A" }} />
-                                        </Button>
-                                    </div>
+                                    <NavigationButtons
+                                            voltar={voltar}
+                                            handleButtonClick={handleButtonClick}
+                                            activeStep={activeStep}
+                                            disabled={false}
+                                        />
                                 </div>
                             </div>
                         }
                         {activeStep === 4 &&
                             <div className="containerV" >
-                                <div className="squareNo containerV" style={{ width: "55rem", height: "69vh", padding: "1rem" }} >
+                                <div className="squareNo containerV" style={{ width: "55rem", height: "35rem", padding: "1rem" }} >
                                     <p className="Title" style={{ padding: "0" }}>Ótimo! Estamos quase lá...</p>
                                     <p className="f16">Escolha a quantidade de convidados. Relaxa! Você
                                         poderá incluir convidados extra depois...</p>
@@ -747,43 +741,34 @@ export default function HomeEvents() {
                                             }} /></b>
                                         </Popover>
                                     </div>
-                                    <div className="containerH" style={{ justifyContent: "space-between", alignItems: "center", width: "52rem" }}>
-                                        <Button
-                                            className="buttonNews"
-                                            style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
-                                            onClick={() => voltar()}
-                                        >
-                                            <LeftOutlined style={{ color: "#A1F71A" }} /> Voltar
-                                        </Button>
-                                        <Button
-                                            className="buttonNews"
-                                            style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
-                                            onClick={() => handleButtonClick(activeStep)}
-                                        >
-                                            Continuar <RightOutlined style={{ color: "#A1F71A" }} />
-                                        </Button>
-                                    </div>
+                                    <NavigationButtons
+                                            voltar={voltar}
+                                            handleButtonClick={handleButtonClick}
+                                            activeStep={activeStep}
+                                            disabled={false}
+                                        />
+                                        {/* </div> */}
                                 </div>
                             </div>
                         }
                         {activeStep === 5 &&
                             <div className="containerV" >
-                                <div className="squareNo squareAntes" style={ dropLook && dropWhats? {minHeight: "79vh"}: {minHeight: "69vh"}} >
-                                    <p className="Title" style={{ padding: "1rem 0" }}>Serviços adicionais</p>
-                                    <p className="f16" style={{ padding: "1rem 0" }}>Potencialize sua experiência com nossos serviços premium</p>
+                                <div className="squareNo squareAntes" style={ dropLook && dropWhats? {height: "40rem"}: {minHeight: "35rem"}}>
+                                    <span className="Title">Serviços adicionais</span>
+                                    <span className="f16">Potencialize sua experiência com nossos serviços premium</span>
                                     <div>
                                         <div className="whiteSquare" 
                                         style={!dropLook? {with: "50vw", height:"3.5rem", padding:" 1rem 1rem", alignItems:"center" , marginTop: "1rem" }
                                                 :{with: "50vw", height:"15rem", padding:" 1rem 1rem", alignItems:"center", marginTop: "1rem" } }>
                                             <div className="containerH">
-                                            <Checkbox className="my-radio-group" style={{ padding:"0" }}>Look You (recomendado)</Checkbox>
+                                            <Checkbox className="my-radio-group" style={{ padding:"0", fontWeight: "500" }}>Look You (recomendado)</Checkbox>
                                             <span  
                                                 onClick={() => {
                                                 setdropLook((old) => !old)}}>
                                                 {!dropLook?
-                                                <div className="containerH" style={{alignItems:"center", width:"12rem"}}><p className="roxo10">R$</p> <p className="roxo15">0,00</p> <p className="f15">/por convidado</p><DownOutlined style={{ padding:"0", color:"#6D0AD7" }}/></div>
+                                                <div className="containerH" style={{alignItems:"center", width:"12rem"}}><span className="roxo10">R$</span> <span className="roxo15">0,00</span> <span className="f15">/por convidado</span><DownOutlined style={{ padding:"0", color:"#6D0AD7" }}/></div>
                                                 :
-                                                <div className="containerH" style={{alignItems:"center", width:"12rem"}}><p className="roxo10">R$</p> <p className="roxo15">0,00</p> <p className="f15">/por convidado</p><UpOutlined style={{ padding:"0", color:"#6D0AD7" }}/></div>}
+                                                <div className="containerH" style={{alignItems:"center", width:"12rem"}}><span className="roxo10">R$</span> <span className="roxo15">0,00</span> <span className="f15">/por convidado</span><UpOutlined style={{ padding:"0", color:"#6D0AD7" }}/></div>}
                                             </span>
                                             </div>
                                             <p 
@@ -818,14 +803,22 @@ export default function HomeEvents() {
                                         style={!dropWhats? {with: "50vw", height:"3.5rem", padding:" 1rem 1rem", alignItems:"center" , marginTop: "1rem" }
                                                 :{with: "50vw", height:"11.5rem", padding:" 1rem 1rem", alignItems:"center", marginTop: "1rem" } }>
                                             <div className="containerH">
-                                            <Checkbox className="my-radio-group" style={{ padding:"0" }}>Mensagem de Whatsapp extra (recomendado)</Checkbox>
+                                            <Checkbox className="my-radio-group" style={{ padding:"0",fontWeight: "500" }}>Mensagem de Whatsapp extra (recomendado)</Checkbox>
                                             <span  
                                                 onClick={() => {
                                                 setdropWhats((old) => !old)}}>
                                                 {!dropWhats?
-                                                <div className="containerH" style={{alignItems:"center", width:"12rem"}}><p className="roxo10">R$</p> <p className="roxo15">0,00</p> <p className="f15">/por convidado</p><DownOutlined style={{ padding:"0", color:"#6D0AD7" }}/></div>
+                                                <div className="containerH" 
+                                                style={{alignItems:"center", width:"12rem"}}>
+                                                    <span className="roxo10">R$</span> <span className="roxo15">0,00</span> <span className="f15">/por convidado</span>
+                                                    <DownOutlined style={{ padding:"0", color:"#6D0AD7" }}/>
+                                                </div>
                                                 :
-                                                <div className="containerH" style={{alignItems:"center", width:"12rem"}}><p className="roxo10">R$</p> <p className="roxo15">0,00</p> <p className="f15">/por convidado</p><UpOutlined style={{ padding:"0", color:"#6D0AD7" }}/></div>}
+                                                <div className="containerH" 
+                                                style={{alignItems:"center", width:"12rem"}}>
+                                                    <span className="roxo10">R$</span> <span className="roxo15">0,00</span> <span className="f15">/por convidado</span>
+                                                    <UpOutlined style={{ padding:"0", color:"#6D0AD7" }}/>
+                                                </div>}
                                             </span>
                                             </div>
                                             <p 
@@ -836,7 +829,7 @@ export default function HomeEvents() {
                                                 fontSize: "1rem",
                                                 // borderRadius: "12px",
                                                 with: "100%",
-                                                height: "10rem",
+                                                height: "9rem",
                                                 color: "#1B0746",
                                                 padding: "1rem",
                                                 paddingLeft: "3rem",
@@ -853,9 +846,268 @@ export default function HomeEvents() {
                                                 especiais, essa funcionalidade extra permite uma conexão mais pessoal com seus convidados.</p>
                                         </div>
                                     </div>
-
+                                    <div 
+                                    className="containerH" 
+                                    style={{ 
+                                        alignItems: "center",
+                                        width: "54.5vw", 
+                                        position:"absolute",
+                                        bottom: dropLook && dropWhats? "-6rem":"-1.1rem",
+                                        // marginTop: !dropLook && !dropWhats ? "13rem" : ""
+                                    }}>
+                                        <Button
+                                            className="buttonNews"
+                                            style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
+                                            onClick={() => voltar()}
+                                        >
+                                            <LeftOutlined style={{ color: "#A1F71A" }} /> Voltar
+                                        </Button>
+                                        <Button
+                                            className="buttonNews"
+                                            style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
+                                            onClick={() => handleButtonClick(activeStep)}
+                                        >
+                                            Continuar <RightOutlined style={{ color: "#A1F71A" }} />
+                                        </Button>
+                                    </div>
                                 </div>
                             </div>
+                        }
+                        {activeStep === 6 && 
+                            <div className="containerV">
+                                {payment === 0 && activeStep === 6 && 
+                                <div className="squareNo squareAntes" style={{ minHeight: "79vh", padding: "1rem" }}>
+                                    <p className="Title" style={{ padding: "0" }}>Pagamento</p>
+                                    <span className="f16">Confira o resumo da sua compra, está tudo certo?</span>
+                                    <div className="whiteSquare" style={{padding:"2rem", marginTop:"2rem"}}>
+                                        <div className='containerH' style={{minHeight: "20rem", }}>
+                                            <div className='containerV' style={{justifyContent:"flex-start", width:"50%"}}>
+                                                <p style={{fontSize:"1.5rem", color: "1B0746", fontWeight: "400"}}>RESUMO DA COMPRA</p>
+                                                <p className='f15'>Tipo de evento:</p>
+                                                <p className='f15'>Data e horário: </p>
+                                                <p className='f15'>N° de conviddos</p>
+                                                <p className='f15'>Serviços adicionais</p>
+                                            </div>
+                                            <div className='containerV' style={{justifyContent:"center", alignItems:"center", width:"50%"}} >
+                                                <p className='roxo15'>VALOR TOTAL</p>
+                                                <p style={{fontSize:"34px", color: "#1B0746", fontWeight: "400"}}>R$ 0.000,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span className="f16 fw-light"  style={{ marginTop:"1rem"}}>Se você possui um cupom de desconto, insira-o no campo abaixo:</span>
+
+                                    <div className="containerH" style={{width:"28rem", margin:"2rem 0"}}>
+                                        <Input style={{borderRadius: "0.5625rem 0rem 0rem 0.5625rem", background:"#FEFEFE", height:"3rem"}} placeholder="Cupom de desconto"/>
+                                        <Button style={{width:"11rem", borderRadius: "0rem 0.5625rem 0.5625rem 0rem", background: "#1B0746", color: "white", height:"3rem"}}
+                                        onClick={() => setCupom((old) => !old)}
+                                        >
+                                            Aplicar
+                                        </Button>
+                                    </div>
+                                    {cupom &&
+                                    <div className="whiteSquare containerH" style={{width:"30rem", height:"6rem", padding: "1rem", marginBottom:"2rem"}}>
+                                        <div className='containerV'>
+                                            <span className='roxo15'>LMJ10390DJ</span>
+                                            <span className='f15'>Valor de desconto - R$ 000,00</span>
+                                        </div>
+                                        <div className='containerV' style={{justifyContent:"center", cursor:"pointer"}}>
+                                            <span className='roxo15' onClick={() => setCupom((old) => !old)}>Remover</span>
+                                        </div>
+                                    </div>}
+
+                                    <span className="f16 fw-light" style={{color: "1B0746"}}>É necessário concordar com os termos a seguir</span>
+                                    
+                                    <div className="containerH">
+                                        <Checkbox className="my-radio-group" style={{ padding:"0", fontWeight: "400", color: "1B0746", marginTop:"2rem" }}>Concordo com os Termos de Uso e a Política de Privacidade da ListMax.</Checkbox>
+                                    </div>
+                                    <span className="f16 fw-light" style={{color: "1B0746", marginTop:"2rem"}}>Escolha o melhor tipo de pagamento para você</span>
+                                    
+                                    <div className="payment containerH align-items-center" style={{ cursor:"pointer"}} 
+                                        onClick={() => {setpayment(1)}}>
+                                        <span><img src={CreditCard}/> Cartão de Crédito</span>
+                                        <span> até 12x sem juros</span>
+                                    </div>
+                                    <div className="payment containerH align-items-center" style={{ cursor:"pointer"}} 
+                                        onClick={() => setpayment(2)}>
+                                        <span><img src={Dolar}/>PIX</span>
+                                        <span>à vista</span>
+                                    </div>
+                                    <div className="payment containerH align-items-center" style={{ cursor:"pointer"}} 
+                                        onClick={() => setpayment(3)}>
+                                        <span><img src={Boleto}/>&nbsp;Boleto</span>
+                                        <span>à vista</span>
+                                    </div>
+
+                                    <div className="containerH" style={{ justifyContent: "space-between", alignItems: "center", width: "52rem" }}>
+                                        <NavigationButtons
+                                            voltar={voltar}
+                                            handleButtonClick={handleButtonClick}
+                                            activeStep={activeStep}
+                                            disabled={true}
+                                        />
+                                    </div>
+                                </div>
+                                }
+                                {payment === 1 && 
+                                    <div className="squareNo squareAntes" style={{ minHeight: "35rem", padding: "1rem" }} >
+                                    <img src={Cartao} style={{ width:"20rem",position:"absolute", top:"20rem", right: "12rem"}}/>
+                                        <p className="Title" style={{ padding: "0" }}>Pagamento</p>
+                                        <span className="f16">Cartão de Crédito</span>
+                                        <div className="containerV" style={{width:"50%", height:"100%", marginTop:"2rem"}}>
+                                            <span>Número do cartão</span>
+                                            <Input style={{ height: "3rem", borderRadius: "0.5625rem" }} placeholder="Digite somente números" />
+
+                                            <span>Número do cartão</span>
+                                            <Input style={{ height: "3rem", borderRadius: "0.5625rem" }} placeholder="Digite o nome impresso no cartão" />
+                                            <div className="containerH">
+                                                <div>
+                                                    <span>Validade</span>
+                                                    <div className="containerH">
+                                                        <select
+                                                            className="select"
+                                                            style={{
+                                                                width: "5rem",
+                                                                height: "3rem",
+                                                                borderRadius: "0.5625rem"
+                                                            }}
+                                                        >
+                                                            <option value="null" selected>00</option>
+                                                        </select>
+                                                        <select
+                                                            className="select"
+                                                            style={{
+                                                                width: "7rem",
+                                                                marginLeft: "1.3rem",
+                                                                height: "3rem",
+                                                                borderRadius: "0.5625rem"
+                                                            }}
+                                                        >
+                                                            <option value="null" selected>0000</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div className='containerV'>
+                                                    <span>CVV</span>
+                                                    <Input style={{ width:"10rem" ,height: "3rem", borderRadius: "0.5625rem" }} placeholder="Código de segurança" />
+                                                </div>
+
+                                                </div>
+                                                <div className='containerV'>
+                                                <span>Parcelamento</span>
+                                                <select
+                                                    className="select"
+                                                    style={{
+                                                        width: "100%",
+                                                        height: "3rem",
+                                                        borderRadius: "0.5625rem"
+                                                    }}
+                                                >
+                                                    <option value="null" selected>1x de R$ 0.000,00</option>
+                                                </select>
+                                                </div>
+                                            <div className="containerH" style={{ justifyContent: "space-between", alignItems: "center", width: "52rem" }}>
+                                                <Button
+                                                    className="buttonNews"
+                                                    style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
+                                                    onClick={() => setpayment(0)}
+                                                >
+                                                    <LeftOutlined style={{ color: "#A1F71A" }} /> Voltar
+                                                </Button>
+                                            </div>
+                                        </div>
+                                    
+                                    </div>
+                                }
+                                {payment === 2 && 
+                                    <div className="squareNo squareAntes justify-content-between" style={{ minHeight: "35rem", padding: "1rem" }} >
+                                        <img src={QR} style={{ width:"15    rem",position:"absolute", top:"23rem", right: "16rem"}}/>
+                                        <div style={{width:"44%"}}>
+                                            <p className="Title" style={{ padding: "0" }}>Pagamento</p>
+                                            <span className="f16">PIX</span>
+                                            <span className='f12 whiteSDash containerH justify-content-lg-center align-items-center' 
+                                                style={{margin: "1rem 0",color: "#595959", width: "23rem",fontWeight: "600", padding: ".5rem .5rem"}}
+                                            >
+                                                <ClockCircleOutlined style={{fontSize:"20px", marginRight:"1rem", color: "#6D0AD7"}}/>
+                                                Seu código expira em
+                                                <span className="roxo"> &nbsp;&nbsp;
+                                                {(minutesCr < 0 && secondsCr < 0) ? <span>Tempo Esgotado</span> : `${minutesCr.toString().padStart(2, '0')}:
+                                                ${secondsCr.toString().padStart(2, '0')}`}</span>
+                                            </span>
+                                            <span className='f12'><img src={Pix}/> &nbsp;Pague R$ 0.000,00 com Pix</span>
+                                            <hr style={{color:"#6D0AD7"}}/>
+                                            <span className='f10' style={{fontWeight: "600"}}>É rápido e prático. Veja como é fácil:</span>
+                                            <div className='containerV'>
+                                                <span className='f10'>1. Abra o app ou banco de sua preferência, escolha a opção pagar via PIX.</span>
+                                                <span className='f10'>2. Escolha pagar Pix com QR Code e escaneie o código QR:</span>
+                                                <span className='f10'>3. Confira todas as informações e confirme o pagamento.</span>
+                                            </div>
+                                            <hr style={{color:"#6D0AD7"}}/>
+                                            <div className='containerV justify-content-between' style={{height:"7rem"}}>
+                                                <span className='f12' style={{fontWeight: "600"}}>Ou se preferir, faça o pagamento com Pix copia e cola</span>
+                                                <span className='f10'>Acesse o app do seu banco ou Internet Banking, escolha a opção pagar com Pix copia e cola. Depois cole o código, confira todas as informações e confirme o pagamento. </span>
+                                                <span className='f12  whiteSDash containerH justify-content-lg-center'
+                                                    style={{color: "#595959", width: "23rem",fontWeight: "600", padding: ".5rem .5rem"}}
+                                                >xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+                                                    <span style={{color:"#6D0AD7", fontWeight: "600"}}>&nbsp;Copiar</span>
+                                                </span>
+                                            </div>
+
+                                            <Button
+                                                    className="buttonNews"
+                                                    style={{ marginTop: ".5rem",height: "2.25rem", width: "23rem", backgroundColor: "#6D0AD7", color: "white" }}
+                                                    // onClick={() => setpayment(0)}
+                                                >
+                                                    <img src={Copy}/>&nbsp;Copiar código Pix
+                                            </Button>
+                                        </div>
+                                            <Button
+                                                className="buttonNews"
+                                                style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
+                                                onClick={() => setpayment(0)}
+                                            >
+                                                <LeftOutlined style={{ color: "#A1F71A" }} /> Voltar
+                                            </Button>
+                                        </div>
+                                }
+                                {payment === 3 && 
+                                    <div className="squareNo squareAntes justify-content-between" style={{ minHeight: "35rem", padding: "1rem" }} >
+                                        <p className="Title" style={{ padding: "0" }}>Pagamento</p>
+                                        <span className="f16">Boleto Bancário</span>
+                                        <div className="containerV" style={{ justifyContent: "space-between", width: "50rem" }}>
+                                            <div className='whiteSquare justify-content-between' style={{width: '100%', height: '24rem', marginTop:'1rem', padding: "2rem"}}>
+                                                <div className='containerH'>
+                                                    <span className='containerV roxo f400'>Valor Total a pagar:<span className='f600'>R$ 0.000,00</span></span>
+
+                                                    <span className='containerV f400'>Vencimento:<span className='f600'>00/00/0000</span></span>
+                                                </div>
+                                                <div className='containerV justify-content-between' style={{margin: "1rem 0", height:"6rem"}}>
+                                                    <span>Use este código em barra ou copie e cole o código e pague pelo seu internet banking</span>
+                                                    <img src={CodeBar} width={"85%"}/>
+                                                    <span className='f600'>00000.00000 00000.000000 00000.000000 0 00000000000000</span>
+                                                </div>
+                                                <div className='containerV justify-content-between' style={{height:"10rem"}}>
+                                                    <span className='f600 roxo f12' style={{ borderBottom:"1px solid #989898", paddingBottom:"1rem" , width:"8rem"}}>
+                                                        <img src={CopyP}/>&nbsp;Copiar Código</span>
+                                                    <span className='f12' style={{color:"#595959"}}>Ou imprima seu boleto para pagá-lo em uma agência bancaria.</span>
+                                                    <span className='roxo f12 f600' style={{ borderBottom:"1px solid #989898", paddingBottom:"1rem" , width:"8rem"}} ><PrinterOutlined className='roxo' /> &nbsp;Imprimir</span>
+
+                                                    <span className='f12' style={{color:"#1B0746"}}>O seu pagamento será aprovado em até 3 dias úteis.</span>
+
+                                                    <span className='f12' style={{color:"#595959"}}>Enviamos estas informações para o seu e-mail para que você as tenhas à mão.</span>
+                                                </div>
+                                            </div>
+                                            
+                                            <Button
+                                                className="buttonNews"
+                                                style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white", marginTop:'1rem' }}
+                                                onClick={() => setpayment(0)}
+                                            >
+                                                <LeftOutlined style={{ color: "#A1F71A" }} /> Voltar
+                                            </Button>
+                                        </div>
+                                    </div>
+                                }
+                        </div>
                         }
                     </div>
                 </div>
@@ -865,22 +1117,22 @@ export default function HomeEvents() {
                     <div className="TabList">
                         <div style={{ color: "#009EF6", marginRight: "9rem" }}>Gerenciando: Nome do evento</div>
                         <div className={`Tab ${selectedTab === 'Página do Evento' ? 'active' : ''}`} onClick={() => setSelectedTab('Página do Evento')}>
-                            <p>Página do Evento</p>
+                            <span>Página do Evento</span>
                         </div>
                         <div className={`Tab ${selectedTab === 'Convites' ? 'active' : ''}`} onClick={() => setSelectedTab('Convites')}>
-                            <p>Convites</p>
+                            <span>Convites</span>
                         </div>
                         <div className={`Tab ${selectedTab === 'Gerenciar Convidados' ? 'active' : ''}`} onClick={() => setSelectedTab('Gerenciar Convidados')}>
-                            <p>Gerenciar Convidados</p>
+                            <span>Gerenciar Convidados</span>
                         </div>
                         <div className={`Tab ${selectedTab === 'Estatísticas' ? 'active' : ''}`} onClick={() => setSelectedTab('Estatísticas')}>
-                            <p>Estatísticas</p>
+                            <span>Estatísticas</span>
                         </div>
                         <div className={`Tab ${selectedTab === 'Recepção' ? 'active' : ''}`} onClick={() => setSelectedTab('Recepção')}>
-                            <p>Recepção</p>
+                            <span>Recepção</span>
                         </div>
                         <div className={`Tab ${selectedTab === 'LookYou' ? 'active' : ''}`} onClick={() => setSelectedTab('LookYou')}>
-                            <p>LookYou</p>
+                            <span>LookYou</span>
                         </div>
                     </div>
                     {selectedTab == 'Página do Evento' && <PgEvento />}

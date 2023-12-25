@@ -47,8 +47,8 @@ export default function News( { whereCalled } ) {
           </div>
         }
           <div className="twoInputsButton">
-            <p className="subTitle">Cadastre-se para </p>
-            <p className="subTitle">receber as novidades.</p>
+            <p className="subTitle text-white">Cadastre-se para </p>
+            <p className="subTitle text-white">receber as novidades.</p>
             <Input size="large" className="inputNews" type="email" placeholder="E-mail"/>
             <Input size="large" className="inputNews" type="text" placeholder="Celular"/>
             <Button size="large"className="buttonNews">Cadastrar no Newsletter</Button>

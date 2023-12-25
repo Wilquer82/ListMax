@@ -7,11 +7,11 @@ import { useState } from 'react';
 const UserCard = ({ avatarUrl, firstName, lastName, userLevel }) => {
     const [seeMenu, setSeeMenu] = useState(false);
     return (
-        <div className="user-card">
+        <div className="user-card text-white">
             <img src={Self} alt="User Avatar" className="user-avatar" />
             <div className="user-info">
-                <h5>Nome Sobrenome</h5>
-                <p>Partner</p>
+                <span>Nome Sobrenome</span>
+                <span>partner</span>
             </div>
             <Button 
                 className="settings-button" 
@@ -23,13 +23,13 @@ const UserCard = ({ avatarUrl, firstName, lastName, userLevel }) => {
                 {seeMenu && 
                     <div className="miniMenu">
                         <div className="miniItem">
-                            <p>Minha Conta </p><UserOutlined />
+                            <span>Minha Conta </span><UserOutlined />
                         </div>
                         <div className="miniItem">
-                        <p>Configurações</p> <SettingOutlined />
+                        <span>Configurações</span> <SettingOutlined />
                         </div>
                         <div className="miniItem">
-                        <p>Sair</p> <ExportOutlined />
+                        <span>Sair</span> <ExportOutlined />
                         </div>
 
                     </div>}

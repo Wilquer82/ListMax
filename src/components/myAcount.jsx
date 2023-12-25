@@ -26,7 +26,7 @@ export default function MyAcount() {
         <div className="ParceriaMain">
             <div className="PartnersTitle">
                 <div>
-                    <p className="Title">Minha Conta</p>
+                    <span className="Title">Minha Conta</span>
                     <p><span style={{color:'#B8B2C6'}}>Home  / </span><span style={{color:'#1B0746'}}> Minha conta</span></p>
                 </div>
 
@@ -62,9 +62,9 @@ export default function MyAcount() {
                     <p style={{ width: "100%", borderBottom: "1px solid #BFBFBF", height: "2.5rem" }} className="squareTitle">Privacidade e Segurança</p>
                     <div style={{ display: "flex"}}>
                         <div style={{fontSize: "14px",marginTop:"2rem" ,width:"29vw", minHeight:"13vh"}}>
-                            <div style={{ display: "flex", justifyContent:"space-between"}}>
+                            <div style={{ display: "flex", justifyContent:"space-around"}}>
                                 < Switch style={{backgroundColor:"#6D0AD7"}} defaultChecked onChange={onChange} />
-                                <p style={{color: "#595959"}}>Autenticação de dois fatores (2FA)</p>
+                                <span style={{color: "#595959"}}>Autenticação de dois fatores (2FA)</span>
                             </div>
                             <p style={{marginTop:"2rem", color: "#595959"}}>Histórico de login</p>
                         </div>                

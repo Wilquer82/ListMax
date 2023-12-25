@@ -54,8 +54,8 @@ export default function Register() {
                 </div>
 
                 <div className="paragraphL">
-                    <p>Se você possui uma conta basta</p>
-                    <div className="flex"><p>fazer &nbsp;</p><Link to="/login"><p className="pink">login aqui!</p></Link></div>
+                    <p className="fwhite">Se você possui uma conta basta</p>
+                    <div className="flex"><p  className="fwhite">fazer &nbsp;</p><Link to="/login"><p className="pink">login aqui!</p></Link></div>
                 </div>
             </div>
             <Space direction="vertical" className="loginInputsR">
@@ -101,7 +101,7 @@ export default function Register() {
                         <Input className="codigo" type="text" />
                         <Input className="codigo" type="text" />
                     </div>
-                    <Space direction="horizontal" className="nameLast">
+                    <Space direction="horizontal" className="nameLast justify-content-md-center align-content-center" >
                         <p>Código válido por </p>
                         <p className="roxo">
                             {(minutes < 0 && seconds < 0) ? handleCancel : `${minutes.toString().padStart(2, '0')}:

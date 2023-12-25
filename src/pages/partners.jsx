@@ -28,8 +28,8 @@ export default function Partners() {
 
     return (
         <>
-            <BackGround />
             <NavBar />
+            <BackGround />
             {!register ?
                 <div className="Main column">
                     <div className="flexPart">

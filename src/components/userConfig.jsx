@@ -14,7 +14,7 @@ export default function UserConfig() {
         <div className="ParceriaMain">
             <div className="PartnersTitle">
                 <div>
-                    <p className="Title">Minha Conta</p>
+                    <span className="Title">Minha Conta</span>
                     <p><span style={{color:'#B8B2C6'}}>Home  / Minha Conta /</span><span style={{color:'#1B0746'}}>Configurações</span></p>
                 </div>
 
@@ -49,28 +49,28 @@ export default function UserConfig() {
                     <p style={{ width: "100%", height: "2.5rem" }} className="squareTitle">Notificações</p>
                     <div style={{ width:"30rem", fontSize: "15px", display: "flex", justifyContent:"space-between"}}>
                         < Switch style={{backgroundColor:"#6D0AD7"}} defaultChecked onChange={onChange} />
-                        <p style={{color: "#595959"}}>Receber todas as notificações</p>
+                        <span style={{color: "#595959"}}>Receber todas as notificações</span>
                     </div>
                 </div>
                         <div style={{display: "flex", flexDirection:"column", justifyContent:"space-between", fontSize: "14px",marginTop:"2rem" ,width:"29vw", minHeight:"20vh"}}>
-                        <Checkbox onChange={onChange}>Notificações via E-mail</Checkbox>
-                        <Checkbox onChange={onChange}>Notificações via WhatsApp</Checkbox>
-                        <Checkbox onChange={onChange}>Notificações via SMS</Checkbox>
-                        <Checkbox onChange={onChange}>Assinar boletins informativos</Checkbox>
-                        <Checkbox onChange={onChange}>Atualizações especiais</Checkbox>
+                        <Checkbox  style={{fontWeight:"400"}}onChange={onChange}>Notificações via E-mail</Checkbox>
+                        <Checkbox  style={{fontWeight:"400"}}onChange={onChange}>Notificações via WhatsApp</Checkbox>
+                        <Checkbox  style={{fontWeight:"400"}}onChange={onChange}>Notificações via SMS</Checkbox>
+                        <Checkbox  style={{fontWeight:"400"}}onChange={onChange}>Assinar boletins informativos</Checkbox>
+                        <Checkbox  style={{fontWeight:"400"}}onChange={onChange}>Atualizações especiais</Checkbox>
                     </div>                
             </div>
             <div className="squareE">
                 <div style={{ borderBottom: "1px solid #BFBFBF", display: "flex"}}>
-                    <p style={{ width: "100%", height: "2.5rem" }} className="squareTitle">Preferência de Comunicação</p>
+                    <span style={{ width: "100%", height: "2.5rem" }} className="squareTitle">Preferência de Comunicação</span>
                     <div style={{ width:"30rem", fontSize: "15px", display: "flex", justifyContent:"space-between"}}>
                         < Switch style={{backgroundColor:"#6D0AD7"}} defaultChecked onChange={onChange} />
                         <p style={{color: "#595959"}}>Receber todos</p>
                     </div>
                 </div>
                 <div style={{display: "flex", flexDirection:"column", justifyContent:"space-between", fontSize: "14px",marginTop:"2rem" ,width:"29vw", minHeight:"10vh"}}>
-                    <Checkbox onChange={onChange}>Assinar boletins informativos</Checkbox>
-                    <Checkbox onChange={onChange}>Assinar boletins sobre atualizações especiais</Checkbox>
+                    <Checkbox  style={{fontWeight:"400"}}onChange={onChange}>Assinar boletins informativos</Checkbox>
+                    <Checkbox  style={{fontWeight:"400"}}onChange={onChange}>Assinar boletins sobre atualizações especiais</Checkbox>
                 </div>                
             </div>
             <div className="squareE">
@@ -121,7 +121,7 @@ export default function UserConfig() {
                             </div>
                         </div>
                         <div style={{  width: "100%", display:"flex", alignItems:"center", justifyContent:"space-around", padding: "1rem 4rem"}}>
-                            <Checkbox onChange={onChange}>Confirmo que quero desativar minha conta e que li os Termos de Uso do site.   </Checkbox>
+                            <Checkbox  style={{fontWeight:"400"}}onChange={onChange}>Confirmo que quero desativar minha conta e que li os Termos de Uso do site.   </Checkbox>
                             <Button  size="large" style={{ marginTop: "4rem",fontWeight: "600", height: "3rem", width: "12rem", backgroundColor: "#EA4335", color: "white"}}>Desativar conta</Button>
                         </div>
                     </div>                

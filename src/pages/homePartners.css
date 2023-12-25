@@ -233,7 +233,7 @@
     align-items: flex-start;
     justify-content: space-between;
     width: 19.625rem;
-    height: 69vh;
+    height: 35rem;
     border-radius: 0.5rem;
     border: 1px solid var(--colors-azul-escuro-light-active, #B8B2C6);
     background: var(--Colors-Azul-escuro-Light, #E8E6ED);
@@ -259,6 +259,7 @@
     margin-right: 10px;
     background-color: #595959;
     z-index: 1;
+    color:white;
 }
 
 .step-title {
@@ -296,10 +297,34 @@
     font-weight: 600;
     line-height  : 120%;
 }
+
 .f15{
     color:  #595959;
     font-size: 15px;
     font-weight: 400;
+}
+
+.f12{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.f10{
+    font-size: 10px;
+}
+
+.roxoF{
+    color:#6D0AD7;
+}
+
+.roxoBG{
+    background-color: #6D0AD7;
+}
+
+.whiteSDash{
+    border-radius: 8px;
+    border: 1px dashed var(--Colors-Roxo-Normal, #6D0AD7);
+    background: var(--Colors-Branco-Normal, #FEFEFE);
 }
 
 .my-radio-group .ant-radio .ant-radio-inner {
@@ -414,7 +439,6 @@
     box-shadow: 0px 8px 20px 0px rgba(184, 178, 198, 0.50);
     color: var(--Colors-Azul-escuro-Normal, #1B0746);
     font-size: 0.875rem;
-    font-weight: 600;
     /* line-height: 1.5rem; */
 }
 
@@ -436,6 +460,28 @@
     display:flex; 
     flex-direction:column; 
     overflow: clip;
+}
+
+.mgT2{
+    margin-top: 2rem;
+}
+
+.payment{
+    width: 29.25rem;
+    height: 3rem;
+    flex-shrink: 0;
+    border-radius: 0.5rem;
+    background: var(--colors-azul-escuro-light-hover, #DDDAE3);
+    margin: 1rem 1rem;
+    padding: .5rem;
+}
+
+.f400{
+    font-weight: 400;
+}
+
+.f600{
+font-weight: 600;
 }
 
 @-webkit-keyframes swing

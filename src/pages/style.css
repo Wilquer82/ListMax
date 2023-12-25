@@ -1,6 +1,5 @@
 * {
     font-family: 'Poppins', sans-serif !important;
-
 }
 
 .textContainer {
@@ -45,6 +44,7 @@
     display: flex;
     width: 660px;
     justify-content: flex-start;
+    align-items: baseline;
     /* margin-bottom: 1rem; */
 }
 
@@ -54,6 +54,7 @@
     font-weight: 400;
     line-height: 43px; 
     letter-spacing: -0.18px;
+    color: white;
 }
 
 .G {
@@ -232,12 +233,16 @@
     color: black;
     background-color: White;
     border-radius: 10px;
-    top: 10vh;
-    left: 18vw;
+    top: 13vh;
+    left: 23vw;
     position: fixed;
     width: 800px;
     height: 450px;
     box-shadow: 2px 2px 2px grey;
+}
+
+.fwhite{
+    color: white;
 }
 
 .containerCodigo {

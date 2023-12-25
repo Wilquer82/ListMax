@@ -14,19 +14,19 @@ export default function HomeUsers() {
     return (
         <div className="MainPartners">
             <NavBarPartners Local={"Clients"} />
-            <div className="TabList" style={{marginTop:"4rem"}}>
+            <div className="TabList" style={{marginTop:"4rem", paddingLeft:"16rem"}}>
             <div 
                 className={`Tab ${selectedTab === 'Home' ? 'active' : ''}`} 
                 // onClick={() => setSelectedTab('Home')
             // }
                 >
-                <p>Home</p>
+                <span>Home</span>
             </div>
             <div className={`Tab ${selectedTab === 'Minha Conta' ? 'active' : ''}`} onClick={() => setSelectedTab('Minha Conta')}>
-                <p>Minha Conta</p>
+                <span>Minha Conta</span>
             </div>
             <div className={`Tab ${selectedTab === 'Configurações' ? 'active' : ''}`} onClick={() => setSelectedTab('Configurações')}>
-                <p>Configurações</p>
+                <span>Configurações</span>
             </div>    
         </div>
             {/* {selectedTab == 'home' && <home />} */}
