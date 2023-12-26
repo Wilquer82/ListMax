@@ -37,7 +37,7 @@ export default function Register() {
         <BackGround />
         <div className="Main">
             <div className="textContainerR">
-                <Link to='/'>
+                <Link to='/' style={{textDecoration: "none"}}>
                     <img className="logoP" src={Logo} width="153px" height="40px" alt="Logo List-Max" />
                 </Link>
                 <div className="lineContainer">

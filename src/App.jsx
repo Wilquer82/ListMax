@@ -24,7 +24,7 @@ export default function App() {
           </div>
         </div>
         <div className="paragraphA">
-          <p>Convide, controle e conecte-se: a solução definitiva com QR Code e Reconhecimento Facial. A solução perfeita para administrar os seus convidados.</p>
+          <span className="fwhite">Convide, controle e conecte-se: a solução definitiva com QR Code e Reconhecimento Facial. A solução perfeita para administrar os seus convidados.</span>
         </div>
         <div className="textContainerA">
           <TwoButtons />

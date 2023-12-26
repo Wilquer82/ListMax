@@ -25,9 +25,9 @@ export default function MyAcount() {
     return (
         <div className="ParceriaMain">
             <div className="PartnersTitle">
-                <div>
+                <div className="containerV">
                     <span className="Title">Minha Conta</span>
-                    <p><span style={{color:'#B8B2C6'}}>Home  / </span><span style={{color:'#1B0746'}}> Minha conta</span></p>
+                    <span><span style={{color:'#B8B2C6'}}>Home  / </span><span style={{color:'#1B0746'}}> Minha conta</span></span>
                 </div>
 
             </div>
@@ -35,13 +35,13 @@ export default function MyAcount() {
                 <div style={{width:"39vw", display:"flex", alignItems: "center", justifyContent:"center"}}>
                     <div className="centerIMG">
                         <img src={LogoE} alt="LogoEmpresa" height={"200px"}/>
-                        {/* <p style={{ color: 'black', position: 'absolute', zIndex: '4' }}></p> */}
+                        {/* <span style={{ color: 'black', position: 'absolute', zIndex: '4' }}></span> */}
                     </div>
                     <div className="data">
-                        <p style={{ color: "#BFBFBF" }}><UserOutlined />  Nome</p>
-                        <p style={{ color: "#BFBFBF" }}><EnvironmentOutlined /> Localidade</p>
-                        <p style={{ color: "#BFBFBF" }}><MailOutlined />  E-Mail</p>
-                        <p style={{ color: "#BFBFBF" }}><PhoneOutlined />  Telefone</p>
+                        <span style={{ color: "#BFBFBF" }}><UserOutlined />  Nome</span>
+                        <span style={{ color: "#BFBFBF" }}><EnvironmentOutlined /> Localidade</span>
+                        <span style={{ color: "#BFBFBF" }}><MailOutlined />  E-Mail</span>
+                        <span style={{ color: "#BFBFBF" }}><spanhoneOutlined />  Telefone</span>
                     </div>
                 </div>                
                 <div style={{ width:"39vw", display: "flex", alignItems:"flex-start", justifyContent:"flex-end"}}>
@@ -59,14 +59,14 @@ export default function MyAcount() {
             {!edit ?
             <>
                 <div className="squareE">
-                    <p style={{ width: "100%", borderBottom: "1px solid #BFBFBF", height: "2.5rem" }} className="squareTitle">Privacidade e Segurança</p>
+                    <span style={{ width: "100%", borderBottom: "1px solid #BFBFBF", height: "2.5rem" }} className="squareTitle">Privacidade e Segurança</span>
                     <div style={{ display: "flex"}}>
                         <div style={{fontSize: "14px",marginTop:"2rem" ,width:"29vw", minHeight:"13vh"}}>
                             <div style={{ display: "flex", justifyContent:"space-around"}}>
                                 < Switch style={{backgroundColor:"#6D0AD7"}} defaultChecked onChange={onChange} />
                                 <span style={{color: "#595959"}}>Autenticação de dois fatores (2FA)</span>
                             </div>
-                            <p style={{marginTop:"2rem", color: "#595959"}}>Histórico de login</p>
+                            <span style={{marginTop:"2rem", color: "#595959"}}>Histórico de login</span>
                         </div>                
                         <div style={{ width:"49vw", display: "flex", alignItems:"flex-end", justifyContent:"flex-end"}}>
                             <Button  size="large" style={{ height: "3rem", width: "14rem", backgroundColor: "#6D0AD7", color: "white"}}>Encerrar sessões ativas</Button>
@@ -74,23 +74,23 @@ export default function MyAcount() {
                     </div>
                 </div>
                 <div className="squareE">
-                    <p style={{ width: "100%", borderBottom: "1px solid #BFBFBF", height: "2.5rem" }} className="squareTitle">Dados e Privacidade</p>
+                    <span style={{ width: "100%", borderBottom: "1px solid #BFBFBF", height: "2.5rem" }} className="squareTitle">Dados e Privacidade</span>
                     <div style={{ display: "flex"}}>
                         <div style={{marginTop:"2rem" ,width:"39vw", minHeight:"13vh"}}>
-                            <p style={{fontSize: "14px", marginTop:"1rem", color: "#595959"}}>Dados pessoais armazenados</p>
-                            <p style={{fontSize: "14px",marginTop:"1rem", color: "#595959"}}>Politica de privacidade e informações</p>
+                            <span style={{fontSize: "14px", marginTop:"1rem", color: "#595959"}}>Dados pessoais armazenados</span>
+                            <span style={{fontSize: "14px",marginTop:"1rem", color: "#595959"}}>Politica de privacidade e informações</span>
                         </div>                
                         <div style={{fontSize: "14px", width:"39vw", display: "flex", alignItems:"flex-end", justifyContent:"flex-end", color: "#595959"}}>
-                            <p className='buttonP'>Baixar Dados</p> <p className='buttonP' style={{marginLeft:"2rem"}}>Excluir Dados</p>
+                            <span className='buttonP'>Baixar Dados</span> <span className='buttonP' style={{marginLeft:"2rem"}}>Excluir Dados</span>
                         </div>
                     </div>
                 </div>
                 <div className="squareE">
-                    <p style={{ width: "100%", borderBottom: "1px solid #BFBFBF", height: "2.5rem" }} className="squareTitle">Assinaturas e Pagamentos</p>
+                    <span style={{ width: "100%", borderBottom: "1px solid #BFBFBF", height: "2.5rem" }} className="squareTitle">Assinaturas e Pagamentos</span>
                     <div style={{ display: "flex"}}>
                         <div style={{marginTop:"2rem" ,width:"39vw", minHeight:"13vh"}}>
-                            <p style={{fontSize: "14px", marginTop:"1rem", color: "#595959"}}>Gerenciamento de assinaturas</p>
-                            <p style={{fontSize: "14px",marginTop:"1rem", color: "#595959"}}>Histórico de transações feitas pela sua conta </p>
+                            <span style={{fontSize: "14px", marginTop:"1rem", color: "#595959"}}>Gerenciamento de assinaturas</span>
+                            <span style={{fontSize: "14px",marginTop:"1rem", color: "#595959"}}>Histórico de transações feitas pela sua conta </span>
                         </div>                
 
                     </div>
@@ -99,14 +99,14 @@ export default function MyAcount() {
             :
             <>
             <div className="squareE">
-                <p style={{ width: "100%", borderBottom: "1px solid #BFBFBF", height: "2.5rem" }} className="squareTitle">Informações da Conta</p>
+                <span style={{ width: "100%", borderBottom: "1px solid #BFBFBF", height: "2.5rem" }} className="squareTitle">Informações da Conta</span>
                 <div style={{ width: "100%", display: "flex" }}>
                     <div style={{ width: "30%",  display: "flex", flexDirection:"column", minHeight: "50vh", justifyContent: "space-evenly"}}>
-                        <p className="squareSubTitle">Nome Completo</p>
-                        <p className="squareSubTitle">Estado / Cidade</p>
-                        <p className="squareSubTitle">Endereço</p>
-                        <p className="squareSubTitle">Telefone (WhatsApp)</p>
-                        <p className="squareSubTitle">Foto do perfil</p>
+                        <span className="squareSubTitle">Nome Completo</span>
+                        <span className="squareSubTitle">Estado / Cidade</span>
+                        <span className="squareSubTitle">Endereço</span>
+                        <span className="squareSubTitle">Telefone (WhatsApp)</span>
+                        <span className="squareSubTitle">Foto do perfil</span>
                     </div>
                     <div style={{ width: "100%", marginLeft: "20%", display: "flex", flexDirection:"column", minHeight: "50vh", justifyContent: "space-evenly" }}>
                         <input className="Input"  placeholder="Nome completo" />
@@ -137,15 +137,15 @@ export default function MyAcount() {
                 <div style={{ width: "100%", display: "flex", flexDirection:"column" }}>
                         <div style={{ width: "100%", display: "flex", minHeight: "7rem", justifyContent:"left", alignItems:"center" }}>
                             
-                            <p  style={{ width: "38.5%"}} className="squareSubTitle">E-mail</p>
+                            <span  style={{ width: "38.5%"}} className="squareSubTitle">E-mail</span>
 
                             <div style={!changeEmail?   
                                 { marginLeft: "15%",display:"flex", width:"100%", justifyContent:"space-between", alignItems: "center"}
                             :   { marginLeft: "15%",display:"flex", width:"100%", justifyContent:"space-between", alignItems: "center", minHeight: "7rem", flexDirection:"column"}}>
                                 <input style={!changeEmail? {width:"70%"} :  {width:"100%"}} className="Input"  placeholder="E-mail Atual" />
                                 {!changeEmail ?
-                                    <p style={{color: "#989898", cursor:"pointer", width:"20%", marginLeft:"1rem"}} 
-                                    onClick={()=>{setchangeEmail((old) => !old)}}> Trocar E-mail</p>
+                                    <span style={{color: "#989898", cursor:"pointer", width:"20%", marginLeft:"1rem"}} 
+                                    onClick={()=>{setchangeEmail((old) => !old)}}> Trocar E-mail</span>
                                 :
                                     <input style={{width:"100%"}} className="Input"  placeholder="Novo E-mail" />
                                 }
@@ -153,13 +153,13 @@ export default function MyAcount() {
                         </div>
                         <div style={{ width: "100%", display: "flex", minHeight: "4rem", justifyContent:"left", alignItems:"center" }}>
                             
-                            <p className="squareSubTitle" style={{ width: "38.5%"}}> Senha</p>
+                            <span className="squareSubTitle" style={{ width: "38.5%"}}> Senha</span>
 
                             <div style={!changePass?
                                 {marginLeft: "15%",display:"flex", width:"100%", justifyContent:"space-between", alignItems: "center"}
                             :   {marginLeft: "15%",display:"flex", width:"100%", justifyContent:"space-between", alignItems: "center", flexDirection:"column", minHeight: "11rem", marginTop:"3rem"}}>
                                     <Input.Password  style={!changePass? {width:"70%"} :  {width:"100%"}} className="Input" placeholder='Senha Atual' /> 
-                                    {!changePass && <p  style={{color: "#989898", cursor:"pointer", width:"20%", marginLeft:"1rem"}} onClick={()=>{setchangePass((old) => !old)}}> Trocar Senha</p>}
+                                    {!changePass && <span  style={{color: "#989898", cursor:"pointer", width:"20%", marginLeft:"1rem"}} onClick={()=>{setchangePass((old) => !old)}}> Trocar Senha</span>}
                                 {changePass &&
                                     <>
                                         <Input.Password  style={{width:"100%"}} className="Input" placeholder='Nova Senha' /> 

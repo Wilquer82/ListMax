@@ -48,10 +48,10 @@ export default function PgEvento() {
                 <div style={{ display: "flex", width: "100%", height: "20vh", alignItems: "center", justifyContent: "space-between" }}>
                     <div style={{ width: "43%", height: "20vh", display: "flex", justifyContent: "space-between" }} className="box">
                         <div style={{ color: "#1B0746", display: "flex", justifyContent: "space-evenly", flexDirection: "column" }}>
-                            <p className="pdate">Inicio</p>
+                            <span className="pdate">Inicio</span>
                             <div style={{ display: "flex", width: "100%", height: "2rem", alignItems: "center", justifyContent: "space-evenly" }}>
-                                <CalendarOutlined className="pdate" /><p className="pdate"> 00/00/0000</p>
-                                <ClockCircleOutlined className="pdate" /> <p className="pdate">00:00</p>
+                                <CalendarOutlined className="pdate" /><span className="pdate"> 00/00/0000</span>
+                                <ClockCircleOutlined className="pdate" /> <span className="pdate">00:00</span>
                             </div>
                         </div>
                         <div style={{
@@ -62,22 +62,22 @@ export default function PgEvento() {
                         }} />
 
                         <div style={{ color: "#1B0746", display: "flex", justifyContent: "space-evenly", flexDirection: "column" }}>
-                            <p className="pdate">Fim</p>
+                            <span className="pdate">Fim</span>
                             <div style={{ display: "flex", width: "100%", height: "2rem", alignItems: "center" }}>
-                                <CalendarOutlined className="pdate" /><p className="pdate"> 00/00/0000</p>
-                                <ClockCircleOutlined className="pdate" /> <p className="pdate">00:00</p>
+                                <CalendarOutlined className="pdate" /><span className="pdate"> 00/00/0000</span>
+                                <ClockCircleOutlined className="pdate" /> <span className="pdate">00:00</span>
                             </div>
                         </div>
                     </div>
                     <div style={{ width: "55%", height: "20vh", display: "flex", flexDirection: "column" }} className="box">
                         <div style={{ width: "100%", display: "flex", justifyContent: "space-between", alignItems: "base-line" }}>
-                            <p className="pdate">Convidados</p>
+                            <span className="pdate">Convidados</span>
                             <Progress style={{ marginLeft: "5rem" }} percent={20} strokeColor={twoColors} showInfo={false} size={[400, 20]} trailColor="#B8B2C6" />
                         </div>
-                        <p className="pdate" style={{ marginLeft: "13rem" }}> 000 convidados confirmados</p>
+                        <span className="pdate" style={{ marginLeft: "13rem" }}> 000 convidados confirmados</span>
 
                         <div style={{ width: "10%", display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "2rem" }}>
-                            <TeamOutlined className="pdate" /><p className="pdate">0000</p>
+                            <TeamOutlined className="pdate" /><span className="pdate">0000</span>
                         </div>
                     </div>
                 </div>
@@ -85,9 +85,9 @@ export default function PgEvento() {
             </div>
             <div className="eventsBar" style={{ justifyContent: "space-between", padding: "2rem", height: "9rem" }}>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "start", justifyContent: "space-between", height: "100%" }}>
-                    <p className="pdate">Endereço:</p>
+                    <span className="pdate">Endereço:</span>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                        <EnvironmentOutlined className="pdate" /><p className="pdate">Endereço completo</p>
+                        <EnvironmentOutlined className="pdate" /><span className="pdate">Endereço completo</span>
                     </div>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-between", height: "100%" }}>
@@ -100,8 +100,8 @@ export default function PgEvento() {
                 </div>
             </div>
             <div style={{ width: "79vw", display: "flex", justifyContent: "space-between", alignItems: "start", marginTop: "2rem", flexDirection: "column" }}>
-                <p className="Description">Descrição</p>
-                <p style={{ margin: "2rem 0", color: "#1B0746", textAlign: "justify" }}>
+                <span className="Description">Descrição</span>
+                <span style={{ margin: "2rem 0", color: "#1B0746", textAlign: "justify" }}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In euismod,
                     elit quis mollis dictum, dui felis tristique lectus, eget vestibulum elit erat ac nunc. Vestibulum suscipit ullamcorper
                     imperdiet. Nam sed nisi tortor. Aliquam tempor, nulla at accumsan elementum, turpis nisl mollis neque, vitae porta sapien
@@ -121,7 +121,7 @@ export default function PgEvento() {
                     quis pretium odio lacinia id. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam
                     luctus laoreet metus, at imperdiet metus varius molestie. Donec ullamcorper sagittis tempor. Ut non est augue. Interdum et malesuada
                     fames ac ante ipsum primis in faucibus. Pellentesque gravida mauris a arcu sodales, sit amet hendrerit leo molestie. Pellentesque
-                    vitae libero ligula. Duis consequat convallis tristique.</p>
+                    vitae libero ligula. Duis consequat convallis tristique.</span>
             </div>
             { modal &&
             <div
@@ -149,7 +149,7 @@ export default function PgEvento() {
                         icon={<CloseOutlined />}
                     />
 
-                    <p style={{color:"#1B0746", fontSize: "20px", fontWeight: "500", lineHeight: "30px", letterSpacing: "0em", textAlign: "center", marginTop:"3rem"}}>Guia rápido de como gerir seu evento aqui na ListMax!</p>
+                    <span style={{color:"#1B0746", fontSize: "20px", fontWeight: "500", lineHeight: "30px", letterSpacing: "0em", textAlign: "center", marginTop:"3rem"}}>Guia rápido de como gerir seu evento aqui na ListMax!</span>
                         <div className="centerImg">
                             <img style={{position: "absolute", zIndex:"4"}} src={ButtonVideo} alt="Merch02"/>
                             { passOne &&
@@ -168,39 +168,39 @@ export default function PgEvento() {
                         <div className="squareModal">
                         { passOne &&
                         <>
-                            <p style={{bottom: "14.7rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>1º Passo</p>
-                            <p style={{ color: "#1B0746", fonSize: "20px", fontWeight: "600", lineHeight: "24px", letterSpacing: "-0.02em", }}
-                                >Personalize seu evento</p>
-                            <p style={{ color: "#1B0746"}}>Inclua a imagem que será o banner da página de confirmação de presenças e a edite uma descrição bem bacana!</p>
+                            <span style={{bottom: "14.7rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>1º Passo</span>
+                            <span style={{ color: "#1B0746", fonSize: "20px", fontWeight: "600", lineHeight: "24px", letterSpacing: "-0.02em", }}
+                                >Personalize seu evento</span>
+                            <span style={{ color: "#1B0746"}}>Inclua a imagem que será o banner da página de confirmação de presenças e a edite uma descrição bem bacana!</span>
                         </>
                         }
                         { passTwo &&
                         <>
-                            <p style={{bottom: "14.7rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>2º Passo</p>
-                            <p style={{ color: "#1B0746", fonSize: "20px", fontWeight: "600", lineHeight: "24px", letterSpacing: "-0.02em", }}
-                                >Crie seus convites</p>
-                            <p style={{ color: "#1B0746"}}>Na ListMax você pode criar convites diferentes para cada grupo de convidados.</p>
+                            <span style={{bottom: "14.7rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>2º Passo</span>
+                            <span style={{ color: "#1B0746", fonSize: "20px", fontWeight: "600", lineHeight: "24px", letterSpacing: "-0.02em", }}
+                                >Crie seus convites</span>
+                            <span style={{ color: "#1B0746"}}>Na ListMax você pode criar convites diferentes para cada grupo de convidados.</span>
                             <br/>
                         </>
                         }
                         { passThree &&
                         <>
-                            <p style={{bottom: "14.7rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>3º Passo</p>
-                            <p style={{ color: "#1B0746", fonSize: "20px", fontWeight: "600", lineHeight: "24px", letterSpacing: "-0.02em", }}
-                                >Adicione seus convidados</p>
-                            <p style={{ color: "#1B0746"}}>
+                            <span style={{bottom: "14.7rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>3º Passo</span>
+                            <span style={{ color: "#1B0746", fonSize: "20px", fontWeight: "600", lineHeight: "24px", letterSpacing: "-0.02em", }}
+                                >Adicione seus convidados</span>
+                            <span style={{ color: "#1B0746"}}>
                                 Faça upload de uma planilha excel com base em nosso modelo 
-                                ou adicione manualmente a lista de seus convidados.</p>
+                                ou adicione manualmente a lista de seus convidados.</span>
                         </>
                         }
                         { passFour &&
                         <>
-                            <p style={{bottom: "14.7rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>4º Passo</p>
-                            <p style={{ color: "#1B0746", fonSize: "20px", fontWeight: "600", lineHeight: "24px", letterSpacing: "-0.02em", }}
-                                >Envie os convites</p>
-                            <p style={{ color: "#1B0746"}}>
+                            <span style={{bottom: "14.7rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>4º Passo</span>
+                            <span style={{ color: "#1B0746", fonSize: "20px", fontWeight: "600", lineHeight: "24px", letterSpacing: "-0.02em", }}
+                                >Envie os convites</span>
+                            <span style={{ color: "#1B0746"}}>
                                 Selecione os convidados e envie seus convites. 
-                                Acompanhe os status de confirmação de presença e pronto! =)</p>
+                                Acompanhe os status de confirmação de presença e pronto! =)</span>
                         </>
                         }
                     </div>
@@ -243,16 +243,16 @@ export default function PgEvento() {
                             borderRadius: "8px",
                             cursor: "pointer",
                         }}>
-                            <p  onClick={() =>  {setPassOne((old) => !old);
+                            <span  onClick={() =>  {setPassOne((old) => !old);
                                                 setPassTwo((old) => !old);
                                         }}>
                                 <LeftOutlined /> Passo Anterior
-                            </p>
-                            <p  onClick={() =>  {setPassTwo((old) => !old);
+                            </span>
+                            <span  onClick={() =>  {setPassTwo((old) => !old);
                                                 setPassThree((old) => !old);
                                         }}>
                                 Próximo passo <RightOutlined />
-                            </p>
+                            </span>
                         </div>
                     }
                     { passThree &&
@@ -273,12 +273,12 @@ export default function PgEvento() {
                         borderRadius: "8px",
                         cursor: "pointer",
                     }}>
-                        <p  onClick={() =>  {setPassThree((old) => !old);
+                        <span  onClick={() =>  {setPassThree((old) => !old);
                                             setPassTwo((old) => !old);
-                                    }}><LeftOutlined /> Passo Anterior</p>
-                        <p  onClick={() =>  {setPassThree((old) => !old);
+                                    }}><LeftOutlined /> Passo Anterior</span>
+                        <span  onClick={() =>  {setPassThree((old) => !old);
                                             setPassFour((old) => !old);
-                                    }}>Próximo passo <RightOutlined /></p>
+                                    }}>Próximo passo <RightOutlined /></span>
                         </div>
                     }
                     { passFour &&
@@ -299,10 +299,10 @@ export default function PgEvento() {
                             borderRadius: "8px",
                             cursor: "pointer",
                         }}>
-                        <p  onClick={() =>  {setPassThree((old) => !old);
+                        <span  onClick={() =>  {setPassThree((old) => !old);
                                             setPassFour((old) => !old);
-                                    }}><LeftOutlined /> Passo Anterior</p>
-                        <p  onClick={() => setModal((old) => !old)}>Fechar o guia rápido</p>
+                                    }}><LeftOutlined /> Passo Anterior</span>
+                        <span  onClick={() => setModal((old) => !old)}>Fechar o guia rápido</span>
                         </div>
                     }
 

@@ -30,16 +30,16 @@ export default function PgConvidados() {
     ];
 
     const content = (
-        <p style={{
+        <span style={{
             position: "absolute", 
             border: "2px dashed #6D0AD7", 
             backgroundColor: "#F0E7FB", 
             fontSize: "12px", 
             borderRadius: "12px", 
             width: "50vw", 
-            height: "4rem", 
+            height: "5rem", 
             color: "#727272", 
-            padding: "1rem", 
+            padding: "1rem 1rem", 
             left: "3rem", 
             bottom: "-3rem" }}
         >
@@ -47,7 +47,7 @@ export default function PgConvidados() {
             opção de compartilhar o link de confirmação com outras pessoas.
             Por favor, defina o número máximo de pessoas com quem o convite
             desse convidado pode ser compartilhado.
-        </p>
+        </span>
     );
 
     const [modal, setModal] = useState(false);
@@ -127,9 +127,9 @@ export default function PgConvidados() {
         <>{sendInvites ? 
             <div className="ParceriaMain" style={{backgroundColor:"#e8e6ed",  width: "100vw", minHeight:"100vh"}}>
                 <div className="PartnersTitle">
-                    <div>
-                        <p className="Title">Gerenciar Convidados</p>
-                            <p><span style={{color:"#B8B2C6"}}>Home  / Meus Eventos / Geerenciar Convidados / </span><span style={{color:"#1B0746"}}> Envio de Convites</span></p>
+                    <div className="containerV">
+                        <span className="Title">Gerenciar Convidados</span>
+                        <span><span style={{color:"#B8B2C6"}}>Home  / Meus Eventos / Geerenciar Convidados / </span><span style={{color:"#1B0746"}}> Envio de Convites</span></span>
                     </div>
                     <div style={{width:"32vw"}}/>
                     <div>
@@ -150,7 +150,7 @@ export default function PgConvidados() {
                         padding: "2rem 2rem"
                         }}>
 
-                        <p style={{ paddingBottom: "2rem", borderBottom: "1px solid #BFBFBF", width:"100%"}} className="SubForm">Envio de convites</p>
+                        <span style={{ paddingBottom: "2rem", borderBottom: "1px solid #BFBFBF", width:"100%"}} className="SubForm">Envio de convites</span>
                         <div 
                             style={{  
                                 display:"flex", 
@@ -174,25 +174,25 @@ export default function PgConvidados() {
                                     padding: "1rem" }}
                             >
                                 <ExclamationCircleOutlined style={{color: "#6D0AD7", fontSize:"30px", margin: "0 2rem"}} /> 
-                                <p className="text">Aqui você verá o destinatário e  poderá escolher o modelo de convite à ser enviado.  </p>
+                                <span className="text">Aqui você verá o destinatário e  poderá escolher o modelo de convite à ser enviado.  </span>
                             </div>
                             <div style={{ display:"flex", height:"100%", width:"100%", justifyContent:"space-evenly", marginTop:"2rem"}}>
                                 <div style={{  padding:"0 .5rem",display:"flex", flexDirection:"column", height: "50vh", width:"35%", overflowY: "auto"}}>                        
-                                    <p style={{ paddingBottom: "2rem", width:"100%"}} className="SubForm">Receberá seu convite</p>
+                                    <span style={{ paddingBottom: "2rem", width:"100%"}} className="SubForm">Receberá seu convite</span>
                                         {nomes.map((nomes, index) => (
                                             <div key={index} style={{marginBottom:".5rem", display:"flex", alignItems:"center", justifyContent:"space-between", width:"100%"}}>
                                                 <span style={{borderRadius: "50%", width:"40px", height: "40px", backgroundColor:"grey"}}></span> 
-                                                <p style={{ color: "#1B0746", fontSize: "16px", fontWeight: "600", lineHeight: "24px"}}>{nomes.nome}</p>
+                                                <span style={{ color: "#1B0746", fontSize: "16px", fontWeight: "600", lineHeight: "24px"}}>{nomes.nome}</span>
                                             </div>
                                         ))}
                                 </div>
                                 <div style={{  display:"flex", flexDirection:"column", width:"60%", paddingLeft:"4rem"}}>
-                                    <p style={{ paddingBottom: "2rem", width:"100%"}} className="SubForm">Modelo de convite à ser enviado</p>
+                                    <span style={{ paddingBottom: "2rem", width:"100%"}} className="SubForm">Modelo de convite à ser enviado</span>
                                     <div style={{display:"flex", alignItems:"center", justifyContent:"left", marginBottom:"1rem"}}>
-                                        <Checkbox onChange={onChange}/><p className="Tab">Modelo de convite para familiares</p>
+                                        <Checkbox onChange={onChange}/><span className="Tab">Modelo de convite para familiares</span>
                                     </div>
                                     <div style={{display:"flex", alignItems:"center", justifyContent:"left"}}>
-                                        <Checkbox onChange={onChange}/><p className="Tab">Modelo de convite para amigos</p>
+                                        <Checkbox onChange={onChange}/><span className="Tab">Modelo de convite para amigos</span>
                                     </div>
                                 </div>
                             </div>
@@ -226,31 +226,31 @@ export default function PgConvidados() {
                             }}>
                             <div style={{ height: "30vh", width: "100%", padding: "1rem 1rem" }}>
                                 <div style={{  height: "90%", width: "95%", backgroundColor:"#D9D9D9", margin: "auto", borderRadius: "9px"}}/>
-                                <p style={{ paddingTop: "1rem", color: "var(--Colors-Azul-escuro-Normal, #1B0746)", fontSize: "16px", fontWeight: "600", lineHeight: "24px"}}>Nome do evento</p>
+                                <span style={{ paddingTop: "1rem", color: "var(--Colors-Azul-escuro-Normal, #1B0746)", fontSize: "16px", fontWeight: "600", lineHeight: "24px"}}>Nome do evento</span>
                             </div>
                             <div style={{ height: "30vh", width: "70%", padding: "1rem 1rem", display: "flex", justifyContent:"space-evenly", flexDirection:"column" }}>
                                 <div style={{display: "flex", justifyContent:"space-between"}}>
-                                    <span><p className="ticketSub"> Data</p>
-                                    <p className="ticketCont">Nov 05 2024</p></span>
-                                    <span><p className="ticketSub"> Hora</p>
-                                    <p className="ticketCont">00:00</p></span>
+                                    <span><span className="ticketSub"> Data</span>
+                                    <span className="ticketCont">Nov 05 2024</span></span>
+                                    <span><span className="ticketSub"> Hora</span>
+                                    <span className="ticketCont">00:00</span></span>
                                 
                                 </div>
                                 <div>
                                     <span>
-                                        <p className="ticketSub"> Endereço</p>
-                                        <p className="ticketCont">Endereço completo</p>
+                                        <span className="ticketSub"> Endereço</span>
+                                        <span className="ticketCont">Endereço completo</span>
                                     </span>
                                 </div>
                                 <div>
                                     <span>
-                                        <p className="ticketSub"> Convidado</p>
-                                        <p className="ticketCont">Nome e Sobrenome</p>
+                                        <span className="ticketSub"> Convidado</span>
+                                        <span className="ticketCont">Nome e Sobrenome</span>
                                     </span>
                                 </div>
                             </div>
                             <div style={{ borderTop:"3px dashed #6D0AD7", padding:"1rem 1rem", width: "100%", minHeight:"30vh", display: "flex", justifyContent: "center", alignItems:"flex-end" }}>
-                            <p className="ticketSub">Código QR para acessar o evento</p>
+                            <span className="ticketSub">Código QR para acessar o evento</span>
                             </div>
                         </div>
                     </div>
@@ -259,20 +259,19 @@ export default function PgConvidados() {
         :
             <div className="ParceriaMain" style={{ backgroundColor: "#e8e6ed", width: "100vw", minHeight: "100vh" }}>
                 <div className="PartnersTitle">
-                    <div>
-                        <p className="Title">Convidados</p>
-
-                        <p><span style={{ color: "#B8B2C6" }}>Home  / </span><span style={{ color: "#1B0746" }}> Meus Eventos / Gerenciar convidados</span></p>
+                    <div className="containerV">
+                        <span className="Title">Convidados</span>
+                        <span><span style={{ color: "#B8B2C6" }}>Home  / </span><span style={{ color: "#1B0746" }}> Meus Eventos / Gerenciar convidados</span></span>
                     </div>
                     <div style={{ width: "32vw" }} />
                     <div 
-                        style={{ display: "flex", width:"22rem", position: "absolute", left:"68vw", top: "40vh", cursor: "pointer"}}
+                        style={{ display: "flex", width:"22rem", position: "absolute", left:"68vw", top: "39vh", cursor: "pointer"}}
                         onClick={() => setShowList((old) => !old)}
                     >
                         <DownloadOutlined style={{color:"#FF14FF"}} />
-                        <p style={{color:"#1B0746", marginLeft:".5rem", fontSize: "12px", borderBottom: "1px solid black"}}>
+                        <span style={{color:"#1B0746", marginLeft:".5rem", fontSize: "12px", borderBottom: "1px solid black"}}>
                             Baixe nosso modelo de planilha Excel
-                        </p>
+                        </span>
                     </div>
                 </div>
                 <div 
@@ -306,9 +305,9 @@ export default function PgConvidados() {
                             <div style={{ margin: "0 2rem", }}>
                                 <img src={ImpExcel} width={"30px"} />
                             </div>
-                            <div>
-                                <p className="textBold">Importar Excel</p>
-                                <p className="text">Importe sua lista de convidados direto do Excel </p>
+                            <div className="containerV">
+                                <span className="textBold">Importar Excel</span>
+                                <span className="text">Importe sua lista de convidados direto do Excel </span>
                             </div>
                         </div>
                         <div style={{ marginTop: "2rem",display: "flex", justifyContent: "space-between", width:"100%", flexDirection:"column", height:"6rem"}}>
@@ -319,11 +318,11 @@ export default function PgConvidados() {
                                         <Input style={{ width: "10rem", borderColor: "#6D0AD7"}}/> 
                                     </div>
                                     <div style={{ display: "flex", justifyContent: "space-evenly", width: "10rem"}}>
-                                        <p className="stickers" onClick={(e) => {goPrev(); handleClick(e);}}>&lt;</p>
-                                        <p id="p1" className={`alphabetic ${activeElement === "p1" ? "active" : ""}`} onClick={handleClick}>{alphabet[currentLetter]}</p>
-                                        <p id="p2" className={`alphabetic ${activeElement === "p2" ? "active" : ""}`} onClick={handleClick}>{alphabet[currentLetter + 1]}</p>
-                                        <p id="p3" className={`alphabetic ${activeElement === "p3" ? "active" : ""}`} onClick={handleClick}>{alphabet[currentLetter + 2]}</p>
-                                        <p className="stickers" onClick={(e) => {goNext(); handleClick(e);}}>&gt;</p>
+                                        <span className="stickers" onClick={(e) => {goPrev(); handleClick(e);}}>&lt;</span>
+                                        <span id="p1" className={`alphabetic ${activeElement === "p1" ? "active" : ""}`} onClick={handleClick}>{alphabet[currentLetter]}</span>
+                                        <span id="p2" className={`alphabetic ${activeElement === "p2" ? "active" : ""}`} onClick={handleClick}>{alphabet[currentLetter + 1]}</span>
+                                        <span id="p3" className={`alphabetic ${activeElement === "p3" ? "active" : ""}`} onClick={handleClick}>{alphabet[currentLetter + 2]}</span>
+                                        <span className="stickers" onClick={(e) => {goNext(); handleClick(e);}}>&gt;</span>
                                     </div>
                                 </div>
                                 <div style={{ display: "flex", justifyContent: "space-between", width: "35rem"}}>
@@ -354,19 +353,19 @@ export default function PgConvidados() {
                             </div>
                             <div className="TabListConv">
                                 <div className={`Tab ${selectedTab === 'Todos' ? 'active' : ''}`} onClick={() => setSelectedTab('Todos')}>
-                                    <p>Todos</p>
+                                    <span>Todos</span>
                                 </div>
                                 <div className={`Tab ${selectedTab === 'Confirmados' ? 'active' : ''}`} onClick={() => setSelectedTab('Confirmados')}>
-                                    <p>Confirmados</p>
+                                    <span>Confirmados</span>
                                 </div>
                                 <div className={`Tab ${selectedTab === 'Não visualizados' ? 'active' : ''}`} onClick={() => setSelectedTab('Não visualizados')}>
-                                    <p>Não visualizados</p>
+                                    <span>Não visualizados</span>
                                 </div>
                                 <div className={`Tab ${selectedTab === 'Recusados' ? 'active' : ''}`} onClick={() => setSelectedTab('Recusados')}>
-                                    <p>Recusados</p>
+                                    <span>Recusados</span>
                                 </div>
                                 <div className={`Tab ${selectedTab === 'Pendentes de envio' ? 'active' : ''}`} onClick={() => setSelectedTab('Pendentes de envio')}>
-                                    <p>Pendentes de envio</p>
+                                    <span>Pendentes de envio</span>
                                 </div>
                             </div>
                         </div>
@@ -374,15 +373,15 @@ export default function PgConvidados() {
                             <div style={{ marginTop: "2rem", display: "flex", alignItems: "center" , justifyContent:"space-between", width:"74vw", borderBottom: "1px dashed #BFBFBF", paddingBottom:".5rem"}}>
                                 <Checkbox onChange={onChange}/>
                                 <div style={{display:"flex", justifyContent:"center", width:"40%"}}>
-                                    <p className="ticketConv">CONVIDADOS</p></div>
+                                    <span className="ticketConv">CONVIDADOS</span></div>
                                 <div style={{display:"flex", justifyContent:"center", width:"15%"}}>
-                                    <p className="ticketConv">Convite enviado em</p></div>
+                                    <span className="ticketConv">Convite enviado em</span></div>
                                 <div style={{display:"flex", justifyContent:"center", width:"15%"}}>
-                                    <p className="ticketConv">Data de resposta</p></div>
+                                    <span className="ticketConv">Data de resposta</span></div>
                                 <div style={{display:"flex", justifyContent:"center", width:"15%" }}>
-                                    <p className="ticketConv">STATUS</p></div>
+                                    <span className="ticketConv">STATUS</span></div>
                                 <div style={{display:"flex", justifyContent:"center", width:"15%"}}>
-                                    <p className="ticketConv">OPÇÕES</p></div>
+                                    <span className="ticketConv">OPÇÕES</span></div>
                             </div>
                             {convidados.map((convidados, index) => (
                             <div key={index} style={{ display: "flex", alignItems: "center" , justifyContent:"space-between", width:"74vw", borderBottom: "1px dashed #BFBFBF", padding:"1rem 0 "}}>
@@ -390,17 +389,17 @@ export default function PgConvidados() {
                                 <div style={{display:"flex", justifyContent:"space-evenly", width:"40%", alignItems: "center"}}>
                                     <div style={{width: "36px", height: "36px", borderRadius: "60px", background: "#595959"}}></div>
                                     <div>
-                                        <p className="roxo" style={{color:"#1B0746"}}>{convidados.nome}</p>
-                                        <p className="convText">{convidados.email}</p>
-                                        <p className="convText">{convidados.telefone}</p>
+                                        <span className="roxo" style={{color:"#1B0746"}}>{convidados.nome}</span>
+                                        <span className="convText">{convidados.email}</span>
+                                        <span className="convText">{convidados.telefone}</span>
                                     </div>
                                 </div>
                                 <div style={{display:"flex", justifyContent:"center", width:"15%"}}>
-                                    <p className="roxo" style={{color:"#1B0746"}}>{convidados.dataEnvio}</p></div>
+                                    <span className="roxo" style={{color:"#1B0746"}}>{convidados.dataEnvio}</span></div>
                                 <div style={{display:"flex", justifyContent:"center", width:"15%"}}>
-                                    <p className="roxo" style={{color:"#1B0746"}}>{convidados.dataResposta}</p></div>
+                                    <span className="roxo" style={{color:"#1B0746"}}>{convidados.dataResposta}</span></div>
                                 <div style={{display:"flex", justifyContent:"center", width:"15%" }}>
-                                    <p className="convText" style={getStatusStyle(convidados.status)}>{convidados.status}</p></div>
+                                    <span className="convText" style={getStatusStyle(convidados.status)}>{convidados.status}</span></div>
                                 <div style={{display:"flex", justifyContent:"center", width:"15%"}}>
                                     <div style={{ padding:"1rem 2rem", display:"flex", alignItems:"center", justifyContent: "center" ,height: "4rem", width:"100%"}}>
                                             <Button  
@@ -410,7 +409,7 @@ export default function PgConvidados() {
                                             
                                                 {seeOptions[index] && 
                                                 <div className="miniMenuConvid" id="ConvMenu" onClick={CloseOutClick}>
-                                                    <p 
+                                                    <span 
                                                         className="miniItemConv" 
                                                         onClick={() => {
                                                             setAddConvidado((old) => !old);
@@ -419,8 +418,8 @@ export default function PgConvidados() {
                                                         }}
                                                     >
                                                             Editar <FormOutlined />
-                                                    </p>
-                                                    <p className="miniItemConv Ex" onClick={() => { setModalEx(true); toggleSeeOptions(index);}} >Excluir <DeleteOutlined /></p>   
+                                                    </span>
+                                                    <span className="miniItemConv Ex" onClick={() => { setModalEx(true); toggleSeeOptions(index);}} >Excluir <DeleteOutlined /></span>   
                                                 </div>}
 
                                                 {modalEx &&
@@ -466,7 +465,7 @@ export default function PgConvidados() {
                                                                 icon={<CloseOutlined />}
                                                             />
 
-                                                            <p className="squareTitle">Tem certeza que deseja excluir esse modelo Convidado?</p>
+                                                            <span className="squareTitle">Tem certeza que deseja excluir esse modelo Convidado?</span>
                                                             <Button style={{fontWeight: "bold", width: "18rem" , backgroundColor:"#EA4335", height:"3rem"}}type="primary" danger> Excluir </Button>
 
                                                         </div>
@@ -503,15 +502,15 @@ export default function PgConvidados() {
                             <div style={{ margin: "0 2rem" }}>
                                 <img src={ImpExcel} width={"30px"} />
                             </div>
-                            <div>
-                                <p className="textBold">Importar Excel</p>
-                                <p className="text">Importe sua lista de convidados direto do Excel </p>
+                            <div className="containerV">
+                                <span className="textBold">Importar Excel</span>
+                                <span className="text">Importe sua lista de convidados direto do Excel </span>
                             </div>
                         </div>
-                        <div style={{marginTop:"5rem"}}>
-                            <p style={{ fontSize: "35px", fontWight: "500", lineHeight: "53px", textAlign: "center", color: "#6D0AD7" }}>Você não possui nenhum convidado :(</p>
-                            <p style={{ fontSize: "20px", fontWeight: "500", lineHeight: "30px", textAlign: "center", color: "#1B0746" }}>Que tal criar uma lista de convidados? Você pode importar de uma planilha do Excel </p>
-                            <p style={{ fontSize: "20px", fontWeight: "500", lineHeight: "30px", textAlign: "center", color: "#1B0746" }}>ou criar aqui mesmo. É rápido e fácil!</p>
+                        <div className="containerV" style={{marginTop:"5rem"}}>
+                            <span style={{ fontSize: "35px", fontWight: "500", lineHeight: "53px", textAlign: "center", color: "#6D0AD7" }}>Você não possui nenhum convidado :(</span>
+                            <span style={{ fontSize: "20px", fontWeight: "500", lineHeight: "30px", textAlign: "center", color: "#1B0746" }}>Que tal criar uma lista de convidados? Você pode importar de uma planilha do Excel </span>
+                            <span style={{ fontSize: "20px", fontWeight: "500", lineHeight: "30px", textAlign: "center", color: "#1B0746" }}>ou criar aqui mesmo. É rápido e fácil!</span>
                         </div>
                     </>
                     }
@@ -544,16 +543,16 @@ export default function PgConvidados() {
                             size="small"
                             icon={<CloseOutlined />}
                         />
-                        <p style={{ color: "#1B0746", fontSize: "20px", fontWeight: "500", lineHeight: "30px", letterSpacing: "0em", textAlign: "center", marginTop: "3rem" }}>Faça o download da Planilha Modelo de Excel</p>
+                        <span style={{ color: "#1B0746", fontSize: "20px", fontWeight: "500", lineHeight: "30px", letterSpacing: "0em", textAlign: "center", marginTop: "3rem" }}>Faça o download da Planilha Modelo de Excel</span>
                         <div className="centerImg">
                             <img style={{ position: "absolute", zIndex: "4" }} src={ButtonVideo} alt="Merch02" />
                             <img src={ExcelPlan} alt="Imagem do Modal" style={{ width: "90%", height: "auto", margin: "0 3rem" }} />
                         </div>
-                        <p style={{ bottom: "14.7rem", position: "absolute", background: "#1B0746", color: "#A1F71A", borderRadius: "10px", padding: " .3rem 1.5rem", fontSize: "14px" }}>É muito simples importar convidados através da planilha excel!</p>
+                        <span style={{ bottom: "14.7rem", position: "absolute", background: "#1B0746", color: "#A1F71A", borderRadius: "10px", padding: " .3rem 1.5rem", fontSize: "14px" }}>É muito simples importar convidados através da planilha excel!</span>
                         <div className="squareModal">
-                            <p style={{ color: "#1B0746", fonSize: "20px", fontWeight: "600", lineHeight: "24px", letterSpacing: "-0.02em", }}>
-                                Personalize seu evento</p>
-                            <p style={{ color: "#1B0746" }}>Inclua a imagem que será o banner da página de confirmação de presenças e a edite uma descrição bem bacana!</p>
+                            <span style={{ color: "#1B0746", fonSize: "20px", fontWeight: "600", lineHeight: "24px", letterSpacing: "-0.02em", }}>
+                                Personalize seu evento</span>
+                            <span style={{ color: "#1B0746" }}>Inclua a imagem que será o banner da página de confirmação de presenças e a edite uma descrição bem bacana!</span>
                         </div>
                         <Button
                             // onClick={() =>  {setPassOne((old) => !old);
@@ -602,10 +601,10 @@ export default function PgConvidados() {
                             size="small"
                             icon={<CloseOutlined />}
                         />
-                        <p 
+                        <span 
                             style={{ color: "#1B0746", fontSize: "20px", fontWeight: "500", lineHeight: "30px", letterSpacing: "0em", textAlign: "center", marginTop: "3rem" }}>
                             Convite(s) enviado com sucesso!
-                        </p>
+                        </span>
                         
                         <Button
                             // onClick={() =>  {setPassOne((old) => !old);
@@ -663,8 +662,8 @@ export default function PgConvidados() {
                         <div style={{ marginTop: "2rem", width: "90%", borderBottom: "1px solid #BFBFBF", display: "flex", justifyContent: "center" }}>
                             
                             {editConv ?
-                                <p style={{ width: "100%", height: "2.5rem" }} className="squareTitle">Editar convidado</p>
-                            :   <p style={{ width: "100%", height: "2.5rem" }} className="squareTitle">Adicionar convidados</p>
+                                <span style={{ width: "100%", height: "2.5rem" }} className="squareTitle">Editar convidado</span>
+                            :   <span style={{ width: "100%", height: "2.5rem" }} className="squareTitle">Adicionar convidados</span>
                             }
                             <Button
                                 className="closeFlex"
@@ -676,28 +675,28 @@ export default function PgConvidados() {
                             />
                         </div>
                         <div style={{ width: "79%", display: "flex", flexDirection: "column" }}>
-                            <p style={{ color: "black", fontWeight: "600", lineHeight: "37px", marginTop: "2rem" }} className="MainText">Quase lá</p>
+                            <span style={{ color: "black", fontWeight: "600", lineHeight: "37px", marginTop: "2rem" }} className="MainText">Quase lá</span>
                             {editConv ?
-                                <p style={{ width: "100%", height: "2.5rem" }} className="squareTitle">Edite os dados do convidado.</p>
-                            :   <p style={{ width: "100%", height: "2.5rem" }} className="squareTitle">Precisamos que preencha esses dados sobre cada convidado.</p>
+                                <span style={{ width: "100%", height: "2.5rem" }} className="squareTitle">Edite os dados do convidado.</span>
+                            :   <span style={{ width: "100%", height: "2.5rem" }} className="squareTitle">Precisamos que preencha esses dados sobre cada convidado.</span>
                             }
                         </div>
                         <div style={{ marginTop: "2rem", width: "87%", display: "flex", justifyContent: "space-evenly" }}>
                             <div style={{ display: "flex", flexDirection: "column" }}>
                                 <div style={{ margin: "1rem 0" }}>
-                                    <p style={{ display: "flex", marginBottom:".5rem" }} className="SubTitle">Primeiro Nome<p style={{ color: "red" }}>*</p></p>
+                                    <span style={{ display: "flex", marginBottom:".5rem" }} className="SubTitle">Primeiro Nome<span style={{ color: "red" }}>*</span></span>
                                     <Input size="large" className="inputInv" type="text" />
                                 </div>
                                 <div style={{ margin: "1rem 0" }}>
 
-                                    <p style={{ display: "flex", marginBottom:".5rem" }} className="SubTitle">Sobrenome<p style={{ color: "red" }}>*</p></p>
+                                    <span style={{ display: "flex", marginBottom:".5rem" }} className="SubTitle">Sobrenome<span style={{ color: "red" }}>*</span></span>
                                     <Input size="large" className="inputInv" type="text" />
                                 </div>
 
                                 <div style={{ margin: "1rem 0" }}>
 
 
-                                    <p style={{ display: "flex", marginBottom:".5rem" }} className="SubTitle">Número de convites extras</p>
+                                    <span style={{ display: "flex", marginBottom:".5rem" }} className="SubTitle">Número de convites extras</span>
                                     <div style={{ display: "flex", width: "8rem", justifyContent: "space-between" }}>
                                         <Select
                                             className="selectNum"
@@ -718,12 +717,12 @@ export default function PgConvidados() {
                             <div style={{ display: "flex", flexDirection: "column" }}>
                                 <div style={{ margin: "1rem 0" }}>
 
-                                    <p style={{ display: "flex", marginBottom:".5rem" }} className="SubTitle">E-Mail<p style={{ color: "red" }}>*</p></p>
+                                    <span style={{ display: "flex", marginBottom:".5rem" }} className="SubTitle">E-Mail<span style={{ color: "red" }}>*</span></span>
                                     <Input size="large" className="inputInv" type="email" />
                                 </div>
                                 <div style={{ margin: "1rem 0" }}>
 
-                                    <p style={{ display: "flex", marginBottom:".5rem" }} className="SubTitle">Telefone (WhatsApp)<p style={{ color: "red" }}>*</p></p>
+                                    <span style={{ display: "flex", marginBottom:".5rem" }} className="SubTitle">Telefone (WhatsApp)<span style={{ color: "red" }}>*</span></span>
                                     <Input size="large" className="inputInv" type="phone" />
                                 </div>
 

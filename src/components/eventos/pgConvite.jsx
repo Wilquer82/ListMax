@@ -31,10 +31,9 @@ export default function PgConvite() {
                 {!inviteData ?
                     <>
                         <div className="PartnersTitle">
-                            <div>
-                                <p className="Title">Convites</p>
-                                
-                                    <p><span style={{color:"#B8B2C6"}}>Home  / </span><span style={{color:"#1B0746"}}> Meus Eventos / Convites</span></p>
+                            <div className="containerV">
+                                <span className="Title">Convites</span>
+                                <span><span style={{color:"#B8B2C6"}}>Home  / </span><span style={{color:"#1B0746"}}> Meus Eventos / Convites</span></span>
                             </div>
                             <div style={{width:"32vw"}}/>
                             <div>
@@ -46,17 +45,16 @@ export default function PgConvite() {
                             </div>
                         </div>
                         <div style={{marginTop: "1rem", border: "1px solid #B8B2C6", width:"79vw", boxShadow: "0px 8px 20px 0px #B8B2C680", background: "#fefefe", height:"50vh", borderRadius:"1rem", display:"flex", flexDirection: "column", alignItems:"center", justifyContent:"center"}}>
-                            <p style={{fontSize: "35px",fontWight: "500",lineHeight: "53px", textAlign: "center", color:"#6D0AD7"}}>Você não possui nenhum modelo de convite :(</p>
-                            <p style={{fontSize: "20px", fontWeight: "500", lineHeight: "30px", textAlign: "center", color:"#1B0746"}}>Que tal criar um convite? É rápido e fácil!</p>
+                            <span style={{fontSize: "35px",fontWight: "500",lineHeight: "53px", textAlign: "center", color:"#6D0AD7"}}>Você não possui nenhum modelo de convite :(</span>
+                            <span style={{fontSize: "20px", fontWeight: "500", lineHeight: "30px", textAlign: "center", color:"#1B0746"}}>Que tal criar um convite? É rápido e fácil!</span>
                         </div>
                     </>
                 : 
                     <>
                         <div className="PartnersTitle">
-                            <div>
-                                <p className="Title">Criar Convite</p>
-                                
-                                    <p><span style={{color:"#B8B2C6"}}>Home  / </span><span style={{color:"#1B0746"}}> Meus Eventos / Criar convites</span></p>
+                            <div className="containerV">
+                                <span className="Title">Criar Convite</span>
+                                <span><span style={{color:"#B8B2C6"}}>Home  / </span><span style={{color:"#1B0746"}}> Meus Eventos / Criar convites</span></span>
                             </div>
                             <div style={{width:"32vw"}}/>
                             <div>
@@ -82,44 +80,52 @@ export default function PgConvite() {
                                 padding: "2rem 2rem"
                                 }}>
 
-                                <p className="SubForm">Nome do modelo do convite</p>
+                                <span className="SubForm">Nome do modelo do convite</span>
                                 <Space.Compact style={{ marginTop: "1rem", width: "100%", backgroundColor: "#E8E6ED",borderRadius: "10px", height: "3rem"}}>
                                     <Input style={{ backgroundColor: "#E8E6ED", paddingLeft: "1rem"}} placeholder="Nome desse modelo de convite" />
                                     <Button style={{ color: "#6D0AD7", backgroundColor: "#E8E6ED", height: "3rem"}} icon={<FormOutlined />}></Button>
                                 </Space.Compact>
-                                <p className="SubForm" style={{ marginTop: "1rem"}}>Defina a foto do convite</p>
+                                <span className="SubForm" style={{ marginTop: "1rem"}}>Defina a foto do convite</span>
                                 <div style={{ display:"flex", alignItems:"center", height: "4rem", width:"100%",borderRadius: "9px", border: "1px dashed var(--Colors-Roxo-Normal, #6D0AD7)", background: "#F1FAFF",}}>
                                     <div style={{margin: "0 2rem"}}>
                                         <img src={Upload} width={"30px"}/>  
                                     </div>
                                     <div>
-                                        <p className="textBold">Importar foto ou vídeo</p>
-                                        <p className="text">Importe a foto ou vídeo que você deseja usar como capa do convite </p>
+                                        <span className="textBold">Importar foto ou vídeo</span>
+                                        <span className="text">Importe a foto ou vídeo que você deseja usar como capa do convite </span>
                                     </div>
                                 </div>
-                                <p className="SubForm" style={{ marginTop: "1rem"}}>Mensagem</p>
+                                <span className="SubForm" style={{ marginTop: "1rem"}}>Mensagem</span>
                                 <div style={{ display:"flex", alignItems:"center", height: "4rem", width:"100%",borderRadius: "9px", border: "1px dashed var(--Colors-Roxo-Normal, #6D0AD7)", background: "#F0E7FB",}}>
                                     <div style={{margin: "0 2rem"}}>
                                         <ExclamationCircleOutlined style={{color: "#6D0AD7", fontSize:"30px"}} /> 
                                     </div>
                                     <div>
-                                        <p className="text">Essa mensagem será enviada para seus convidados junto com o convite do seu evento. </p>
+                                        <span className="text">Essa mensagem será enviada para seus convidados junto com o convite do seu evento. </span>
                                     </div>
                                 </div>
-                                <div style={{ display:"flex", alignItems:"left", justifyContent: "start", height: "10rem", width:"100%",borderRadius: "9px", border: "none", background: "#F0E7FB", padding: "1rem, 1rem"}}>
+                                <div  className="containerV justify-content-sm-start" 
+                                    style={{ 
+                                        alignItems:"left", 
+                                        height: "10rem", 
+                                        width:"100%",
+                                        borderRadius: "9px", 
+                                        border: "none", 
+                                        background: "#F0E7FB",
+                                        padding:"1rem"}}>
                                     <div>
-                                        <p className="text">Exemplo de mensagem:</p>
+                                        <span className="text">Exemplo de mensagem:</span>
                                         <div style={{ display:"flex", alignItems:"center"}}>
-                                            <p className="text" style={{padding: "4px 4px",border: "1px dashed var(--Colors-Roxo-Normal, #6D0AD7)",borderRadius: "9px"}}>Nome </p> &nbsp;  
-                                            <p className="text"style={{padding: "4px 4px",border: "1px dashed var(--Colors-Roxo-Normal, #6D0AD7)",borderRadius: "9px"}}>Sobrenome</p>
-                                            <p className="text">, espero que possamos curtir minha festa juntos, aguardo sua confirmação!</p>
+                                            <span className="text" style={{padding: "4px 4px",border: "1px dashed var(--Colors-Roxo-Normal, #6D0AD7)",borderRadius: "9px"}}>Nome </span> &nbsp;  
+                                            <span className="text"style={{padding: "4px 4px",border: "1px dashed var(--Colors-Roxo-Normal, #6D0AD7)",borderRadius: "9px"}}>Sobrenome</span>
+                                            <span className="text">, espero que possamos curtir minha festa juntos, aguardo sua confirmação!</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div style={{ display:"flex", alignItems:"center"}}>
-                                    <p className="text">Adicione os campos automáticos: </p>  &nbsp;
-                                    <p className="text" style={{padding: "4px 4px", border: "1px dashed var(--Colors-Roxo-Normal, #6D0AD7)",borderRadius: "9px", background: "#F0E7FB"}}>Nome </p> &nbsp;  
-                                    <p className="text"style={{padding: "4px 4px", border: "1px dashed var(--Colors-Roxo-Normal, #6D0AD7)",borderRadius: "9px", background: "#F0E7FB"}}>Sobrenome</p>
+                                    <span className="text">Adicione os campos automáticos: </span>  &nbsp;
+                                    <span className="text" style={{padding: "4px 4px", border: "1px dashed var(--Colors-Roxo-Normal, #6D0AD7)",borderRadius: "9px", background: "#F0E7FB"}}>Nome </span> &nbsp;  
+                                    <span className="text"style={{padding: "4px 4px", border: "1px dashed var(--Colors-Roxo-Normal, #6D0AD7)",borderRadius: "9px", background: "#F0E7FB"}}>Sobrenome</span>
                                 </div>
                             </div>
                             <div
@@ -135,31 +141,31 @@ export default function PgConvite() {
                                 }}>
                                 <div style={{ height: "30vh", width: "100%", padding: "1rem 1rem" }}>
                                     <div style={{  height: "90%", width: "95%", backgroundColor:"#D9D9D9", margin: "auto", borderRadius: "9px"}}/>
-                                    <p style={{ paddingTop: "1rem", color: "var(--Colors-Azul-escuro-Normal, #1B0746)", fontSize: "16px", fontWeight: "600", lineHeight: "24px"}}>Nome do evento</p>
+                                    <span style={{ paddingTop: "1rem", color: "var(--Colors-Azul-escuro-Normal, #1B0746)", fontSize: "16px", fontWeight: "600", lineHeight: "24px"}}>Nome do evento</span>
                                 </div>
                                 <div style={{ height: "30vh", width: "70%", padding: "1rem 1rem", display: "flex", justifyContent:"space-evenly", flexDirection:"column" }}>
                                     <div style={{display: "flex", justifyContent:"space-between"}}>
-                                        <span><p className="ticketSub"> Data</p>
-                                        <p className="ticketCont">Nov 05 2024</p></span>
-                                        <span><p className="ticketSub"> Hora</p>
-                                        <p className="ticketCont">00:00</p></span>
+                                        <p><p className="ticketSub"> Data</p>
+                                        <p className="ticketCont">Nov 05 2024</p></p>
+                                        <p><p className="ticketSub"> Hora</p>
+                                        <p className="ticketCont">00:00</p></p>
                                     
                                     </div>
                                     <div>
-                                        <span>
+                                        <p>
                                             <p className="ticketSub"> Endereço</p>
                                             <p className="ticketCont">Endereço completo</p>
-                                        </span>
+                                        </p>
                                     </div>
                                     <div>
-                                        <span>
+                                        <p>
                                             <p className="ticketSub"> Convidado</p>
                                             <p className="ticketCont">Nome e Sobrenome</p>
-                                        </span>
+                                        </p>
                                     </div>
                                 </div>
                                 <div style={{ borderTop:"3px dashed #6D0AD7", padding:"1rem 1rem", width: "100%", minHeight:"30vh", display: "flex", justifyContent: "center", alignItems:"flex-end" }}>
-                                <p className="ticketSub">Código QR para acessar o evento</p>
+                                <span className="ticketSub">Código QR para acessar o evento</span>
                                 </div>
                             </div>
                         </div>
@@ -169,10 +175,9 @@ export default function PgConvite() {
             :
             <div className="ParceriaMain" style={{backgroundColor:"#e8e6ed",  width: "100vw", minHeight:"100vh"}}>
                 <div className="PartnersTitle">
-                    <div>
-                        <p className="Title">Convites</p>
-                        
-                            <p><span style={{color:"#B8B2C6"}}>Home  / </span><span style={{color:"#1B0746"}}> Meus Eventos / Convites</span></p>
+                    <div className="containerV">
+                        <span className="Title">Convites</span>
+                        <span><span style={{color:"#B8B2C6"}}>Home  / </span><span style={{color:"#1B0746"}}> Meus Eventos / Convites</span></span>
                     </div>
                     <div style={{width:"32vw"}}/>
                     <div>
@@ -198,13 +203,13 @@ export default function PgConvite() {
                         padding: "2rem 0"
                         }}>
 
-                        <p style={{ padding:"0 2rem"}} className="SubForm">Crie e gerencie modelos de convites para serem enviados aos convidados</p>
+                        <span style={{ padding:"0 2rem"}} className="SubForm">Crie e gerencie modelos de convites para serem enviados aos convidados</span>
                         <div style={{  display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"flex-start", height: "4rem", width:"100%"}}>
                             <div  style={{ padding:"1rem 2rem", display:"flex", alignItems:"center", height:"6rem", width:"100%", background: "#F0E7FB", marginTop: "1rem"}}>
-                                    <p style={{ fontSize: "16px"}}className="textBold">MODELO</p>
+                                    <span style={{ fontSize: "16px"}}className="textBold">MODELO</span>
                             </div>
                             <div style={{ padding:"1rem 2rem", display:"flex", alignItems:"center", justifyContent: "space-between" ,height: "4rem", width:"100%", borderTop: "1px solid #B8B2C6", borderBottom: "1px solid #B8B2C6"}}>
-                                <p style={{ fontSize: "16px"}} className="text">Modelo de convite para familiares</p> 
+                                <span style={{ fontSize: "16px"}} className="text">Modelo de convite para familiares</span> 
                                 <Button  
                                     style={{ display:"flex", alignItems:"center", justifyContent:"center",background: "#F0E7FB", border:"none"}} 
                                     icon={<EllipsisOutlined style={{fontWeight:"bold"}}/>}
@@ -212,8 +217,8 @@ export default function PgConvite() {
                                 
                                     {seeOptions && 
                                     <div className="miniMenuConv" id="ConvMenu" onClick={CloseOutClick}>
-                                        <p className="miniItemConv">Editar <FormOutlined /></p>
-                                        <p className="miniItemConv Ex" onClick={() => { setModalEx(true)}} >Excluir <DeleteOutlined /></p>   
+                                        <span className="miniItemConv">Editar <FormOutlined /></span>
+                                        <span className="miniItemConv Ex" onClick={() => { setModalEx(true)}} >Excluir <DeleteOutlined /></span>   
                                     </div>}
 
                                     {modalEx &&
@@ -244,7 +249,7 @@ export default function PgConvite() {
                                                     icon={<CloseOutlined />}
                                                 />
 
-                                                <p className="squareTitle">Tem certeza que deseja excluir esse modelo de convite?</p>
+                                                <span className="squareTitle">Tem certeza que deseja excluir esse modelo de convite?</span>
                                                 <Button style={{fontWeight: "bold", width: "18rem" , backgroundColor:"#EA4335", height:"3rem"}}type="primary" danger> Excluir </Button>
 
                                             </div>
@@ -274,31 +279,31 @@ export default function PgConvite() {
                             }}>
                             <div style={{ height: "30vh", width: "100%", padding: "1rem 1rem" }}>
                                 <div style={{  height: "90%", width: "95%", backgroundColor:"#D9D9D9", margin: "auto", borderRadius: "9px"}}/>
-                                <p style={{ paddingTop: "1rem", color: "var(--Colors-Azul-escuro-Normal, #1B0746)", fontSize: "16px", fontWeight: "600", lineHeight: "24px"}}>Nome do evento</p>
+                                <span style={{ paddingTop: "1rem", color: "var(--Colors-Azul-escuro-Normal, #1B0746)", fontSize: "16px", fontWeight: "600", lineHeight: "24px"}}>Nome do evento</span>
                             </div>
                             <div style={{ height: "30vh", width: "70%", padding: "1rem 1rem", display: "flex", justifyContent:"space-evenly", flexDirection:"column" }}>
                                 <div style={{display: "flex", justifyContent:"space-between"}}>
-                                    <span><p className="ticketSub"> Data</p>
-                                    <p className="ticketCont">Nov 05 2024</p></span>
-                                    <span><p className="ticketSub"> Hora</p>
-                                    <p className="ticketCont">00:00</p></span>
+                                    <span><span className="ticketSub"> Data</span>
+                                    <span className="ticketCont">Nov 05 2024</span></span>
+                                    <span><span className="ticketSub"> Hora</span>
+                                    <span className="ticketCont">00:00</span></span>
                                 
                                 </div>
                                 <div>
                                     <span>
-                                        <p className="ticketSub"> Endereço</p>
-                                        <p className="ticketCont">Endereço completo</p>
+                                        <span className="ticketSub"> Endereço</span>
+                                        <span className="ticketCont">Endereço completo</span>
                                     </span>
                                 </div>
                                 <div>
                                     <span>
-                                        <p className="ticketSub"> Convidado</p>
-                                        <p className="ticketCont">Nome e Sobrenome</p>
+                                        <span className="ticketSub"> Convidado</span>
+                                        <span className="ticketCont">Nome e Sobrenome</span>
                                     </span>
                                 </div>
                             </div>
                             <div style={{ borderTop:"3px dashed #6D0AD7", padding:"1rem 1rem", width: "100%", minHeight:"30vh", display: "flex", justifyContent: "center", alignItems:"flex-end" }}>
-                            <p className="ticketSub">Código QR para acessar o evento</p>
+                            <span className="ticketSub">Código QR para acessar o evento</span>
                             </div>
                         </div>
                     </div>

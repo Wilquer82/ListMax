@@ -16,13 +16,13 @@ export default function HomePartners() {
             <NavBarPartners Local={"Partners"} />
             <div className="TabList" style={{marginTop:"4rem"}}>
                 <div className={`Tab ${selectedTab === 'Parceria' ? 'active' : ''}`} onClick={() => setSelectedTab('Parceria')}>
-                    <p>Parceria</p>
+                    <span>Parceria</span>
                 </div>
                 <div className={`Tab ${selectedTab === 'Comissões' ? 'active' : ''}`} onClick={() => setSelectedTab('Comissões')}>
-                    <p>Comissões</p>
+                    <span>Comissões</span>
                 </div>
                 <div className={`Tab ${selectedTab === 'Configurações' ? 'active' : ''}`} onClick={() => setSelectedTab('Configurações')}>
-                    <p> Configurações</p>
+                    <span> Configurações</span>
                 </div>
             </div>
             {selectedTab == 'Parceria' && <Parceria />}

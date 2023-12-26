@@ -36,7 +36,7 @@
 
 .white-choiced{
     background-image: url('../assets//navChoice.png');
-    background-size: 98% 90%;
+    background-size: 98% 80%;
     background-repeat: no-repeat;
     color: #00B4FF;
     display: flex;
@@ -555,6 +555,7 @@ letter-spacing: -0.14px;
     border: none;
     height: 4rem;
     padding: 0 1rem;
+    text-align: center;
 }
 
 .table td{

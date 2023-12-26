@@ -6,42 +6,40 @@ export default function NavBar() {
     return (
         <>
         <nav className="navbar">
-            <Link to='/'>
-            <img src={Logo} alt="Logo ListMax" width="153.398px" height="40px"/>
+            <Link to='/' style={{textDecoration: "none"}}>
+                <img src={Logo} alt="Logo ListMax" width="153.398px" height="40px"/>
             </Link>
-            {/* <Link to='/Test'> */}
-            <p className="nav-item">
+            <span className="nav-item">
                 Como Funciona
-            </p>
-            {/* </Link> */}
-            <p className="nav-item">
+            </span>
+            <span className="nav-item">
                 Recursos
-            </p>
-            <p className="nav-item">
+            </span>
+            <span className="nav-item">
                 Preços
-            </p>
-            <Link to="/partners">
-            <p className="nav-item">
+            </span>
+            <Link to="/partners" style={{textDecoration: "none"}}>
+            <span className="nav-item">
                 Parceiros
-            </p>
+            </span>
             </Link>
-            <Link to="/News">
-            <p className="nav-item">
+            <Link to="/News" style={{textDecoration: "none"}}>
+            <span className="nav-item">
                 Blog
-            </p>
+            </span>
             </Link>
 
-            <p className="nav-item">
+            <span className="nav-item">
                 Contato
-            </p>
-            <Link to="/manut">
-            <p className="nav-item">
+            </span>
+            <Link to="/manut" style={{textDecoration: "none"}}>
+            <span className="nav-item">
                 Perguntas Frequentes
-            </p>
+            </span>
             </Link>
 
             <div className="button">
-                <Link to="/login">
+                <Link to="/login" style={{textDecoration: "none"}}>
                     <div className="buttonGreenOver">
                         Log In
                     </div>

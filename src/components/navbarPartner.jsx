@@ -18,52 +18,50 @@ export default function NavBarPartners({ Local }) {
         <>
             <nav className="navbarPartner">
                 <div className="navbarInt">
-                    <Link to='/'>
+                    <Link to='/' style={{textDecoration: "none"}}>
                         <img src={Logo} alt="Logo ListMax" width="153.398px" height="40px" />
                     </Link>
-                    <Link to='/Test'>
-                        <p className="nav-item" style={{ justifyContent: "center" }}>
-                            Como Funciona
-                        </p>
-                    </Link>
-                    <p className="nav-item" style={{ justifyContent: "center" }}>
+                    <span className="nav-item" style={{ justifyContent: "center" }}>
+                        Como Funciona
+                    </span>
+                    <span className="nav-item" style={{ justifyContent: "center" }}>
                         Recursos
-                    </p>
-                    <p className="nav-item" style={{ justifyContent: "center" }}>
+                    </span>
+                    <span className="nav-item" style={{ justifyContent: "center" }}>
                         Preços
-                    </p>
-                    <Link to="/partners">
-                        <p className="nav-item" style={{ justifyContent: "center" }}>
+                    </span>
+                    <Link to="/partners" style={{textDecoration: "none"}}>
+                        <span className="nav-item" style={{ justifyContent: "center" }}>
                             Parceiros
-                        </p>
+                        </span>
                     </Link>
-                    <Link to="/News">
-                        <p className="nav-item" style={{ justifyContent: "center" }}>
+                    <Link to="/News" style={{textDecoration: "none"}}>
+                        <span className="nav-item" style={{ justifyContent: "center" }}>
                             Blog
-                        </p>
+                        </span>
                     </Link>
 
-                    <p className="nav-item" style={{ justifyContent: "center" }}>
+                    <span className="nav-item" style={{ justifyContent: "center" }}>
                         Contato
-                    </p>
+                    </span>
                     {Local == "Partners" &&
-                        <p style={{ justifyContent: "center" }} className="nav-item white-choiced    ">
+                        <span style={{ justifyContent: "center" }} className="nav-item white-choiced">
                             ListMax Partners
-                        </p>
+                        </span>
                     }
                     {Local == "Clients" &&
                         <>
                             {myEvents ?
-                                    <p style={{ width: "12rem", justifyContent: "center" }} className={"nav-item white-choiced"}
+                                    <span style={{ width: "12rem", justifyContent: "center" }} className={"nav-item white-choiced"}
                                         onClick={() => { setMyEvents((old) => !old) }}>
                                         Meus Eventos
-                                    </p> 
+                                    </span> 
                                 :
-                                <Link to="/HomeEvents">
-                                    <p style={{ width: "12rem", justifyContent: "center" }} className={"nav-item"}
+                                <Link to="/HomeEvents" style={{textDecoration: "none"}}>
+                                    <span style={{ width: "12rem", justifyContent: "center" }} className={"nav-item"}
                                         onClick={() => { setMyEvents((old) => !old) }}>
                                         Meus Eventos
-                                    </p>
+                                    </span>
                                 </Link>
                                 }
 

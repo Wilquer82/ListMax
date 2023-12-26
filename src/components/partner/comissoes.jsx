@@ -1,6 +1,5 @@
 import LogoP from '../../assets/logotipo-partners.png';
 import '../style.css';
-import { Button } from 'antd';
 
 
 export default function Comissoes() {
@@ -26,36 +25,36 @@ export default function Comissoes() {
                     </div>
                     <table className="table">
                         <tr className="squareSubTitle">
-                            <th>Data</th>
-                            <th>ID</th>
+                            <th style={{width:'10rem'}}>Data</th>
+                            <th style={{width:'10rem'}}>ID</th>
                             <th style={{width:'30rem'}}>Anfitrião</th>
-                            <th>Comissão</th>
-                            <th><p>Status de</p><p>pagamento</p></th>
-                            <th>Recibo</th>
+                            <th style={{width:'10rem'}}>Comissão</th>
+                            <th style={{width:'10rem'}}>Status de pagamento</th>
+                            <th style={{width:'10rem'}}>Recibo</th>
                         </tr>
                         <tr >
                             <td>01/01/2023</td>
                             <td>123</td>
                             <td style={{textAlign:'left'}}>João</td>
                             <td>10%</td>
-                            <td><Button className="pago">Pago</Button></td>
-                            <td><Button className="down">Download</Button></td>
+                            <td className="pago">Pago</td>
+                            <td className="down">Download</td>
                         </tr>
                         <tr >
                             <td>01/01/2023</td>
                             <td>123</td>
                             <td style={{textAlign:'left'}}>José</td>
                             <td>10%</td>
-                            <td><Button className="pend">Pendente</Button></td>
-                            <td><Button className="down">Download</Button></td>
+                            <td className="pend">Pendente</td>
+                            <td className="down">Download</td>
                         </tr>
                         <tr >
                             <td>01/01/2023</td>
                             <td>123</td>
                             <td style={{textAlign:'left'}}>Antonio</td>
                             <td>10%</td>
-                            <td><Button className="cancel">Cancelado</Button></td>
-                            <td><Button className="down">Download</Button></td>
+                            <td className="cancel">Cancelado</td>
+                            <td className="down">Download</td>
                         </tr>
                     </table>
             </div>

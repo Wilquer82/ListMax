@@ -24,7 +24,7 @@ export default function Login (){
         <BackGround />
         <div className="Main">
             <div className="textContainerL">
-                <Link to='/'>
+                <Link to='/' style={{textDecoration: "none"}}>
                     <img className="logoP" src={Logo} width="153px" height="40px" alt="Logo List-Max" />
                 </Link>
                 <div className="lineContainer">
@@ -39,7 +39,7 @@ export default function Login (){
                 <div className="paragraphL text-white">
                     <p>Se você não possui uma conta </p>
                     <div className="flex"><p>cadastrada, você pode &nbsp;</p>
-                    <Link to="/register" whereCalled="client"><p className="pink"> se cadastrar aqui!</p></Link></div>
+                    <Link to="/register" whereCalled="client" style={{textDecoration: "none"}}><p className="pink"> se cadastrar aqui!</p></Link></div>
                 </div>
             </div>
             <Space direction="vertical" className="loginInputs text-white">
@@ -47,7 +47,7 @@ export default function Login (){
                     <Input.Password id="password" size="large" className="inputNews" placeholder="Senha" />
                     
                     <p className="textRight">Esqueceu a senha?</p>
-                        <Link to="/HomeUsers">
+                        <Link to="/HomeUsers" style={{textDecoration: "none"}}>
                             <Button size="large"className="buttonNews" onClick={()=>{Login()}}>Login</Button>
                         </Link>
                     <p className="textCenter">ou continue com:</p>

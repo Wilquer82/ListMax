@@ -176,16 +176,16 @@ export default function PgLook() {
                 <div className="TabListConv" style={{ display: "flex",  justifyContent: "space-between", width:"100%", height:"100%"}}>
                     <div style={{ display: "flex", alignContent:"left", justifyContent: "space-between", width:"60%"}}>
                         <div className={`Tab ${selectedTab === 'IMPORTAÇÃO' ? 'active' : ''}`} onClick={() => setSelectedTab('IMPORTAÇÃO')}>
-                            <p>IMPORTAÇÃO</p>
+                            <span>IMPORTAÇÃO</span>
                         </div>
                         <div className={`Tab ${selectedTab === 'SELEÇÃO' ? 'active' : ''}`} onClick={() => setSelectedTab('SELEÇÃO')}>
-                            <p>SELEÇÃO</p>
+                            <span>SELEÇÃO</span>
                         </div>
                         <div className={`Tab ${selectedTab === 'IMAGEM DE CAPA' ? 'active' : ''}`} onClick={() => setSelectedTab('IMAGEM DE CAPA')}>
-                            <p>IMAGEM DE CAPA</p>
+                            <span>IMAGEM DE CAPA</span>
                         </div>
                         <div className={`Tab ${selectedTab === 'ENVIO' ? 'active' : ''}`} onClick={() => setSelectedTab('ENVIO')}>
-                            <p>ENVIO</p>
+                            <span>ENVIO</span>
                         </div>
                     </div>
                         <div style={{ width: "30rem"}}/>
@@ -226,9 +226,9 @@ export default function PgLook() {
                             <div style={{margin: "0 2rem"}}>
                                 <img src={Upload} width={"30px"}/>  
                             </div>
-                            <div>
-                                <p className="textBold">Importar as fotos do seu evento</p>
-                                <p className="text">Faça upload das suas fotos e iremos identificar e separa-las por convidado</p>
+                            <div className='containerV'>
+                                <span className="textBold">Importar as fotos do seu evento</span>
+                                <span className="text">Faça upload das suas fotos e iremos identificar e separa-las por convidado</span>
                             </div>
                         </div>
                     </div>
@@ -236,12 +236,12 @@ export default function PgLook() {
                     <div style={{ width: "100%", height: "20vh", display: "flex", flexDirection: "column", marginTop:"10rem" }}>
                         <div style={{ width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center", flexDirection:"column" }}>
                             <div style={{ width: "80%", display: "flex", justifyContent: "space-between", marginBottom: ".25rem"}}>
-                                <p className="pdate">Fotos</p> 
-                                <p style={{ color: "#6D0AD7"}} className="pdate">0000 de 0000 fotos</p>
+                                <span className="pdate">Fotos</span> 
+                                <span style={{ color: "#6D0AD7"}} className="pdate">0000 de 0000 fotos</span>
                             </div>
                             <Progress style={{ width: "80%" }} percent={20} strokeColor={twoColors} showInfo={false} size={[950, 20]} trailColor="#B8B2C6" />
                             <div style={{ width: "80%", display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: ".25rem" }}>
-                            <p className="pdate">0000 fotos restantes para upload </p>
+                            <span className="pdate">0000 fotos restantes para upload </span>
                         </div>
                         </div>
                         
@@ -282,19 +282,19 @@ export default function PgLook() {
                                 padding: "1rem" }}
                         >
                             <ExclamationCircleOutlined style={{color: "#6D0AD7", fontSize:"30px", margin: "0 2rem"}} /> 
-                            <p className="text" style={{color: "#6D0AD7"}}>Crie o álbum do seu evento para enviar aos convidados. Selecione quais fotos estarão presentes.</p>
+                            <span className="text" style={{color: "#6D0AD7"}}>Crie o álbum do seu evento para enviar aos convidados. Selecione quais fotos estarão presentes.</span>
                         </div>
                         
                         <div style={{width: "100%", display:"flex", alignItems: "center", justifyContent:"space-between"}}>
                             <div style={{marginTop:"3rem", display:"flex", width:"45%", justifyContent:"space-between"}}>
-                                <div style={{padding:"1rem", width: "12.5rem",height: "11rem", borderRadius: "0.5625rem", border: "1px solid var(--colors-roxo-light-active, #D2B3F3)" , background: "var(--Colors-Roxo-Light, #F0E7FB)"}}>
-                                    <img src={Photo}/>
-                                    <p style={{color:"#D2B3F3",fontSize: "1.5rem",fontWeight: "600",lineHeight: "1.75rem",}}>000 / 000 fotos</p>
+                                <div className="containerV" style={{padding:"1rem", width: "12.5rem",height: "11rem", borderRadius: "0.5625rem", border: "1px solid var(--colors-roxo-light-active, #D2B3F3)" , background: "var(--Colors-Roxo-Light, #F0E7FB)"}}>
+                                    <img src={Photo} width={"30%"}/>
+                                    <span style={{color:"#D2B3F3",fontSize: "1.5rem",fontWeight: "600",lineHeight: "1.75rem",}}>000 / 000 fotos</span>
                                 </div>
-                                <div style={{padding:"1rem", width: "18.875rem", height: "11rem", borderRadius: "0.5625rem", border: "1px solid var(--colors-violeta-light-active, #FFB6FF)", background: "var(--Colors-Violeta-Light, #FFE8FF)"}}>
-                                    <img src={Face}/>
-                                    <p style={{color:"#FFB6FF",fontSize: "1.5rem",fontWeight: "600",lineHeight: "1.75rem",}}>
-                                        000 / 000 convidados identificados</p>
+                                <div className="containerV" style={{padding:"1rem", width: "18.875rem", height: "11rem", borderRadius: "0.5625rem", border: "1px solid var(--colors-violeta-light-active, #FFB6FF)", background: "var(--Colors-Violeta-Light, #FFE8FF)"}}>
+                                    <img src={Face} width={"20%"}/>
+                                    <span style={{color:"#FFB6FF",fontSize: "1.5rem",fontWeight: "600",lineHeight: "1.75rem",}}>
+                                        000 / 000 convidados identificados</span>
                                 </div>
                             </div>
                             <div style={{width:"20%"}}>
@@ -315,7 +315,15 @@ export default function PgLook() {
                         
                         <div style={{overflowY:"auto",flexWrap:"wrap", width: "80%", display:"flex", alignItems: "center", justifyContent:"space-between", marginTop:"2rem", height:"60vh"}}>
                             {teste.map((teste, index) => (
-                                <div key={index} style={{padding:"1rem",marginBottom:"1rem", width: "15.75rem", height: "9.9375rem", borderRadius: "0.5625rem", background: "#C4C4C4"}}>
+                                <div key={index} 
+                                    style={{
+                                        padding:"1rem",
+                                        marginBottom:"1rem", 
+                                        width: "15.75rem", 
+                                        height: "9.9375rem", 
+                                        borderRadius: "0.5625rem",
+                                        background: "#C4C4C4"
+                                    }}>
                                     <Checkbox onChange={onChange} style={{color:"transparent"}}>{teste.num}</Checkbox>
                                 </div>
                             ))}
@@ -338,9 +346,9 @@ export default function PgLook() {
                                 padding: "1rem" }}
                         >
                             <ExclamationCircleOutlined style={{color: "#6D0AD7", fontSize:"30px", margin: "0 2rem"}} /> 
-                            <p className="text" style={{color: "#6D0AD7"}}>O álbum particular contem apenas fotos em que um 
+                            <span className="text" style={{color: "#6D0AD7"}}>O álbum particular contem apenas fotos em que um 
                                 convidado especifico está presente, enquanto o álbum completo inclui todas as fotos do evento. 
-                                Escolha entre as opções.</p>
+                                Escolha entre as opções.</span>
                         </div>
                         <div 
                             style={{
@@ -357,9 +365,9 @@ export default function PgLook() {
                             }}
                         >
                             <img src={Smile}/>
-                            <p style={{fontSize: "1.25rem", fontWeight:" 600", lineHeight: "1rem", letterSpacing: "-0.025rem",color: "#FF14FF"}}>000/000</p>
-                            <p style={{ fontSize: "1.25rem", fontWeight:" 600", lineHeight: "1rem", letterSpacing: "-0.025rem", color:"#D2B3F3"}}>
-                                convidados foram identificados pelo Look You em suas fotos. Hora de compartilhar!</p>
+                            <span style={{fontSize: "1.25rem", fontWeight:" 600", lineHeight: "1rem", letterSpacing: "-0.025rem",color: "#FF14FF"}}>000/000</span>
+                            <span style={{ fontSize: "1.25rem", fontWeight:" 600", lineHeight: "1rem", letterSpacing: "-0.025rem", color:"#D2B3F3"}}>
+                                convidados foram identificados pelo Look You em suas fotos. Hora de compartilhar!</span>
                         </div>
                         <div style={{ width: "100%", justifyContent:"right", display:"flex", marginTop:"2rem"}}>
                             <Button 
@@ -427,11 +435,11 @@ export default function PgLook() {
                                     boxShadow: "0px 8px 20px 0px rgba(184, 178, 198, 0.50)",
                                 }}>
                                 <div style={{width:" 7.5rem", height:" 7.5rem", borderRadius: "0.5rem", background: "#D9D9D9"}}/>
-                                <div style={{display:"flex", flexDirection:"column", justifyContent:"space-between", alignItems:"center"}}>
-                                    <p style={{color: "#6D0AD7"}}>Nome</p>
+                                <div className='containerV' style={{paddingLeft:"1rem"}}>
+                                    <span style={{color: "#6D0AD7"}}>Nome</span>
                                     <div style={{display:"flex"}}>
                                         <img src={Smile} width={"30px"}/>
-                                        <p style={{color: "#6D0AD7"}}>Identificado em X fotos</p>
+                                        <span style={{color: "#6D0AD7"}}>&nbsp;Identificado em X fotos</span>
                                     </div>
                                     <div style={{display:"flex",justifyContent:"space-between", width:"100%", marginLeft:".5rem"}}>
                                         <Button className="buttonNews" style={{ height: "2.5rem", width: "8rem", backgroundColor: "#6D0AD7", color: "white" }}>
@@ -512,10 +520,10 @@ export default function PgLook() {
                             <div style={{display: "flex", alignItems:"center", width:"34rem", justifyContent:"space-between", marginTop:"3rem"}}>
                                 <div style={{width:"120px", height:"120px", backgroundColor:"#D9D9D9", borderRadius: "0.5625rem"}}/>
                                 <div>
-                                    <p className="squareTitle">Fotos no álbum de (nome do convidado)</p>
+                                    <span className="squareTitle">Fotos no álbum de (nome do convidado)</span>
                                     <div style={{display: "flex", alignItems:"center"}}>
                                         <img src={Smile}/> 
-                                        <p style={{fontSize: "20px", fontWeight: "600", lineHeight: "24px", color:"#D2B3F3"}}>Identificado em X fotos</p>
+                                        <span style={{fontSize: "20px", fontWeight: "600", lineHeight: "24px", color:"#D2B3F3"}}>Identificado em X fotos</span>
                                     </div>
                                 </div>
                             </div>
@@ -559,40 +567,42 @@ export default function PgLook() {
                         alignItems: "center", 
                         padding:"2rem 2rem" }}
                     >
-                        <div style={{ display:"flex", alignItems:"center", justifyContent:"center",height: "4rem", width:"100%",borderRadius: "9px", border: "1px dashed var(--Colors-Roxo-Normal, #6D0AD7)", background: "#F1FAFF",}}>
-                            <div style={{ display:"flex", alignItems:"center"}}>
+                        <div className='containerH' style={{ marginBottom:"1rem", height: "4rem", width:"100%",borderRadius: "9px", border: "1px dashed var(--Colors-Roxo-Normal, #6D0AD7)", background: "#F1FAFF",}}>
+                            <div className='containerH'  style={{ alignItems:"center"}}>
                                 <div style={{margin: "0 2rem"}}>
                                     <img src={Upload} width={"30px"}/>  
                                 </div>
-                                <div>
-                                    <p className="textBold">Importar foto</p>
-                                    <p className="text">Faça upload de uma foto para ser usada como capa do seu álbum.</p>
+                                <div className='containerV'>
+                                    <span className="textBold">Importar foto</span>
+                                    <span className="text">Faça upload de uma foto para ser usada como capa do seu álbum.</span>
                                 </div>
                             </div>
                         </div>
-                        <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between",minHeight: "4rem", width:"100%"}}>
-                            <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", flexDirection:"column"}}>
-                                <p className="SubForm" style={{ marginTop: "1rem"}}>Foto de capa</p>
+                        <div className='containerH' style={{ minHeight: "4rem", width:"100%"}}>
+                            <div  className='containerV'>
+                                <span className="SubForm" style={{ marginBottom: "1rem"}}>Foto de capa</span>
                                 <div style={{borderRadius: "9px",width: "15.75rem", height: "9.9375rem", backgroundColor: "#C4C4C4"}}>
                                 </div>
-                                <p className="text">Essa foto será usada na capa do seu álbum.</p>
+                                <div className='containerH' style={{ marginTop:"1rem", justifyContent:"left"}}>
+                                    <span className="text">Essa foto será usada na capa do seu álbum.</span>
+                                </div>
                             </div>
                             <div>
-                                <p className="SubForm" style={{ marginTop: "1rem"}}>Mensagem</p>
-                                <div style={{  display:"flex", alignItems:"left", justifyContent: "flex-start", height: "10rem", width:"100%",borderRadius: "9px", border: "none", background: "#F0E7FB", padding: "1rem, 1rem"}}>
+                                <span className="SubForm" >Mensagem</span>
+                                <div style={{marginTop:"2rem", display:"flex", alignItems:"left", justifyContent: "flex-start", height: "10rem", width:"100%",borderRadius: "9px", border: "none", background: "#F0E7FB", padding: "1rem, 1rem"}}>
                                     <div style={{padding:"1rem"}}>
-                                        <p className="text">Exemplo de mensagem:</p>
+                                        <span className="text">Exemplo de mensagem:</span>
                                         <div style={{ display:"flex", alignItems:"center"}}>
-                                            <p className="text" style={{padding: "3px 3px",borderRadius: "9px", border: "1px dashed #6D0AD7"}}>Nome </p> &nbsp;  
-                                            <p className="text" style={{padding: "3px 3px",borderRadius: "9px", border: "1px dashed #6D0AD7"}}>Sobrenome</p>
-                                            <p className="text" style={{textAling:"justify"}}>, espero que tenha curtido a festa, segue o álbum de fotos com fotos que você aparece! </p>
+                                            <span className="text" style={{padding: "3px 3px",borderRadius: "9px", border: "1px dashed #6D0AD7"}}>Nome </span> &nbsp;  
+                                            <span className="text" style={{padding: "3px 3px",borderRadius: "9px", border: "1px dashed #6D0AD7"}}>Sobrenome</span>
+                                            <span className="text" style={{textAling:"justify"}}>, espero que tenha curtido a festa, segue o álbum de fotos com fotos que você aparece! </span>
                                         </div>
                                     </div>
                                 </div>
-                                <div style={{ display:"flex", alignItems:"center"}}>
-                                    <p className="text">Adicione os campos automáticos: </p>  &nbsp;
-                                    <p className="text" style={{padding: "3px 3px", border: "1px dashed #6D0AD7",borderRadius: "9px", background: "#F0E7FB"}}>Nome </p> &nbsp;  
-                                    <p className="text" style={{padding: "3px 3px", border: "1px dashed #6D0AD7",borderRadius: "9px", background: "#F0E7FB"}}>Sobrenome</p>
+                                <div className='containerH' style={{ marginTop:"1rem", justifyContent:"left"}}>
+                                    <span className="text">Adicione os campos automáticos: </span>  &nbsp;
+                                    <span className="text" style={{padding: "3px 3px", border: "1px dashed #6D0AD7",borderRadius: "9px", background: "#F0E7FB"}}>Nome </span> &nbsp;  
+                                    <span className="text" style={{padding: "3px 3px", border: "1px dashed #6D0AD7",borderRadius: "9px", background: "#F0E7FB"}}>Sobrenome</span>
                                 </div>
                             </div>
                         </div>
@@ -613,37 +623,37 @@ export default function PgLook() {
                         alignItems: "center", 
                         padding:"2rem 2rem" }}
                     >
-                        <p className="squareTitle">Veja o resumo das suas escolhas antes de encaminhar seus álbuns</p>
+                        <span className="squareTitle">Veja o resumo das suas escolhas antes de encaminhar seus álbuns</span>
                         <div style={{ display:"flex", marginTop:"3rem", width:"100%", alignItems:"center", justifyContent:"space-between"}}>
                             <div style={{ borderRadius: "9px", padding:"2rem 2rem",display:"flex", flexDirection:"column", height: "50vh", width:"31%", overflowY: "auto", backgroundColor:"#e8e6ed"}}>                        
-                                <p style={{ paddingBottom: "2rem", width:"100%"}} className="SubForm">Receberão álbuns particulares</p>
+                                <span style={{ paddingBottom: "2rem", width:"100%"}} className="SubForm">Receberão álbuns particulares</span>
                                     {teste.map((teste, index) => (
                                         <div key={index} style={{marginBottom:".5rem", display:"flex", alignItems:"center", justifyContent:"space-between", width:"100%"}}>
                                             <span style={{borderRadius: "50%", width:"40px", height: "40px", backgroundColor:"grey"}}></span> 
-                                            <p style={{ color: "#1B0746", fontSize: "16px", fontWeight: "600", lineHeight: "24px"}}>{teste.num}</p>
+                                            <span style={{ color: "#1B0746", fontSize: "16px", fontWeight: "600", lineHeight: "24px"}}>{teste.num}</span>
                                         </div>
                                     ))}
                             </div>
                             <div style={{ borderRadius: "9px", padding:"2rem 2rem",display:"flex", flexDirection:"column", height: "50vh", width:"31%", overflowY: "auto", backgroundColor:"#e8e6ed"}}>                        
-                                <p style={{ paddingBottom: "2rem", width:"100%"}} className="SubForm">Receberão álbuns completos</p>
+                                <span style={{ paddingBottom: "2rem", width:"100%"}} className="SubForm">Receberão álbuns completos</span>
                                     {teste.map((teste, index) => (
                                         <div key={index} style={{marginBottom:".5rem", display:"flex", alignItems:"center", justifyContent:"space-between", width:"100%"}}>
                                             <span style={{borderRadius: "50%", width:"40px", height: "40px", backgroundColor:"grey"}}></span> 
-                                            <p style={{ color: "#1B0746", fontSize: "16px", fontWeight: "600", lineHeight: "24px"}}>{teste.num}</p>
+                                            <span style={{ color: "#1B0746", fontSize: "16px", fontWeight: "600", lineHeight: "24px"}}>{teste.num}</span>
                                         </div>
                                     ))}
                             </div>
                             <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", flexDirection:"column",  width:"31%"}}>
-                                <p className="SubForm" style={{ marginTop: "1rem"}}>Foto de capa</p>
+                                <span className="SubForm" style={{ marginTop: "1rem"}}>Foto de capa</span>
                                 <div style={{borderRadius: "9px",width: "15.75rem", height: "9.9375rem", backgroundColor: "#C4C4C4"}}>
                                 </div>
-                                <p className="SubForm" style={{ marginTop: "1rem"}}>Mensagem</p>
-                                <p className="text" style={{textAling:"justify"}}>
+                                <span className="SubForm" style={{ marginTop: "1rem"}}>Mensagem</span>
+                                <span className="text" style={{textAling:"justify"}}>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing 
                                     elit. In euismod, elit quis mollis dictum, dui felis 
                                     tristique lectusquis mollis dictum, dui felis tristique 
                                     lectus dui felis tristique lectus dui felis tristique 
-                                    lectus dui felis tristique lectus.</p>
+                                    lectus dui felis tristique lectus.</span>
                             </div>
                         </div>
                 </div>

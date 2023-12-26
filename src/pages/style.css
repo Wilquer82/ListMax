@@ -1,6 +1,9 @@
 * {
     font-family: 'Poppins', sans-serif !important;
 }
+a{
+    text-decoration: none;
+}
 
 .textContainer {
     margin-top: 8rem;
@@ -439,7 +442,7 @@
 .blue {
     background-color: #310561;
     width: 100vw;
-    min-height: 1170px;
+    min-height: 76rem;
 }
 
 .logoDivision {
