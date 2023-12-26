@@ -484,6 +484,10 @@
 font-weight: 600;
 }
 
+.fblue{
+    color: #1B0746;
+}
+
 @-webkit-keyframes swing
 {
     15%

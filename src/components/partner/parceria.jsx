@@ -8,10 +8,10 @@ export default function Parceria() {
     return (
         <div className="ParceriaMain">
             <div className="PartnersTitle">
-                <div>
-                    <p className="Title">Parceria</p>
+                <div className='containerV'>
+                    <span className="Title">Parceria</span>
                     
-                        <p><span style={{color:'#B8B2C6'}}>ListMax Partners  / </span><span style={{color:'#1B0746'}}> Minha conta</span></p>
+                        <span><span style={{color:'#B8B2C6'}}>ListMax Partners  / </span><span style={{color:'#1B0746'}}> Minha conta</span></span>
                     
                 </div>
                 <div style={{width:'32vw'}}/>
@@ -24,35 +24,35 @@ export default function Parceria() {
             <div className="square">
                 <div>
                     <div className="twoLines">
-                        <p className="squareTitle">Sua parceria com a gente</p>
-                        <p className="squareSubTitle">Para continuar sua parceria com a gente</p>
+                        <span className="squareTitle">Sua parceria com a gente</span>
+                        <span className="squareSubTitle">Para continuar sua parceria com a gente</span>
                     </div>
 
                     <div className="cupom">
                         <div className="QuantDesc">
-                            <p className="quant">3/3</p>
-                            <p className="descricao DescCupom">Cupons de desconto disponíveis</p>
+                            <span className="quant">3/3</span>
+                            <span className="descricao DescCupom">Cupons de desconto disponíveis</span>
                         </div>
-                        <p className="DescCupom"><span className="Eighteen">Link com</span><span className="twentyFour"> 10% de desconto</span></p>
+                        <span className="DescCupom"><span className="Eighteen">Link com</span><span className="twentyFour"> 10% de desconto</span></span>
                         <div  className="linkButton">
-                            <p className="link">https://listmax.com.br/indicacao/?refid=345re66787k8</p>
+                            <span className="link">https://listmax.com.br/indicacao/?refid=345re66787k8</span>
                             <Button  size="large" className="purpleButton">Copiar</Button>
                         </div>
                     </div>
                     <div className="cupom">
                     <div className="QuantDesc">
-                            <p className="quant">∞ / ilimitado</p>
-                            <p className="descricao DescCupom">Cupons de desconto disponíveis</p>
+                            <span className="quant">∞ / ilimitado</span>
+                            <span className="descricao DescCupom">Cupons de desconto disponíveis</span>
                         </div>
-                        <p className="DescCupom"><span className="Eighteen">Link com</span><span className="twentyFour"> 10% de desconto</span></p>
+                        <span className="DescCupom"><span className="Eighteen">Link com</span><span className="twentyFour"> 10% de desconto</span></span>
                         <div  className="linkButton">
-                            <p className="link">https://listmax.com.br/indicacao/?refid=345re66787k8</p>
+                            <span className="link">https://listmax.com.br/indicacao/?refid=345re66787k8</span>
                             <Button  size="large" className="purpleButton">Copiar</Button>
                         </div>
                     </div>
                     <div className="twoLines">
-                        <p className="squareTitle">Não sabe como utilizar?</p>
-                        <p className="squareSubTitle">Temos um tutorial para te explicar como funciona!</p>
+                        <span className="squareTitle">Não sabe como utilizar?</span>
+                        <span className="squareSubTitle">Temos um tutorial para te explicar como funciona!</span>
                     </div>
                     <Button  size="large" className="LearnMore">Saiba mais</Button>
 
@@ -60,25 +60,25 @@ export default function Parceria() {
                 <div className="halfSquares">
                     <div className="containerSquares">
                         <div className="litleSquares">
-                            <p className="LStitle">Cadastros por indicação</p>
-                            <p className="LSvalue">03</p>
+                            <span className="LStitle">Cadastros por indicação</span>
+                            <span className="LSvalue">03</span>
 
                         </div>
                         <div className="litleSquares">
-                        <p className="LStitle">Fechamentos</p>
-                        <p className="LSvalue">02</p>
+                        <span className="LStitle">Fechamentos</span>
+                        <span className="LSvalue">02</span>
 
                         </div>    
                     </div>
                     <div className="containerSquares">
                         <div className="litleSquares">
-                        <p className="LStitle">Comissões pendentes</p>
-                        <p className="LSvalue">R$ 389,13</p>
+                        <span className="LStitle">Comissões pendentes</span>
+                        <span className="LSvalue">R$ 389,13</span>
 
                         </div>
                         <div className="litleSquares">
-                        <p className="LStitle">Comissões pagas</p>
-                        <p className="LSvalue">R$ 2.568,25</p>
+                        <span className="LStitle">Comissões pagas</span>
+                        <span className="LSvalue">R$ 2.568,25</span>
 
                         </div>    
                     </div>

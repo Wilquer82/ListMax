@@ -11,11 +11,9 @@ export default function Config() {
     return (
         <div className="ParceriaMain">
             <div className="PartnersTitle">
-                <div>
+                <div className='containerV'>
                     <span className="Title">Configurações</span>
-
                     <span><span style={{ color: '#B8B2C6' }}>ListMax Partners  / </span><span style={{ color: '#1B0746' }}>Configurações</span></span>
-
                 </div>
                 <div style={{ width: '32vw' }} />
                 <div>

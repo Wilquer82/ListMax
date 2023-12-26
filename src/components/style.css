@@ -579,59 +579,6 @@ letter-spacing: -0.14px;
     padding: 3rem;
 }
 
-.pago{
-    background-color: #EEFFF3;
-    color:#34A853;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 21px; /* 150% */
-    letter-spacing: -0.14px;
-    border-radius: 8px;
-    border: transparent;
-    width: 10rem;
-}
-
-.pend{
-    border-radius: 8px;
-    background: #FFF8DD;
-    color: #FBBC05;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 21px; /* 150% */
-    letter-spacing: -0.14px;
-    border: transparent;
-    width: 10rem;
-
-}
-
-.cancel{
-    color: #EA4335;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 21px; /* 150% */
-    letter-spacing: -0.14px;
-    border-radius: 8px;
-    background: #FFF6F8;
-    border: transparent;
-    width: 10rem;
-}
-
-.down{
-    color: #595959;
-    font-family: Poppins;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 21px; /* 150% */
-    letter-spacing: -0.14px;
-    border-radius: 8px;
-    background: #E8E6ED;
-    border: transparent;
-    width: 9rem;
-}
 
 .squareE{
     display: flex;
