@@ -592,3 +592,10 @@ a{
 :where(.css-dev-only-do-not-override-2q8sxy).ant-input-affix-wrapper >input.ant-input {
     background-color: #e8e6ed;
 }
+
+.squareBP{
+    border-radius: 0.5625rem;
+    border: 1px solid var(--Colors-Roxo-Normal, #6D0AD7);
+    background: var(--Colors-Roxo-Light, #F0E7FB);
+    box-shadow: 0px 8px 20px 0px rgba(184, 178, 198, 0.50);
+}

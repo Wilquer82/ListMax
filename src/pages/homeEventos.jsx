@@ -299,7 +299,6 @@ export default function HomeEvents() {
                             <p><span style={{ color: '#B8B2C6' }}>Home / </span>
                                 <span style={{ color: '#1B0746' }}>Eventos futuros</span></p>
                         </div>
-
                         <Button
                             className="buttonNews"
                             style={{ height: "3rem", width: "18rem", backgroundColor: "#6D0AD7", color: "white" }}
@@ -312,8 +311,12 @@ export default function HomeEvents() {
                         </Button>
                     </div>
                     <div className="eventsBar">
-                        <Button className="buttonNews" style={{ marginLeft: "2rem", height: "2rem", width: "13rem", backgroundColor: "#1B0746", color: "white" }}>Eventos Futuros</Button>
-                        <Button className="buttonNews" style={{ border: "none", marginLeft: "2rem", height: "2rem", width: "13rem", backgroundColor: "transparent", color: "#1B0746" }}>Eventos Encerrados</Button>
+                        <Button className="buttonNews" 
+                        style={{ marginLeft: "2rem", height: "2rem", width: "13rem", backgroundColor: "#1B0746", color: "white" }}
+                            >Eventos Futuros</Button>
+                        <Button className="buttonNews" 
+                        style={{ border: "none", marginLeft: "2rem", height: "2rem", width: "13rem", backgroundColor: "transparent", color: "#1B0746" }}
+                            >Eventos Encerrados</Button>
                     </div>
                     {/* <div style={{width:"100vw" , marginTop: "10rem"}}>
                     <p style={{fontSize: "35px",fontWight: "500",lineHeight: "53px", textAlign: "center", color:"#6D0AD7"}}>Você não possui nenhum evento :(</p>
@@ -335,7 +338,8 @@ export default function HomeEvents() {
                                 height: "30vh",
                                 width: "100%", 
                                 padding: "1rem 1rem" }}>
-                                <div style={{ height: "90%", width: "95%", backgroundColor: "#D9D9D9", margin: "auto", borderRadius: "9px" }} />
+                                <div 
+                                    style={{ height: "90%", width: "95%", backgroundColor: "#D9D9D9", margin: "auto", borderRadius: "9px" }} />
                                 <p style={{ paddingTop: "1rem", color: "var(--Colors-Azul-escuro-Normal, #1B0746)", fontSize: "16px", fontWeight: "600", lineHeight: "24px" }}>Nome do evento</p>
 
                             </div>

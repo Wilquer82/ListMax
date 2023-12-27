@@ -26,7 +26,7 @@ const pago = {
     borderRadius: '8px',
     border: 'transparent',
     width: '10rem',
-  };
+};
 
 const cancel = {
     color: '#EA4335',
@@ -39,9 +39,9 @@ const cancel = {
     backgroundColor: '#FFF6F8',
     border: 'transparent',
     width: '10rem',
-  };
-  
-  const down = {
+};
+
+const down = {
     color: '#595959',
     fontFamily: 'Poppins',
     fontSize: '14px',
@@ -53,7 +53,7 @@ const cancel = {
     backgroundColor: '#E8E6ED',
     border: 'transparent',
     width: '9rem',
-  };
+};
 
 export default function Comissoes() {
     return (

@@ -14,6 +14,7 @@ import './index.css'
 import HomePartners from './pages/homePartners.jsx';
 import HomeUsers from './pages/homeUsers.jsx';
 import HomeEvents from './pages/homeEventos.jsx';
+import LookYou from './pages/lookYou.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,10 +31,10 @@ const router = createBrowserRouter([
     element: <HomeEvents />,
   },
 
-  // {
-  //   path: "/test",
-  //   element: <Test />,
-  // },
+  {
+    path: "/look",
+    element: <LookYou />,
+  },
   {
     path: "/news",
     element: <News whereCalled="news" />,

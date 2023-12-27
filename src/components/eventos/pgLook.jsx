@@ -6,6 +6,7 @@ import  Upload from "../../assets/upload-square.svg";
 import Face from "../../assets/face-scan.svg";
 import Photo from "../../assets/photo-download.svg";
 import Smile from "../../assets/face-scan-s.png"
+import { Link } from 'react-router-dom';
 
 
 export default function PgLook() {
@@ -145,11 +146,7 @@ export default function PgLook() {
         setSeeOptions(newSeeOptions);
     };
 
-    const tabs = ['IMPORTAÇÃO', 'SELEÇÃO', 'IMAGEM DE CAPA', 'ENVIO'];
-    const [tabIndex, setTabIndex] = useState(0);
-    
     const handleButtonClick = (selectedTab) => {
-
         switch(selectedTab) {
             case 'IMPORTAÇÃO':
                 return setSelectedTab('SELEÇÃO');
@@ -160,9 +157,6 @@ export default function PgLook() {
             default:
                 return {};
         }
-    //   if (tabIndex < tabs.length - 1) {
-    //     setTabIndex(tabIndex + 1);
-    //   }
     };
 
 
@@ -189,13 +183,16 @@ export default function PgLook() {
                         </div>
                     </div>
                         <div style={{ width: "30rem"}}/>
-                        {selectedTab === "ENVIO" ? <Button 
-                            className="buttonNews" 
-                            style={{ height: "3rem", width: "10rem", background: "linear-gradient(90deg, #FF14FF 0%, #6D0AD7 100%)", color: "white", borderRadius: "8px" }}
-                            onClick={() => handleButtonClick(selectedTab)}
-                        >
-                            Concluir
-                        </Button> :
+                        {selectedTab === "ENVIO" ? 
+                        <Link to="/look">
+                            <Button 
+                                className="buttonNews" 
+                                style={{ height: "3rem", width: "10rem", background: "linear-gradient(90deg, #FF14FF 0%, #6D0AD7 100%)", color: "white", borderRadius: "8px" }}
+                                // onClick={() => handleButtonClick(selectedTab)}
+                            >
+                                Concluir
+                            </Button>
+                        </Link> :
                         <Button 
                             className="buttonNews" 
                             style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white", borderRadius: "8px"}}

@@ -47,6 +47,8 @@ export { default as LogoEmpresa } from './logoEmpresa.png';
 export { default as Logo } from './Logo.png';
 export { default as LogotipoPartners } from './logotipo-partners.png';
 export { default as LookYou } from './lookYou.png';
+export { default as LookYouLogo } from './logotipo-look-you.svg';
+export { default as LookYouBack } from './LookYouBack.jpeg';
 export { default as Map } from './map.svg';
 export { default as Marriage } from './marriage-svgrepo-com 1.svg';
 export { default as Marriage2 } from './marriage-svgrepo-com 2.svg';

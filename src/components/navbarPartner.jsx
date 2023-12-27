@@ -50,22 +50,23 @@ export default function NavBarPartners({ Local }) {
                         </span>
                     }
                     {Local == "Clients" &&
-                        <>
-                            {myEvents ?
-                                    <span style={{ width: "12rem", justifyContent: "center" }} className={"nav-item white-choiced"}
-                                        onClick={() => { setMyEvents((old) => !old) }}>
-                                        Meus Eventos
-                                    </span> 
-                                :
+                        // <>
+                        //     {myEvents ?
+                        //             <span style={{ width: "12rem", justifyContent: "center" }} className={"nav-item white-choiced"}
+                        //                 onClick={() => { setMyEvents((old) => !old) }}>
+                        //                 Meus Eventos
+                        //             </span> 
+                        //         :
                                 <Link to="/HomeEvents" style={{textDecoration: "none"}}>
-                                    <span style={{ width: "12rem", justifyContent: "center" }} className={"nav-item"}
+                                    <span style={{ width: "12rem", justifyContent: "center" }} 
+                                    className={ myEvents === true ? "nav-item white-choiced" : "nav-item"}
                                         onClick={() => { setMyEvents((old) => !old) }}>
                                         Meus Eventos
                                     </span>
                                 </Link>
-                                }
+                        //         }
 
-                        </>
+                        // </>
                     }
                 </div>
                 <UserCard />
