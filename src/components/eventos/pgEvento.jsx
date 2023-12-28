@@ -209,40 +209,12 @@ export default function PgEvento() {
                             onClick={() =>  {setPassOne((old) => !old);
                                             setPassTwo((old) => !old);
                                     }}
-                            style={{ 
-                                background: "linear-gradient(90deg, #FF14FF 0%, #6D0AD7 100%)", 
-                                width: "35rem", 
-                                fontSize: "16px",
-                                fontWeight: "600",
-                                lineHeight: "19px",
-                                letterSpacing: "0em",
-                                color: "white",
-                                height:"3rem",
-                                textAlign: "right",
-                                border: "none",
-                                padding: "0 3rem"
-                            }}>
+                            className='passButton'>
                             Próximo passo <RightOutlined />
                         </Button>
                     }
                     { passTwo &&
-                        <div style={{ 
-                            background: "linear-gradient(90deg, #FF14FF 0%, #6D0AD7 100%)", 
-                            width: "35rem", 
-                            fontSize: "16px",
-                            fontWeight: "600",
-                            lineHeight: "19px",
-                            letterSpacing: "0em",
-                            color: "white",
-                            height:"3rem",
-                            textAlign: "right",
-                            display:"flex",
-                            alignItems: "center",
-                            justifyContent: "space-between",
-                            padding: "0 3rem",
-                            borderRadius: "8px",
-                            cursor: "pointer",
-                        }}>
+                        <div className='passDiv'>
                             <span  onClick={() =>  {setPassOne((old) => !old);
                                                 setPassTwo((old) => !old);
                                         }}>
@@ -256,23 +228,7 @@ export default function PgEvento() {
                         </div>
                     }
                     { passThree &&
-                        <div style={{ 
-                        background: "linear-gradient(90deg, #FF14FF 0%, #6D0AD7 100%)", 
-                        width: "35rem", 
-                        fontSize: "16px",
-                        fontWeight: "600",
-                        lineHeight: "19px",
-                        letterSpacing: "0em",
-                        color: "white",
-                        height:"3rem",
-                        textAlign: "right",
-                        display:"flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        padding: "0 3rem",
-                        borderRadius: "8px",
-                        cursor: "pointer",
-                    }}>
+                        <div className='passDiv'>
                         <span  onClick={() =>  {setPassThree((old) => !old);
                                             setPassTwo((old) => !old);
                                     }}><LeftOutlined /> Passo Anterior</span>
@@ -282,26 +238,10 @@ export default function PgEvento() {
                         </div>
                     }
                     { passFour &&
-                        <div style={{ 
-                            background: "linear-gradient(90deg, #FF14FF 0%, #6D0AD7 100%)", 
-                            width: "35rem", 
-                            fontSize: "16px",
-                            fontWeight: "600",
-                            lineHeight: "19px",
-                            letterSpacing: "0em",
-                            color: "white",
-                            height:"3rem",
-                            textAlign: "right",
-                            display:"flex",
-                            alignItems: "center",
-                            justifyContent: "space-between",
-                            padding: "0 3rem",
-                            borderRadius: "8px",
-                            cursor: "pointer",
-                        }}>
+                        <div className='passDiv'>
                         <span  onClick={() =>  {setPassThree((old) => !old);
-                                            setPassFour((old) => !old);
-                                    }}><LeftOutlined /> Passo Anterior</span>
+                            setPassFour((old) => !old);
+                            }}><LeftOutlined /> Passo Anterior</span>
                         <span  onClick={() => setModal((old) => !old)}>Fechar o guia rápido</span>
                         </div>
                     }

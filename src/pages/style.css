@@ -209,11 +209,20 @@ a{
     justify-content: center;
 }
 
+.closeLook{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
 .closeFlex {
     background-color: #DDDAE3;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
 }
 
 .Modal Button .close {
@@ -598,4 +607,41 @@ a{
     border: 1px solid var(--Colors-Roxo-Normal, #6D0AD7);
     background: var(--Colors-Roxo-Light, #F0E7FB);
     box-shadow: 0px 8px 20px 0px rgba(184, 178, 198, 0.50);
+}
+
+.passButton{
+    background: linear-gradient(90deg, #FF14FF 0%, #6D0AD7 100%);
+    width: 15rem; 
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: white;
+    height: 3.5rem;
+    text-align: center;
+    border: none;
+    padding: 0 3rem
+}
+
+.passDiv{
+    background: linear-gradient(90deg, #FF14FF 0%, #6D0AD7 100%); 
+    width: 35rem; 
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: white;
+    height:3rem;
+    text-align: right;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.inputConfirm{
+    border: 2px dashed var(--Colors-Roxo-Normal, #6D0AD7);
+    background-color: #E8E6ED;
 }

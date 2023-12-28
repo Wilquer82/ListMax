@@ -15,11 +15,16 @@ import HomePartners from './pages/homePartners.jsx';
 import HomeUsers from './pages/homeUsers.jsx';
 import HomeEvents from './pages/homeEventos.jsx';
 import LookYou from './pages/lookYou.jsx';
+import ConfPres from './pages/confPresen.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/confirm",
+    element: <ConfPres />,
   },
   {
     path: "/homeUsers",

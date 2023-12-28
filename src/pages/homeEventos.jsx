@@ -24,7 +24,6 @@ import {
     DatePicker, 
     Space, 
     Popover, 
-    Dropdown, 
     Checkbox 
 } from 'antd';
 
@@ -46,6 +45,7 @@ import {
     Sport2, Sport, SportWinner, Badminton, SportWinner1, SportBasketball,
     EditPurple, ListMax, Copy, Map, Dolar, CreditCard, Boleto, Cartao, QR, Pix, CodeBar, CopyP
 } from '../assets';
+import { Link } from 'react-router-dom';
 
 
 export default function HomeEvents() {
@@ -314,9 +314,11 @@ export default function HomeEvents() {
                         <Button className="buttonNews" 
                         style={{ marginLeft: "2rem", height: "2rem", width: "13rem", backgroundColor: "#1B0746", color: "white" }}
                             >Eventos Futuros</Button>
-                        <Button className="buttonNews" 
-                        style={{ border: "none", marginLeft: "2rem", height: "2rem", width: "13rem", backgroundColor: "transparent", color: "#1B0746" }}
-                            >Eventos Encerrados</Button>
+                        <Link to="/confirm" style={{textDecoration: "none"}}>
+                            <Button className="buttonNews" 
+                            style={{ border: "none", marginLeft: "2rem", height: "2rem", width: "13rem", backgroundColor: "transparent", color: "#1B0746" }}
+                                >Eventos Encerrados</Button>
+                        </Link>
                     </div>
                     {/* <div style={{width:"100vw" , marginTop: "10rem"}}>
                     <p style={{fontSize: "35px",fontWight: "500",lineHeight: "53px", textAlign: "center", color:"#6D0AD7"}}>Você não possui nenhum evento :(</p>
@@ -765,7 +767,8 @@ export default function HomeEvents() {
                                         style={!dropLook? {with: "50vw", height:"3.5rem", padding:" 1rem 1rem", alignItems:"center" , marginTop: "1rem" }
                                                 :{with: "50vw", height:"15rem", padding:" 1rem 1rem", alignItems:"center", marginTop: "1rem" } }>
                                             <div className="containerH">
-                                            <Checkbox className="my-radio-group" style={{ padding:"0", fontWeight: "500" }}>Look You (recomendado)</Checkbox>
+                                            <Checkbox className="my-radio-group" 
+                                                style={{ padding:"0", fontWeight: "500" }}>Look You (recomendado)</Checkbox>
                                             <span  
                                                 onClick={() => {
                                                 setdropLook((old) => !old)}}>
