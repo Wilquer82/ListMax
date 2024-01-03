@@ -31,7 +31,7 @@ import PgEvento from '../components/eventos/pgEvento';
 import NavigationButtons from '../components/eventos/buttonsCriar';
 import PgConvite from '../components/eventos/pgConvite';
 import PgConvidados from '../components/eventos/pgConvidados';
-import PgEstatiscas from '../components/eventos/pgEstatis';
+import PgEstatisticas from '../components/eventos/pgEstatis';
 import PgRecep from '../components/eventos/pgRecep';
 import PgLook from '../components/eventos/pgLook';
 import locale from 'antd/es/date-picker/locale/pt_BR';
@@ -1145,7 +1145,7 @@ export default function HomeEvents() {
                     {selectedTab == 'Página do Evento' && <PgEvento />}
                     {selectedTab == 'Convites' && <PgConvite />}
                     {selectedTab == 'Gerenciar Convidados' && <PgConvidados />}
-                    {selectedTab == 'Estatíticas' && <PgEstatiscas />}
+                    {selectedTab == 'Estatísticas' && <PgEstatisticas />}
                     {selectedTab == 'Recepção' && <PgRecep />}
                     {selectedTab == 'LookYou' && <PgLook />}
 

@@ -690,3 +690,16 @@ letter-spacing: -0.14px;
     height: 0;
 }
 
+.graySquare{
+    border-radius: 0.5625rem;
+    border: 1px dashed var(--Colors-Roxo-Normal, #6D0AD7);
+    background: var(--Colors-Roxo-Light, #F0E7FB);
+}
+
+.squareStatistics{
+    border-radius: 0.75rem;
+    border: 1px solid var(--colors-azul-escuro-light-active, #B8B2C6);
+    background: var(--Colors-Branco-Normal, #FEFEFE);
+    box-shadow: 0px 8px 20px 0px rgba(184, 178, 198, 0.50);
+    padding: 2rem;
+}

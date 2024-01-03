@@ -388,7 +388,7 @@ export default function PgConvidados() {
                                 <Checkbox onChange={onChange}/>
                                 <div style={{display:"flex", justifyContent:"space-evenly", width:"40%", alignItems: "center"}}>
                                     <div style={{width: "36px", height: "36px", borderRadius: "60px", background: "#595959"}}></div>
-                                    <div>
+                                    <div className="containerV">
                                         <span className="roxo" style={{color:"#1B0746"}}>{convidados.nome}</span>
                                         <span className="convText">{convidados.email}</span>
                                         <span className="convText">{convidados.telefone}</span>
