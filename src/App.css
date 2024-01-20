@@ -149,7 +149,7 @@ a{
     width: 100vw;
     min-height: 100vh;
     display: flex;
-    justify-content:space-evenly;
+    justify-content:center;
 }
 
 .MainP {
