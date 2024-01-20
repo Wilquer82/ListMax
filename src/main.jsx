@@ -23,6 +23,10 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
+    path: "/previa2024",
+    element: <App whereCalled="previa"/>,
+  },
+  {
     path: "/confirm",
     element: <ConfPres />,
   },
