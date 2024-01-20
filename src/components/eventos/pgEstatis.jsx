@@ -1,7 +1,7 @@
-import { ExclamationCircleOutlined } from "@ant-design/icons";
+import { ExclamationCircleOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 import { Progress } from "antd";
 
-import  Chart  from "react-apexcharts";
+import Chart from "react-apexcharts";
 import { useState } from "react";
 
 export default function PgEstatisticas() {
@@ -37,31 +37,60 @@ export default function PgEstatisticas() {
                 </div>
                 <div className="containerH" style={{ marginTop: "2rem" }}>
                     <div className="containerV">
+
                         <div className="squareStatistics" style={{ width: "37vw", height: "18rem", marginBottom: "2rem", marginRight: "2rem" }}>
-                            <Progress
-                                percent={60}
-                                success={{
-                                    percent: 30,
-                                }}
-                                type="circle"
-                            />
+                            <span>Convidados</span>
+                            <div style={{marginLeft: '4rem',display:'flex', alignItems:'center', justifyContent:'space-between', width: '70%', height:'13rem'}}>
+                                <Progress
+                                    percent={50}
+                                    success={{
+                                        percent: 30,
+                                    }}
+                                    type="dashboard"
+                                    strokeColor="#ff14ff"
+                                    remainingColor="#6d0ad7"
+                                    strokeWidth={[10]}
+                                    format={() => 
+                                        <span style={{fontSize:'10px'}}>Convidados</span>
+                                    }
+                                />
+                                <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between', height:'7rem', width:'60%'}}>
+                                    <span className="flex justify-content-between"><span>-&nbsp;</span>Confirmados      <span>00</span></span>
+                                    <span className="flex justify-content-between"><span>-&nbsp;</span>Recusados        <span>00</span></span>
+                                    <span className="flex justify-content-between"><span>-&nbsp;</span>Não visualizaram&nbsp;&nbsp;<span>00</span></span>
+                                </div>
+                            </div>
+                            <span style={{marginLeft:'70%'}}><ShoppingCartOutlined /> + Convidados</span>
                         </div>
+
                         <div className="squareStatistics" style={{ width: "37vw", height: "18rem" }}>
+                        <span>Convidados</span>
+                            <div style={{marginLeft: '4rem',display:'flex', alignItems:'center', justifyContent:'space-between', width: '70%', height:'13rem'}}>
                             <Progress
                                 percent={30}
                                 success={{
                                     percent: 20,
                                 }}
-                                type="circle"
+                                type="dashboard"
+                                strokeColor="#ff14ff"
                                 strokeWidth={[10]}
+                                format={() => 
+                                    <span style={{fontSize:'10px'}}>Mensagens</span>
+                                }
                             />
+                            <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between', height:'4rem', width:'60%'}}>
+                                    <span className="flex justify-content-between"><span>-&nbsp;</span>Usadas      <span>00</span></span>
+                                    <span className="flex justify-content-between"><span>-&nbsp;</span>Restantes        <span>00</span></span>
+                                </div>
+                            </div>
+                            <span style={{marginLeft:'70%'}}><ShoppingCartOutlined /> + Mensagens</span>
                         </div>
                     </div>
                     <div className="squareStatistics containerV align-items-center" style={{ width: "40vw", height: "38rem" }}>
                         <Chart
-                            options={options} 
-                            series={series} 
-                            type="area"    
+                            options={options}
+                            series={series}
+                            type="area"
                             width={'450'}
                             height={'450'}
                         />
