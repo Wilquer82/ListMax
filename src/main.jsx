@@ -10,7 +10,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import './index.css'
+// import './index.css'
 import HomePartners from './pages/homePartners.jsx';
 import HomeUsers from './pages/homeUsers.jsx';
 import HomeEvents from './pages/homeEventos.jsx';
