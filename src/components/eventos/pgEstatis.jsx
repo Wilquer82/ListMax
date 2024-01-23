@@ -49,10 +49,12 @@ export default function PgEstatisticas() {
                                     type="dashboard"
                                     strokeColor="#ff14ff"
                                     remainingColor="#6d0ad7"
+                                    defaultColor="#ff14ff"
                                     strokeWidth={[10]}
                                     format={() => 
                                         <span style={{fontSize:'10px'}}>Convidados</span>
                                     }
+                                    size={[180, 20]}
                                 />
                                 <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between', height:'7rem', width:'60%'}}>
                                     <span className="flex justify-content-between"><span>-&nbsp;</span>Confirmados      <span>00</span></span>
@@ -75,7 +77,7 @@ export default function PgEstatisticas() {
                                 strokeColor="#ff14ff"
                                 strokeWidth={[10]}
                                 format={() => 
-                                    <span style={{fontSize:'10px'}}>Mensagens</span>
+                                    <span style={{fontSize:'10px'}}>Mensagens 000</span>
                                 }
                             />
                             <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between', height:'4rem', width:'60%'}}>

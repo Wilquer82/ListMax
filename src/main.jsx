@@ -16,6 +16,8 @@ import HomeUsers from './pages/homeUsers.jsx';
 import HomeEvents from './pages/homeEventos.jsx';
 import LookYou from './pages/lookYou.jsx';
 import ConfPres from './pages/confPresen.jsx';
+import { StyleProvider } from '@ant-design/cssinjs';
+
 
 const router = createBrowserRouter([
   {
@@ -74,6 +76,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <StyleProvider hashPriority="high">
       <RouterProvider router={router} />
+    </StyleProvider>
   </React.StrictMode>,
 )

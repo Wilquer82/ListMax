@@ -45,8 +45,8 @@ export default function PgEvento() {
             </div>
             <div style={{ width: "79vw", minHeight: "40vh", display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "space-evenly" }}>
                 <h1 style={{ color: "#1B0746", textAlign: "left" }}>Nome do Evento</h1>
-                <div style={{ display: "flex", width: "100%", height: "20vh", alignItems: "center", justifyContent: "space-between" }}>
-                    <div style={{ width: "43%", height: "20vh", display: "flex", justifyContent: "space-between" }} className="box">
+                <div style={{ display: "flex", width: "100%", height: "17vh", alignItems: "center", justifyContent: "space-between" }}>
+                    <div style={{ width: "43%", height: "15vh", display: "flex", justifyContent: "space-between" }} className="box">
                         <div style={{ color: "#1B0746", display: "flex", justifyContent: "space-evenly", flexDirection: "column" }}>
                             <span className="pdate">Inicio</span>
                             <div style={{ display: "flex", width: "100%", height: "2rem", alignItems: "center", justifyContent: "space-evenly" }}>
@@ -69,14 +69,14 @@ export default function PgEvento() {
                             </div>
                         </div>
                     </div>
-                    <div style={{ width: "55%", height: "20vh", display: "flex", flexDirection: "column" }} className="box">
+                    <div style={{ width: "55%", height: "15vh", display: "flex", flexDirection: "column" }} className="box">
                         <div style={{ width: "100%", display: "flex", justifyContent: "space-between", alignItems: "base-line" }}>
                             <span className="pdate">Convidados</span>
                             <Progress style={{ marginLeft: "5rem" }} percent={20} strokeColor={twoColors} showInfo={false} size={[400, 20]} trailColor="#B8B2C6" />
                         </div>
                         <span className="pdate" style={{ marginLeft: "13rem" }}> 000 convidados confirmados</span>
 
-                        <div style={{ width: "10%", display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "2rem" }}>
+                        <div style={{ width: "10%", display: "flex", justifyContent: "space-between", alignItems: "center"}}>
                             <TeamOutlined className="pdate" /><span className="pdate">0000</span>
                         </div>
                     </div>

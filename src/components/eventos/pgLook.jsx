@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button, Progress, Checkbox } from 'antd';
 import Look from '../../assets/lookYou.png';
-import { RightOutlined, ExclamationCircleOutlined, ArrowDownOutlined, CloseOutlined, DeleteOutlined } from "@ant-design/icons";
+import { RightOutlined, CloseCircleOutlined , ExclamationCircleOutlined, ArrowDownOutlined, CloseOutlined, DeleteOutlined } from "@ant-design/icons";
 import  Upload from "../../assets/upload-square.svg";
 import Face from "../../assets/face-scan.svg";
 import Photo from "../../assets/photo-download.svg";
@@ -121,7 +121,8 @@ export default function PgLook() {
             num: 1
         },
     ]
-
+    const [nome, setNome] = useState(true);
+    const [sobre, setSobre] = useState(true);
     const [envios, setEnvios] = useState(false);
     const [viewButtons, setViewButtons]= useState(false)
     const [seeOptions, setSeeOptions] = useState(Array(teste.length).fill(false));    
@@ -585,22 +586,49 @@ export default function PgLook() {
                                 </div>
                             </div>
                             <div>
-                                <span className="SubForm" >Mensagem</span>
-                                <div style={{marginTop:"2rem", display:"flex", alignItems:"left", justifyContent: "flex-start", height: "10rem", width:"100%",borderRadius: "9px", border: "none", background: "#F0E7FB", padding: "1rem, 1rem"}}>
-                                    <div style={{padding:"1rem"}}>
-                                        <span className="text">Exemplo de mensagem:</span>
-                                        <div style={{ display:"flex", alignItems:"center"}}>
-                                            <span className="text" style={{padding: "3px 3px",borderRadius: "9px", border: "1px dashed #6D0AD7"}}>Nome </span> &nbsp;  
-                                            <span className="text" style={{padding: "3px 3px",borderRadius: "9px", border: "1px dashed #6D0AD7"}}>Sobrenome</span>
-                                            <span className="text" style={{textAling:"justify"}}>, espero que tenha curtido a festa, segue o álbum de fotos com fotos que você aparece! </span>
+                                <span className="SubForm" style={{ marginTop: "1rem" }}>Mensagem</span>
+                                    <div className="containerV justify-content-sm-start"
+                                        style={{
+                                            alignItems: "left",
+                                            height: "10rem",
+                                            width: "100%",
+                                            borderRadius: "9px",
+                                            border: "none",
+                                            background: "#F0E7FB",
+                                            padding: "1rem",
+                                            margin:"1rem 0"
+                                        }}>
+                                        <div>
+                                            <span className="text">Exemplo de mensagem:</span>
+                                            <div style={{ display: "flex", alignItems: "center" }}>
+                                                <span className={nome?"text":"invisible"}
+                                                    style={{ padding: "4px 4px", border: "1px dashed var(--Colors-Roxo-Normal, #6D0AD7)", borderRadius: "9px" }}
+                                                    >Nome 
+                                                    <CloseCircleOutlined style={{ color: 'red' }} onClick={() => setNome((old) => !old)}/>
+                                                </span>
+                                                &nbsp;
+                                                <span className={sobre?"text":"invisible"}
+                                                    style={{ padding: "4px 4px", border: "1px dashed var(--Colors-Roxo-Normal, #6D0AD7)", borderRadius: "9px" }}
+                                                    >Sobrenome 
+                                                    <CloseCircleOutlined style={{ color: 'red' }} onClick={() => setSobre((old) => !old)} />
+                                                </span>
+                                                <span className="text" contentEditable="true">, espero que possamos curtir minha festa juntos, aguardo sua confirmação!</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div className='containerH' style={{ marginTop:"1rem", justifyContent:"left"}}>
-                                    <span className="text">Adicione os campos automáticos: </span>  &nbsp;
-                                    <span className="text" style={{padding: "3px 3px", border: "1px dashed #6D0AD7",borderRadius: "9px", background: "#F0E7FB"}}>Nome </span> &nbsp;  
-                                    <span className="text" style={{padding: "3px 3px", border: "1px dashed #6D0AD7",borderRadius: "9px", background: "#F0E7FB"}}>Sobrenome</span>
-                                </div>
+                                    <div style={{ display: "flex", alignItems: "center", marginTop:".5rem" }}>
+                                        <span className="text">Adicione os campos automáticos: </span>  &nbsp;
+                                        <span 
+                                        className="text" 
+                                        style={{ padding: "4px 4px", border: "1px dashed var(--Colors-Roxo-Normal, #6D0AD7)", borderRadius: "9px", background: "#F0E7FB" }}
+                                        onClick={() => setNome((old) => !old)}
+                                        >Nome </span> &nbsp;
+                                        <span 
+                                        className="text" 
+                                        style={{ padding: "4px 4px", border: "1px dashed var(--Colors-Roxo-Normal, #6D0AD7)", borderRadius: "9px", background: "#F0E7FB" }}
+                                        onClick={() => setSobre((old) => !old)}
+                                        >Sobrenome</span>
+                                    </div>
                             </div>
                         </div>
                 </div>

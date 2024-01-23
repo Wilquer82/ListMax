@@ -6,6 +6,8 @@
 }
 
 .navbar {
+    margin: 0 0;
+    padding: 0 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -30,21 +32,22 @@
     transition: 1s;
     cursor: pointer;
     padding: 0 1rem;
-    height: 5rem;
+    /* height: 5rem; */
     margin-top: .8rem;
 }
 
 .white-choiced{
     background-image: url('../assets//navChoice.png');
-    background-size: 98% 80%;
+    background-size: 98% 100%;
     background-repeat: no-repeat;
     color: #00B4FF;
     display: flex;
-    margin-top: 2rem;
-    padding-bottom: 1rem;
+    margin-top: 1rem;
+    padding-bottom: .5rem;
     align-items: center;
     justify-content: center;
     width: 12rem;
+    height: 4rem;
 }
 
 .nav-item:hover {
@@ -91,6 +94,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 1rem;
 }
 
 .buttons {
@@ -145,15 +149,15 @@
     display: flex;
     width: 100vw;
     height: 5rem;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    padding: 0 1rem;
+    padding: 2rem;
 }
 
 .navbarInt {
     display: flex;
-    width: 75vw;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -336,13 +340,13 @@
 .square{
     display: flex;
     width: 79vw;
-    min-height: 10vh;
+    min-height: 8vh;
     border-radius: 12px;
     border: 1px solid var(--colors-azul-escuro-light-active, #B8B2C6);
     background: var(--colors-branco-normal, #FEFEFE);
     box-shadow: 0px 8px 20px 0px rgba(184, 178, 198, 0.50);
     margin-bottom: 2rem;
-    padding: 3rem;
+    padding: 1.5rem;
 }
 
 .squareTitle{
@@ -703,18 +707,7 @@ letter-spacing: -0.14px;
     box-shadow: 0px 8px 20px 0px rgba(184, 178, 198, 0.50);
     padding: 1rem;
 }
-:where(.css-dev-only-do-not-override-2q8sxy).ant-progress .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path {
-    stroke: #6D0AD7;
-}
 
-:where(.css-dev-only-do-not-override-2q8sxy).ant-progress .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path {
-    stroke: #6D0AD7;
-}
-
-Progress{
-    stroke:#6D0AD7;
-}
-
-.ant-progress-circle-path{
-    stroke:#6D0AD7;
+.test{
+    color:"#6d0ad7"
 }

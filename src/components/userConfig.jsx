@@ -47,9 +47,9 @@ export default function UserConfig() {
             <div className="squareE">
                 <div style={{ borderBottom: "1px solid #BFBFBF", display: "flex"}}>
                     <span style={{ width: "100%", height: "2.5rem" }} className="squareTitle">Notificações</span>
-                    <div style={{ width:"30rem", fontSize: "15px", display: "flex", justifyContent:"space-between"}}>
-                        < Switch style={{backgroundColor:"#6D0AD7"}} defaultChecked onChange={onChange} />
+                    <div style={{ width:"25rem", fontSize: "15px", display: "flex", justifyContent:"space-between"}}>
                         <span style={{color: "#595959"}}>Receber todas as notificações</span>
+                        < Switch style={{backgroundColor:"#6D0AD7"}} defaultChecked onChange={onChange} />
                     </div>
                 </div>
                         <div style={{display: "flex", flexDirection:"column", justifyContent:"space-between", fontSize: "14px",marginTop:"2rem" ,width:"29vw", minHeight:"20vh"}}>
@@ -63,9 +63,9 @@ export default function UserConfig() {
             <div className="squareE">
                 <div style={{ borderBottom: "1px solid #BFBFBF", display: "flex"}}>
                     <span style={{ width: "100%", height: "2.5rem" }} className="squareTitle">Preferência de Comunicação</span>
-                    <div style={{ width:"15rem", fontSize: "15px", display: "flex", justifyContent:"space-between"}}>
-                        < Switch style={{backgroundColor:"#6D0AD7"}} defaultChecked onChange={onChange} />
+                    <div style={{ width:"12rem", fontSize: "15px", display: "flex", justifyContent:"space-between"}}>
                         <span style={{color: "#595959"}}>Receber todos</span>
+                        <Switch style={{backgroundColor:"#6D0AD7"}} defaultChecked onChange={onChange} />
                     </div>
                 </div>
                 <div style={{display: "flex", flexDirection:"column", justifyContent:"space-between", fontSize: "14px",marginTop:"2rem" ,width:"29vw", minHeight:"10vh"}}>
@@ -78,6 +78,7 @@ export default function UserConfig() {
                 <div style={{ display: "flex"}}>
                     <div style={{marginTop:"2rem" ,width:"39vw", minHeight:"13vh"}}>
                         <span style={{fontSize: "14px", marginTop:"1rem", color: "#595959"}}>Dados pessoais armazenados</span>
+                        <br/>
                         <span style={{fontSize: "14px",marginTop:"1rem", color: "#595959"}}>Politica de privacidade e informações</span>
                     </div>                
                     <div style={{fontSize: "14px", width:"39vw", display: "flex", alignItems:"flex-end", justifyContent:"flex-end", color: "#595959"}}>

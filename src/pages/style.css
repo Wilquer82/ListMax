@@ -22,9 +22,9 @@ a{
 }
 
 .textContainerL {
-    margin-top: 8rem;
-    width: 30vw;
-    height: 330px;
+    margin-top:15rem;
+    width: 40vw;
+    /* height: 330px; */
 }
 
 .textContainerR {
@@ -134,12 +134,12 @@ a{
 }
 
 .loginInputs {
-    margin-top: 8rem;
+    margin-top: 16rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     width: 400px;
-    height: 270px;
+    height: 20rem;
 }
 
 .nameLast {
@@ -355,7 +355,7 @@ a{
 /* ////////////////////////////////////////// */
 
 .flexPart {
-    margin-top: 2rem;
+    margin-top: 12rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -645,3 +645,120 @@ a{
     border: 2px dashed var(--Colors-Roxo-Normal, #6D0AD7);
     background-color: #E8E6ED;
 }
+
+.invisible{
+    display: none;
+}
+
+.contentPopover {
+    background-color: #F0E7FB;
+    border-radius: 12px;
+    border: 2px dashed #6D0AD7;
+    bottom: -2rem;
+    box-sizing: border-box;
+    color: #727272;
+    font-size: 12px;
+    height: 3.5rem;
+    left: 3rem;
+    padding: .5rem;
+    position: absolute;
+    width: 49.5vw;
+    z-index: 200!important;
+}
+
+#Fundo{
+    align-items: center;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, .15);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 10!important;
+}
+
+.ImportExcel{
+    align-items: center;
+    background: #F1FAFF;
+    border-radius: 9px;
+    border: 1px dashed var(--Colors-Roxo-Normal, #6D0AD7);
+    cursor: pointer;
+    display: flex;
+    height: 4rem;
+    justify-content: center;
+    margin-top: 5rem;
+    width: 90%;
+}
+
+.buttonConcluir {
+    background: #6D0AD7;
+    width: 15rem;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: white;
+    height: 3rem;
+    border: none;
+    padding: 0 2rem;
+}
+
+
+#FundoAdd{
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, .15);
+    display: flex;
+    left: 0;
+    min-height: 210%;
+    min-width: 101%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    z-index: 100!important;
+}
+
+.buttonDownload{
+    background: #6D0AD7;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    height: 3rem;
+    letter-spacing: 0em;
+    line-height: 19px;
+    padding: 0 2rem;
+    width: 35rem;
+}
+
+.quadroAdd {
+    align-items: center;
+    background-color: white;
+    border-radius: .5rem;
+    border: 2px solid #B8B2C6;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    margin: 0 15vw;
+    position: absolute;
+    top: 2rem;
+    width: 70vw;
+}
+
+.quadroDownload {
+    align-items: center;
+    background-color: white;
+    border-radius: .5rem;
+    border: 2px solid #B8B2C6;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: space-evenly;
+    margin: 5vh 15vw;
+    position: absolute;
+    width: 70vw;
+}
+

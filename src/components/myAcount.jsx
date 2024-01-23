@@ -2,7 +2,6 @@ import './style.css';
 import { Button, Switch, Input } from 'antd';
 import LogoE from '../assets/logoEmpresa.png';
 import { 
-    PhoneOutlined, 
     UserOutlined, 
     EnvironmentOutlined, 
     MailOutlined ,
@@ -34,7 +33,7 @@ export default function MyAcount() {
             <div className="square">
                 <div style={{width:"39vw", display:"flex", alignItems: "center", justifyContent:"center"}}>
                     <div className="centerIMG">
-                        <img src={LogoE} alt="LogoEmpresa" height={"200px"}/>
+                        <img src={LogoE} alt="LogoEmpresa" height={"170px"}/>
                         {/* <span style={{ color: 'black', position: 'absolute', zIndex: '4' }}></span> */}
                     </div>
                     <div className="data">
@@ -62,9 +61,9 @@ export default function MyAcount() {
                     <span style={{ width: "100%", borderBottom: "1px solid #BFBFBF", height: "2.5rem" }} className="squareTitle">Privacidade e Segurança</span>
                     <div style={{ display: "flex"}}>
                         <div style={{fontSize: "14px",marginTop:"2rem" ,width:"29vw", minHeight:"13vh"}}>
-                            <div style={{ display: "flex", justifyContent:"space-around"}}>
+                            <div style={{ width: "20rem",display: "flex", justifyContent:"space-between", alignItems:"center"}}>
+                                <span style={{color: "#595959"}}>Autenticação de dois fatores (2FA)</span>          
                                 < Switch style={{backgroundColor:"#6D0AD7"}} defaultChecked onChange={onChange} />
-                                <span style={{color: "#595959"}}>Autenticação de dois fatores (2FA)</span>
                             </div>
                             <span style={{marginTop:"2rem", color: "#595959"}}>Histórico de login</span>
                         </div>                
@@ -78,6 +77,7 @@ export default function MyAcount() {
                     <div style={{ display: "flex"}}>
                         <div style={{marginTop:"2rem" ,width:"39vw", minHeight:"13vh"}}>
                             <span style={{fontSize: "14px", marginTop:"1rem", color: "#595959"}}>Dados pessoais armazenados</span>
+                            <br/>
                             <span style={{fontSize: "14px",marginTop:"1rem", color: "#595959"}}>Politica de privacidade e informações</span>
                         </div>                
                         <div style={{fontSize: "14px", width:"39vw", display: "flex", alignItems:"flex-end", justifyContent:"flex-end", color: "#595959"}}>
@@ -90,6 +90,7 @@ export default function MyAcount() {
                     <div style={{ display: "flex"}}>
                         <div style={{marginTop:"2rem" ,width:"39vw", minHeight:"13vh"}}>
                             <span style={{fontSize: "14px", marginTop:"1rem", color: "#595959"}}>Gerenciamento de assinaturas</span>
+                            <br/>
                             <span style={{fontSize: "14px",marginTop:"1rem", color: "#595959"}}>Histórico de transações feitas pela sua conta </span>
                         </div>                
 
@@ -114,7 +115,7 @@ export default function MyAcount() {
                             <select
                                 className="Input" 
                                 style={{
-                                    width: "8rem",
+                                    width: "15rem",
                                 }}>
                                 <option value="null" selected>Estado</option>
                             </select>
@@ -122,7 +123,7 @@ export default function MyAcount() {
                             <select
                                 className="Input" 
                                 style={{
-                                    width: "18.5rem", marginLeft: "1.3rem"
+                                    width: "27rem", marginLeft: "1.3rem"
                                 }}>
                                 <option value="null" selected>Cidade</option>
                             </select>
@@ -158,20 +159,20 @@ export default function MyAcount() {
                             <div style={!changePass?
                                 {marginLeft: "15%",display:"flex", width:"100%", justifyContent:"space-between", alignItems: "center"}
                             :   {marginLeft: "15%",display:"flex", width:"100%", justifyContent:"space-between", alignItems: "center", flexDirection:"column", minHeight: "11rem", marginTop:"3rem"}}>
-                                    <Input.Password  style={!changePass? {width:"70%"} :  {width:"100%"}} className="Input" placeholder='Senha Atual' /> 
+                                    <Input.Password  style={!changePass? {width:"70%"} :  {width:"100%"}} className="Input" variant="filled" placeholder='Senha Atual' /> 
                                     {!changePass && <span  style={{color: "#989898", cursor:"pointer", width:"20%", marginLeft:"1rem"}} onClick={()=>{setchangePass((old) => !old)}}> Trocar Senha</span>}
                                 {changePass &&
                                     <>
-                                        <Input.Password  style={{width:"100%"}} className="Input" placeholder='Nova Senha' /> 
-                                        <Input.Password  style={{width:"100%"}} className="Input" placeholder='Confirme a nova Senha' /> 
+                                        <Input.Password  style={{width:"100%"}} className="Input" variant="filled" placeholder='Nova Senha' /> 
+                                        <Input.Password  style={{width:"100%"}} className="Input" variant="filled" placeholder='Confirme a nova Senha' /> 
                                     </>
                                 }
                             </div>
                         </div>
                 </div>
-                <div style={{ width: "50vw", marginLeft: "37%", marginTop: "4rem", display: "flex",  justifyContent: "space-evenly" }}>
-                <Button  size="large" style={{ height: "3rem" ,width: "18rem", backgroundColor: "transparent", border: "none", color: "#989898"}}>Descartar</Button>
-                <Button  size="large" style={{ height: "3rem", width: "18rem", backgroundColor: "#6D0AD7", color: "white"}}>Salvar Alterações</Button>
+                <div style={{ width: "30vw", marginLeft: "37%", marginTop: "4rem", display: "flex",  justifyContent: "space-evenly", alignSelf: 'flex-end' }}>
+                    <Button  size="large" style={{ height: "3rem" ,width: "10rem", backgroundColor: "transparent", border: "none", color: "#989898"}}>Descartar</Button>
+                    <Button  size="large" style={{ height: "3rem", width: "18rem", backgroundColor: "#6D0AD7", color: "white"}}>Salvar Alterações</Button>
                 </div>
             </div>
             </>

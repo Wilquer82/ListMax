@@ -30,18 +30,7 @@ export default function PgConvidados() {
     ];
 
     const content = (
-        <span style={{
-            position: "absolute", 
-            border: "2px dashed #6D0AD7", 
-            backgroundColor: "#F0E7FB", 
-            fontSize: "12px", 
-            borderRadius: "12px", 
-            width: "50vw", 
-            height: "5rem", 
-            color: "#727272", 
-            padding: "1rem 1rem", 
-            left: "3rem", 
-            bottom: "-3rem" }}
+        <span className='contentPopover'
         >
             Quando você enviar o convite para esse convidado, ele terá a
             opção de compartilhar o link de confirmação com outras pessoas.
@@ -82,12 +71,17 @@ export default function PgConvidados() {
     };
 
     const goNext = () => {
-        setCurrentLetter((currentLetter + 3) % (alphabet.length - 2));
+        if (currentLetter < alphabet.length - 3) {
+            setCurrentLetter(currentLetter + 1);
+        }
     };
     
     const goPrev = () => {
-        setCurrentLetter((currentLetter - 3 + (alphabet.length - 2)) % (alphabet.length - 2));
+        if (currentLetter > 0) {
+            setCurrentLetter(currentLetter - 1);
+        }
     };
+    
 
     const CloseOutClickEx = (e) => {
         if (e.target.id === "Fundo") {
@@ -318,11 +312,11 @@ export default function PgConvidados() {
                                         <Input style={{ width: "10rem", borderColor: "#6D0AD7"}}/> 
                                     </div>
                                     <div style={{ display: "flex", justifyContent: "space-evenly", width: "10rem"}}>
-                                        <span className="stickers" onClick={(e) => {goPrev(); handleClick(e);}}>&lt;</span>
-                                        <span id="p1" className={`alphabetic ${activeElement === "p1" ? "active" : ""}`} onClick={handleClick}>{alphabet[currentLetter]}</span>
-                                        <span id="p2" className={`alphabetic ${activeElement === "p2" ? "active" : ""}`} onClick={handleClick}>{alphabet[currentLetter + 1]}</span>
-                                        <span id="p3" className={`alphabetic ${activeElement === "p3" ? "active" : ""}`} onClick={handleClick}>{alphabet[currentLetter + 2]}</span>
-                                        <span className="stickers" onClick={(e) => {goNext(); handleClick(e);}}>&gt;</span>
+                                    <span className="stickers" onClick={(e) => {goPrev(); handleClick(e);}}>&lt;</span>
+                                    <span id="p1" className={`alphabetic ${activeElement === "p1" ? "active" : ""}`} onClick={handleClick}>{alphabet[currentLetter]}</span>
+                                    <span id="p2" className={`alphabetic ${activeElement === "p2" ? "active" : ""}`} onClick={handleClick}>{alphabet[currentLetter + 1] || ""}</span>
+                                    <span id="p3" className={`alphabetic ${activeElement === "p3" ? "active" : ""}`} onClick={handleClick}>{alphabet[currentLetter + 2] || ""}</span>
+                                    <span className="stickers" onClick={(e) => {goNext(); handleClick(e);}}>&gt;</span>
                                     </div>
                                 </div>
                                 <div style={{ display: "flex", justifyContent: "space-between", width: "35rem"}}>
@@ -425,20 +419,6 @@ export default function PgConvidados() {
                                                 {modalEx &&
                                                     <div
                                                     id="Fundo"
-                                                    style={{
-                                                        overflow: "hidden",
-                                                        zIndex: "10001!important",
-                                                        width: "100vw",
-                                                        height: "100vh",
-                                                        backgroundColor: "rgba(255, 255, 255, .15)",
-                                                        backdropFilter: "blur(3px)",
-                                                        display: "flex",
-                                                        position: "fixed",
-                                                        top: "0",
-                                                        left: "0",
-                                                        alignItems:"center",
-                                                        justifyContent:"center",
-                                                    }}
                                                     onClick={CloseOutClickEx}>
                                                         <div 
                                                             style={{ 
@@ -487,17 +467,7 @@ export default function PgConvidados() {
                             </Button>
                         </div>
                         <div
-                            style={{ 
-                                cursor: "pointer", 
-                                display: "flex", 
-                                alignItems: "center", 
-                                justifyContent: "center",
-                                height: "4rem",
-                                marginTop: "5rem",
-                                width: "90%", 
-                                borderRadius: "9px", 
-                                border: "1px dashed var(--Colors-Roxo-Normal, #6D0AD7)", 
-                                background: "#F1FAFF", }}
+                            className='ImportExcel'
                             onClick={() => setModal((old) => !old)}>
                             <div style={{ margin: "0 2rem" }}>
                                 <img src={ImpExcel} width={"30px"} />
@@ -521,20 +491,10 @@ export default function PgConvidados() {
             {modal &&
                 <div
                     id="Fundo"
-                    style={{
-                        overflow: "hidden",
-                        zIndex: "10001!important",
-                        minWidth: "101%",
-                        minHeight: "210%",
-                        backdropFilter: "blur(10px)",
-                        backgroundColor: "#181C32CC",
-                        display: "flex",
-                        position: "fixed",
-                        top: "0",
-                        left: "0"
-                    }}
                     onClick={CloseOutClick}>
-                    <div style={{ width: "70vw", height: "90vh", margin: "5vh 15vw", backgroundColor: "white", borderRadius: ".5rem", display: "flex", flexDirection: "column", position: "absolute", alignItems: "center", justifyContent: "space-evenly" }}>
+                    <div 
+                    className='quadroDownload'
+                    >
                         <Button
                             className="close"
                             type="primary"
@@ -558,18 +518,7 @@ export default function PgConvidados() {
                             // onClick={() =>  {setPassOne((old) => !old);
                             //                 setPassTwo((old) => !old);
                             //         }}
-                            style={{
-                                background: "#6D0AD7",
-                                width: "35rem",
-                                fontSize: "16px",
-                                fontWeight: "600",
-                                lineHeight: "19px",
-                                letterSpacing: "0em",
-                                color: "white",
-                                height: "3rem",
-                                border: "none",
-                                padding: "0 2rem"
-                            }}>
+                            className='buttonDownload'>
                             Fazer Download da Planilha Modelo de Excel
                         </Button>
                     </div>
@@ -579,18 +528,6 @@ export default function PgConvidados() {
             {modalInvite &&
                 <div
                     id="Fundo"
-                    style={{
-                        overflow: "hidden",
-                        zIndex: "10001!important",
-                        minWidth: "101%",
-                        minHeight: "210%",
-                        backdropFilter: "blur(10px)",
-                        backgroundColor: "#181C32CC",
-                        display: "flex",
-                        position: "fixed",
-                        top: "0",
-                        left: "0"
-                    }}
                     onClick={CloseOutClick}>
                     <div style={{ width: "50vw", height: "50vh", margin: "20vh 25vw", backgroundColor: "white", borderRadius: ".5rem", display: "flex", flexDirection: "column", position: "absolute", alignItems: "center", justifyContent: "space-evenly" }}>
                         <Button
@@ -610,18 +547,7 @@ export default function PgConvidados() {
                             // onClick={() =>  {setPassOne((old) => !old);
                             //                 setPassTwo((old) => !old);
                             //         }}
-                            style={{
-                                background: "#6D0AD7",
-                                width: "15rem",
-                                fontSize: "16px",
-                                fontWeight: "600",
-                                lineHeight: "19px",
-                                letterSpacing: "0em",
-                                color: "white",
-                                height: "3rem",
-                                border: "none",
-                                padding: "0 2rem"
-                            }}>
+                            className='buttonConcluir'>
                             Concluir
                         </Button>
                     </div>
@@ -631,33 +557,9 @@ export default function PgConvidados() {
             {addConvidado &&
                 <div
                     id="FundoAdd"
-                    style={{
-                        overflow: "hidden",
-                        zIndex: "10001!important",
-                        minWidth: "101%",
-                        minHeight: "210%",
-                        backgroundColor: "rgba(255, 255, 255, .15)",
-                        backdropFilter: "blur(3px)",
-                        display: "flex",
-                        position: "fixed",
-                        top: "0",
-                        left: "0"
-                        }}
                     onClick={CloseOutClick}>
                     <div 
-                        style={{ 
-                            width: "70vw", 
-                            height: "90vh", 
-                            margin: "0 15vw", 
-                            top: "2rem", 
-                            backgroundColor: "white", 
-                            borderRadius: ".5rem", 
-                            display: "flex", 
-                            position: "absolute", 
-                            alignItems: "center", 
-                            flexDirection: "column",
-                            border: "2px solid #B8B2C6"
-                        }}
+                        className='quadroAdd'
                         >
                         <div style={{ marginTop: "2rem", width: "90%", borderBottom: "1px solid #BFBFBF", display: "flex", justifyContent: "center" }}>
                             

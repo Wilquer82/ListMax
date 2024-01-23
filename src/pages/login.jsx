@@ -9,7 +9,6 @@ import BackGround from "../components/backGround";
 import './style.css';
 
 
-
 export default function Login (){
 
     const Login =  () => {
