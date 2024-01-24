@@ -183,6 +183,10 @@ a{
     border: none !important;
 }
 
+.buttonNews {
+    color: #310561 !important;
+}
+
 .buttonNewsP {
     display: flex;
     align-items: center;
@@ -792,14 +796,25 @@ a{
 }
 
 .duplicar:hover *{
-    /* font-weight: bold; */
     color: black;
 }
 
-/* .ant-popover-content p {
-    margin: 0;
-  }
-
-  .css-dev-only-do-not-override-2q8sxy.ant-popover .ant-popover-inner{
-    display: none;
-  } */
+@media only screen and (max-width: 768px) {
+    .subTitle {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: normal;
+    }
+    .MainText {
+        font-size: 20px;
+        line-height: normal;
+    }
+    .MainText span {
+        font-size: 20px;
+        line-height: normal;
+    }
+    .logoM {
+        margin-bottom: 2rem;
+        width: 130px;
+    }
+}
