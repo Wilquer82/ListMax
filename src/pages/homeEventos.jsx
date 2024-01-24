@@ -16,7 +16,7 @@ import {
 
 import NavBarPartners from '../components/navbarPartner';
 import { 
-    Button, 
+    // Button, 
     Progress, 
     Radio, 
     Input, 
@@ -28,7 +28,7 @@ import {
 } from 'antd';
 
 import PgEvento from '../components/eventos/pgEvento';
-import NavigationButtons from '../components/eventos/buttonsCriar';
+import Navigationbuttons from '../components/eventos/buttonsCriar';
 import PgConvite from '../components/eventos/pgConvite';
 import PgConvidados from '../components/eventos/pgConvidados';
 import PgEstatisticas from '../components/eventos/pgEstatis';
@@ -118,24 +118,26 @@ export default function HomeEvents() {
     };
 
     const content = (
-        <p style={{
+        <span 
+        style={{
             position: "absolute",
             border: "2px dashed #6D0AD7",
             backgroundColor: "#F0E7FB",
             fontSize: "12px",
             borderRadius: "12px",
-            width: "35vw",
-            height: "4rem",
+            width: "31vw",
+            height: "4.5rem",
             color: "#6D0AD7",
             padding: "1rem",
             display: "flex",
-            left: "5rem",
-            bottom: "-2rem"
+            left: "2rem",
+            bottom: "-4rem",
+            textAlign: "center",
         }}
         >
-            <img src={Map} style={{ padding: "0 1rem" }} /> Pesquise pelo CEP que estado, cidade, bairro e rua serão preenchidos
+            <img src={Map} style={{ padding: "0 .5rem", width:"45px"}} /> Pesquise pelo CEP que estado, cidade, bairro e rua serão preenchidos
             automaticamente.
-        </p>
+        </span>
     );
 
     const content2 = (
@@ -151,8 +153,8 @@ export default function HomeEvents() {
             padding: "1rem",
             alignItems: "center",
             display: "flex",
-            left: "3rem",
-            bottom: "-2rem"
+            left: "5rem",
+            bottom: "-2.3rem"
         }}
         >
             <EditOutlined style={{fontSize: "2rem", marginRight: "1rem"}}/> Você também pode digitar no seu teclado o numero de convidados, 
@@ -173,8 +175,8 @@ export default function HomeEvents() {
             padding: "1rem",
             display: "flex",
             alignItems:"center",
-            left: "3rem",
-            bottom: "-2rem",
+            left: "4rem",
+            bottom: "-4rem",
             textAlign:"justify"
         }}
         >
@@ -244,7 +246,7 @@ export default function HomeEvents() {
         // setCompletedSteps([...completedSteps, step]);
     };
 
-    const handleButtonClick = (activeStep) => {
+    const handlebuttonClick = (activeStep) => {
         if (activeStep < steps.length - 1) {
             setActiveStep(activeStep + 1);
         }
@@ -299,7 +301,7 @@ export default function HomeEvents() {
                             <p><span style={{ color: '#B8B2C6' }}>Home / </span>
                                 <span style={{ color: '#1B0746' }}>Eventos futuros</span></p>
                         </div>
-                        <Button
+                        <button
                             className="buttonNewsP"
                             style={{ height: "3rem", width: "18rem", color: "white" }}
                             onClick={() => {
@@ -308,16 +310,16 @@ export default function HomeEvents() {
                             }}
                         >
                             Criar novo evento
-                        </Button>
+                        </button>
                     </div>
                     <div className="eventsBar">
-                        <Button className="buttonNewsNo" 
+                        <button className="buttonNewsNo" 
                         style={{ marginLeft: "2rem", height: "2rem", width: "13rem", backgroundColor: "#1B0746", color: "white" }}
-                            >Eventos Futuros</Button>
+                            >Eventos Futuros</button>
                         <Link to="/confirm" style={{textDecoration: "none"}}>
-                            <Button className="buttonNewsNo" 
+                            <button className="buttonNewsNo" 
                             style={{ border: "none", marginLeft: "2rem", height: "2rem", width: "13rem", backgroundColor: "transparent", color: "#1B0746" }}
-                                >Eventos Encerrados</Button>
+                                >Eventos Encerrados</button>
                         </Link>
                     </div>
                     {/* <div style={{width:"100vw" , marginTop: "10rem"}}>
@@ -395,12 +397,12 @@ export default function HomeEvents() {
                                         <i className="bi bi-copy ticketSub"></i>&nbsp;
                                         <span className='ticketSub'>Duplicar Evento</span>
                                     </div>
-                                    <Button
+                                    <button
                                         className="buttonNewsNo add"
                                         style={{ border: "2px solid #6D0AD7", height: "2rem", width: "8rem", backgroundColor: "transparent", color: "#6D0AD7", fontSize: "12px" }}
                                         onClick={() => { setGerenciarEvento((old) => !old); setPrincipal((old) => !old) }}>
                                         Gerenciar Evento
-                                    </Button>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -431,7 +433,7 @@ export default function HomeEvents() {
                                 <div className="squareNo containerV" style={{ width: "55rem", height: "26vh", padding: "1rem" }} >
                                     <span className="Title" style={{ padding: "0" }}>Vamos começar?</span>
                                     <p className="f16">Qual o seu tipo de evento?</p>
-                                    <Radio.Group className="my-radio-group containerH" style={{ width: "60%"}} onChange={onChangeEvent}>
+                                    <Radio.Group className="my-radio-group d-flex" style={{ width: "60%"}} onChange={onChangeEvent}>
                                         <div className="containerV" >
                                             <Radio value="A" style={{ marginBottom: ".5rem", fontWeight: "500" }}>Particular</Radio>
                                             <Radio value="B" style={{ marginBottom: ".5rem", fontWeight: "500" }}>Religioso</Radio>
@@ -466,13 +468,13 @@ export default function HomeEvents() {
                                             <Input style={{ width: "41rem", height: "3rem" }} placeholder="Descreva seu evento" />
                                             <img src={EditPurple} width={"24px"} style={{ position: "absolute", paddingRight: ".5rem" }} />
                                         </div>
-                                        <Button
+                                        <button
                                             className="buttonNewsP"
                                             style={{ height: "3rem", width: "10rem", color: "white" }}
-                                            onClick={() => handleButtonClick(activeStep)}
+                                            onClick={() => handlebuttonClick(activeStep)}
                                         >
                                             Continuar <RightOutlined />
-                                        </Button>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -503,9 +505,9 @@ export default function HomeEvents() {
                                                 resize: 'none',
                                                 padding: '1rem',
                                             }} />
-                                        <NavigationButtons
+                                        <Navigationbuttons
                                             voltar={voltar}
-                                            handleButtonClick={handleButtonClick}
+                                            handlebuttonClick={handlebuttonClick}
                                             activeStep={activeStep}
                                             disabled={false}
                                         />
@@ -533,7 +535,7 @@ export default function HomeEvents() {
                                             {!dateStartEnd ?
                                                 <DatePicker
                                                     placement='bottomLeft'
-                                                    className="buttonNews"
+                                                    className="buttonNewsNo"
                                                     onChange={onChangeDate}
                                                     // placeholder='data/mês/ano'
                                                     locale={locale}
@@ -547,7 +549,7 @@ export default function HomeEvents() {
                                                 /> :
                                                 <RangePicker
                                                     placement='bottomLeft'
-                                                    className="buttonNews"
+                                                    className="buttonNewsP"
                                                     onChange={onChangeDate}
                                                     locale={locale}
                                                     format="DD/MM/YYYY"
@@ -582,9 +584,9 @@ export default function HomeEvents() {
                                             </select>
                                         </div>
                                     </div>
-                                    <NavigationButtons
+                                    <Navigationbuttons
                                             voltar={voltar}
-                                            handleButtonClick={handleButtonClick}
+                                            handlebuttonClick={handlebuttonClick}
                                             activeStep={activeStep}
                                             disabled={false}
                                         />
@@ -604,9 +606,12 @@ export default function HomeEvents() {
                                                 // onSearch={onSearch}
                                                 style={{ width: "10rem", borderRadius: "0.5625rem" }}
                                             />
-                                            <Popover content={content} placement="left" arrow={true}>
+                                            {/* <span className="d-inline-block" tabIndex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content={content}>
                                                 <ExclamationCircleOutlined style={{ color: "#6D0AD7", fontSize: "1.5rem", fontWeight: "bold" }} />
-                                            </Popover>
+                                            </span> */}
+                                                <Popover content={content} arrow={false}>
+                                                    <ExclamationCircleOutlined style={{ color: "#6D0AD7", fontSize: "1.5rem", fontWeight: "bold" }} />
+                                                </Popover>
                                         </div>
                                         <div style={{ display: "flex", justifyContent: "space-between" }}>
                                             <select
@@ -639,9 +644,9 @@ export default function HomeEvents() {
                                             <Input style={{ height: "3rem", borderRadius: "0.5625rem" }} placeholder="Complemento" />
                                         </Space>
                                     </div>
-                                    <NavigationButtons
+                                    <Navigationbuttons
                                             voltar={voltar}
-                                            handleButtonClick={handleButtonClick}
+                                            handlebuttonClick={handlebuttonClick}
                                             activeStep={activeStep}
                                             disabled={false}
                                         />
@@ -665,7 +670,7 @@ export default function HomeEvents() {
                                             justifyContent:"center"
                                         }}
                                     >
-                                        <Button
+                                        <button
                                             style={{
                                                 height: "4rem",
                                                 width: "3rem",
@@ -680,10 +685,10 @@ export default function HomeEvents() {
 
                                             }}
                                             onClick={handleDecrement}
-                                            icon={<MinusOutlined style={{ fontWeight: "1000" }} />} />
+                                        ><b><MinusOutlined style={{ fontWeight: "900", color: "white" }} /></b></button>
 
                                         <Input
-                                            className="buttonNews"
+                                            className="buttonNewsP"
                                             style={{
                                                 height: "4rem",
                                                 width: "6rem",
@@ -700,7 +705,7 @@ export default function HomeEvents() {
                                             onChange={handleChange(setValue)}
                                             onBlur={handleBlur(value, setValue)}
                                         />
-                                        <Button
+                                        <button
                                             style={{
                                                 height: "4rem",
                                                 width: "3rem",
@@ -715,8 +720,8 @@ export default function HomeEvents() {
                                                 
                                             }} 
                                             onClick={handleIncrement}
-                                            icon={<b><PlusOutlined style={{ fontWeight: "1000", color: "#FF14FF" }} /></b>} />
-                                            <Popover content={content2} placement="left" arrow={true}>
+                                        ><b><PlusOutlined style={{ fontWeight: "900", color: "white" }} /></b></button>
+                                            <Popover content={content2} placement="left" arrow={false}>
                                                 <b><ExclamationCircleOutlined 
                                                     style={{ 
                                                         color: "#6D0AD7", 
@@ -738,7 +743,7 @@ export default function HomeEvents() {
                                         <p className="f16">Valor total a pagar</p>
                                         <p className="f15"><b>R$</b></p>
                                         <p className="f16" style={{color:"#6D0AD7"}}>0.000,00</p>
-                                        <Popover content={content3} placement="left" arrow={false}>
+                                        <Popover content={content3} arrow={false}>
                                             <b><ExclamationCircleOutlined 
                                             style={{ 
                                                 color: "#6D0AD7", 
@@ -747,9 +752,9 @@ export default function HomeEvents() {
                                             }} /></b>
                                         </Popover>
                                     </div>
-                                    <NavigationButtons
+                                    <Navigationbuttons
                                             voltar={voltar}
-                                            handleButtonClick={handleButtonClick}
+                                            handlebuttonClick={handlebuttonClick}
                                             activeStep={activeStep}
                                             disabled={false}
                                         />
@@ -862,20 +867,20 @@ export default function HomeEvents() {
                                         bottom: dropLook && dropWhats? "-6rem":"-1.1rem",
                                         // marginTop: !dropLook && !dropWhats ? "13rem" : ""
                                     }}>
-                                        <Button
-                                            className="buttonNews"
+                                        <button
+                                            className="buttonNewsP"
                                             style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
                                             onClick={() => voltar()}
                                         >
                                             <LeftOutlined style={{ color: "#A1F71A" }} /> Voltar
-                                        </Button>
-                                        <Button
-                                            className="buttonNews"
+                                        </button>
+                                        <button
+                                            className="buttonNewsP"
                                             style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
-                                            onClick={() => handleButtonClick(activeStep)}
+                                            onClick={() => handlebuttonClick(activeStep)}
                                         >
                                             Continuar <RightOutlined style={{ color: "#A1F71A" }} />
-                                        </Button>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -905,11 +910,11 @@ export default function HomeEvents() {
 
                                     <div className="containerH" style={{width:"28rem", margin:"2rem 0"}}>
                                         <Input style={{borderRadius: "0.5625rem 0rem 0rem 0.5625rem", background:"#FEFEFE", height:"3rem"}} placeholder="Cupom de desconto"/>
-                                        <Button style={{width:"11rem", borderRadius: "0rem 0.5625rem 0.5625rem 0rem", background: "#1B0746", color: "white", height:"3rem"}}
+                                        <button style={{width:"11rem", borderRadius: "0rem 0.5625rem 0.5625rem 0rem", background: "#1B0746", color: "white", height:"3rem"}}
                                         onClick={() => setCupom((old) => !old)}
                                         >
                                             Aplicar
-                                        </Button>
+                                        </button>
                                     </div>
                                     {cupom &&
                                     <div className="whiteSquare containerH" style={{width:"30rem", height:"6rem", padding: "1rem", marginBottom:"2rem"}}>
@@ -946,9 +951,9 @@ export default function HomeEvents() {
                                     </div>
 
                                     <div className="containerH" style={{ justifyContent: "space-between", alignItems: "center", width: "52rem" }}>
-                                        <NavigationButtons
+                                        <Navigationbuttons
                                             voltar={voltar}
-                                            handleButtonClick={handleButtonClick}
+                                            handlebuttonClick={handlebuttonClick}
                                             activeStep={activeStep}
                                             disabled={true}
                                         />
@@ -1013,13 +1018,13 @@ export default function HomeEvents() {
                                                 </select>
                                                 </div>
                                             <div className="containerH" style={{ justifyContent: "space-between", alignItems: "center", width: "52rem" }}>
-                                                <Button
-                                                    className="buttonNews"
+                                                <button
+                                                    className="buttonNewsP"
                                                     style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
                                                     onClick={() => setpayment(0)}
                                                 >
                                                     <LeftOutlined style={{ color: "#A1F71A" }} /> Voltar
-                                                </Button>
+                                                </button>
                                             </div>
                                         </div>
                                     
@@ -1059,21 +1064,21 @@ export default function HomeEvents() {
                                                 </span>
                                             </div>
 
-                                            <Button
-                                                    className="buttonNews"
+                                            <button
+                                                    className="buttonNewsP"
                                                     style={{ marginTop: ".5rem",height: "2.25rem", width: "23rem", backgroundColor: "#6D0AD7", color: "white" }}
                                                     // onClick={() => setpayment(0)}
                                                 >
                                                     <img src={Copy}/>&nbsp;Copiar código Pix
-                                            </Button>
+                                            </button>
                                         </div>
-                                            <Button
-                                                className="buttonNews"
+                                            <button
+                                                className="buttonNewsP"
                                                 style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
                                                 onClick={() => setpayment(0)}
                                             >
                                                 <LeftOutlined style={{ color: "#A1F71A" }} /> Voltar
-                                            </Button>
+                                            </button>
                                         </div>
                                 }
                                 {payment === 3 && 
@@ -1104,13 +1109,13 @@ export default function HomeEvents() {
                                                 </div>
                                             </div>
                                             
-                                            <Button
-                                                className="buttonNews"
+                                            <button
+                                                className="buttonNewsP"
                                                 style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white", marginTop:'1rem' }}
                                                 onClick={() => setpayment(0)}
                                             >
                                                 <LeftOutlined style={{ color: "#A1F71A" }} /> Voltar
-                                            </Button>
+                                            </button>
                                         </div>
                                     </div>
                                 }

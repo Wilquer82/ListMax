@@ -1,7 +1,8 @@
 * {
     font-family: 'Poppins', sans-serif !important;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
@@ -22,7 +23,7 @@ a{
 }
 
 .textContainerL {
-    margin-top:15rem;
+    margin-top: 15rem;
     width: 40vw;
     /* height: 330px; */
 }
@@ -55,7 +56,7 @@ a{
     font-size: 36px;
     font-style: normal;
     font-weight: 400;
-    line-height: 43px; 
+    line-height: 43px;
     letter-spacing: -0.18px;
     color: white;
 }
@@ -175,41 +176,46 @@ a{
 }
 
 .buttonNews {
-    background-color: #A1F71A!important;
-    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #A1F71A !important;
+    font-size: 16px !important;
+    font-style: normal !important;
     font-weight: 600 !important;
-    line-height: 20px !important;
-    border-radius: 9px !important;
+    line-height: 120% !important;
     border: none !important;
 }
 
-.buttonNews {
+.buttonNews:hover {
     color: #310561 !important;
 }
 
 .buttonNewsP {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    width: 25vw;
-    background-color: #6D0AD7!important;
+    background-color: #6D0AD7 !important;
+    border-radius: 8px;
+    border: none;
+    display: flex;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
+    justify-content: center;
     line-height: 120%;
-    border: none;
+    width: 25vw;
 }
 
 .buttonNewsNo {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    width: 25vw;
+    border-radius: 8px;
+    border: none;
+    display: flex;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
+    justify-content: center;
     line-height: 120%;
-    border: none;
+    width: 25vw;
 }
 
 .subTitle {
@@ -232,7 +238,7 @@ a{
     align-self: flex-end;
 }
 
-.closeLook{
+.closeLook {
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -276,7 +282,7 @@ a{
     box-shadow: 2px 2px 2px grey;
 }
 
-.fwhite{
+.fwhite {
     color: white;
 }
 
@@ -389,7 +395,7 @@ a{
 .textContainerPart {
     margin-left: 3rem;
     line-height: 1rem;
-   
+
 }
 
 .threeFives {
@@ -515,7 +521,7 @@ a{
     display: flex;
     width: 500px;
     justify-content: flex-start;
-    text-align:justify;
+    text-align: justify;
 }
 
 .gift {
@@ -537,10 +543,10 @@ a{
     height: 3rem;
     color: white;
     margin: 1.5rem 0;
-    padding: 0 1.5rem  ;
+    padding: 0 1.5rem;
 }
 
-.description{
+.description {
     position: absolute;
     margin-left: 10rem;
     margin-top: 20rem;
@@ -549,7 +555,7 @@ a{
     width: 500px;
 }
 
-.lightBlue{
+.lightBlue {
     background-color: #6d0ad7;
     width: 100vw;
     height: 550px;
@@ -557,7 +563,7 @@ a{
     /* flex-direction: column; */
 }
 
-.fourth{
+.fourth {
     color: #FFF;
     font-size: 40px;
     font-style: normal;
@@ -565,31 +571,31 @@ a{
     line-height: normal;
 }
 
-.centerImg{
+.centerImg {
     /* margin-top: 2rem; */
     /* margin-left: 7rem; */
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.half{
+.half {
     width: 50%;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
-.tenRemLeft{
+.tenRemLeft {
     margin-left: 10rem;
 }
 
-.tenRemTop{
+.tenRemTop {
     margin-top: 5rem;
 }
 
-.textLight{
+.textLight {
     margin-top: 15rem;
     margin-bottom: 3rem;
     width: 400px;
@@ -599,16 +605,17 @@ a{
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 21px; /* 150% */
+    line-height: 21px;
+    /* 150% */
     letter-spacing: -0.14px;
 }
 
-.add{
+.add {
     width: 20rem;
     height: 3.5rem;
 }
 
-.squareModal{
+.squareModal {
     border: 1px solid #B8B2C6;
     box-shadow: 0px 8px 20px 0px #B8B2C680;
     background-color: #e8e6ed;
@@ -621,18 +628,18 @@ a{
     text-align: center;
 }
 
-:where(.css-dev-only-do-not-override-2q8sxy).ant-input-affix-wrapper >input.ant-input {
+:where(.css-dev-only-do-not-override-2q8sxy).ant-input-affix-wrapper>input.ant-input {
     background-color: white;
 }
 
-.squareBP{
+.squareBP {
     border-radius: 0.5625rem;
     border: 1px solid var(--Colors-Roxo-Normal, #6D0AD7);
     background: var(--Colors-Roxo-Light, #F0E7FB);
     box-shadow: 0px 8px 20px 0px rgba(184, 178, 198, 0.50);
 }
 
-.passButton{
+.passButton {
     background: linear-gradient(90deg, #FF14FF 0%, #6D0AD7 100%);
     border: none;
     color: white;
@@ -643,35 +650,35 @@ a{
     line-height: 19px;
     padding: 0 3rem;
     text-align: center;
-    width: 15rem; 
+    width: 15rem;
     border-radius: 8px;
 
 }
 
-.passDiv{
+.passDiv {
     align-items: center;
-    background: linear-gradient(90deg, #FF14FF 0%, #6D0AD7 100%); 
+    background: linear-gradient(90deg, #FF14FF 0%, #6D0AD7 100%);
     border-radius: 8px;
     color: white;
     cursor: pointer;
-    display:flex;
+    display: flex;
     font-size: 16px;
     font-weight: 600;
-    height:3rem;
+    height: 3rem;
     justify-content: space-between;
     letter-spacing: 0em;
     line-height: 19px;
     padding: 0 3rem;
     text-align: right;
-    width: 35rem; 
+    width: 35rem;
 }
 
-.inputConfirm{
+.inputConfirm {
     border: 2px dashed var(--Colors-Roxo-Normal, #6D0AD7);
     background-color: #E8E6ED;
 }
 
-.invisible{
+.invisible {
     display: none;
 }
 
@@ -688,10 +695,10 @@ a{
     padding: .5rem;
     position: absolute;
     width: 49.5vw;
-    z-index: 200!important;
+    z-index: 200 !important;
 }
 
-#Fundo{
+#Fundo {
     align-items: center;
     backdrop-filter: blur(3px);
     background-color: rgba(255, 255, 255, .15);
@@ -703,10 +710,10 @@ a{
     position: fixed;
     top: 0;
     width: 100vw;
-    z-index: 10!important;
+    z-index: 10 !important;
 }
 
-.ImportExcel{
+.ImportExcel {
     align-items: center;
     background: #F1FAFF;
     border-radius: 9px;
@@ -733,7 +740,7 @@ a{
 }
 
 
-#FundoAdd{
+#FundoAdd {
     backdrop-filter: blur(3px);
     background-color: rgba(255, 255, 255, .15);
     display: flex;
@@ -743,10 +750,10 @@ a{
     overflow: hidden;
     position: fixed;
     top: 0;
-    z-index: 100!important;
+    z-index: 100 !important;
 }
 
-.buttonDownload{
+.buttonDownload {
     background: #6D0AD7;
     border-radius: 8px;
     border: none;
@@ -788,14 +795,14 @@ a{
     width: 70vw;
 }
 
-.duplicar{
+.duplicar {
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.duplicar:hover *{
+.duplicar:hover * {
     color: black;
 }
 
@@ -805,16 +812,38 @@ a{
         font-size: 16px;
         line-height: normal;
     }
+
     .MainText {
         font-size: 20px;
         line-height: normal;
     }
+
     .MainText span {
         font-size: 20px;
         line-height: normal;
     }
+
     .logoM {
         margin-bottom: 2rem;
         width: 130px;
     }
+}
+
+.css-dev-only-do-not-override-2q8sxy.ant-popover .ant-popover-inner {
+    background-color: transparent !important;
+    border: none;
+    box-shadow: none !important;
+}
+
+.plusMinus {
+    height: 4rem;
+    width: 3rem;
+    background-color: #6D0AD7;
+    color: white;
+    border: transparent;
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

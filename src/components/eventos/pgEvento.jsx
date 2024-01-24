@@ -32,7 +32,7 @@ export default function PgEvento() {
     return (
         <div className="ParceriaMain">
             <div style={{ width: "100vw", minHeight: "50vh", backgroundColor: "#D9D9D9", display: "flex", alignItems: "flex-end", justifyContent: "end" }}>
-                <Button
+                <button
                     className="buttonNewsNo add"
                     style={{ border: "none", marginRight: "7rem", marginBottom: "2rem", height: "3rem", width: "13rem", backgroundColor: "#FF14FF", color: "white" }}
                     icon={<EditOutlined />}
@@ -41,7 +41,7 @@ export default function PgEvento() {
                                     setPassTwo(false);
                                     setPassThree(false);
                                     setPassFour(false);}}
-                >Editar Informações</Button>
+                >Editar Informações</button>
             </div>
             <div style={{ width: "79vw", minHeight: "40vh", display: "flex", flexDirection: "column", alignItems: "flex-start", justifyContent: "space-evenly" }}>
                 <h1 style={{ color: "#1B0746", textAlign: "left" }}>Nome do Evento</h1>
@@ -91,12 +91,12 @@ export default function PgEvento() {
                     </div>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-between", height: "100%" }}>
-                    <Button className="buttonNewsP add" style={{ height: "2rem", width: "15rem", color: "white" }}>
+                    <button className="buttonNewsP add" style={{ height: "2rem", width: "15rem", color: "white" }}>
                         <img style={{ margin: "0 10px" }} src={Gmaps} /> Ver no GoogleMaps
-                    </Button>
-                    <Button className="buttonNewsP add" style={{ height: "2rem", width: "15rem", color: "white" }}>
+                    </button>
+                    <button className="buttonNewsP add" style={{ height: "2rem", width: "15rem", color: "white" }}>
                         <img style={{ margin: "0 10px" }} src={Waze} /> Navegue pelo Waze
-                    </Button>
+                    </button>
                 </div>
             </div>
             <div style={{ width: "79vw", display: "flex", justifyContent: "space-between", alignItems: "start", marginTop: "2rem", flexDirection: "column" }}>
@@ -140,7 +140,7 @@ export default function PgEvento() {
                 }}
                 onClick={CloseOutClick}>
                 <div style={{ width: "70vw", height: "90vh", top: "5vh", backgroundColor: "white", borderRadius: ".5rem", display: "flex", flexDirection: "column", position: "absolute", alignItems: "center", justifyContent: "space-evenly" }}>
-                    <Button 
+                    <button 
                         className="close" 
                         type="primary" 
                         onClick={() => { setModal(false)}} 
@@ -209,7 +209,7 @@ export default function PgEvento() {
                             onClick={() =>  {setPassOne((old) => !old);
                                             setPassTwo((old) => !old);
                                     }}
-                            className='passButton'>
+                            className='passbutton'>
                             Próximo passo <RightOutlined />
                         </button>
                     }
