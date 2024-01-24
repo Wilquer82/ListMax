@@ -633,17 +633,17 @@ export default function PgConvidados() {
                             </div>
                         </div>
                         {editConv ?
-                                <Button className="buttonNewsP add" style={{ height: "3rem", width: "50rem", color: "white", marginTop:"2rem" }}
+                                <button className="buttonNewsP add" style={{ height: "3rem", width: "50rem", color: "white", marginTop:"2rem" }}
                                 onClick={CloseOutClick}
                                 >
                                     Salvar alterações
-                                </Button>
+                                </button>
                         
-                            :   <Button className="buttonNewsP add" style={{ height: "3rem", width: "50rem", color: "white", marginTop:"2rem" }}
+                            :   <button className="buttonNewsP add" style={{ height: "3rem", width: "50rem", color: "white", marginTop:"2rem" }}
                                 onClick={CloseOutClick}
                                 >
                                     Adicionar novo convidado
-                                </Button>
+                                </button>
                         }
                     </div>
                 </div>
