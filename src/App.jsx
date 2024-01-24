@@ -47,7 +47,7 @@ export default function App( { whereCalled } ) {
           Voltaremos <span className="span">logo</span>!</h1>
         </div>
       </div>
-      <div className="col-lg-6 text-center">
+      <div className="col-lg-6 text-center pt-4">
         <p className="subTitle text-white">Cadastre-se para <br/> receber as novidades.</p>
         <div className="d-flex justify-content-center align-items-center">
         <form className="w400 px-lg-0 px-4">
