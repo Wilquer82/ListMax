@@ -63,8 +63,8 @@ a{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    min-height: 100%;
+    width: 100%;
+    min-height: 100vh;
     background-image: url('./assets/LookYouBack.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -75,48 +75,18 @@ a{
 
 }
 
-#main::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    min-height: 100%;
-    background-image: url('./assets/event.png');
+#bgColor {
+    background-image: url('./assets/bg-usuario-deslogado.png');
     background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
     background-attachment:local;
-    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
     z-index: -1;
     overflow: hidden;
 }
-
-#color::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;    
-    width: 100vw;
-    min-height: 100%;
-    background-color: #2e0692;
-    opacity: 0.7;
-    z-index: -2;
-    overflow: hidden;
-}
-
-#colorLook::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;    
-    width: 100vw;
-    min-height: 100%;
-    background-color: #2e0692;
-    opacity: 0.3;
-    z-index: -2;
-    overflow: hidden;
-}
-
 
 .textContainerA {
     margin-left: 8rem;
@@ -149,8 +119,17 @@ a{
     letter-spacing: -0.3px;
 }
 
+.w400 {
+    width: 400px;
+}
+
 .span {
-    margin: 0 7px;
+    color: #A1F71A;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.08px;
 }
 
 .paragraphA {

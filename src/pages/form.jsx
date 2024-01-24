@@ -10,9 +10,9 @@ export default function News( { whereCalled } ) {
   return (
     <>
       <BackGround />
-      <div className="Main">
+      <div className="container d-flex justify-content-center align-items-center">
         { whereCalled == "news" &&
-          <div className="textContainer">
+          <div className="col-lg-6">
             <img className="logoM" src={Logo} width="245px" height="64px" alt="Logo List-Max" />
             <div className="lineContainer">
               <h1 className="MainText">Seu</h1><span className="span"></span><h1 className="G">evento</h1>
@@ -33,7 +33,7 @@ export default function News( { whereCalled } ) {
           </div>
         }
         { whereCalled == "manut" &&
-          <div className="textContainer">
+          <div className="col-lg-6">
             <img className="logoM" src={Logo} width="245px" height="64px" alt="Logo List-Max" />
             <div className="lineContainer">
               <h1 className="MainText">Estamos em uma</h1>
@@ -46,12 +46,12 @@ export default function News( { whereCalled } ) {
             </div>
           </div>
         }
-          <div className="twoInputsButton">
+          <div className="col-lg-6">
             <p className="subTitle text-white">Cadastre-se para </p>
             <p className="subTitle text-white">receber as novidades.</p>
             <Input size="large" className="inputNews" type="email" placeholder="E-mail"/>
             <Input size="large" className="inputNews" type="text" placeholder="Celular"/>
-            <Button size="large"className="buttonNews" primary>Cadastrar no Newsletter</Button>
+            <Button size="large"className="buttonNews">Cadastrar no Newsletter</Button>
           </div>
       </div>
     </>
