@@ -129,7 +129,7 @@ export default function HomeEvents() {
             color: "#6D0AD7",
             padding: "1rem",
             display: "flex",
-            left: "3rem",
+            left: "5rem",
             bottom: "-2rem"
         }}
         >
@@ -300,8 +300,8 @@ export default function HomeEvents() {
                                 <span style={{ color: '#1B0746' }}>Eventos futuros</span></p>
                         </div>
                         <Button
-                            className="buttonNews"
-                            style={{ height: "3rem", width: "18rem", backgroundColor: "#6D0AD7", color: "white" }}
+                            className="buttonNewsP"
+                            style={{ height: "3rem", width: "18rem", color: "white" }}
                             onClick={() => {
                                 setCriarEvento((old) => !old);
                                 setPrincipal((old) => !old);
@@ -311,11 +311,11 @@ export default function HomeEvents() {
                         </Button>
                     </div>
                     <div className="eventsBar">
-                        <Button className="buttonNews" 
+                        <Button className="buttonNewsNo" 
                         style={{ marginLeft: "2rem", height: "2rem", width: "13rem", backgroundColor: "#1B0746", color: "white" }}
                             >Eventos Futuros</Button>
                         <Link to="/confirm" style={{textDecoration: "none"}}>
-                            <Button className="buttonNews" 
+                            <Button className="buttonNewsNo" 
                             style={{ border: "none", marginLeft: "2rem", height: "2rem", width: "13rem", backgroundColor: "transparent", color: "#1B0746" }}
                                 >Eventos Encerrados</Button>
                         </Link>
@@ -391,12 +391,12 @@ export default function HomeEvents() {
                                     </div>
                                 </div>
                                 <div style={{ display: "flex", justifyContent: "space-around", alignItems:"center" }}>
-                                    {/* <div style={{ cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "space-between" }}> */}
-                                        <img src={Copy} height={"16px"} width={"auto"} />
+                                    <div className="duplicar">
+                                        <i className="bi bi-copy ticketSub"></i>&nbsp;
                                         <span className='ticketSub'>Duplicar Evento</span>
-                                    {/* </div> */}
+                                    </div>
                                     <Button
-                                        className="buttonNews add"
+                                        className="buttonNewsNo add"
                                         style={{ border: "2px solid #6D0AD7", height: "2rem", width: "8rem", backgroundColor: "transparent", color: "#6D0AD7", fontSize: "12px" }}
                                         onClick={() => { setGerenciarEvento((old) => !old); setPrincipal((old) => !old) }}>
                                         Gerenciar Evento
@@ -467,8 +467,8 @@ export default function HomeEvents() {
                                             <img src={EditPurple} width={"24px"} style={{ position: "absolute", paddingRight: ".5rem" }} />
                                         </div>
                                         <Button
-                                            className="buttonNews"
-                                            style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white" }}
+                                            className="buttonNewsP"
+                                            style={{ height: "3rem", width: "10rem", color: "white" }}
                                             onClick={() => handleButtonClick(activeStep)}
                                         >
                                             Continuar <RightOutlined />
@@ -604,7 +604,7 @@ export default function HomeEvents() {
                                                 // onSearch={onSearch}
                                                 style={{ width: "10rem", borderRadius: "0.5625rem" }}
                                             />
-                                            <Popover content={content} placement="left" arrow={false}>
+                                            <Popover content={content} placement="left" arrow={true}>
                                                 <ExclamationCircleOutlined style={{ color: "#6D0AD7", fontSize: "1.5rem", fontWeight: "bold" }} />
                                             </Popover>
                                         </div>
@@ -716,7 +716,7 @@ export default function HomeEvents() {
                                             }} 
                                             onClick={handleIncrement}
                                             icon={<b><PlusOutlined style={{ fontWeight: "1000", color: "#FF14FF" }} /></b>} />
-                                            <Popover content={content2} placement="left" arrow={false}>
+                                            <Popover content={content2} placement="left" arrow={true}>
                                                 <b><ExclamationCircleOutlined 
                                                     style={{ 
                                                         color: "#6D0AD7", 

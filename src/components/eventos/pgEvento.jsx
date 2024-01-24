@@ -33,7 +33,7 @@ export default function PgEvento() {
         <div className="ParceriaMain">
             <div style={{ width: "100vw", minHeight: "50vh", backgroundColor: "#D9D9D9", display: "flex", alignItems: "flex-end", justifyContent: "end" }}>
                 <Button
-                    className="buttonNews add"
+                    className="buttonNewsNo add"
                     style={{ border: "none", marginRight: "7rem", marginBottom: "2rem", height: "3rem", width: "13rem", backgroundColor: "#FF14FF", color: "white" }}
                     icon={<EditOutlined />}
                     onClick={() => {setModal(true); 
@@ -91,10 +91,10 @@ export default function PgEvento() {
                     </div>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-between", height: "100%" }}>
-                    <Button className="buttonNews add" style={{ height: "2rem", width: "15rem", backgroundColor: "#6D0AD7", color: "white" }}>
+                    <Button className="buttonNewsP add" style={{ height: "2rem", width: "15rem", color: "white" }}>
                         <img style={{ margin: "0 10px" }} src={Gmaps} /> Ver no GoogleMaps
                     </Button>
-                    <Button className="buttonNews add" style={{ height: "2rem", width: "15rem", backgroundColor: "#6D0AD7", color: "white" }}>
+                    <Button className="buttonNewsP add" style={{ height: "2rem", width: "15rem", color: "white" }}>
                         <img style={{ margin: "0 10px" }} src={Waze} /> Navegue pelo Waze
                     </Button>
                 </div>
@@ -139,7 +139,7 @@ export default function PgEvento() {
                     left: "0"
                 }}
                 onClick={CloseOutClick}>
-                <div style={{ width: "70vw", height: "90vh", margin: "5vh 15vw", backgroundColor: "white", borderRadius: ".5rem", display: "flex", flexDirection: "column", position: "absolute", alignItems: "center", justifyContent: "space-evenly" }}>
+                <div style={{ width: "70vw", height: "90vh", top: "5vh", backgroundColor: "white", borderRadius: ".5rem", display: "flex", flexDirection: "column", position: "absolute", alignItems: "center", justifyContent: "space-evenly" }}>
                     <Button 
                         className="close" 
                         type="primary" 
@@ -168,7 +168,7 @@ export default function PgEvento() {
                         <div className="squareModal">
                         { passOne &&
                         <>
-                            <span style={{bottom: "14.7rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>1º Passo</span>
+                            <span style={{bottom: "13.7rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>1º Passo</span>
                             <span style={{ color: "#1B0746", fonSize: "20px", fontWeight: "600", lineHeight: "24px", letterSpacing: "-0.02em", }}
                                 >Personalize seu evento</span>
                             <span style={{ color: "#1B0746"}}>Inclua a imagem que será o banner da página de confirmação de presenças e a edite uma descrição bem bacana!</span>
@@ -176,7 +176,7 @@ export default function PgEvento() {
                         }
                         { passTwo &&
                         <>
-                            <span style={{bottom: "14.7rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>2º Passo</span>
+                            <span style={{bottom: "13.5rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>2º Passo</span>
                             <span style={{ color: "#1B0746", fonSize: "20px", fontWeight: "600", lineHeight: "24px", letterSpacing: "-0.02em", }}
                                 >Crie seus convites</span>
                             <span style={{ color: "#1B0746"}}>Na ListMax você pode criar convites diferentes para cada grupo de convidados.</span>
@@ -185,7 +185,7 @@ export default function PgEvento() {
                         }
                         { passThree &&
                         <>
-                            <span style={{bottom: "14.7rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>3º Passo</span>
+                            <span style={{bottom: "13.5rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>3º Passo</span>
                             <span style={{ color: "#1B0746", fonSize: "20px", fontWeight: "600", lineHeight: "24px", letterSpacing: "-0.02em", }}
                                 >Adicione seus convidados</span>
                             <span style={{ color: "#1B0746"}}>
@@ -195,7 +195,7 @@ export default function PgEvento() {
                         }
                         { passFour &&
                         <>
-                            <span style={{bottom: "14.7rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>4º Passo</span>
+                            <span style={{bottom: "13.5rem",position: "absolute",background: "#1B0746", color: "#A1F71A", borderRadius: "10px",  padding:" .3rem 1.5rem", fontSize:"14px"}}>4º Passo</span>
                             <span style={{ color: "#1B0746", fonSize: "20px", fontWeight: "600", lineHeight: "24px", letterSpacing: "-0.02em", }}
                                 >Envie os convites</span>
                             <span style={{ color: "#1B0746"}}>
@@ -205,13 +205,13 @@ export default function PgEvento() {
                         }
                     </div>
                     {passOne &&
-                        <Button 
+                        <button 
                             onClick={() =>  {setPassOne((old) => !old);
                                             setPassTwo((old) => !old);
                                     }}
                             className='passButton'>
                             Próximo passo <RightOutlined />
-                        </Button>
+                        </button>
                     }
                     { passTwo &&
                         <div className='passDiv'>

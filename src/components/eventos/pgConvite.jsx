@@ -40,7 +40,7 @@ export default function PgConvite() {
                                 </div>
                                 <div style={{ width: "32vw" }} />
                                 <div>
-                                    <Button className="buttonNews add" style={{ height: "3rem", width: "18rem", backgroundColor: "#6D0AD7", color: "white" }}
+                                    <Button className="buttonNewsP add" style={{ height: "3rem", width: "18rem", color: "white" }}
                                         onClick={() => setInviteData((old) => !old)}
                                     >
                                         Criar novo convite
@@ -61,7 +61,7 @@ export default function PgConvite() {
                                 </div>
                                 <div style={{ width: "32vw" }} />
                                 <div>
-                                    <Button className="buttonNews add" style={{ height: "3rem", width: "18rem", backgroundColor: "#6D0AD7", color: "white" }}
+                                    <Button className="buttonNewsP add" style={{ height: "3rem", width: "18rem", color: "white" }}
                                         onClick={() => setListInvites((old) => !old)}
                                     >
                                         Concluido

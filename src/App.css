@@ -10,6 +10,28 @@ a{
     text-decoration: none;
 }
 
+/* Funciona no Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #6D0AD7 #E8E6ED;
+}
+
+/* Funciona no Chrome, Edge e Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #E8E6ED;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #6D0AD7;
+    border-radius: 20px;
+    border: 3px solid #E8E6ED;
+}
+
+
 .background{
     background-image: url('./assets/event.png');
     background-size: cover;

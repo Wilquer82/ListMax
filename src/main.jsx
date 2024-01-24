@@ -76,7 +76,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <StyleProvider hashPriority="high">
+    <StyleProvider hashPriority="high" theme={{
+      // colorPrimary: "#6d0ad7"
+    }}>
       <RouterProvider router={router} />
     </StyleProvider>
   </React.StrictMode>,

@@ -62,7 +62,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #a1f71a;
+    background-color: #a1f71a!important;
     border: 2px solid #a1f71a;
     color: black;
     height: 40px;
@@ -97,12 +97,9 @@
     margin-top: 1rem;
 }
 
-.buttons {
-    position: absolute;
-    width: 23vw;
-    height: 74px;
+.buttons{
+    width: 35vw;
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -113,7 +110,7 @@
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    background: #90da1f;
+    background: #90da1f!important;
     border: none;
 }
 
@@ -299,7 +296,7 @@
 
 .settings-button {
     cursor: pointer;
-    background-color: #FF14FF;
+    background-color: #FF14FF!important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -456,7 +453,7 @@
 }
 
 .purpleButton{
-    background-color: #6D0AD7;
+    background-color: #6D0AD7!important;
     width: max-content;
     padding:  1rem 0;
     color: var(--colors-branco-normal, #FEFEFE);
@@ -468,7 +465,7 @@
 }
 
 .LearnMore{
-    background-color: #6D0AD7;
+    background-color: #6D0AD7!important;
     width: 15rem;
     height: 4rem;
     color: var(--colors-branco-normal, #FEFEFE);
@@ -708,6 +705,11 @@ letter-spacing: -0.14px;
     padding: 1rem;
 }
 
-.test{
-    color:"#6d0ad7"
+
+.css-dev-only-do-not-override-2q8sxy.ant-progress .ant-progress-inner:not(.ant-progress-circle-gradient) .ant-progress-circle-path {
+    stroke: #6d0ad7;
+}
+
+.ant-progress-cicle-path{
+    stroke: #ff14ff;
 }
