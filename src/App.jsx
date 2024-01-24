@@ -8,8 +8,8 @@ import { Button, Input} from 'antd';
 
 export default function App( { whereCalled } ) {
   return (
-    <> 
-    { whereCalled == "previa" ?
+    // <> 
+    // { whereCalled == "previa" ?
     <>
       <BackGround />
       <NavBar />
@@ -35,7 +35,7 @@ export default function App( { whereCalled } ) {
           <TwoButtons />
         </div>
       </div> 
-      </>:
+      {/* </>:
     <div className="container d-flex justify-content-center align-items-center vh-100 overflow-hidden">
       <BackGround />
       <div className="col-lg-12 d-lg-flex">
@@ -58,7 +58,7 @@ export default function App( { whereCalled } ) {
         </div>
       </div>
     </div>
-    </div>}
+    </div>} */}
     </>
   );
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import News from './pages/form.jsx';
@@ -22,11 +21,11 @@ import { StyleProvider } from '@ant-design/cssinjs';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <News whereCalled="manut" />,
   },
   {
     path: "/previa2024",
-    element: <App whereCalled="previa"/>,
+    element: <App />,
   },
   {
     path: "/confirm",
