@@ -36,27 +36,28 @@ export default function App( { whereCalled } ) {
         </div>
       </div> 
       </>:
-    <div className="Main">
+    <div className="container d-flex justify-content-center align-items-center vh-100 overflow-hidden">
       <BackGround />
-      <div className="textContainer">
-        <img className="logoM" src={Logo} width="245px" height="64px" alt="Logo List-Max" />
-        <div className="lineContainer">
-          <h1 className="MainText">Estamos em uma</h1>
-        </div>
-        <div className="lineContainer">
-          <h1 className="G">breve manutenção</h1>
-        </div>
-        <div className="lineContainer">
-          <h1 className="MainText">Voltaremos</h1><span className="span"></span><h1 className="G">logo.</h1>
+      <div className="col-lg-12 d-lg-flex">
+      <div className="col-lg-6 text-center text-lg-start">
+        <img className="logoM" src={Logo} alt="Logo List-Max" />
+        <div className="">
+          <h1 className="MainText">Estamos em uma <br/> 
+          <span className="span">breve manutenção</span>. <br/>
+          Voltaremos <span className="span">logo</span>!</h1>
         </div>
       </div>
-      <div className="twoInputsButton">
-        <p className="subTitle text-white">Cadastre-se para </p>
-        <p className="subTitle text-white">receber as novidades.</p>
-        <Input size="large" className="inputNews" type="email" placeholder="E-mail"/>
-        <Input size="large" className="inputNews" type="text" placeholder="Celular"/>
-        <Button size="large"className="buttonNews">Cadastrar no Newsletter</Button>
+      <div className="col-lg-6 text-center">
+        <p className="subTitle text-white">Cadastre-se para <br/> receber as novidades.</p>
+        <div className="d-flex justify-content-center align-items-center">
+        <form className="w400 px-lg-0 px-4">
+        <Input size="large" className="inputNews mb-3" type="email" placeholder="E-mail"/>
+        <Input size="large" className="inputNews mb-3" type="text" placeholder="Celular"/>
+        <Button size="large"className="buttonNews w-100 font-16">Cadastrar no Newsletter</Button>
+        </form>
+        </div>
       </div>
+    </div>
     </div>}
     </>
   );

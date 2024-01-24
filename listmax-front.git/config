@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = https://github.com/listmax/listmax-front.git
+[remote "origem"]
+	url = https://github.com/MateusBreno/List-Max.git
+	fetch = +refs/heads/*:refs/remotes/origem/*
