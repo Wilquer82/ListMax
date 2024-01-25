@@ -1,5 +1,5 @@
 
-import { Button, Progress, Space, Input } from "antd"
+import { Progress, Space, Input } from "antd"
 import { CloseCircleOutlined, FormOutlined, ExclamationCircleOutlined, EllipsisOutlined, DeleteOutlined, CloseOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import Upload from "../../assets/upload-square.svg"
@@ -40,11 +40,11 @@ export default function PgConvite() {
                                 </div>
                                 <div style={{ width: "32vw" }} />
                                 <div>
-                                    <Button className="buttonNewsP add" style={{ height: "3rem", width: "18rem", color: "white" }}
+                                    <button className="buttonNewsP add" style={{ height: "3rem", width: "18rem", color: "white" }}
                                         onClick={() => setInviteData((old) => !old)}
                                     >
                                         Criar novo convite
-                                    </Button>
+                                    </button>
                                 </div>
                             </div>
                             <div style={{ marginTop: "1rem", border: "1px solid #B8B2C6", width: "79vw", boxShadow: "0px 8px 20px 0px #B8B2C680", background: "#fefefe", height: "50vh", borderRadius: "1rem", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
@@ -61,11 +61,11 @@ export default function PgConvite() {
                                 </div>
                                 <div style={{ width: "32vw" }} />
                                 <div>
-                                    <Button className="buttonNewsP add" style={{ height: "3rem", width: "18rem", color: "white" }}
+                                    <button className="buttonNewsP add" style={{ height: "3rem", width: "18rem", color: "white" }}
                                         onClick={() => setListInvites((old) => !old)}
                                     >
                                         Concluido
-                                    </Button>
+                                    </button>
                                 </div>
                             </div>
                             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "79vw", marginBottom: "3rem" }}>
@@ -87,7 +87,7 @@ export default function PgConvite() {
                                     <span className="SubForm">Nome do modelo do convite</span>
                                     <Space.Compact style={{ marginTop: "1rem", width: "100%", backgroundColor: "#E8E6ED", borderRadius: "10px", height: "3rem" }}>
                                         <Input style={{ backgroundColor: "#E8E6ED", paddingLeft: "1rem" }} placeholder="Nome desse modelo de convite" />
-                                        <Button style={{ color: "#6D0AD7", backgroundColor: "#E8E6ED", height: "3rem" }} icon={<FormOutlined />} disabled></Button>
+                                        <button style={{ color: "#6D0AD7", backgroundColor: "#E8E6ED", height: "3rem" }} icon={<FormOutlined />} disabled></button>
                                     </Space.Compact>
                                     <span className="SubForm" style={{ marginTop: "1rem" }}>Defina a foto do convite</span>
                                     <div style={{ display: "flex", alignItems: "center", height: "4rem", width: "100%", borderRadius: "9px", border: "1px dashed var(--Colors-Roxo-Normal, #6D0AD7)", background: "#F1FAFF", }}>
@@ -235,11 +235,11 @@ export default function PgConvite() {
                         </div>
                         <div style={{ width: "32vw" }} />
                         <div>
-                            <Button className="buttonNews add" style={{ height: "3rem", width: "18rem", backgroundColor: "#6D0AD7", color: "white" }}
+                            <button className="buttonNews add" style={{ height: "3rem", width: "18rem", backgroundColor: "#6D0AD7", color: "white" }}
                                 onClick={() => setInviteData((old) => !old)}
                             >
                                 Criar novo convite
-                            </Button>
+                            </button>
                         </div>
                     </div>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "79vw", marginBottom: "3rem" }}>
@@ -264,7 +264,7 @@ export default function PgConvite() {
                                 </div>
                                 <div style={{ padding: "1rem 2rem", display: "flex", alignItems: "center", justifyContent: "space-between", height: "4rem", width: "100%", borderTop: "1px solid #B8B2C6", borderBottom: "1px solid #B8B2C6" }}>
                                     <span style={{ fontSize: "16px" }} className="text">Modelo de convite para familiares</span>
-                                    <Button
+                                    <button
                                         style={{ display: "flex", alignItems: "center", justifyContent: "center", background: "#F0E7FB", border: "none" }}
                                         icon={<EllipsisOutlined style={{ fontWeight: "bold" }} />}
                                         onClick={() => setSeeOptions((old) => !old)} />
@@ -294,7 +294,7 @@ export default function PgConvite() {
                                             }}
                                             onClick={CloseOutClickEx}>
                                             <div style={{ width: "60vw", height: "40vh", margin: "0 0 auto", backgroundColor: "white", borderRadius: ".5rem", display: "flex", flexDirection: "column", position: "absolute", zIndex: "10", alignItems: "center", justifyContent: "space-evenly" }}>
-                                                <Button
+                                                <button
                                                     className="close"
                                                     type="primary"
                                                     onClick={() => { setModalEx(false) }}
@@ -304,7 +304,7 @@ export default function PgConvite() {
                                                 />
 
                                                 <span className="squareTitle">Tem certeza que deseja excluir esse modelo de convite?</span>
-                                                <Button style={{ fontWeight: "bold", width: "18rem", backgroundColor: "#EA4335", height: "3rem" }} type="primary" danger> Excluir </Button>
+                                                <button style={{ fontWeight: "bold", width: "18rem", backgroundColor: "#EA4335", height: "3rem" }} type="primary" danger> Excluir </button>
 
                                             </div>
                                         </div>

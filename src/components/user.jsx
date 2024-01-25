@@ -1,6 +1,5 @@
 import './style.css'; // Importando o arquivo CSS
 import Self from '../assets/partners1.png'
-import { Button } from 'antd';
 import { DownOutlined, UpOutlined, SettingOutlined, UserOutlined, ExportOutlined }from '@ant-design/icons';
 import { useState } from 'react';
 
@@ -13,7 +12,7 @@ const UserCard = ({ avatarUrl, firstName, lastName, userLevel }) => {
                 <span>Nome Sobrenome</span>
                 <span>partner</span>
             </div>
-            <Button 
+            <button 
                 className="settings-button" 
                 icon={!seeMenu ?
                         (<DownOutlined style={{ fontSize: "13px", color:"white", fontWeight:"bold"}}/>)

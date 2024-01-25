@@ -248,7 +248,47 @@
     justify-content: space-evenly;
     border-radius: 8px ;
     border: 2px solid white;
+}
 
+.miniMenuFilter{
+    align-items: center;
+    background-color: #E8E6ED;
+    border-radius: 8px ;
+    border: 2px solid white;
+    color: #595959;
+    background-color: #310561;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    height: 12rem;
+    justify-content: space-evenly;
+    line-height: 16px; 
+    position: absolute;
+    right: 12rem;
+    top: 95em;
+    width: 12rem;
+    z-index: 4;
+}
+
+.miniItemFil{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 90%; */
+    padding: 0 1rem;
+    border-radius: 8px;
+    height: 2rem;
+    width: 11rem;
+    cursor: pointer;
+    background-color: white;
+
+}
+
+.miniItemFil:hover{
+    background-color: #FF14FF;
+    color: white;
 }
 
 .miniItem{

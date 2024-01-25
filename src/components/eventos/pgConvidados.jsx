@@ -1,4 +1,4 @@
-import { Button, Input, Select, Popover, Checkbox } from 'antd'
+import { Input, Select, Popover, Checkbox } from 'antd'
 import { DeleteOutlined, DownloadOutlined, EllipsisOutlined, CloseOutlined, FormOutlined, ExclamationCircleOutlined, SearchOutlined } from "@ant-design/icons";
 import ImpExcel from '../../assets/Excel.png';
 import { useState } from 'react';
@@ -82,7 +82,6 @@ export default function PgConvidados() {
         }
     };
     
-
     const CloseOutClickEx = (e) => {
         if (e.target.id === "Fundo") {
             setSeeOptions(false); 
@@ -191,7 +190,7 @@ export default function PgConvidados() {
                                 </div>
                             </div>
                         </div>
-                        <Button 
+                        <button 
                             className="buttonNewsP" 
                             style={{borderRadius:".5rem", height: "3rem", width: "49vw", color: "white" }}
                             onClick={() => {
@@ -199,7 +198,7 @@ export default function PgConvidados() {
                             }}
                         > 
                             <img src={Send}/> &nbsp;Enviar Convites
-                        </Button>
+                        </button>
                     </div>
                     <div style={{
                         display:"flex", 
@@ -308,7 +307,7 @@ export default function PgConvidados() {
                             <div style={{ display: "flex", justifyContent: "space-between", width:"100%", alignItems:"center"}}>
                                 <div style={{ display: "flex", justifyContent: "space-evenly"}}>
                                     <div style={{ display: "flex" }}>
-                                        <Button className="buttonNewsP" icon={<SearchOutlined />}style={{borderRadius:".5rem",  width: "6rem", color: "white" }}>Buscar</Button>
+                                        <button className="buttonNewsP" icon={<SearchOutlined />}style={{borderRadius:".5rem",  width: "6rem", color: "white" }}>Buscar</button>
                                         <Input style={{ width: "10rem", borderColor: "#6D0AD7"}}/> 
                                     </div>
                                     <div style={{ display: "flex", justifyContent: "space-evenly", width: "10rem"}}>
@@ -320,7 +319,7 @@ export default function PgConvidados() {
                                     </div>
                                 </div>
                                 <div style={{ display: "flex", justifyContent: "space-between", width: "35rem"}}>
-                                    <Button 
+                                    <button 
                                         className="buttonNewsP" 
                                         style={{borderRadius:".5rem", height: "2.5rem", width: "13rem", color: "white" }}
                                         onClick={() => {
@@ -328,13 +327,13 @@ export default function PgConvidados() {
                                         }}
                                     > 
                                         <img src={Send}/> &nbsp;Enviar Convites
-                                    </Button>
+                                    </button>
                                     
-                                    <Button className="buttonNewsP" 
+                                    <button className="buttonNewsP" 
                                         style={{borderRadius:".5rem", height: "2.5rem", width: "14rem", color: "white" }}>
                                         <img src={Export}/> &nbsp;Exportar para Excel
-                                    </Button>
-                                    <Button 
+                                    </button>
+                                    <button 
                                         className="buttonNewsP" 
                                         style={{borderRadius:".5rem", height: "2.5rem", width: "3rem", color: "white" }}
                                         onClick={() => {
@@ -342,7 +341,7 @@ export default function PgConvidados() {
                                             setAddConvidado((old) => !old)}}
                                     >
                                         +
-                                    </Button>
+                                    </button>
                                 </div>
                             </div>
                             <div className="TabListConv">
@@ -396,7 +395,7 @@ export default function PgConvidados() {
                                     <span className="convText" style={getStatusStyle(convidados.status)}>{convidados.status}</span></div>
                                 <div style={{display:"flex", justifyContent:"center", width:"15%"}}>
                                     <div style={{ padding:"1rem 2rem", display:"flex", alignItems:"center", justifyContent: "center" ,height: "4rem", width:"100%"}}>
-                                            <Button  
+                                            <button  
                                                 style={{ display:"flex", alignItems:"center", justifyContent:"center", background: "#F0E7FB", border:"none"}} 
                                                 icon={<EllipsisOutlined style={{fontWeight:"bold"}}/>}
                                                 onClick={() => toggleSeeOptions(index)}/>
@@ -436,7 +435,7 @@ export default function PgConvidados() {
                                                             border: "2px solid #B8B2C6"
                                                             }}
                                                         >
-                                                            <Button 
+                                                            <button 
                                                                 className="close" 
                                                                 type="primary" 
                                                                 onClick={() => { setModalEx(false)}} 
@@ -446,7 +445,7 @@ export default function PgConvidados() {
                                                             />
 
                                                             <span className="squareTitle">Tem certeza que deseja excluir esse modelo Convidado?</span>
-                                                            <Button style={{fontWeight: "bold", width: "18rem" , backgroundColor:"#EA4335", height:"3rem"}}type="primary" danger> Excluir </Button>
+                                                            <button style={{fontWeight: "bold", width: "18rem" , backgroundColor:"#EA4335", height:"3rem"}}type="primary" danger> Excluir </button>
 
                                                         </div>
                                                     </div>
@@ -460,11 +459,11 @@ export default function PgConvidados() {
                     {!showList &&
                     <>
                         <div style={{display:"flex", justifyContent:"flex-end", width: "90%", height:"4rem"}}>
-                            <Button className="buttonNewsP add" style={{ height: "3rem", width: "15rem", color: "white" }}
+                            <button className="buttonNewsP add" style={{ height: "3rem", width: "15rem", color: "white" }}
                                 onClick={() => setAddConvidado((old) => !old)}
                             >
                                 + Adicionar Convidado
-                            </Button>
+                            </button>
                         </div>
                         <div
                             className='ImportExcel'
@@ -495,7 +494,7 @@ export default function PgConvidados() {
                     <div 
                     className='quadroDownload'
                     >
-                        <Button
+                        <button
                             className="close"
                             type="primary"
                             onClick={() => { setModal(false) }}
@@ -532,7 +531,7 @@ export default function PgConvidados() {
                     id="Fundo"
                     onClick={CloseOutClick}>
                     <div style={{ width: "50vw", height: "50vh", margin: "20vh 25vw", backgroundColor: "white", borderRadius: ".5rem", display: "flex", flexDirection: "column", position: "absolute", alignItems: "center", justifyContent: "space-evenly" }}>
-                        <Button
+                        <button
                             className="close"
                             type="primary"
                             onClick={() => { setModalInvite(false) }}
@@ -545,13 +544,13 @@ export default function PgConvidados() {
                             Convite(s) enviado com sucesso!
                         </span>
                         
-                        <Button
+                        <button
                             // onClick={() =>  {setPassOne((old) => !old);
                             //                 setPassTwo((old) => !old);
                             //         }}
                             className='buttonConcluir'>
                             Concluir
-                        </Button>
+                        </button>
                     </div>
                 </div>
             }
@@ -569,7 +568,7 @@ export default function PgConvidados() {
                                 <span style={{ width: "100%", height: "2.5rem" }} className="squareTitle">Editar convidado</span>
                             :   <span style={{ width: "100%", height: "2.5rem" }} className="squareTitle">Adicionar convidados</span>
                             }
-                            <Button
+                            <button
                                 className="closeFlex"
                                 type="primary"
                                 onClick={() => { setAddConvidado(false) }}

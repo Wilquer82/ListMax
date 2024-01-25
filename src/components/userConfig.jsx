@@ -1,7 +1,12 @@
 import './style.css';
 import { Button, Switch, Checkbox } from 'antd';
 import LogoE from '../assets/logoEmpresa.png';
-import { PhoneOutlined, UserOutlined, EnvironmentOutlined, MailOutlined, ExclamationCircleOutlined } from '@ant-design/icons';
+import { 
+    UserOutlined, 
+    EnvironmentOutlined, 
+    MailOutlined, 
+    ExclamationCircleOutlined 
+} from '@ant-design/icons';
 
 
 export default function UserConfig() {
@@ -22,7 +27,7 @@ export default function UserConfig() {
             <div className="square">
                 <div style={{width:"39vw", display:"flex", alignItems: "center", justifyContent:"center"}}>
                     <div className="centerIMG">
-                        <img src={LogoE} alt="LogoEmpresa" height={"200px"}/>
+                        <img src={LogoE} alt="LogoEmpresa" height={"170px"}/>
                         {/* <span style={{ color: 'black', position: 'absolute', zIndex: '4' }}></span> */}
                     </div>
                     <div className="data">
