@@ -13,7 +13,7 @@ export default function News({ whereCalled }) {
         <BackGround />
         <div className="col-lg-12 d-lg-flex">
           {whereCalled == "news" &&
-            <div className="col-lg-6">
+            <div className="col-lg-6 text-center text-lg-start">
               <img className="logoM" src={Logo} width="245px" height="64px" alt="Logo List-Max" />
               <div className="lineContainer">
                 <h1 className="MainText">Seu</h1><span className="span"></span><h1 className="G">evento</h1>
