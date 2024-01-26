@@ -168,23 +168,43 @@
 /* //////////////////////////////////////////////// */
 
 .miniMenuConv{
+    align-items: center;
     background-color: #E8E6ED;
+    border-radius: 8px;
+    color: #595959;
+    display: flex;
+    flex-direction: column;
     font-size: 13px;
     font-style: normal;
     font-weight: 600;
-    line-height: 16px; 
-    color: #595959;
-    position: absolute;
-    z-index: 4;
-    width: 6rem;
     height: 4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-evenly;
-    border-radius: 8px;
+    line-height: 16px; 
     margin-left:41rem;
     margin-top: 2rem;
+    position: absolute;
+    width: 6rem;
+    z-index: 4;
+}
+
+.miniMenuRecep{
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    color: #595959;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    height: 4rem;
+    justify-content: space-evenly;
+    line-height: 16px; 
+    right:10rem;
+    /* margin-top: 2rem; */
+    position: absolute;
+    width: 6rem;
+    z-index: 4;
 }
 
 .miniMenuConvid{

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Progress, Checkbox } from 'antd';
+import { Progress, Checkbox } from 'antd';
 import Look from '../../assets/lookYou.png';
 import { RightOutlined, CloseCircleOutlined , ExclamationCircleOutlined, ArrowDownOutlined, CloseOutlined, DeleteOutlined } from "@ant-design/icons";
 import  Upload from "../../assets/upload-square.svg";
@@ -162,7 +162,7 @@ export default function PgLook() {
 
 
     return(
-        <div className="ParceriaMain" style={{backgroundColor:"#e8e6ed",  width: "100vw", minHeight:"100vh"}}>
+        <div className="ParceriaMain" style={{backgroundColor:"#e8e6ed",  width: "100vw", minHeight:"120vh"}}>
             <div style={{backgroundColor:"#1B0746",  width: "100vw", height:"12rem", display:"flex", alignItems:"center", justifyContent:"center"}}>
                 <img src={Look} width={"20%"}/>
             </div>
@@ -186,21 +186,21 @@ export default function PgLook() {
                         <div style={{ width: "30rem"}}/>
                         {selectedTab === "ENVIO" ? 
                         <Link to="/look">
-                            <Button 
+                            <button 
                                 className="buttonNews" 
                                 style={{ height: "3rem", width: "10rem", background: "linear-gradient(90deg, #FF14FF 0%, #6D0AD7 100%)", color: "white", borderRadius: "8px" }}
                                 // onClick={() => handleButtonClick(selectedTab)}
                             >
                                 Concluir
-                            </Button>
+                            </button>
                         </Link> :
-                        <Button 
-                            className="buttonNews" 
-                            style={{ height: "3rem", width: "10rem", backgroundColor: "#6D0AD7", color: "white", borderRadius: "8px"}}
+                        <button 
+                            className="buttonNewsP" 
+                            style={{ height: "3rem", width: "12rem", backgroundColor: "#6D0AD7", color: "white", borderRadius: "8px"}}
                             onClick={() => handleButtonClick(selectedTab)}
                         >
                             Continuar <RightOutlined />
-                        </Button>}
+                        </button>}
                     </div>
             </div>
             {selectedTab == 'IMPORTAÇÃO' &&
@@ -298,16 +298,16 @@ export default function PgLook() {
                             <div style={{width:"20%"}}>
                             </div>
                             <div style={{marginTop:"3rem", display:"flex", width:"35%", justifyContent:"space-between", alignItems:"baseline", height:"100%"}}>
-                                <Button className="buttonNews add" style={{ height: "3rem", width: "11.5rem", backgroundColor: "#6D0AD7", color: "white" }}>
+                                <button className="buttonNews add" style={{ height: "3rem", width: "11.5rem", backgroundColor: "#6D0AD7", color: "white" }}>
                                     Selecionar todos 
-                                </Button>
-                                <Button 
+                                </button>
+                                <button 
                                     className="buttonNews add" 
                                     style={{ height: "3rem", width: "12.5rem", backgroundColor: "#6D0AD7", color: "white" }}
                                     onClick={() => {setEnvios(true)}}
                                 >
                                     Apagar selecionados 
-                                </Button>
+                                </button>
                             </div>
                         </div>
                         
@@ -368,11 +368,11 @@ export default function PgLook() {
                                 convidados foram identificados pelo Look You em suas fotos. Hora de compartilhar!</span>
                         </div>
                         <div style={{ width: "100%", justifyContent:"right", display:"flex", marginTop:"2rem"}}>
-                            <Button 
+                            <button 
                                 className="buttonNews add" style={{ borderRadius: "0.5625rem",height: "3rem", width: "25.5rem", backgroundColor: "#6D0AD7", color: "white" }}
                                 onClick={() => {setViewButtons((old) => !old)}}>
                                 Definir envio em massa <ArrowDownOutlined />
-                            </Button>
+                            </button>
                             {viewButtons &&
                             <>
                                 <div 
@@ -390,15 +390,15 @@ export default function PgLook() {
                                         padding:" .5rem 0",
                                         borderRadius: "0.5625rem",
                                     }}>
-                                    <Button className="buttonNews add" style={{ borderRadius: "0.5625rem",height: "2.75rem", width: "25rem", backgroundColor: "#F0E7FB", color: "#6D0AD7" }}>
+                                    <button className="buttonNews add" style={{ borderRadius: "0.5625rem",height: "2.75rem", width: "25rem", backgroundColor: "#F0E7FB", color: "#6D0AD7" }}>
                                         <img src={Smile} width={"30px"}/>   Álbum particular para todos 
-                                    </Button>
-                                    <Button className="buttonNews add" style={{ borderRadius: "0.5625rem",height: "2.75rem", width: "25rem", backgroundColor: "#FEFEFE", color: "#6D0AD7" }}>
+                                    </button>
+                                    <button className="buttonNews add" style={{ borderRadius: "0.5625rem",height: "2.75rem", width: "25rem", backgroundColor: "#FEFEFE", color: "#6D0AD7" }}>
                                         Álbum completo para todos 
-                                    </Button>
-                                    <Button className="buttonNews add" style={{ borderRadius: "0.5625rem",height: "2.75rem", width: "25rem", backgroundColor: "#FEFEFE", color: "#6D0AD7" }}>
+                                    </button>
+                                    <button className="buttonNews add" style={{ borderRadius: "0.5625rem",height: "2.75rem", width: "25rem", backgroundColor: "#FEFEFE", color: "#6D0AD7" }}>
                                         Álbum Particular + Completo para todos 
-                                    </Button>
+                                    </button>
                                 </div>
                                 <div style={{
                                     overflow: "hidden",
@@ -440,14 +440,14 @@ export default function PgLook() {
                                         <span style={{color: "#6D0AD7"}}>&nbsp;Identificado em X fotos</span>
                                     </div>
                                     <div style={{display:"flex",justifyContent:"space-between", width:"100%", marginLeft:".5rem"}}>
-                                        <Button className="buttonNews" style={{ height: "2.5rem", width: "8rem", backgroundColor: "#6D0AD7", color: "white" }}>
+                                        <button className="buttonNews" style={{ height: "2.5rem", width: "8rem", backgroundColor: "#6D0AD7", color: "white" }}>
                                             Ver fotos
-                                        </Button>
-                                        <Button className="buttonNews" 
+                                        </button>
+                                        <button className="buttonNews" 
                                         style={{ height: "2.5rem", width: "17rem", backgroundColor: "#6D0AD7", color: "white" }} 
                                         onClick={() => toggleSeeOptions(index)}>
                                             Selecionar tipo de envios <ArrowDownOutlined />
-                                        </Button>
+                                        </button>
                                         {seeOptions[index] && 
                                         <div 
                                             style={{
@@ -465,19 +465,19 @@ export default function PgLook() {
                                                 borderRadius: "0.5625rem",
                                                 marginLeft:"8.5rem",
                                             }}>
-                                            <Button 
+                                            <button 
                                                 className="buttonNews" 
                                                 style={{ borderRadius: "0.5625rem",height: "2.75rem", width: "16rem", backgroundColor: "#F0E7FB", color: "#6D0AD7" }}
                                                 onClick={() => setParticular((old) => !old)}
                                             >
                                                 <img src={Smile} width={"30px"}/>   Álbum particular
-                                            </Button>
-                                            <Button className="buttonNews" style={{ borderRadius: "0.5625rem",height: "2.75rem", width: "16rem", backgroundColor: "#FEFEFE", color: "#6D0AD7" }}>
+                                            </button>
+                                            <button className="buttonNews" style={{ borderRadius: "0.5625rem",height: "2.75rem", width: "16rem", backgroundColor: "#FEFEFE", color: "#6D0AD7" }}>
                                                 Álbum completo 
-                                            </Button>
-                                            <Button className="buttonNews" style={{ borderRadius: "0.5625rem",height: "2.75rem", width: "16rem", backgroundColor: "#FEFEFE", color: "#6D0AD7" }}>
+                                            </button>
+                                            <button className="buttonNews" style={{ borderRadius: "0.5625rem",height: "2.75rem", width: "16rem", backgroundColor: "#FEFEFE", color: "#6D0AD7" }}>
                                                 Álbum Particular + Completo
-                                            </Button>
+                                            </button>
                                         </div>
                                         }
                                     </div>
@@ -506,7 +506,7 @@ export default function PgLook() {
                                 padding:"2rem 2rem" }}
                             >
                             <div>
-                            <Button 
+                            <button 
                                 className="close" 
                                 type="primary" 
                                 onClick={() => { setParticular(false)}} 
@@ -529,7 +529,7 @@ export default function PgLook() {
                             <div style={{overflowY:"auto",flexWrap:"wrap", width: "80%", display:"flex", alignItems: "center", justifyContent:"space-between", marginTop:"2rem", height:"60vh"}}>
                             {teste.map((teste, index) => (
                                 <div key={index} style={{padding:"1rem",marginBottom:"1rem", width: "15.75rem", height: "9.9375rem", borderRadius: "0.5625rem", background: "#C4C4C4", display:"flex", justifyContent:"flex-end", alignItems:"flex-end"}}>
-                                    <Button 
+                                    <button 
                                     style={{
                                         width: "5.0625rem",
                                         eight:" 1.5rem",
@@ -541,7 +541,7 @@ export default function PgLook() {
                                     }}
                                     >
                                         Excluir <DeleteOutlined/>
-                                    </Button>
+                                    </button>
                                 </div>
                             ))}
                         </div>

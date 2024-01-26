@@ -235,7 +235,7 @@ export default function PgConvite() {
                         </div>
                         <div style={{ width: "32vw" }} />
                         <div>
-                            <button className="buttonNews add" style={{ height: "3rem", width: "18rem", backgroundColor: "#6D0AD7", color: "white" }}
+                            <button className="buttonNewsP add" style={{ height: "3rem", width: "18rem", backgroundColor: "#6D0AD7", color: "white" }}
                                 onClick={() => setInviteData((old) => !old)}
                             >
                                 Criar novo convite
@@ -243,7 +243,8 @@ export default function PgConvite() {
                         </div>
                     </div>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "79vw", marginBottom: "3rem" }}>
-                        <div style={{
+                        <div 
+                        style={{
                             border: "1px solid #B8B2C6",
                             width: "53vw",
                             height: "90vh",
@@ -256,7 +257,6 @@ export default function PgConvite() {
                             justifyContent: "flex-start",
                             padding: "2rem 0"
                         }}>
-
                             <span style={{ padding: "0 2rem" }} className="SubForm">Crie e gerencie modelos de convites para serem enviados aos convidados</span>
                             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "flex-start", height: "4rem", width: "100%" }}>
                                 <div style={{ padding: "1rem 2rem", display: "flex", alignItems: "center", height: "6rem", width: "100%", background: "#F0E7FB", marginTop: "1rem" }}>
@@ -265,9 +265,18 @@ export default function PgConvite() {
                                 <div style={{ padding: "1rem 2rem", display: "flex", alignItems: "center", justifyContent: "space-between", height: "4rem", width: "100%", borderTop: "1px solid #B8B2C6", borderBottom: "1px solid #B8B2C6" }}>
                                     <span style={{ fontSize: "16px" }} className="text">Modelo de convite para familiares</span>
                                     <button
-                                        style={{ display: "flex", alignItems: "center", justifyContent: "center", background: "#F0E7FB", border: "none" }}
-                                        icon={<EllipsisOutlined style={{ fontWeight: "bold" }} />}
-                                        onClick={() => setSeeOptions((old) => !old)} />
+                                        style={{
+                                            width: "2rem", 
+                                            height: "2rem",
+                                            display:"flex", 
+                                            alignItems:"center", 
+                                            justifyContent:"center", 
+                                            border:"none", 
+                                            borderRadius:"8px"
+                                            }}
+                                        onClick={() => setSeeOptions((old) => !old)}>
+                                            <EllipsisOutlined style={{ fontWeight: "bold" }} />
+                                    </button>
 
                                     {seeOptions &&
                                         <div className="miniMenuConv" id="ConvMenu" onClick={CloseOutClick}>
@@ -293,18 +302,34 @@ export default function PgConvite() {
                                                 justifyContent: "center",
                                             }}
                                             onClick={CloseOutClickEx}>
-                                            <div style={{ width: "60vw", height: "40vh", margin: "0 0 auto", backgroundColor: "white", borderRadius: ".5rem", display: "flex", flexDirection: "column", position: "absolute", zIndex: "10", alignItems: "center", justifyContent: "space-evenly" }}>
+                                            <div 
+                                            style={{ 
+                                                width: "60vw", 
+                                                height: "40vh", 
+                                                margin: "0 0", 
+                                                backgroundColor: "white", 
+                                                borderRadius: ".5rem", 
+                                                display: "flex", 
+                                                flexDirection: "column", 
+                                                position: "absolute", 
+                                                zIndex: "10", 
+                                                alignItems: "center", 
+                                                justifyContent: "space-between", 
+                                                padding:"2rem"
+                                                }}>
                                                 <button
-                                                    className="close"
-                                                    type="primary"
+                                                    className="closeB"
                                                     onClick={() => { setModalEx(false) }}
-                                                    shape="square"
-                                                    size="small"
-                                                    icon={<CloseOutlined />}
-                                                />
+                                                >
+                                                    <CloseOutlined />
+                                                </button>
 
                                                 <span className="squareTitle">Tem certeza que deseja excluir esse modelo de convite?</span>
-                                                <button style={{ fontWeight: "bold", width: "18rem", backgroundColor: "#EA4335", height: "3rem" }} type="primary" danger> Excluir </button>
+                                                <button 
+                                                    className="buttonNewsNo"
+                                                    style={{ fontWeight: "bold", width: "18rem", backgroundColor: "#EA4335", height: "3rem" }} type="primary" danger>
+                                                    Excluir 
+                                                </button>
 
                                             </div>
                                         </div>

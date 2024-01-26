@@ -6,7 +6,7 @@ import {
     MailOutlined,
     CloseOutlined
 } from "@ant-design/icons";
-import { Button, Input, Select, Popover, Checkbox, Progress } from 'antd';
+import { Input, Checkbox, Progress } from 'antd';
 import Chart from "react-apexcharts";
 
 export default function PgEstatisticas() {
