@@ -41,14 +41,19 @@ export default function Login (){
                     <Link to="/register" whereCalled="client" style={{textDecoration: "none"}}><p className="pink"> se cadastrar aqui!</p></Link></div>
                 </div>
             </div>
-            <Space direction="vertical" className="loginInputs text-white">
+            <Space direction="vertical" className="loginInputs text-white  d-flex justify-content-center align-items-center">
                     <Input id="email" size="large" className="inputNews" type="email" placeholder="E-mail"/>
                     <Input.Password id="password" size="large" className="inputNews" placeholder="Senha" />
                     
                     <p className="textRight">Esqueceu a senha?</p>
-                        <Link to="/HomeUsers" style={{textDecoration: "none"}}>
-                            <Button size="large"className="buttonNews" onClick={()=>{Login()}}>Login</Button>
-                        </Link>
+                    <Link to="/HomeUsers" style={{textDecoration: "none"}}>
+                        <Button 
+                            size="large"
+                                style={{width: "500px"}}
+                            className="buttonNews" 
+                            onClick={()=>{Login()}}
+                            >Login</Button>
+                    </Link>
                     <p className="textCenter">ou continue com:</p>
 
                     <div className="treeImg">

@@ -16,12 +16,17 @@ import HomeEvents from './pages/homeEventos.jsx';
 import LookYou from './pages/lookYou.jsx';
 import ConfPres from './pages/confPresen.jsx';
 import { StyleProvider } from '@ant-design/cssinjs';
+import HomeAdmin from './pages/homeAdmin.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <News whereCalled="manut" />,
+  },
+  {
+    path: "/admin",
+    element: <HomeAdmin />,
   },
   {
     path: "/previa2024",

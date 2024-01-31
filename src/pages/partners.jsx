@@ -28,10 +28,10 @@ export default function Partners() {
 
     return (
         <>
-            <NavBar />
             <BackGround />
+            <NavBar />
             {!register ?
-                <div className="Main column">
+                <div className="column">
                     <div className="flexPart">
                         <img src={LogoP} className="logoPart" alt="Logo List-Max Partners" width="130px" />
                         <div className="textContainerPart">
@@ -50,12 +50,17 @@ export default function Partners() {
                         <Select className="Select" defaultValue="Cidade" style={{ width: '31.5%' }} />
                     </div>
                     <div className="center">
-                        <Button type="button" size="large" className="confirm" onClick={() => { setRegister((old) => !old) }}> Quero me tornar um parceiro</Button>
+                        <button 
+                            type="button" 
+                            size="large" 
+                            className="confirm" 
+                            onClick={() => { setRegister((old) => !old) }}>
+                                 Quero me tornar um parceiro</button>
                     </div>
                 </div>
                 :
-                <div id="color">
-                    <div id="main">
+                // <div id="color">
+                //     <div id="main">
                         <div className='containerV'>
                                 <div style={{display: 'flex', height: '700px',  justifyContent: 'space-evenly'}}>
                                     <div className="textContainerR">
@@ -73,45 +78,46 @@ export default function Partners() {
                                     </div>
 
                                     <Space direction="vertical" className="loginInputsR">
-                                    <Space direction="horizontal" className="nameLast">
-                                        <Input size="large" type="text" placeholder="Nome" />
-                                        <Input size="large" type="text" placeholder="Sobrenome" />
-                                    </Space>
-                                    <Input size="large" className="inputNews" type="phone" placeholder="Celular" />
-                                    <Input size="large" className="inputNews" type="text" placeholder="Empresa" />
+                                        <Space direction="horizontal" className="nameLast">
+                                            <Input size="large" type="text" placeholder="Nome" />
+                                            <Input size="large" type="text" placeholder="Sobrenome" />
+                                        </Space>
+                                        <Input size="large" className="inputNews" type="phone" placeholder="Celular" />
+                                        <Input size="large" className="inputNews" type="text" placeholder="Empresa" />
 
-                                    <Select
-                                        showSearch
-                                        className="inputNews"
-                                        placeholder="Categoria da sua Empresa"
-                                        optionFilterProp="children"
-                                        onChange={onChange}
-                                        onSearch={onSearch}
-                                        filterOption={filterOption}
-                                        size={'large'}
-                                        options={[
-                                            {
-                                                value: 'jack',
-                                                label: 'Jack',
-                                            },
-                                            {
-                                                value: 'lucy',
-                                                label: 'Lucy',
-                                            },
-                                            {
-                                                value: 'tom',
-                                                label: 'Tom',
-                                            },
-                                        ]}
-                                    />
-                                    <Input size="large" className="inputNews" type="text" placeholder="Seu cargo na empresa" />
-                                    <Input size="large" className="inputNews" type="email" placeholder="Seu E-mail" />
-                                    <Button
-                                        size="large"
-                                        className="buttonNews"
-                                    >
-                                        Solicitar Parceria
-                                    </Button>
+                                        <Select
+                                            showSearch
+                                            className="inputNews"
+                                            placeholder="Categoria da sua Empresa"
+                                            optionFilterProp="children"
+                                            onChange={onChange}
+                                            onSearch={onSearch}
+                                            filterOption={filterOption}
+                                            size={'large'}
+                                            options={[
+                                                {
+                                                    value: 'jack',
+                                                    label: 'Jack',
+                                                },
+                                                {
+                                                    value: 'lucy',
+                                                    label: 'Lucy',
+                                                },
+                                                {
+                                                    value: 'tom',
+                                                    label: 'Tom',
+                                                },
+                                            ]}
+                                        />
+                                        <Input size="large" className="inputNews" type="text" placeholder="Seu cargo na empresa" />
+                                        <Input size="large" className="inputNews" type="email" placeholder="Seu E-mail" />
+                                        <Button
+                                            size="large"
+                                            className="buttonNews"
+                                            style={{width:"500px"}}
+                                        >
+                                            Solicitar Parceria
+                                        </Button>
                                     </Space>
                                 </div>
                                 <div className="white">
@@ -178,15 +184,15 @@ export default function Partners() {
                                     <div className="half">
                                         <p className="textLight">Na ListMax, acreditamos que cada evento especial merece ser memorável. Junte-se a nós no ListMax Partners e torne-se parte de uma comunidade de profissionais que compartilham a mesma visão. Simplifique a gestão de convidados, recompense seus clientes e expanda seus negócios.</p>
                                         <Link style={{textDecoration: "none"}}to="/homePartners">
-                                            <Button className="buttonNews add">
+                                            <button className="buttonNews add">
                                                 Quero me tornar um parceiro
-                                            </Button>                        
+                                            </button>                        
                                         </Link>
                                     </div>
                                 </div>
                         </div>
-                    </div>
-                </div>
+                //     </div>
+                // </div>
             }
         </>
     )

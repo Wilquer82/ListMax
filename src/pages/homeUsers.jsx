@@ -1,7 +1,6 @@
 import './homePartners.css';
 import NavBarPartners from '../components/navbarPartner';
 import { useState } from 'react';
-// import home from '../components/home';
 import MyAcount from '../components/myAcount';
 import UserConfig from '../components/userConfig';
 

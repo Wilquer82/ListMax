@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import './style.css';
 import Logo from '../assets/Logo.png';
 import { Link, useLocation } from 'react-router-dom';
@@ -17,10 +18,10 @@ export default function NavBarPartners({ Local }) {
     return (
         <>
             <nav className="navbarPartner">
-                <div className="navbarInt">
                     <Link to='/' style={{textDecoration: "none"}}>
                         <img src={Logo} alt="Logo ListMax" width="153.398px" height="40px" />
                     </Link>
+                <div className="navbarInt">
                     <span className="nav-item" style={{ justifyContent: "center" }}>
                         Como Funciona
                     </span>
@@ -45,7 +46,8 @@ export default function NavBarPartners({ Local }) {
                         Contato
                     </span>
                     {Local == "Partners" &&
-                        <span style={{ justifyContent: "center" }} className="nav-item white-choiced">
+                        <span style={{ justifyContent: "center" }} 
+                        className="nav-item white-choiced">
                             ListMax Partners
                         </span>
                     }
