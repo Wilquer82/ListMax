@@ -65,6 +65,24 @@ export default function HomeAdmin() {
                         </div>
                     </>
                 )}
+                {selectedItem == "Eventos" && (
+                    <>
+                    <div
+                            className={`TabAdm ${selectedTab === 'Usuários' ? 'active' : ''}`}
+                            onClick={() => setSelectedTab('Usuários')
+                            }
+                        >
+                            <span>Usuários</span>
+                        </div>
+                        <div
+                            className={`TabAdm ${selectedTab === 'Bloqueados' ? 'active' : ''}`}
+                            onClick={() => setSelectedTab('Bloqueados')
+                            }
+                        >
+                            <span>Bloqueados</span>
+                        </div>
+                    </>
+                )}
 
             </div>
 
