@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default function NavBar() {
     return (
         <>
-        <nav className="navbar">
+        <nav className="navbarN">
             <Link to='/' style={{textDecoration: "none"}}>
                 <img src={Logo} alt="Logo ListMax" width="153.398px" height="40px"/>
             </Link>

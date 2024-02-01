@@ -83,9 +83,17 @@ a{
     background-attachment:local;
     position: absolute;
     width: 100%;
-    min-height: 100vh;
+    min-height: 120vh;
     z-index: -1;
     overflow: hidden;
+}
+
+.background-image{
+    background-image: url('./assets/bg-usuario-deslogado.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment:local;
 }
 
 .textContainerA {
@@ -154,14 +162,55 @@ a{
 }
 
 .MainP {
-    position: fixed;
-    top: 10rem;
-    left: 0;
+    /* position: fixed; */
+    margin-top: 5rem;
+    /* left: 0; */
     width: 100vw;
-    height: 100vh;
+    height: 99vh;
     display: flex;
 }
 
 .column{
     flex-direction: column;
+}
+
+.f3rem{
+    font-size: 3rem;
+}
+
+.f500{
+    font-weight: 500;
+}
+
+.f700{
+    font-weight: 700;
+}   
+
+.fpink{
+    color: #FF14FF
+}
+.fwhite{
+    color: white;
+}
+
+.flemon{
+    color: #90DA1F;
+}
+
+.priceSquare{
+    border-radius: 1.5rem;
+    background: #FFF;
+    width: 19.5625rem;
+    height: 29.8125rem;
+    padding: 2rem;
+    color: #181059;
+}
+
+.priceSquareB{
+    border-radius: 1.5rem;
+    background: #310561;
+    width: 19.5625rem;
+    height: 29.8125rem;
+    padding: 2rem;
+    color: white;
 }

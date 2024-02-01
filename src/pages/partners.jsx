@@ -55,7 +55,7 @@ export default function Partners() {
                             size="large" 
                             className="confirm" 
                             onClick={() => { setRegister((old) => !old) }}>
-                                 Quero me tornar um parceiro</button>
+                                Quero me tornar um parceiro</button>
                     </div>
                 </div>
                 :
@@ -184,7 +184,7 @@ export default function Partners() {
                                     <div className="half">
                                         <p className="textLight">Na ListMax, acreditamos que cada evento especial merece ser memorável. Junte-se a nós no ListMax Partners e torne-se parte de uma comunidade de profissionais que compartilham a mesma visão. Simplifique a gestão de convidados, recompense seus clientes e expanda seus negócios.</p>
                                         <Link style={{textDecoration: "none"}}to="/homePartners">
-                                            <button className="buttonNews add">
+                                            <button className="confirm">
                                                 Quero me tornar um parceiro
                                             </button>                        
                                         </Link>

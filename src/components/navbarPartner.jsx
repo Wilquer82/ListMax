@@ -46,9 +46,9 @@ export default function NavBarPartners({ Local }) {
                         Contato
                     </span>
                     {Local == "Partners" &&
-                        <span style={{ justifyContent: "center" }} 
+                        <span style={{ justifyContent: "center", width:"rem" }} 
                         className="nav-item white-choiced">
-                            ListMax Partners
+                            Partners
                         </span>
                     }
                     {Local == "Clients" &&

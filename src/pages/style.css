@@ -297,10 +297,6 @@ a {
     box-shadow: 2px 2px 2px grey;
 }
 
-.fwhite {
-    color: white;
-}
-
 .containerCodigo {
     display: flex;
     justify-content: center;
@@ -480,6 +476,8 @@ a {
     align-items: center; */
 }
 
+
+
 .ImgOne {
     position: absolute;
     z-index: 6;
@@ -539,9 +537,22 @@ a {
     text-align: justify;
 }
 
+.lineContainerC {
+    display: flex;
+    width: 500px;
+    justify-content: flex-start;
+    text-align: center;
+}
+
 .gift {
     position: absolute;
     left: 74vh
+}
+
+.status {
+    position: absolute;
+    right: 0;
+    top: 100vh;
 }
 
 .gradient {
@@ -752,6 +763,14 @@ a {
     height: 3rem;
     border: none;
     padding: 0 2rem;
+}
+
+.buttonCriar {
+    width: 16.25rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    background: #310561;
+    color: white;
 }
 
 
