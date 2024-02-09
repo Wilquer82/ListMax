@@ -298,11 +298,11 @@ export default function PgLook() {
                             <div style={{width:"20%"}}>
                             </div>
                             <div style={{marginTop:"3rem", display:"flex", width:"35%", justifyContent:"space-between", alignItems:"baseline", height:"100%"}}>
-                                <button className="buttonNews add" style={{ height: "3rem", width: "11.5rem", backgroundColor: "#6D0AD7", color: "white" }}>
+                                <button className="buttonNewsP add" style={{ height: "3rem", width: "11.5rem", backgroundColor: "#6D0AD7", color: "white" }}>
                                     Selecionar todos 
                                 </button>
                                 <button 
-                                    className="buttonNews add" 
+                                    className="buttonNewsP add" 
                                     style={{ height: "3rem", width: "12.5rem", backgroundColor: "#6D0AD7", color: "white" }}
                                     onClick={() => {setEnvios(true)}}
                                 >

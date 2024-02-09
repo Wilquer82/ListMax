@@ -93,7 +93,7 @@ export default function App( ) {
         </div>
         <div className="d-flex align-items-center flex-column" style={{backgroundColor:"#6D0AD7", height:"50rem"}}>
           <span className="fwhite f3rem f700 mt-5">Preços</span>
-          <div className="d-flex w-100 justify-content-evenly mt-5">
+          <div className="d-flex w-100 justify-content-evenly mt-5 precos">
             <div className="d-flex flex-column align-items-start justify-content-between priceSquare mt-4">
               <span className="f24 f700 mb-3">Gratuito</span>
               <span><i className="bi bi-check"/>&nbsp; Até 50 convidados</span>
@@ -102,7 +102,7 @@ export default function App( ) {
               ))}
               <span style={{color:"grey"}}><i className="bi bi-x"/>&nbsp; Serviços avançados</span>
               <span className=" align-self-center">R$<span className="f700 f24">0</span>/grátis!</span>
-              <button className=" f700 align-self-center buttonCriar"  >Criar evento</button>
+              <button className=" f700 align-self-center buttonCriar">Criar evento</button>
             </div>
             <div className="d-flex flex-column align-items-start justify-content-between priceSquareB">
               <span className="f24 f700 mb-3">Premium</span>

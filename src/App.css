@@ -162,9 +162,7 @@ a{
 }
 
 .MainP {
-    /* position: fixed; */
     margin-top: 5rem;
-    /* left: 0; */
     width: 100vw;
     height: 99vh;
     display: flex;
@@ -213,4 +211,42 @@ a{
     height: 29.8125rem;
     padding: 2rem;
     color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    /* .precos{
+        flex-direction:column;
+    } */
+
+    .MainTextA {
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 400;
+        letter-spacing: -0.005em;
+        text-align: left;
+    }
+
+    .GA {
+        font-size: 24px;
+        line-height: 30px;
+        font-family: Poppins;
+        font-weight: 700;
+        letter-spacing: -0.005em;
+        text-align: left;
+    }
+
+    .textContainerA {
+        margin-left: 1rem;
+        width: 100%;
+        /* height: 120px; */
+    }
+
+    .lineContainerA {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: baseline;
+    }
+
+
 }
