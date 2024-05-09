@@ -24,7 +24,7 @@ a {
 
 .textContainerL {
     margin-top: 15rem;
-    width: 40vw;
+    width: 40%;
     /* height: 330px; */
 }
 
@@ -139,7 +139,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 25vw;
+    width: 30%;
     height: 20rem;
 }
 
@@ -165,7 +165,7 @@ a {
 }
 
 .inputNews {
-    width: 500px!important;
+    width: 100%!important;
     margin: 0 0;
 }
 
@@ -176,6 +176,7 @@ a {
 }
 
 .buttonNews {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -400,7 +401,7 @@ a {
     align-items: center;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
 }
 
 .textContainerPart {
@@ -469,7 +470,7 @@ a {
 
 .white {
     height: 500px;
-    width: 100vw;
+    width: 100%;
     background-color: white;
     display: flex;
     /* justify-content: space-evenly;
@@ -492,7 +493,7 @@ a {
 
 .blue {
     background-color: #310561;
-    width: 100vw;
+    width: 100%;
     min-height: 76rem;
 }
 
@@ -583,7 +584,7 @@ a {
 
 .lightBlue {
     background-color: #6d0ad7;
-    width: 100vw;
+    width: 100%;
     height: 550px;
     display: flex;
     /* flex-direction: column; */
@@ -735,7 +736,7 @@ a {
     overflow: hidden;
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 10 !important;
 }
 

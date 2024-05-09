@@ -18,7 +18,7 @@ export default function NavBarPartners({ Local }) {
     return (
         <>
             <nav className="navbarPartner">
-                    <Link to='/' style={{textDecoration: "none"}}>
+                    <Link to='/previa2024' style={{textDecoration: "none"}}>
                         <img src={Logo} alt="Logo ListMax" width="153.398px" height="40px" />
                     </Link>
                 <div className="navbarInt">

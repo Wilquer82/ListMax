@@ -45,13 +45,11 @@ export default function News({ whereCalled }) {
           }
           <div className="col-lg-6 text-center pt-4">
             <p className="subTitle text-white">Cadastre-se para <br /> receber as novidades.</p>
-            <div className="d-flex justify-content-center align-items-center">
-              <form className="w400 px-lg-0 px-4">
+              <form className="px-lg-0 px-4">
                 <Input size="large" className="inputNews mb-3" type="email" placeholder="E-mail" />
                 <Input size="large" className="inputNews mb-3" type="text" placeholder="Celular" />
-                <Button size="large" className="buttonNews w-100 font-16">Cadastrar no Newsletter</Button>
+                <Button size="large" className="buttonNews font-16">Cadastrar no Newsletter</Button>
               </form>
-            </div>
           </div>
         </div>
       </div>

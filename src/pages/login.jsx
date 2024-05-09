@@ -23,7 +23,7 @@ export default function Login (){
         <BackGround />
         <div className="Main">
             <div className="textContainerL">
-                <Link to='/' style={{textDecoration: "none"}}>
+                <Link to='/previa2024' style={{textDecoration: "none"}}>
                     <img className="logoP" src={Logo} width="153px" height="40px" alt="Logo List-Max" />
                 </Link>
                 <div className="lineContainer">
@@ -41,26 +41,26 @@ export default function Login (){
                     <Link to="/register" whereCalled="client" style={{textDecoration: "none"}}><p className="pink"> se cadastrar aqui!</p></Link></div>
                 </div>
             </div>
-            <Space direction="vertical" className="loginInputs text-white  d-flex justify-content-center align-items-center">
-                    <Input id="email" size="large" className="inputNews" type="email" placeholder="E-mail"/>
-                    <Input.Password id="password" size="large" className="inputNews" placeholder="Senha" />
-                    
-                    <p className="textRight">Esqueceu a senha?</p>
-                    <Link to="/HomeUsers" style={{textDecoration: "none"}}>
-                        <Button 
-                            size="large"
-                                style={{width: "500px"}}
-                            className="buttonNews" 
-                            onClick={()=>{Login()}}
-                            >Login</Button>
-                    </Link>
-                    <p className="textCenter">ou continue com:</p>
+            <Space direction="vertical" className="loginInputs text-white d-flex justify-content-center align-items-center">
+                <form className="px-lg-0 px-4">
+                <Input id="email" size="large" className="mb-3 inputNews w-100" type="email" placeholder="E-mail"/>
+                <Input.Password id="password" size="large" className="mb-3 inputNews" placeholder="Senha" />
+                <p className="textRight">Esqueceu a senha?</p>
+                <Link to="/HomeUsers" style={{textDecoration: "none"}}>
+                    <Button 
+                        size="large"
+                        className="buttonNews" 
+                        onClick={()=>{Login()}}
+                        >Login</Button>
+                </Link>
+                </form>
+                <p className="textCenter">ou continue com:</p>
 
-                    <div className="treeImg">
-                        <img src={Google} alt="With Google"/>
-                        <img src={Apple} alt="With Apple"/>
-                        <img src={Face} alt="With Facebook"/>
-                    </div>
+                <div className="treeImg">
+                    <img src={Google} alt="With Google"/>
+                    <img src={Apple} alt="With Apple"/>
+                    <img src={Face} alt="With Facebook"/>
+                </div>
             </Space>
             {isModalBlocked &&
                 <div className="ModalBlocked">

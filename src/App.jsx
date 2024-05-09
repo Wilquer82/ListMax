@@ -25,7 +25,7 @@ export default function App( ) {
     <>
       <BackGround />
       <NavBar />
-      <div className="d-flex flex-column">
+      <div className="d-flex flex-column w-100 overflow-x-hidden">
         <div className="MainP column">
           <div className="textContainerA">
             <div className="lineContainerA">
@@ -48,7 +48,7 @@ export default function App( ) {
             <TwoButtons />
           </div>
         </div>
-        <div className="d-flex flex-column" style={{backgroundColor:"#6D0AD7", height:"33rem", padding: "6rem 3rem"}}>
+        <div className="d-flex flex-column" style={{backgroundColor:"#6D0AD7", height:"36rem", padding: "6rem 3rem", margin: "0 0"}}>
           <img src={Status} alt="Img Celular" className="status"/>
           <span className="f3rem f500 fwhite">Como funciona a <br/><span className="fpink f700">ListMax</span>?</span>
           <span className="fwhite mt-5" style={{width:"38rem", textAlign:"justify"}}>Seja bem-vindo à ListMax, a plataforma revolucionária 
@@ -146,7 +146,7 @@ export default function App( ) {
           </div>
           <button style={{ backgroundColor: "#A1F71A", color: "black", alignSelf: "self-end"}} className=" f700 buttonCriar"><i className="bi bi-whatsapp"/>&nbsp;Fale conosco Agora</button>
         </div>
-        <div className="d-flex w-100 row align-items-baseline justify-content-center" style={{background: "#26044B", height:"20rem"}}>
+        <div className="d-flex row align-items-baseline justify-content-center" style={{background: "#26044B",  height:"20rem"}}>
           <div className="d-flex flex-column  justify-content-evenly col-6 w-25 mt-5">
             <img src={Logo} alt="Logo ListMax" width="153.398px" height="40px" className="mt-2"/>
             <div className="d-flex mt-4 ">
@@ -155,7 +155,7 @@ export default function App( ) {
               <i style={{fontSize:"1.5rem", color:"white", margin:"0 .5rem"}}className="bi bi-youtube"/>
               <i style={{fontSize:"1.5rem", color:"white", margin:"0 .5rem"}}className="bi bi-whatsapp"/>
             </div>
-            <span className="fwhite mt-4 w-50"><i className="bi bi-c-circle"/>&nbsp;2024 ListMax LTDA Todos os direitos reservados.</span>
+            <span className="fwhite mt-4 w-50"><i className="bi bi-c-circle"/>&nbsp;2024 FoxTailConsulting Todos os direitos reservados.</span>
           </div>
           <div className="d-flex flex-column col-2 fwhite mt-5" >
             <span className="flemon f600">SOBRE</span>

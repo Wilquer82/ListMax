@@ -10,7 +10,7 @@ export default function NavBarAdmin({ selectedItem, setSelectedItem }) {
     return (
         <>
         <nav className="navbarPartner w-100 d-flex align-items-center justify-content-between">
-                <Link to='/' style={{textDecoration: "none"}} className="d-flex flex-column">
+                <Link to='/previa2024' style={{textDecoration: "none"}} className="d-flex flex-column">
                     <img src={Logo} alt="Logo ListMax" width="153.398px" height="40px"/>
                     <span>PAINEL DE CONTROLE</span>
                 </Link>
